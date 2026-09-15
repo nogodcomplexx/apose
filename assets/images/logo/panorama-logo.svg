@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 50" width="240" height="50" fill="none">
+  <defs>
+    <linearGradient id="peakGrad1" x1="12" y1="6" x2="36" y2="40" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="40%" stop-color="#fbbf24"/>
+      <stop offset="100%" stop-color="#ff7425"/>
+    </linearGradient>
+    <linearGradient id="peakGrad2" x1="24" y1="6" x2="8" y2="38" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.9"/>
+      <stop offset="60%" stop-color="#f59e0b" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#d95a10" stop-opacity="0.9"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="24" y1="2" x2="24" y2="16" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ffffff"/>
+      <stop offset="100%" stop-color="#ff7425"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Emblem G -->
+  <g transform="translate(0, 3)">
+    <!-- Subtle alpine sun / morning star above the crest -->
+    <circle cx="24" cy="7" r="2.5" fill="url(#sunGrad)"/>
+    <line x1="24" y1="2" x2="24" y2="4" stroke="#fbbf24" stroke-width="1" stroke-linecap="round"/>
+    
+    <!-- Back / Left Peak -->
+    <polygon points="12,18 4,36 20,36" fill="#1e2229" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+    <polygon points="12,18 20,36 12,36" fill="url(#peakGrad2)" fill-opacity="0.4"/>
+    
+    <!-- Back / Right Peak -->
+    <polygon points="34,16 26,36 44,36" fill="#181c22" stroke="rgba(255,255,255,0.2)" stroke-width="0.8"/>
+    <polygon points="34,16 34,36 44,36" fill="url(#peakGrad1)" fill-opacity="0.35"/>
+
+    <!-- Main Central Peak (Left Face - Shaded) -->
+    <polygon points="24,10 11,38 24,38" fill="url(#peakGrad2)"/>
+    <!-- Main Central Peak (Right Face - Sunlit) -->
+    <polygon points="24,10 24,38 37,38" fill="url(#peakGrad1)"/>
+    
+    <!-- Central Snow Cap Highlight -->
+    <polygon points="24,10 20,18 24,16 28,18" fill="#ffffff"/>
+    
+    <!-- Stylized Panorama Horizon Base Line -->
+    <line x1="2" y1="41" x2="46" y2="41" stroke="#ff7425" stroke-width="1.5" stroke-linecap="round"/>
+    <line x1="16" y1="43.5" x2="32" y2="43.5" stroke="#fbbf24" stroke-width="1" stroke-linecap="round"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="58" y="27" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="20" font-weight="900" fill="#ffffff" letter-spacing="4">PANORAMA</text>
+  <text x="59" y="41" font-family="'Plus Jakarta Sans', 'Inter', -apple-system, sans-serif" font-size="8.5" font-weight="700" fill="#ff7425" letter-spacing="3.2">MOUNTAIN RESIDENCE</text>
+</svg>
