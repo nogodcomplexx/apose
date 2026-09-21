@@ -241,15 +241,15 @@
                            <!-- Bottom Stats Strip -->
                            <div class="hero-stats-strip">
                               <div class="hero-stat-item">
-                                 <h4 data-i18n="hero_stat_1_num">12</h4>
-                                 <p data-i18n="hero_stat_1_text">Designových apartmánů</p>
+                                 <h4 class="hero-stat-counter" data-target="3" data-i18n="hero_stat_1_num">3</h4>
+                                 <p data-i18n="hero_stat_1_text">Architektonické typy</p>
                               </div>
                               <div class="hero-stat-item">
-                                 <h4 data-i18n="hero_stat_2_num">50</h4>
+                                 <h4 class="hero-stat-counter" data-target="14" data-i18n="hero_stat_2_num">14</h4>
                                  <p data-i18n="hero_stat_2_text">Lůžek celkem</p>
                               </div>
                               <div class="hero-stat-item">
-                                 <h4 data-i18n="hero_stat_3_num">100%</h4>
+                                 <h4 class="hero-stat-counter" data-target="100" data-suffix="%" data-i18n="hero_stat_3_num">100%</h4>
                                  <p data-i18n="hero_stat_3_text">Panoramatický výhled</p>
                               </div>
                               <div class="hero-stat-item">
@@ -537,116 +537,116 @@
                </div>
                <!-- ==== / Marquee Text Ticker End ==== -->
 
-               <!-- ==== 04. 12 APARTMENTS SHOWCASE (Xpovio Portfolio Grid) ==== -->
-               <section class="section portfolio" id="residence">
-                  <div class="container">
-                     <div class="row justify-content-center">
-                        <div class="col-12 col-lg-8">
-                           <div class="section__header text-center">
-                              <span class="sub-title">
-                                 <span data-i18n="apts_sub">NAŠE REZIDENCE</span>
-                                 <i class="fa-solid fa-arrow-right ms-1"></i>
-                              </span>
-                              <h2 class="title title-anim" data-i18n="apts_title">
-                                 12 designových apartmánů na Bublavě
-                              </h2>
-                              <p class="mt-3 text-secondary" data-i18n="apts_desc">
-                                 Celková kapacita 50 lůžek. Každý apartmán disponuje vlastní uzamykatelnou kójí na lyže a kola se sušáky bot a možností dobíjení elektrokol.
-                              </p>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                <!-- ==== 04. RESIDENCE LIFESTYLE & EXPERIENCES (Xpovio Portfolio Grid) ==== -->
+                <section class="section portfolio" id="residence">
+                   <div class="container">
+                      <div class="row justify-content-center">
+                         <div class="col-12 col-lg-8">
+                            <div class="section__header text-center">
+                               <span class="sub-title">
+                                  <span data-i18n="apts_sub">ŽIVOT V REZIDENCI &amp; ZÁŽITKY</span>
+                                  <i class="fa-solid fa-arrow-right ms-1"></i>
+                               </span>
+                               <h2 class="title title-anim" data-i18n="apts_title">
+                                  Více než ubytování. Horský životní styl na Bublavě
+                               </h2>
+                               <p class="mt-3 text-secondary" data-i18n="apts_desc">
+                                  Od ranního espressa v Lobby Baru přes přímý nástup na zasněženou sjezdovku až po stovky kilometrů hřebenových tras a večerní posezení u vína. Zažijte Krušné hory naplno ve všech ročních obdobích.
+                               </p>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
 
-                  <div class="container-fluid">
-                     <div class="row gaper">
-                        <!-- Apt Category 01: Apartmány 1–3 -->
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(1)">
-                              <div class="portfolio-price-tag" data-i18n="apt1_price">od 4 800 Kč / noc</div>
-                              <a href="javascript:void(0)">
-                                 <img src="assets/images/web/apt-living-balcony.jpg" alt="Apartmány 1–3 Mezonety a Penthousy">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="javascript:void(0)">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <h4>
-                                    <a href="javascript:void(0)" data-i18n="apt1_title">Apartmány 1–3</a>
-                                 </h4>
-                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt1_specs">68–115 m² • 6–8 hostů • Terasa, lamely &amp; výhled</p>
-                              </div>
-                           </div>
-                        </div>
+                   <div class="container-fluid">
+                      <div class="row gaper">
+                         <!-- Activity 01: Lobby Bar & Lounge -->
+                         <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="portfolio__single topy-tilt fade-top" onclick="openPanoramaLightbox(1)" title="Zobrazit detail v galerii">
+                               <div class="portfolio-price-tag" data-i18n="exp1_badge"><i class="fa-solid fa-martini-glass me-1 text-warning"></i> Přímo v domě • 1. NP</div>
+                               <a href="javascript:void(0)">
+                                  <img src="assets/images/web/lobby-bar-evening.jpg" alt="Rezidenční Lobby Bar &amp; Lounge">
+                               </a>
+                               <div class="portfolio__single-content">
+                                  <a href="javascript:void(0)">
+                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                  </a>
+                                  <h4>
+                                     <a href="javascript:void(0)" data-i18n="exp1_title">Rezidenční Lobby Bar</a>
+                                  </h4>
+                                  <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="exp1_desc">Výběrová káva, večerní bar, krb a velká obrazovka pro společné chvíle</p>
+                               </div>
+                            </div>
+                         </div>
 
-                        <!-- Apt Category 02: Apartmány 4–8 -->
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(2)">
-                              <div class="portfolio-price-tag" data-i18n="apt2_price">od 3 600 Kč / noc</div>
-                              <a href="javascript:void(0)">
-                                 <img src="assets/images/web/apt-living-dining.jpg" alt="Apartmány 4–8 Rodinné">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="javascript:void(0)">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <h4>
-                                    <a href="javascript:void(0)" data-i18n="apt2_title">Apartmány 4–8</a>
-                                 </h4>
-                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt2_specs">48–58 m² • 4 hosté • Jídelní stůl, kuchyně &amp; balkon</p>
-                              </div>
-                           </div>
-                        </div>
+                         <!-- Activity 02: Ski Areál Bublava -->
+                         <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="portfolio__single topy-tilt fade-top" onclick="openPanoramaLightbox(6)" title="Zobrazit detail v galerii">
+                               <div class="portfolio-price-tag" data-i18n="exp2_badge"><i class="fa-solid fa-person-skiing me-1 text-warning"></i> 150 m od rezidence</div>
+                               <a href="javascript:void(0)">
+                                  <img src="assets/images/web/winter-ski.jpg" alt="Ski Areál Bublava">
+                               </a>
+                               <div class="portfolio__single-content">
+                                  <a href="javascript:void(0)">
+                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                  </a>
+                                  <h4>
+                                     <a href="javascript:void(0)" data-i18n="exp2_title">Ski Areál Bublava</a>
+                                  </h4>
+                                  <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="exp2_desc">6 sjezdovek, 4sedačková lanovka, noční lyžování, půjčovny &amp; snowpark</p>
+                               </div>
+                            </div>
+                         </div>
 
-                        <!-- Apt Category 03: Apartmány 9–12 -->
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(3)">
-                              <div class="portfolio-price-tag" data-i18n="apt3_price">od 2 600 Kč / noc</div>
-                              <a href="javascript:void(0)">
-                                 <img src="assets/images/web/apt-bedroom-loft.jpg" alt="Apartmány 9–12 Podkrovní studia">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="javascript:void(0)">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <h4>
-                                    <a href="javascript:void(0)" data-i18n="apt3_title">Apartmány 9–12</a>
-                                 </h4>
-                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt3_specs">36–44 m² • 2–3 hosté • Podkroví, dřevěný dekor &amp; klid</p>
-                              </div>
-                           </div>
-                        </div>
+                         <!-- Activity 03: Krušnohorská magistrála -->
+                         <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="portfolio__single topy-tilt fade-top" onclick="openPanoramaLightbox(8)" title="Zobrazit detail v galerii">
+                               <div class="portfolio-price-tag" data-i18n="exp3_badge"><i class="fa-solid fa-person-hiking me-1 text-warning"></i> Hned za domem</div>
+                               <a href="javascript:void(0)">
+                                  <img src="assets/images/web/summer-hiking.jpg" alt="Krušnohorská magistrála">
+                               </a>
+                               <div class="portfolio__single-content">
+                                  <a href="javascript:void(0)">
+                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                  </a>
+                                  <h4>
+                                     <a href="javascript:void(0)" data-i18n="exp3_title">Krušnohorská magistrála</a>
+                                  </h4>
+                                  <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="exp3_desc">Stovky km upravených běžkařských stop, cyklotrasy a hřebenové túry</p>
+                               </div>
+                            </div>
+                         </div>
 
-                        <!-- Apt Category 04: Celá rezidence & Lobby Bar -->
-                        <div class="col-12 col-sm-6 col-xl-3">
-                           <div class="portfolio__single topy-tilt fade-top" onclick="openPrevioModal('Celá Rezidence Panorama (až 50 osob • 12 apartmánů)')">
-                              <div class="portfolio-price-tag" data-i18n="apt4_price">od 48 000 Kč / noc</div>
-                              <a href="javascript:void(0)">
-                                 <img src="assets/images/web/lobby-bar-evening.jpg" alt="Celá Rezidence &amp; Lobby Bar">
-                              </a>
-                              <div class="portfolio__single-content">
-                                 <a href="javascript:void(0)">
-                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
-                                 </a>
-                                 <h4>
-                                    <a href="javascript:void(0)" data-i18n="apt4_title">Celá rezidence &amp; Lobby Bar</a>
-                                 </h4>
-                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt4_specs">12 apartmánů • 50 lůžek • Privátní bar, krb &amp; společenská zóna</p>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
+                         <!-- Activity 04: Rozhledna & Výlety v okolí -->
+                         <div class="col-12 col-sm-6 col-xl-3">
+                            <div class="portfolio__single topy-tilt fade-top" onclick="openPanoramaLightbox(11)" title="Zobrazit detail v galerii">
+                               <div class="portfolio-price-tag" data-i18n="exp4_badge"><i class="fa-solid fa-compass me-1 text-warning"></i> Tipy v okolí • 5–10 min</div>
+                               <a href="javascript:void(0)">
+                                  <img src="assets/images/web/location-village.jpg" alt="Rozhledna &amp; Výlety v okolí">
+                               </a>
+                               <div class="portfolio__single-content">
+                                  <a href="javascript:void(0)">
+                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                  </a>
+                                  <h4>
+                                     <a href="javascript:void(0)" data-i18n="exp4_title">Rozhledna &amp; Výlety v okolí</a>
+                                  </h4>
+                                  <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="exp4_desc">Vyhlídka Bleiberg, německá Vogtland Arena a severská tundra na Přebuzi</p>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
 
-                  <div class="lines d-none d-lg-flex">
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                     <div class="line"></div>
-                  </div>
-               </section>
-               <!-- ==== / 12 Apartments Showcase End ==== -->
+                   <div class="lines d-none d-lg-flex">
+                      <div class="line"></div>
+                      <div class="line"></div>
+                      <div class="line"></div>
+                      <div class="line"></div>
+                      <div class="line"></div>
+                   </div>
+                </section>
+                <!-- ==== / Residence Lifestyle & Experiences End ==== -->
 
                 <!-- ==== 05. ARCHITECTURAL SHOWCASE: DISPOZICE & CENY (Design Peak) ==== -->
                 <section class="section architectural-dossier" id="apartments">

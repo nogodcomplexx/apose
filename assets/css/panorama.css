@@ -782,6 +782,7 @@ a.btn span {
   transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
   cursor: pointer;
+  animation: heroSoftBlurUp 1.1s cubic-bezier(0.16, 1, 0.3, 1) 0.5s backwards;
 }
 
 .hero-location-beacon:hover {
@@ -893,6 +894,33 @@ a.btn span {
   background: rgba(255, 116, 37, 0.5);
 }
 
+/* Hero Soft Cinematic Blur-Up Entrance Animation (Quiet Luxury) */
+@keyframes heroSoftBlurUp {
+  0% {
+    opacity: 0;
+    filter: blur(14px);
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroSoftBlurUpMasked {
+  0% {
+    opacity: 0;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.7)) blur(14px);
+    transform: translateY(18px);
+  }
+  100% {
+    opacity: 1;
+    filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.7)) blur(0px);
+    transform: translateY(0);
+  }
+}
+
 .hero-main-title {
   margin: 0 0 16px 0;
   line-height: 0.92;
@@ -905,6 +933,7 @@ a.btn span {
   font-weight: 900;
   letter-spacing: 2px;
   color: #ffffff;
+  animation: heroSoftBlurUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.65s backwards;
 }
 
 /* Textured Mountain Typography (Reference MOUNTAINS) */
@@ -919,6 +948,7 @@ a.btn span {
   background-clip: text;
   color: transparent;
   filter: drop-shadow(0 5px 20px rgba(0, 0, 0, 0.7));
+  animation: heroSoftBlurUpMasked 1.35s cubic-bezier(0.16, 1, 0.3, 1) 0.8s backwards;
 }
 
 .hero-left-desc {
@@ -927,6 +957,7 @@ a.btn span {
   color: rgba(240, 240, 245, 0.82);
   max-width: 520px;
   margin-bottom: 24px;
+  animation: heroSoftBlurUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 0.95s backwards;
 }
 
 /* Actions Row */
@@ -936,6 +967,11 @@ a.btn span {
   gap: 20px;
   flex-wrap: wrap;
   margin-bottom: 24px;
+  animation: heroSoftBlurUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.1s backwards;
+}
+
+.hero-stats-strip {
+  animation: heroSoftBlurUp 1.2s cubic-bezier(0.16, 1, 0.3, 1) 1.25s backwards;
 }
 
 .hero-link-underline {
@@ -1662,9 +1698,9 @@ a.btn span {
   overflow: hidden;
   position: relative;
   padding: 25px 0 35px;
-  /* Smooth edge masks for luxury fade-in / fade-out at viewport edges */
-  mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
-  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 6%, black 94%, transparent 100%);
+  /* Deep cinematic mist fade: cards emerge seamlessly from dark mountain fog */
+  mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 3%, rgba(0, 0, 0, 0.8) 8%, black 14%, black 86%, rgba(0, 0, 0, 0.8) 92%, rgba(0, 0, 0, 0.15) 97%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, rgba(0, 0, 0, 0.15) 3%, rgba(0, 0, 0, 0.8) 8%, black 14%, black 86%, rgba(0, 0, 0, 0.8) 92%, rgba(0, 0, 0, 0.15) 97%, transparent 100%);
 }
 
 .reviews-marquee-track {

@@ -53,25 +53,25 @@ const i18n = {
     about_bar_3: 'Nástupní stanice lanovky (150 m)',
     about_cta: 'Zjistit dostupnost v Previo',
     
-    apts_sub: 'NAŠE REZIDENCE',
-    apts_title: '12 designových apartmánů na Bublavě',
-    apts_desc: 'Celková kapacita 50 lůžek. Každý apartmán disponuje vlastní uzamykatelnou kójí na lyže a kola se sušáky bot a možností dobíjení elektrokol.',
+    apts_sub: 'ŽIVOT V REZIDENCI & ZÁŽITKY',
+    apts_title: 'Více než ubytování. Horský životní styl na Bublavě',
+    apts_desc: 'Od ranního espressa v Lobby Baru přes přímý nástup na zasněženou sjezdovku až po stovky kilometrů hřebenových tras a večerní posezení u vína. Zažijte Krušné hory naplno ve všech ročních obdobích.',
     
-    apt1_title: 'Apartmány 1–3',
-    apt1_specs: '68–115 m² • 6–8 hostů • Terasa, lamely & výhled',
-    apt1_price: 'od 4 800 Kč / noc',
+    exp1_badge: 'Přímo v domě • 1. NP',
+    exp1_title: 'Rezidenční Lobby Bar',
+    exp1_desc: 'Výběrová káva, večerní bar, krb a velká obrazovka pro společné chvíle',
     
-    apt2_title: 'Apartmány 4–8',
-    apt2_specs: '48–58 m² • 4 hosté • Jídelní stůl, kuchyně & balkon',
-    apt2_price: 'od 3 600 Kč / noc',
+    exp2_badge: '150 m od rezidence',
+    exp2_title: 'Ski Areál Bublava',
+    exp2_desc: '6 sjezdovek, 4sedačková lanovka, noční lyžování, půjčovny & snowpark',
     
-    apt3_title: 'Apartmány 9–12',
-    apt3_specs: '36–44 m² • 2–3 hosté • Podkroví, dřevěný dekor & klid',
-    apt3_price: 'od 2 600 Kč / noc',
+    exp3_badge: 'Hned za domem',
+    exp3_title: 'Krušnohorská magistrála',
+    exp3_desc: 'Stovky km upravených běžkařských stop, cyklotrasy a hřebenové túry',
     
-    apt4_title: 'Celá rezidence & Lobby Bar',
-    apt4_specs: '12 apartmánů • 50 lůžek • Privátní bar, krb & společenská zóna',
-    apt4_price: 'od 48 000 Kč / noc',
+    exp4_badge: 'Tipy v okolí • 5–10 min',
+    exp4_title: 'Rozhledna & Výlety v okolí',
+    exp4_desc: 'Vyhlídka Bleiberg, německá Vogtland Arena a severská tundra na Přebuzi',
     
     comfort_sub: 'KOMFORT & VYBAVENÍ',
     comfort_title: 'Vše pro váš bezstarostný horský pobyt',
@@ -183,25 +183,25 @@ const i18n = {
     about_bar_3: 'Proximity to express ski lift (150 m)',
     about_cta: 'Check Dates on Previo',
     
-    apts_sub: 'OUR SUITES',
-    apts_title: '12 Designer Residences in Bublava',
-    apts_desc: 'Total capacity of 50 beds. Each apartment features its own lockable ski and bike storage locker with boot dryers and e-bike charging sockets.',
+    apts_sub: 'RESIDENCE LIFESTYLE & EXPERIENCES',
+    apts_title: 'More Than a Stay. The Alpine Way of Life in Bublava',
+    apts_desc: 'From morning espresso at the Lobby Bar to ski-in / ski-out access and hundreds of miles of mountain trails. Discover all that our residence and the Ore Mountains have to offer year-round.',
     
-    apt1_title: 'Apartments 1–3',
-    apt1_specs: '68–115 m² • 6–8 Guests • Terrace, Timber Slats & View',
-    apt1_price: 'from 4,800 CZK / night',
+    exp1_badge: 'On-site • Ground Floor',
+    exp1_title: 'Residential Lobby Bar',
+    exp1_desc: 'Artisan coffee, evening wine bar, fireplace & big screen for shared moments',
     
-    apt2_title: 'Apartments 4–8',
-    apt2_specs: '48–58 m² • 4 Guests • Dining Table, Kitchen & Balcony',
-    apt2_price: 'from 3,600 CZK / night',
+    exp2_badge: '150 m to Chairlift',
+    exp2_title: 'Bublava Ski Resort',
+    exp2_desc: '6 slopes, 4-seat chairlift, night skiing, equipment rental & terrain park',
     
-    apt3_title: 'Apartments 9–12',
-    apt3_specs: '36–44 m² • 2–3 Guests • Loft, Warm Timber & Serenity',
-    apt3_price: 'from 2,600 CZK / night',
+    exp3_badge: 'Direct Trail Access',
+    exp3_title: 'Ore Mountains Ridge Trail',
+    exp3_desc: 'Hundreds of km of groomed cross-country tracks, bike trails & ridge hikes',
     
-    apt4_title: 'Whole Residence & Lobby Bar',
-    apt4_specs: '12 Suites • 50 Beds • Private Bar, Fireplace & Social Lounge',
-    apt4_price: 'from 48,000 CZK / night',
+    exp4_badge: 'Local Highlights • 5–10 min',
+    exp4_title: 'Lookout Tower & Day Trips',
+    exp4_desc: 'Bleiberg lookout, Klingenthal Vogtland Arena & the wild Přebuz peat bogs',
     
     comfort_sub: 'COMFORT & AMENITIES',
     comfort_title: 'Everything for an effortless alpine escape',
@@ -1037,7 +1037,49 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   });
+
+  initHeroCounters();
 });
+
+// ==========================================================================
+// Subtle Animated Stats Counter (Magic UI inspired - exponential ease-out)
+// ==========================================================================
+function initHeroCounters() {
+  const counters = document.querySelectorAll('.hero-stat-counter');
+  if (!counters.length) return;
+
+  let triggered = false;
+  const runCounters = () => {
+    if (triggered) return;
+    triggered = true;
+
+    counters.forEach((el) => {
+      const target = parseInt(el.getAttribute('data-target') || el.textContent, 10);
+      if (isNaN(target)) return;
+      const suffix = el.getAttribute('data-suffix') || '';
+      const duration = 1400; // ms
+      let startTime = null;
+
+      function step(now) {
+        if (!startTime) startTime = now;
+        const progress = Math.min((now - startTime) / duration, 1);
+        // Exponential ease out for quiet luxury feel
+        const ease = progress === 1 ? 1 : 1 - Math.pow(2, -10 * progress);
+        const current = Math.round(target * ease);
+        el.textContent = current + suffix;
+        if (progress < 1) {
+          requestAnimationFrame(step);
+        } else {
+          el.textContent = target + suffix;
+        }
+      }
+      requestAnimationFrame(step);
+    });
+  };
+
+  // Trigger after preloader dissolve
+  setTimeout(runCounters, 900);
+}
 
 
 // Fail-safe Preloader Dissolver (Guarantees silky smooth fade without sharp cut)
