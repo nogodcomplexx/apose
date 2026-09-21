@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_2" data-name="Layer 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 492.86 493.59">
+  <defs>
+    <style>
+      .cls-1 {
+        clip-path: url(#clippath);
+      }
+
+      .cls-2 {
+        stroke-width: 0px;
+      }
+
+      .cls-2, .cls-3, .cls-4 {
+        fill: none;
+      }
+
+      .cls-5 {
+        clip-path: url(#clippath-1);
+      }
+
+      .cls-6 {
+        clip-path: url(#clippath-4);
+      }
+
+      .cls-7 {
+        clip-path: url(#clippath-3);
+      }
+
+      .cls-8 {
+        clip-path: url(#clippath-2);
+      }
+
+      .cls-9 {
+        clip-path: url(#clippath-7);
+      }
+
+      .cls-10 {
+        clip-path: url(#clippath-8);
+      }
+
+      .cls-11 {
+        clip-path: url(#clippath-6);
+      }
+
+      .cls-12 {
+        clip-path: url(#clippath-5);
+      }
+
+      .cls-3 {
+        stroke-width: 20px;
+      }
+
+      .cls-3, .cls-4 {
+        stroke: #45536a;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-4 {
+        stroke-width: 12px;
+      }
+    </style>
+    <clipPath id="clippath">
+      <rect class="cls-2" x="34.07" y="371.19" width="54.07" height="88.19"/>
+    </clipPath>
+    <clipPath id="clippath-1">
+      <rect class="cls-2" x="34.07" y="283" width="54.07" height="88.19"/>
+    </clipPath>
+    <clipPath id="clippath-2">
+      <rect class="cls-2" x="34.07" y="194.82" width="54.07" height="88.19"/>
+    </clipPath>
+    <clipPath id="clippath-3">
+      <rect class="cls-2" x="34.07" y="106.63" width="54.07" height="88.19"/>
+    </clipPath>
+    <clipPath id="clippath-4">
+      <polygon class="cls-2" points="106.55 88.21 88.14 88.21 88.14 106.63 34.07 106.63 34.07 34.14 106.55 34.14 106.55 88.21"/>
+    </clipPath>
+    <clipPath id="clippath-5">
+      <rect class="cls-2" x="106.55" y="34.14" width="88.04" height="54.07"/>
+    </clipPath>
+    <clipPath id="clippath-6">
+      <rect class="cls-2" x="194.59" y="34.14" width="88.04" height="54.07"/>
+    </clipPath>
+    <clipPath id="clippath-7">
+      <rect class="cls-2" x="282.62" y="34.14" width="88.04" height="54.07"/>
+    </clipPath>
+    <clipPath id="clippath-8">
+      <rect class="cls-2" x="370.66" y="34.14" width="88.04" height="54.07"/>
+    </clipPath>
+  </defs>
+  <g id="GRAPHIC">
+    <g id="_09" data-name="09">
+      <polyline class="cls-3" points="10 459.37 10 10 458.69 10"/>
+      <g>
+        <g class="cls-1">
+          <polyline class="cls-4" points="41.62 347.51 41.62 389.32 51.15 398.57 60.58 389.32 60.58 354.6 69.98 345.35 79.52 354.6 79.52 397.63 41.62 434.15 41.62 475.96 51.15 485.21 60.58 475.96 60.58 441.24 69.98 431.99 79.52 441.24 79.52 483.05"/>
+        </g>
+        <g class="cls-5">
+          <polyline class="cls-4" points="41.62 259.33 41.62 301.14 51.15 310.39 60.58 301.13 60.58 266.42 69.98 257.17 79.52 266.42 79.52 309.44 41.62 345.96 41.62 387.77 51.15 397.02 60.58 387.77 60.58 353.05 69.98 343.8 79.52 353.05 79.52 394.86"/>
+        </g>
+        <g class="cls-8">
+          <polyline class="cls-4" points="41.62 171.14 41.62 212.95 51.15 222.2 60.58 212.95 60.58 178.23 69.98 168.98 79.52 178.23 79.52 221.25 41.62 257.77 41.62 299.59 51.15 308.84 60.58 299.58 60.58 264.87 69.98 255.62 79.52 264.87 79.52 306.68"/>
+        </g>
+        <g class="cls-7">
+          <polyline class="cls-4" points="41.62 82.95 41.62 124.77 51.15 134.02 60.58 124.76 60.58 90.04 69.98 80.8 79.52 90.04 79.52 133.07 41.62 169.59 41.62 211.4 51.15 220.65 60.58 211.4 60.58 176.68 69.98 167.43 79.52 176.68 79.52 218.49"/>
+        </g>
+        <g class="cls-6">
+          <path class="cls-4" d="M130.96,41.7h-43.3c-5.44,3.18-9.75,6.36-12.94,9.53,5.49,3.14,9.87,6.28,13.14,9.42h35.79l9.53,9.4-9.53,9.53h-38.33c-3.93-6.11-11.97-12.21-24.12-18.32-6.53-.07-13.05,4.56-19.58,13.88v48.57l9.53,9.53,9.42-9.54v-35.79c3.13-3.21,6.27-5.31,9.4-6.31,3.18,3.29,6.36,5.45,9.53,6.5v42.91"/>
+        </g>
+        <g class="cls-12">
+          <polyline class="cls-4" points="218.22 41.7 176.48 41.7 167.25 51.23 176.49 60.66 211.14 60.66 220.38 70.06 211.14 79.59 168.2 79.59 131.74 41.7 90 41.7 80.76 51.23 90 60.66 124.66 60.66 133.89 70.06 124.66 79.59 82.92 79.59"/>
+        </g>
+        <g class="cls-11">
+          <polyline class="cls-4" points="306.26 41.7 264.52 41.7 255.28 51.23 264.52 60.66 299.18 60.66 308.41 70.06 299.18 79.59 256.23 79.59 219.77 41.7 178.03 41.7 168.8 51.23 178.04 60.66 212.69 60.66 221.93 70.06 212.69 79.59 170.95 79.59"/>
+        </g>
+        <g class="cls-9">
+          <polyline class="cls-4" points="394.29 41.7 352.55 41.7 343.32 51.23 352.56 60.66 387.21 60.66 396.45 70.06 387.21 79.59 344.27 79.59 307.81 41.7 266.07 41.7 256.83 51.23 266.07 60.66 300.73 60.66 309.96 70.06 300.73 79.59 258.99 79.59"/>
+        </g>
+        <g class="cls-10">
+          <polyline class="cls-4" points="482.33 41.7 440.59 41.7 431.36 51.23 440.59 60.66 475.25 60.66 484.48 70.06 475.25 79.59 432.3 79.59 395.84 41.7 354.1 41.7 344.87 51.23 354.11 60.66 388.76 60.66 398 70.06 388.76 79.59 347.02 79.59"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

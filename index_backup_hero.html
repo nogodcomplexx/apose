@@ -1,0 +1,2342 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="shortcut icon" href="assets/images/template/favicon.png" type="image/x-icon">
+   <title>Apartmány Panorama | Luxusní horská rezidence</title>
+   <meta name="keywords" content="apartmány, hory, ubytování, luxus, Bublava, Krušné hory, ski-in ski-out, wellness, hory">
+   <meta name="description" content="Apartmány Panorama - Luxusní horská rezidence se 4 designovými apartmány s výhledem a ski-in / ski-out polohou přímo u sjezdovky.">
+
+   <!-- ==== CSS Dependencies from Xpovio ==== -->
+   <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="assets/vendor/glyyphter/css/xpovio.css">
+   <link rel="stylesheet" href="assets/vendor/font-awesome/css/all.css">
+   <link rel="stylesheet" href="assets/vendor/nice-select/css/nice-select.css">
+   <link rel="stylesheet" href="assets/vendor/magnific-popup/css/magnific-popup.css">
+   <link rel="stylesheet" href="assets/vendor/slick/css/slick.css">
+   <link rel="stylesheet" href="assets/css/main.min.css">
+   <link rel="stylesheet" href="assets/css/panorama.css">
+</head>
+
+<body>
+   <div class="my-app">
+
+      <!-- Preloader Start -->
+      <div id="preloader">
+         <div class="preloader-wrap">
+            <div id="loader"></div>
+            <img class="preloader-center-icon" src="assets/images/logo/panorama-mark.svg" alt="Apartmány Panorama">
+         </div>
+         <div class="preloader-brand">
+            <h1 class="preloader-title">Apartmány Panorama</h1>
+            <span class="preloader-sub" data-i18n="hero_sub">HORSKÁ LUXUSNÍ REZIDENCE</span>
+         </div>
+      </div>
+      <!-- Preloader End -->
+
+      <!-- Cursor Area Start -->
+      <div class="mouseCursor cursor-outer"></div>
+      <div class="mouseCursor cursor-inner"></div>
+
+                        <!-- ==== Header Start (Strictly ONE Logo in the Center, Balanced Spacer on Left) ==== -->
+      <header class="header">
+         <div class="primary-navbar">
+            <div class="container-fluid px-3 px-xl-4 px-xxl-5">
+               <nav class="navbar p-0 w-100">
+
+                  <!-- 1. Left Grid Column: Pure Balanced Spacer (NO logo here!) -->
+                  <div class="navbar__grid-left"></div>
+
+                  <!-- 2. Center Grid Column: Tight Cluster with ONE Central Logo -->
+                  <div class="navbar__center-cluster d-flex align-items-center justify-content-center">
+                     <!-- Left Links: Domů, Apartmány, Galerie (desktop only) -->
+                     <ul class="navbar__list m-0 p-0 d-none d-xl-flex align-items-center">
+                        <li class="navbar__item">
+                           <a href="#home" data-i18n="nav_home">Domů</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#apartments" data-i18n="nav_apartments">Apartmány</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
+                        </li>
+                     </ul>
+
+                     <!-- The ONLY Logo on the entire page: Smooth scroll to Hero without reload -->
+                     <a href="#home" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Apartmány Panorama" class="navbar__logo-center text-decoration-none">
+                        <img src="assets/images/logo/panorama-logo.svg" alt="Apartmány Panorama" style="height: 38px; width: auto;">
+                     </a>
+
+                     <!-- Right Links: O rezidenci, Reference, Kontakt (desktop only) -->
+                     <ul class="navbar__list m-0 p-0 d-none d-xl-flex align-items-center">
+                        <li class="navbar__item">
+                           <a href="#about" data-i18n="nav_about">O rezidenci</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#reviews" data-i18n="nav_reviews">Reference</a>
+                        </li>
+                        <li class="navbar__item">
+                           <a href="#contact" data-i18n="nav_contact">Kontakt</a>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <!-- 3. Right Grid Column: Actions (CZ/EN, Rezervovat CTA, Kulička) -->
+                  <div class="navbar__grid-right d-flex align-items-center justify-content-end gap-2 gap-sm-3">
+                     <!-- Language Switcher -->
+                     <div class="lang-switcher">
+                        <button class="lang-btn active" data-lang="cs" onclick="setLanguage('cs')">CZ</button>
+                        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                     </div>
+
+                     <!-- Rezervovat CTA Button -->
+                     <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--secondary d-none d-sm-inline-flex navbar-book-btn">
+                        <span data-i18n="nav_book">Rezervovat</span>
+                        <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
+                     </a>
+
+                     <!-- Iconic Kulička (Offcanvas menu trigger) -->
+                     <button class="open-offcanvas-nav d-flex" aria-label="toggle menu" title="Otevřít menu" onclick="openOffcanvasMenu()"></button>
+                  </div>
+
+               </nav>
+            </div>
+         </div>
+      </header>
+
+      <!-- ==== Offcanvas Nav Start (Authentic Full-Screen Xpovio Design) ==== -->
+      <div class="offcanvas-nav">
+         <div class="offcanvas-menu">
+            <nav class="offcanvas-menu__wrapper">
+               <div class="offcanvas-menu__header">
+                  <div class="logo">
+                     <a href="#home" onclick="event.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); closeOffcanvasMenu();" aria-label="Apartmány Panorama">
+                        <img src="assets/images/logo/panorama-logo.svg" alt="Apartmány Panorama" style="height: 38px; width: auto;">
+                     </a>
+                  </div>
+                  <button class="close-offcanvas-menu" aria-label="close menu" onclick="closeOffcanvasMenu()">
+                     <i class="fa-solid fa-xmark"></i>
+                  </button>
+               </div>
+               <div class="offcanvas-menu__list">
+                  <div class="navbar__menu">
+                     <ul class="navbar__list">
+                        <li class="navbar__item nav-fade">
+                           <a href="#home" onclick="closeOffcanvasMenu();" data-i18n="nav_home">Domů</a>
+                        </li>
+                        <li class="navbar__item nav-fade">
+                           <a href="#apartments" onclick="closeOffcanvasMenu();" data-i18n="nav_apartments">Apartmány</a>
+                        </li>
+                        <li class="navbar__item nav-fade">
+                           <a href="#about" onclick="closeOffcanvasMenu();" data-i18n="nav_about">O rezidenci</a>
+                        </li>
+                        <li class="navbar__item nav-fade">
+                           <a href="#gallery" onclick="closeOffcanvasMenu();" data-i18n="nav_gallery">Galerie</a>
+                        </li>
+                        <li class="navbar__item nav-fade">
+                           <a href="#reviews" onclick="closeOffcanvasMenu();" data-i18n="nav_reviews">Reference</a>
+                        </li>
+                        <li class="navbar__item nav-fade">
+                           <a href="#contact" onclick="closeOffcanvasMenu();" data-i18n="nav_contact">Kontakt</a>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div class="offcanvas-menu__options nav-fade">
+                  <div class="offcanvas__mobile-options d-flex align-items-center flex-wrap gap-3">
+                     <a href="javascript:void(0)" onclick="closeOffcanvasMenu(); openPrevioModal();" class="btn btn--secondary">
+                        <span data-i18n="nav_book">Rezervovat pobyt (Previo)</span>
+                        <i class="fa-sharp fa-solid fa-arrow-up-right ms-2"></i>
+                     </a>
+                     <div class="lang-switcher m-0">
+                        <button class="lang-btn active" data-lang="cs" onclick="setLanguage('cs')">CZ</button>
+                        <button class="lang-btn" data-lang="en" onclick="setLanguage('en')">EN</button>
+                     </div>
+                  </div>
+               </div>
+               <div class="offcanvas-menu__social social nav-fade">
+                  <a href="mailto:info@apartmany-panorama.cz" aria-label="email">
+                     <i class="fa-solid fa-envelope"></i>
+                  </a>
+                  <a href="tel:+420777123456" aria-label="phone">
+                     <i class="fa-solid fa-phone"></i>
+                  </a>
+                  <a href="https://www.instagram.com/" target="_blank" aria-label="instagram">
+                     <i class="fa-brands fa-instagram"></i>
+                  </a>
+               </div>
+            </nav>
+         </div>
+      </div>
+      <!-- ==== / Offcanvas Nav End ==== -->
+
+      <div id="smooth-wrapper">
+         <div id="smooth-content">
+            <!-- ==== Main Start ==== -->
+            <main>
+
+               <!-- ==== 01. HERO BANNER START (Authentic Xpovio Banner) ==== -->
+               <section class="banner" id="home" style="background: linear-gradient(180deg, rgba(0,0,0,0.7) 0%, rgba(10,10,10,0.92) 100%), url('assets/images/web/hero-panorama.jpg') center center / cover no-repeat;">
+                  <div class="container">
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="banner__content">
+                              <span class="sub-title mb-3 d-inline-block">
+                                 <span data-i18n="hero_sub">HORSKÁ LUXUSNÍ REZIDENCE</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h1 class="text-uppercase text-start fw-9 mb-0 title-anim">
+                                 <span data-i18n="hero_title_1">Apartmány</span>
+                                 <span class="text-stroke" data-i18n="hero_title_stroke">Panorama</span>
+                              </h1>
+                              <div class="banner__content-inner">
+                                 <p data-i18n="hero_desc">
+                                    Exkluzivní horské útočiště v srdci přírody. 12 designových apartmánů s panoramatickým výhledem na hřebeny, vlastním Lobby Barem a ski-in / ski-out polohou přímo u sjezdovky.
+                                 </p>
+                                 <div class="cta section__content-cta d-flex align-items-center gap-4 flex-wrap">
+                                    <div class="single">
+                                       <h5 class="fw-7" data-i18n="hero_stat_1_num">12</h5>
+                                       <p class="fw-5" data-i18n="hero_stat_1_text">Designových apartmánů</p>
+                                    </div>
+                                    <div class="single">
+                                       <h5 class="fw-7" data-i18n="hero_stat_2_num">50</h5>
+                                       <p class="fw-5" data-i18n="hero_stat_2_text">Lůžek celkem</p>
+                                    </div>
+                                    <div class="single">
+                                       <h5 class="fw-7" data-i18n="hero_stat_3_num">100%</h5>
+                                       <p class="fw-5" data-i18n="hero_stat_3_text">Panoramatický výhled</p>
+                                    </div>
+                                    <div class="ms-md-4 mt-2 mt-md-0 d-flex gap-3 flex-wrap">
+                                       <a href="#apartments" class="btn btn--secondary">
+                                          <span data-i18n="hero_cta_apts">Prohlédnout apartmány</span>
+                                          <i class="fa-sharp fa-solid fa-arrow-down"></i>
+                                       </a>
+                                       <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--primary">
+                                          <span data-i18n="hero_cta_book">Ověřit termíny v Previo</span>
+                                          <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                       </a>
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <!-- Previo Docked Booking Bar (Cleanly integrated INSIDE Hero, no overhang) -->
+                     <div class="row">
+                        <div class="col-12">
+                           <div class="previo-booking-bar">
+                              <div class="row g-3 align-items-end">
+                                 <!-- 1. Check-in Field -->
+                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                    <div class="booking-field-group">
+                                       <span class="booking-field-label" data-i18n="book_checkin">Příjezd</span>
+                                       <div class="custom-date-trigger" id="checkin-trigger" onclick="toggleAlpineCalendar('checkin')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
+                                          <div class="custom-date-trigger__info">
+                                             <i class="fa-regular fa-calendar-days custom-date-trigger__icon"></i>
+                                             <span class="custom-date-trigger__val" id="checkin-val-display">15. 10. 2026</span>
+                                          </div>
+                                          <span class="custom-date-trigger__day" id="checkin-day-display">Čt</span>
+                                       </div>
+                                       <input type="hidden" id="book-checkin" value="2026-10-15">
+                                    </div>
+                                 </div>
+
+                                 <!-- 2. Check-out Field -->
+                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                    <div class="booking-field-group">
+                                       <span class="booking-field-label" data-i18n="book_checkout">Odjezd</span>
+                                       <div class="custom-date-trigger" id="checkout-trigger" onclick="toggleAlpineCalendar('checkout')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
+                                          <div class="custom-date-trigger__info">
+                                             <i class="fa-regular fa-calendar-days custom-date-trigger__icon"></i>
+                                             <span class="custom-date-trigger__val" id="checkout-val-display">19. 10. 2026</span>
+                                          </div>
+                                          <span class="custom-date-trigger__day" id="checkout-day-display">Po</span>
+                                       </div>
+                                       <input type="hidden" id="book-checkout" value="2026-10-19">
+                                    </div>
+                                 </div>
+
+                                 <!-- 3. Apartment Custom Luxury Dropdown -->
+                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                    <div class="booking-field-group">
+                                       <span class="booking-field-label" data-i18n="book_apartment">Apartmán</span>
+                                       <div class="custom-dropdown" id="apt-dropdown-container">
+                                          <button type="button" class="custom-dropdown__trigger" id="apt-dropdown-trigger" onclick="toggleAptDropdown()" aria-haspopup="listbox" aria-expanded="false">
+                                             <div class="custom-dropdown__trigger-content">
+                                                <i class="fa-solid fa-mountain-city custom-dropdown__trigger-icon"></i>
+                                                <span class="custom-dropdown__selected-text" id="apt-dropdown-selected" data-i18n="book_all_apts">Všechny apartmány (Celý dům • 50 lůžek)</span>
+                                             </div>
+                                             <i class="fa-solid fa-chevron-down custom-dropdown__chevron"></i>
+                                          </button>
+
+                                          <div class="custom-dropdown__menu" id="apt-dropdown-menu" role="listbox">
+                                             <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny apartmány (Celý dům • 50 lůžek)', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-layer-group"></i>
+                                                   <span class="custom-dropdown__option-title" data-i18n="book_all_apts">Všechny apartmány (Celý dům • 50 lůžek)</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">12 apartmánů • 50 lůžek</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="1" onclick="selectAptOption('1', 'Apartmán 1', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 1</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">6–8 osob • 115 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="2" onclick="selectAptOption('2', 'Apartmán 2', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 2</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4–6 osob • 72 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="3" onclick="selectAptOption('3', 'Apartmán 3', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 3</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4–6 osob • 68 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="4" onclick="selectAptOption('4', 'Apartmán 4', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 4</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4 osoby • 58 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Apartmán 5', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 5</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4 osoby • 56 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Apartmán 6', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 6</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4 osoby • 54 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="7" onclick="selectAptOption('7', 'Apartmán 7', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 7</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4 osoby • 52 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="8" onclick="selectAptOption('8', 'Apartmán 8', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 8</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">4 osoby • 48 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="9" onclick="selectAptOption('9', 'Apartmán 9', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 9</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">3 osoby • 44 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Apartmán 10', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 10</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">3 osoby • 42 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="11" onclick="selectAptOption('11', 'Apartmán 11', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 11</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">2 osoby • 38 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+
+                                             <div class="custom-dropdown__option" data-value="12" onclick="selectAptOption('12', 'Apartmán 12', this)">
+                                                <div class="custom-dropdown__option-main">
+                                                   <i class="fa-solid fa-door-open"></i>
+                                                   <span class="custom-dropdown__option-title">Apartmán 12</span>
+                                                </div>
+                                                <span class="custom-dropdown__badge">2 osoby • 36 m²</span>
+                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
+                                             </div>
+                                          </div>
+
+                                          <!-- Hidden synchronized select for Previo & form support -->
+                                          <select id="book-apartment" class="d-none">
+                                             <option value="all" selected>Všechny apartmány (Celý dům • 50 lůžek)</option>
+                                             <option value="1">Apartmán 1 (6–8 osob)</option>
+                                             <option value="2">Apartmán 2 (4–6 osob)</option>
+                                             <option value="3">Apartmán 3 (4–6 osob)</option>
+                                             <option value="4">Apartmán 4 (4 osoby)</option>
+                                             <option value="5">Apartmán 5 (4 osoby)</option>
+                                             <option value="6">Apartmán 6 (4 osoby)</option>
+                                             <option value="7">Apartmán 7 (4 osoby)</option>
+                                             <option value="8">Apartmán 8 (4 osoby)</option>
+                                             <option value="9">Apartmán 9 (3 osoby)</option>
+                                             <option value="10">Apartmán 10 (3 osoby)</option>
+                                             <option value="11">Apartmán 11 (2 osoby)</option>
+                                             <option value="12">Apartmán 12 (2 osoby)</option>
+                                          </select>
+                                       </div>
+                                    </div>
+                                 </div>
+
+                                 <!-- 4. CTA Button -->
+                                 <div class="col-12 col-sm-6 col-lg-3">
+                                    <button type="button" onclick="openPrevioModal()" class="btn btn--primary w-100" style="padding: 13px 20px; font-size: 12px;">
+                                       <span data-i18n="book_cta">Ověřit dostupnost (Previo)</span>
+                                       <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
+                                    </button>
+                                    <div class="booking-live-price" id="booking-live-price">
+                                       <i class="fa-solid fa-tag" style="font-size: 10px; color: #ff9d5c;"></i>
+                                       <span>Kalkulace: <strong>70 000 Kč</strong> <span style="font-size: 10px; opacity: 0.7;">(4 noci)</span></span>
+                                    </div>
+                                 </div>
+                              </div>
+
+                              <!-- Hero Calendar Slot -->
+                              <div id="hero-calendar-slot" class="hero-calendar-slot">
+                                 <!-- Custom Alpine Date Range Calendar Popover -->
+                                 <div id="alpine-calendar-popover" class="alpine-calendar-popover" role="dialog" aria-label="Výběr termínu pobytu">
+                                 <!-- Month Nav Header -->
+                                 <div class="cal-header">
+                                    <button type="button" class="cal-nav-btn" onclick="prevAlpineMonth()" aria-label="Předchozí měsíc">
+                                       <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+                                    <div class="cal-month-title" id="cal-month-title">Říjen 2026</div>
+                                    <button type="button" class="cal-nav-btn" onclick="nextAlpineMonth()" aria-label="Následující měsíc">
+                                       <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                 </div>
+
+                                 <!-- Active Selection Stage Bar -->
+                                 <div class="cal-stage-bar">
+                                    <div class="cal-stage-pill active" id="cal-stage-checkin-pill" onclick="setCalendarStage('checkin')">
+                                       <span class="cal-stage-lbl" data-i18n="book_checkin">Příjezd</span>
+                                       <span class="cal-stage-val" id="cal-stage-in-val">15. 10. 2026</span>
+                                    </div>
+                                    <i class="fa-solid fa-arrow-right-long cal-stage-arrow"></i>
+                                    <div class="cal-stage-pill" id="cal-stage-checkout-pill" onclick="setCalendarStage('checkout')">
+                                       <span class="cal-stage-lbl" data-i18n="book_checkout">Odjezd</span>
+                                       <span class="cal-stage-val" id="cal-stage-out-val">19. 10. 2026</span>
+                                    </div>
+                                    <div class="cal-stage-nights" id="cal-stage-nights-badge">4 noci</div>
+                                 </div>
+
+                                 <!-- Weekdays Row -->
+                                 <div class="cal-weekdays" id="cal-weekdays-row">
+                                    <span>Po</span><span>Út</span><span>St</span><span>Čt</span><span>Pá</span><span class="weekend">So</span><span class="weekend">Ne</span>
+                                 </div>
+
+                                 <!-- Days Grid -->
+                                 <div class="cal-grid" id="cal-days-grid">
+                                    <!-- Populated dynamically via JS -->
+                                 </div>
+
+                                 <!-- Footer with Hint & Actions -->
+                                 <div class="cal-footer">
+                                    <div class="cal-footer-hint" id="cal-footer-hint">
+                                       <span class="cal-hint-badge" id="cal-hint-badge" aria-hidden="true">
+                                          <i class="fa-solid fa-info"></i>
+                                       </span>
+                                       <span id="cal-hint-text">Min. délka pobytu: 2 noci</span>
+                                    </div>
+                                    <div class="cal-footer-actions">
+                                        <button type="button" class="cal-btn-reset" onclick="resetAlpineCalendarDates()">Dnes</button>
+                                        <button type="button" class="cal-btn-confirm" onclick="closeAlpineCalendar()">Potvrdit</button>
+                                     </div>
+                                  </div>
+                               </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Side Vertical Info from Xpovio -->
+                  <div class="banner-left-text banner-social-text d-none d-md-flex">
+                     <a href="mailto:info@apartmany-panorama.cz">mail : info@apartmany-panorama.cz</a>
+                     <a href="tel:+420777123456">tel : +420 777 123 456</a>
+                  </div>
+                  <div class="banner-right-text banner-social-text d-none d-md-flex">
+                     <a href="javascript:void(0)" onclick="openVideoModal(event)"><i class="fa-solid fa-play me-1"></i> Video Tour</a>
+                     <a href="#apartments">Apartmány</a>
+                     <a href="#gallery">Galerie</a>
+                  </div>
+
+                  <!-- Rotating Video Tour Button (Přehrát video z apartmánů) -->
+                  <a class="video-frame video-tour-trigger" href="javascript:void(0)" onclick="openVideoModal(event)" title="Přehrát video prohlídku" aria-label="Přehrát video prohlídku">
+                     <img id="hero-video-badge" src="assets/images/template/video-badge.svg" alt="Video prohlídka - Apartmány Panorama">
+                     <span class="badge-center-icon">
+                        <i class="fa-sharp fa-solid fa-play"></i>
+                     </span>
+                  </a>
+
+                  <!-- Subtle Background Grid Lines from Xpovio -->
+                  <div class="lines d-none d-lg-flex">
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                  </div>
+               </section>
+               <!-- ==== / Hero Banner End ==== -->
+
+               <!-- ==== 03. MARQUEE TEXT TICKER (Xpovio Portfolio Text Slider) ==== -->
+               <div class="portfolio__text-slider section liner" style="padding: 30px 0; background: #080808; border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <div class="portfolio__text-slider-single">
+                     <h2 class="h1">
+                        <a href="#apartments">
+                           <span data-i18n="ticker_text_1">APARTMÁNY PANORAMA</span>
+                           <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
+                        </a>
+                     </h2>
+                  </div>
+                  <div class="portfolio__text-slider-single">
+                     <h2 class="h1">
+                        <a href="#gallery">
+                           <span data-i18n="ticker_text_2">PANORAMATICKÉ VÝHLEDY</span>
+                           <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
+                        </a>
+                     </h2>
+                  </div>
+                  <div class="portfolio__text-slider-single">
+                     <h2 class="h1">
+                        <a href="#about">
+                           <span data-i18n="ticker_text_3">SKI-IN / SKI-OUT POLOHA</span>
+                           <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
+                        </a>
+                     </h2>
+                  </div>
+                  <div class="portfolio__text-slider-single">
+                     <h2 class="h1">
+                        <a href="#apartments">
+                           <span data-i18n="ticker_text_4">4 DESIGN RESIDENCES</span>
+                           <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
+                        </a>
+                     </h2>
+                  </div>
+                  <div class="portfolio__text-slider-single">
+                     <h2 class="h1">
+                        <a href="#apartments">
+                           <span data-i18n="ticker_text_1">APARTMÁNY PANORAMA</span>
+                           <i class="fa-sharp fa-solid fa-arrow-down-right"></i>
+                        </a>
+                     </h2>
+                  </div>
+               </div>
+               <!-- ==== / Marquee Text Ticker End ==== -->
+
+               <!-- ==== 04. 12 APARTMENTS SHOWCASE (Xpovio Portfolio Grid) ==== -->
+               <section class="section portfolio" id="apartments">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                           <div class="section__header text-center">
+                              <span class="sub-title">
+                                 <span data-i18n="apts_sub">NAŠE REZIDENCE</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim" data-i18n="apts_title">
+                                 12 designových apartmánů na Bublavě
+                              </h2>
+                              <p class="mt-3 text-secondary" data-i18n="apts_desc">
+                                 Celková kapacita 50 lůžek. Každý apartmán disponuje vlastní uzamykatelnou kójí na lyže a kola se sušáky bot a možností dobíjení elektrokol.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="container-fluid">
+                     <div class="row gaper">
+                        <!-- Apt Category 01: Apartmány 1–3 -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(1)">
+                              <div class="portfolio-price-tag" data-i18n="apt1_price">od 4 800 Kč / noc</div>
+                              <a href="javascript:void(0)">
+                                 <img src="assets/images/web/apt-living-balcony.jpg" alt="Apartmány 1–3 Mezonety a Penthousy">
+                              </a>
+                              <div class="portfolio__single-content">
+                                 <a href="javascript:void(0)">
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                                 <h4>
+                                    <a href="javascript:void(0)" data-i18n="apt1_title">Apartmány 1–3</a>
+                                 </h4>
+                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt1_specs">68–115 m² • 6–8 hostů • Terasa, lamely &amp; výhled</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Apt Category 02: Apartmány 4–8 -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(2)">
+                              <div class="portfolio-price-tag" data-i18n="apt2_price">od 3 600 Kč / noc</div>
+                              <a href="javascript:void(0)">
+                                 <img src="assets/images/web/apt-living-dining.jpg" alt="Apartmány 4–8 Rodinné">
+                              </a>
+                              <div class="portfolio__single-content">
+                                 <a href="javascript:void(0)">
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                                 <h4>
+                                    <a href="javascript:void(0)" data-i18n="apt2_title">Apartmány 4–8</a>
+                                 </h4>
+                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt2_specs">48–58 m² • 4 hosté • Jídelní stůl, kuchyně &amp; balkon</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Apt Category 03: Apartmány 9–12 -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                           <div class="portfolio__single topy-tilt fade-top" onclick="openAptDetailModal(3)">
+                              <div class="portfolio-price-tag" data-i18n="apt3_price">od 2 600 Kč / noc</div>
+                              <a href="javascript:void(0)">
+                                 <img src="assets/images/web/apt-bedroom-loft.jpg" alt="Apartmány 9–12 Podkrovní studia">
+                              </a>
+                              <div class="portfolio__single-content">
+                                 <a href="javascript:void(0)">
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                                 <h4>
+                                    <a href="javascript:void(0)" data-i18n="apt3_title">Apartmány 9–12</a>
+                                 </h4>
+                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt3_specs">36–44 m² • 2–3 hosté • Podkroví, dřevěný dekor &amp; klid</p>
+                              </div>
+                           </div>
+                        </div>
+
+                        <!-- Apt Category 04: Celá rezidence & Lobby Bar -->
+                        <div class="col-12 col-sm-6 col-xl-3">
+                           <div class="portfolio__single topy-tilt fade-top" onclick="openPrevioModal('Celá Rezidence Panorama (až 50 osob • 12 apartmánů)')">
+                              <div class="portfolio-price-tag" data-i18n="apt4_price">od 48 000 Kč / noc</div>
+                              <a href="javascript:void(0)">
+                                 <img src="assets/images/web/lobby-bar-evening.jpg" alt="Celá Rezidence &amp; Lobby Bar">
+                              </a>
+                              <div class="portfolio__single-content">
+                                 <a href="javascript:void(0)">
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                                 <h4>
+                                    <a href="javascript:void(0)" data-i18n="apt4_title">Celá rezidence &amp; Lobby Bar</a>
+                                 </h4>
+                                 <p style="font-size: 12px; color: #a1a1a1; margin-top: 5px;" data-i18n="apt4_specs">12 apartmánů • 50 lůžek • Privátní bar, krb &amp; společenská zóna</p>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <div class="lines d-none d-lg-flex">
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                     <div class="line"></div>
+                  </div>
+               </section>
+               <!-- ==== / 12 Apartments Showcase End ==== -->
+
+               <!-- ==== 05. INTERACTIVE CURSOR HOVER APARTMENT LIST (Xpovio Offer Section) ==== -->
+               <section class="section offer fade-wrapper light" style="background: #090e14;">
+                  <div class="container">
+                     <div class="row gaper align-items-center">
+                        <div class="col-12 col-lg-5">
+                           <div class="offer__content section__content">
+                              <span class="sub-title">
+                                 DISPOZICE & CENY
+                                 <i class="fa-solid fa-arrow-right"></i>
+                              </span>
+                              <h2 class="title title-anim">
+                                 Exkluzivní přehled dispozic
+                              </h2>
+                              <div class="paragraph">
+                                 <p>Prozkoumejte dispozice našich 12 apartmánů. Každá jednotka má vlastní uzamykatelnou kóji na kolo nebo lyže se sušáky bot, garantované parkování a přímý přístup do stylového Lobby Baru.</p>
+                              </div>
+                              <div class="section__content-cta">
+                                 <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--secondary">
+                                    <span>Rezervovat přes Previo</span>
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-lg-7 col-xl-6 offset-xl-1">
+                           <div class="offer__cta">
+                              <div class="offer__cta-single fade-top cursor-pointer" onclick="openAptDetailModal(1)">
+                                 <span class="sub-title">01 <i class="fa-solid fa-arrow-right"></i></span>
+                                 <h2>
+                                    <a href="javascript:void(0)">
+                                       Mezonety &amp; Penthousy (Apt 1–3)
+                                       <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                 </h2>
+                                 <div class="offer-thumb-hover d-none d-md-block" data-background="assets/images/web/apt-living-balcony.jpg"></div>
+                              </div>
+
+                              <div class="offer__cta-single fade-top cursor-pointer" onclick="openAptDetailModal(2)">
+                                 <span class="sub-title">02 <i class="fa-solid fa-arrow-right"></i></span>
+                                 <h2>
+                                    <a href="javascript:void(0)">
+                                       Rodinné apartmány (Apt 4–8)
+                                       <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                 </h2>
+                                 <div class="offer-thumb-hover d-none d-md-block" data-background="assets/images/web/apt-living-dining.jpg"></div>
+                              </div>
+
+                              <div class="offer__cta-single fade-top cursor-pointer" onclick="openAptDetailModal(3)">
+                                 <span class="sub-title">03 <i class="fa-solid fa-arrow-right"></i></span>
+                                 <h2>
+                                    <a href="javascript:void(0)">
+                                       Designová studia (Apt 9–12)
+                                       <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                 </h2>
+                                 <div class="offer-thumb-hover d-none d-md-block" data-background="assets/images/web/apt-bedroom-loft.jpg"></div>
+                              </div>
+
+                              <div class="offer__cta-single fade-top cursor-pointer" onclick="openPrevioModal('Celá Rezidence Panorama (až 50 osob)')">
+                                 <span class="sub-title">04 <i class="fa-solid fa-arrow-right"></i></span>
+                                 <h2>
+                                    <a href="javascript:void(0)">
+                                       Lobby Bar &amp; Celá rezidence
+                                       <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                    </a>
+                                 </h2>
+                                 <div class="offer-thumb-hover d-none d-md-block" data-background="assets/images/web/lobby-bar-lounge.jpg"></div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Interactive Cursor Hover End ==== -->
+
+               <!-- ==== 06. ARCHITECTURE & CRAFTSMANSHIP (Xpovio Agency Section) ==== -->
+               <section class="section agency" id="about">
+                  <div class="container">
+                     <div class="row gaper align-items-center">
+                        <div class="col-12 col-lg-6">
+                           <div class="agency__thumb">
+                              <img src="assets/images/web/residence-exterior.jpg" alt="Exteriér Rezidence" class="thumb-one fade-left">
+                              <img src="assets/images/web/gallery-chalet.jpg" alt="Detail dřeva" class="thumb-two fade-right">
+                           </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                           <div class="agency__content section__content">
+                              <span class="sub-title">
+                                 <span data-i18n="about_sub">ARCHITEKTURA & HORSKÁ FILOZOFIE</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim" data-i18n="about_title">
+                                 Spojení masivního dřeva, žuly a nekonečného prostoru
+                              </h2>
+                              <div class="paragraph">
+                                 <p data-i18n="about_desc">
+                                    Apartmány Panorama představují harmonii přírodních materiálů a velkoformátových prosklených stěn. Každý apartmán byl navržen tak, aby poskytoval ničím nerušený výhled na horský masiv a maximální akustické soukromí.
+                                 </p>
+                              </div>
+                              <div class="skill-wrap">
+                                 <div class="skill-bar-single">
+                                    <div class="skill-bar-title">
+                                       <p class="primary-text" data-i18n="about_bar_1">Panoramatický výhled na masiv</p>
+                                    </div>
+                                    <div class="skill-bar-wrapper" data-percent="100%">
+                                       <div class="skill-bar">
+                                          <div class="skill-bar-percent">
+                                             <span class="percent-value"></span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="skill-bar-single">
+                                    <div class="skill-bar-title">
+                                       <p class="primary-text" data-i18n="about_bar_2">Akustický komfort a soukromí</p>
+                                    </div>
+                                    <div class="skill-bar-wrapper" data-percent="100%">
+                                       <div class="skill-bar">
+                                          <div class="skill-bar-percent">
+                                             <span class="percent-value"></span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="skill-bar-single">
+                                    <div class="skill-bar-title">
+                                       <p class="primary-text" data-i18n="about_bar_3">Nástupní stanice lanovky (150 m)</p>
+                                    </div>
+                                    <div class="skill-bar-wrapper" data-percent="95%">
+                                       <div class="skill-bar">
+                                          <div class="skill-bar-percent">
+                                             <span class="percent-value"></span>
+                                          </div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="section__content-cta mt-4">
+                                 <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--primary">
+                                    <span data-i18n="about_cta">Zjistit dostupnost v Previo</span>
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Architecture End ==== -->
+
+               <!-- ==== 07. COMFORT & AMENITIES (Xpovio Services Grid) ==== -->
+               <section class="section service" id="services" style="background: #080c10;">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                           <div class="section__header text-center">
+                              <span class="sub-title">
+                                 <span data-i18n="comfort_sub">KOMFORT & VYBAVENÍ</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim" data-i18n="comfort_title">
+                                 Vše pro váš bezstarostný horský pobyt
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="row gaper">
+                        <!-- 01. Vlastní kóje na lyže a kola -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-person-skiing" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_1_title">Vlastní Kóje na Lyže &amp; Kola</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_1_desc">
+                                 Každý ze 12 apartmánů má vlastní uzamykatelnou privátní kóji se sušáky na lyžařské boty a bezpečným prostorem pro kola včetně dobíjení elektrokol.
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- 02. Lobby Bar & Společenská zóna -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-martini-glass-citrus" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="#lobby-bar" data-i18n="comfort_card_2_title">Stylový Lobby Bar &amp; TV Lounge</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_2_desc">
+                                 Příjemná společenská zóna v přízemí pro ranní espresso, odpolední drinky a večerní sledování sportovních přenosů na velké obrazovce.
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- 03. Slunečné terasy a výhledy -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-mountain-sun" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_3_title">Slunečné Terasy &amp; Krby</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_3_desc">
+                                 Prostorné venkovní terasy s posezením, výhledem na horské masivy a biokrby v interiérech pro dokonalou horskou pohodu.
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- 04. Krytá garáž & Wallbox -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-charging-station" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_4_title">Krytá Garáž &amp; Wallbox</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_4_desc">
+                                 Pohodlné parkování v suchu pod domem s moderními dobíjecími stanicemi pro vaše elektromobily.
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- 05. Vysokorychlostní Wi-Fi & Smart TV -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-wifi" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_5_title">Optická Wi-Fi &amp; Smart TV</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_5_desc">
+                                 Rychlé stabilní optické připojení v celé rezidenci i v Lobby Baru a multimediální systémy v každém pokoji.
+                              </p>
+                           </div>
+                        </div>
+
+                        <!-- 06. Bezkontaktní Check-in 24/7 -->
+                        <div class="col-12 col-md-6 col-lg-4">
+                           <div class="service__single topy-tilt fade-top h-100">
+                              <div class="service__single-icon mb-3">
+                                 <i class="fa-solid fa-key" style="font-size: 30px; color: var(--primary-color);"></i>
+                              </div>
+                              <h4 class="mb-2">
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_6_title">Bezkontaktní Check-in 24/7</a>
+                              </h4>
+                              <p class="text-secondary small" data-i18n="comfort_card_6_desc">
+                                 Flexibilní příjezd v libovolný čas díky moderním elektronickým zámkům se zabezpečeným PIN kódem bez čekání.
+                              </p>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Comfort End ==== -->
+
+               <!-- ==== 07B. LOBBY BAR PANORAMA (Authentic Social Heart & Lounge) ==== -->
+               <section class="section lobby-bar-section" id="lobby-bar" style="background: #070a0e; padding-top: 100px; padding-bottom: 100px; border-top: 1px solid rgba(255,255,255,0.06);">
+                  <div class="container">
+                     <div class="row align-items-center gaper">
+                        <div class="col-12 col-lg-6">
+                           <div class="lobby-bar-media-wrap position-relative">
+                              <div class="lobby-bar-card-main">
+                                 <img src="assets/images/web/lobby-bar-evening.jpg" alt="Lobby Bar večer - posezení a sportovní přenosy" class="img-fluid rounded-4 shadow-lg w-100" style="border: 1px solid rgba(255,255,255,0.12); object-fit: cover; aspect-ratio: 4/3;">
+                                 <div class="lobby-bar-badge" style="position: absolute; bottom: 16px; left: 16px; background: rgba(10,14,20,0.88); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.14); padding: 7px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #fff;">
+                                    <i class="fa-solid fa-tv me-1" style="color: #ff7425;"></i> Velkoplošná TV &amp; Sportovní přenosy
+                                 </div>
+                              </div>
+                              <div class="lobby-bar-card-sub d-none d-md-block" style="position: absolute; top: -25px; right: -20px; z-index: 2;">
+                                 <img src="assets/images/web/lobby-bar-lounge.jpg" alt="Lobby Bar denní posezení a design" class="img-fluid rounded-4 shadow-lg" style="width: 200px; border: 2px solid #ff7425; object-fit: cover; aspect-ratio: 4/3;">
+                                 <div class="lobby-bar-sub-badge" style="position: absolute; bottom: 8px; left: 8px; background: rgba(10,14,20,0.92); border: 1px solid rgba(255,255,255,0.14); padding: 4px 10px; border-radius: 8px; font-size: 10.5px; font-weight: 700; color: #ff9d5c;">
+                                    <i class="fa-solid fa-mug-hot me-1"></i> Výběrová káva
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-12 col-lg-6">
+                           <div class="section__content">
+                              <span class="sub-title">
+                                 <span>SPOLEČENSKÉ SRDCE REZIDENCE</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim mb-3">
+                                 Stylový Lobby Bar &amp; Společenská zóna
+                              </h2>
+                              <div class="paragraph">
+                                 <p>
+                                    V přízemí rezidence na vás čeká příjemný Lobby Bar s neformální horskou atmosférou. Místo pro ranní espresso, odpolední drink po lyžování či cyklistice a večerní setkání u velkoplošné obrazovky se sportovními přenosy.
+                                 </p>
+                              </div>
+                              <div class="row g-3 mt-2 mb-4">
+                                 <div class="col-12 col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                                       <i class="fa-solid fa-beer-mug-empty" style="font-size: 22px; color: var(--primary-color);"></i>
+                                       <div>
+                                          <div class="fw-7 text-white" style="font-size: 13.5px;">Čepované pivo &amp; Bar</div>
+                                          <div class="text-secondary small">Lokální piva, výběrová vína a drinky</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                                       <i class="fa-solid fa-tv" style="font-size: 22px; color: var(--primary-color);"></i>
+                                       <div>
+                                          <div class="fw-7 text-white" style="font-size: 13.5px;">Sportovní přenosy</div>
+                                          <div class="text-secondary small">Velkoplošná TV pro zápasy a závody</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                                       <i class="fa-solid fa-people-group" style="font-size: 22px; color: var(--primary-color);"></i>
+                                       <div>
+                                          <div class="fw-7 text-white" style="font-size: 13.5px;">Kapacita pro skupiny</div>
+                                          <div class="text-secondary small">Masivní dřevěné stoly pro celou partu</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="col-12 col-sm-6">
+                                    <div class="d-flex align-items-center gap-3 p-3 rounded-3" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08);">
+                                       <i class="fa-solid fa-person-skiing" style="font-size: 22px; color: var(--primary-color);"></i>
+                                       <div>
+                                          <div class="fw-7 text-white" style="font-size: 13.5px;">Apres-ski &amp; Cyklo relax</div>
+                                          <div class="text-secondary small">Příjemné zahřátí po návratu ze svahu</div>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="section__content-cta d-flex gap-3 flex-wrap">
+                                 <a href="#gallery" class="btn btn--secondary">
+                                    <span>Prohlédnout fotogalerii</span>
+                                    <i class="fa-sharp fa-solid fa-arrow-down"></i>
+                                 </a>
+                                 <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--primary">
+                                    <span>Rezervovat pobyt</span>
+                                    <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                                 </a>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Lobby Bar End ==== -->
+
+               <!-- ==== 08. EXCLUSIVE RESIDENCE BUYOUT (Whole House) ==== -->
+               <section class="section cta-two" style="background: linear-gradient(135deg, rgba(20,20,20,0.95), rgba(8,12,18,0.98)); border-top: 1px solid rgba(255,255,255,0.06); border-bottom: 1px solid rgba(255,255,255,0.06);">
+                  <div class="container">
+                     <div class="row align-items-center gaper">
+                        <div class="col-12 col-lg-8">
+                           <div class="section__header text-start mb-0">
+                              <span class="sub-title">
+                                 <span data-i18n="whole_house_sub">EXKLUZIVNÍ PRONÁJEM</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim mb-3" data-i18n="whole_house_title">
+                                 Plánujete pobyt s přáteli nebo firemní retreat?
+                              </h2>
+                              <p class="text-secondary" data-i18n="whole_house_desc">
+                                 Pronajměte si celou rezidenci Apartmány Panorama pro až 50 osob (12 apartmánů, 50 lůžek) s exkluzivním využitím všech apartmánů, privátního Lobby Baru, společenské zóny a venkovních teras.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-lg-4 text-lg-end">
+                           <a href="javascript:void(0)" onclick="openPrevioModal('Celá Rezidence Panorama (až 50 osob • 12 apartmánů)')" class="btn btn--primary">
+                              <span data-i18n="whole_house_btn">Poptat celou rezidenci</span>
+                              <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                           </a>
+                        </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Whole House End ==== -->
+
+               <!-- ==== 09. TESTIMONIAL & GUEST REVIEWS (Continuous Marquee Row, ~3 visible on screen, Pause on Hover) ==== -->
+               <section class="section testimonial pb-5" id="reviews" style="background: #0b0d10; padding-top: 100px;">
+                  <div class="container">
+                     <div class="row justify-content-center">
+                        <div class="col-12 col-lg-8">
+                           <div class="section__header text-center mb-4">
+                              <span class="sub-title">
+                                 <span data-i18n="testimonial_sub">REFERENCE HOSTŮ</span>
+                                 <i class="fa-solid fa-arrow-right ms-1"></i>
+                              </span>
+                              <h2 class="title title-anim mb-3" data-i18n="testimonial_title">
+                                 Co o nás říkají naši hosté
+                              </h2>
+                              <!-- Trust Aggregate Badge -->
+                              <div class="d-inline-flex align-items-center gap-2 px-3 py-2 rounded-pill mt-2" style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.1);">
+                                 <span class="text-warning fw-8" style="font-size: 14px;"><i class="fa-solid fa-star me-1"></i>4.95 / 5.0</span>
+                                 <span class="text-white-50 small">•</span>
+                                 <span class="text-white small fw-6" data-i18n="reviews_aggregate">48 ověřených recenzí (Booking.com, Google, Previo)</span>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Full-width Continuous Marquee Ribbon (Glides left to right, pauses on hover) -->
+                  <div class="reviews-marquee-wrapper">
+                     <div class="reviews-marquee-track">
+                        <!-- Set 1 (Cards 1 to 11) -->
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Naprosto výjimečné místo. Výhled na zasněžené hory přímo ze soukromé střešní terasy byl zážitek na celý život. Dokonalý klid, designový interiér a sjezdovka doslova za rohem."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">TD</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Ing. Tomáš Dvořák</div>
+                                    <div class="review-stay-info">Praha • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Byli jsme nadšeni prosluněnou terasou s výhledem a volně stojící vanou s pohledem na horské hřebeny. Po celém dni na lyžích je to neskutečný relax. Určitě se vrátíme i v létě na elektrokola."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">KS</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">MUDr. Klára &amp; Jan Sýkorovi</div>
+                                    <div class="review-stay-info">Brno • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 3</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Jako architekt oceňuji precizní práci s přírodními materiály. Masivní dub, žula a velkoformátová okna. Špičková akustická izolace mezi apartmány – absolutní ticho a soukromí."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">DM</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Ing. arch. David Mareš</div>
+                                    <div class="review-stay-info">Liberec • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Celá Rezidence</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Pronajali jsme si celou rezidenci pro 4 spřátelené rodiny. Společenský prostor i soukromí jednotlivých apartmánů předčily očekávání. Vyhřívaná lyžárna a sušáky na boty jsou neocenitelné."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">PH</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Petra Horáková s rodinou</div>
+                                    <div class="review-stay-info">Hradec Králové • Silvestr 2025/26</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.8</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 4</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Wunderbares alpines Refugium. Přímý vstup do voňavého modřínového lesa a večery u biokrbu byly neskutečně romantické. Rychlé Wi-Fi připojení fungovalo bezchybně."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">MB</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Michael &amp; Sophie Bergmann</div>
+                                    <div class="review-stay-info">Wien • Pobyt: březen 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Firemní retreat vedení společnosti. Špičkový internet, vinotéka s výběrovými víny a 360° střešní terasa pro večerní networking. Profesionální přístup a stoprocentní soukromí."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">RC</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Radek Černý, IT Director</div>
+                                    <div class="review-stay-info">Ostrava • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Skutečný ski-in / ski-out komfort. Ráno nazujete lyže hned u rezidence a odpoledne sjedete přímo k domu. Velké plus za podzemní garáž s wallbox nabíječkou pro náš elektromobil."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">VT</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Veronika &amp; Filip Trojanovi</div>
+                                    <div class="review-stay-info">České Budějovice • prosinec 2025</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 3</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Kuchyně je vybavená lépe než u nás doma – indukce, ostrůvek, prémiový kávovar s čerstvou kávou a velký jídelní stůl pro celou partu. Ranní espresso na prosluněné jižní terase nemělo chybu."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">JK</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Jakub Král</div>
+                                    <div class="review-stay-info">Pardubice • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.8</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 4</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Nádherný podzimní relax v tichu přírody. Vysoké prémiové matrace a prémiové lůžkoviny nám dopřály nejlepší spánek za hodně dlouhou dobu. Všude vzorná čistota a vůně dřeva."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">HB</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Hana Blažková</div>
+                                    <div class="review-stay-info">Olomouc • Pobyt: podzim 2025</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Oceňujeme bezkontaktní check-in přes PIN kód, čistotu a špičkovou komunikaci. Večerní posezení na terase pod hvězdnou oblohou s výhledem do zasněženého údolí byl zlatým hřebem víkendu."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">MV</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Martin &amp; Andrea Vlčkovi</div>
+                                    <div class="review-stay-info">Plzeň • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Střešní terasa Apartmánu 1 nabízí bezkonkurenční 360° výhled na hřebeny. Děti milovaly velký prostor, my dospělí zase designový krb a pohodlí. Rozhodně doporučujeme."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">KN</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Kateřina Novotná</div>
+                                    <div class="review-stay-info">Praha • Pobyt: březen 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                        <!-- Set 2 (Cards 1 to 11 for seamless infinite loop) -->
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Naprosto výjimečné místo. Výhled na zasněžené hory přímo ze soukromé střešní terasy byl zážitek na celý život. Dokonalý klid, designový interiér a sjezdovka doslova za rohem."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">TD</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Ing. Tomáš Dvořák</div>
+                                    <div class="review-stay-info">Praha • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Byli jsme nadšeni prosluněnou terasou s výhledem a volně stojící vanou s pohledem na horské hřebeny. Po celém dni na lyžích je to neskutečný relax. Určitě se vrátíme i v létě na elektrokola."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">KS</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">MUDr. Klára &amp; Jan Sýkorovi</div>
+                                    <div class="review-stay-info">Brno • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 3</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Jako architekt oceňuji precizní práci s přírodními materiály. Masivní dub, žula a velkoformátová okna. Špičková akustická izolace mezi apartmány – absolutní ticho a soukromí."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">DM</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Ing. arch. David Mareš</div>
+                                    <div class="review-stay-info">Liberec • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Celá Rezidence</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Pronajali jsme si celou rezidenci pro 4 spřátelené rodiny. Společenský prostor i soukromí jednotlivých apartmánů předčily očekávání. Vyhřívaná lyžárna a sušáky na boty jsou neocenitelné."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">PH</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Petra Horáková s rodinou</div>
+                                    <div class="review-stay-info">Hradec Králové • Silvestr 2025/26</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.8</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 4</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Wunderbares alpines Refugium. Přímý vstup do voňavého modřínového lesa a večery u biokrbu byly neskutečně romantické. Rychlé Wi-Fi připojení fungovalo bezchybně."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">MB</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Michael &amp; Sophie Bergmann</div>
+                                    <div class="review-stay-info">Wien • Pobyt: březen 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Firemní retreat vedení společnosti. Špičkový internet, vinotéka s výběrovými víny a 360° střešní terasa pro večerní networking. Profesionální přístup a stoprocentní soukromí."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">RC</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Radek Černý, IT Director</div>
+                                    <div class="review-stay-info">Ostrava • Pobyt: únor 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Skutečný ski-in / ski-out komfort. Ráno nazujete lyže hned u rezidence a odpoledne sjedete přímo k domu. Velké plus za podzemní garáž s wallbox nabíječkou pro náš elektromobil."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">VT</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Veronika &amp; Filip Trojanovi</div>
+                                    <div class="review-stay-info">České Budějovice • prosinec 2025</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 3</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Kuchyně je vybavená lépe než u nás doma – indukce, ostrůvek, prémiový kávovar s čerstvou kávou a velký jídelní stůl pro celou partu. Ranní espresso na prosluněné jižní terase nemělo chybu."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">JK</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Jakub Král</div>
+                                    <div class="review-stay-info">Pardubice • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.8</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 4</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Nádherný podzimní relax v tichu přírody. Vysoké prémiové matrace a prémiové lůžkoviny nám dopřály nejlepší spánek za hodně dlouhou dobu. Všude vzorná čistota a vůně dřeva."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">HB</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Hana Blažková</div>
+                                    <div class="review-stay-info">Olomouc • Pobyt: podzim 2025</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                                       <span class="text-white ms-1 fw-7 small">5.0</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 2</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Oceňujeme bezkontaktní check-in přes PIN kód, čistotu a špičkovou komunikaci. Večerní posezení na terase pod hvězdnou oblohou s výhledem do zasněženého údolí byl zlatým hřebem víkendu."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">MV</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Martin &amp; Andrea Vlčkovi</div>
+                                    <div class="review-stay-info">Plzeň • Pobyt: leden 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="floating-review-card">
+                              <div>
+                                 <div class="d-flex justify-content-between align-items-center mb-2">
+                                    <div class="review-stars">
+                                       <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star-half-stroke"></i>
+                                       <span class="text-white ms-1 fw-7 small">4.9</span>
+                                    </div>
+                                    <span class="review-badge">Apartmán 1</span>
+                                 </div>
+                                 <p class="review-quote">
+                                    "Střešní terasa Apartmánu 1 nabízí bezkonkurenční 360° výhled na hřebeny. Děti milovaly velký prostor, my dospělí zase designový krb a pohodlí. Rozhodně doporučujeme."
+                                 </p>
+                              </div>
+                              <div class="review-author-wrap">
+                                 <div class="review-avatar">KN</div>
+                                 <div class="review-author-info">
+                                    <div class="review-author-name">Kateřina Novotná</div>
+                                    <div class="review-stay-info">Praha • Pobyt: březen 2026</div>
+                                 </div>
+                              </div>
+                           </div>
+                     </div>
+                  </div>
+               </section>
+               <!-- ==== / Testimonial End ==== -->
+
+               <!-- ==== 10. PHOTO GALLERY WITH 2026 LUXURY CINEMA LIGHTBOX ==== -->
+                <section class="section gallery" id="gallery" style="background: #07090c; padding-top: 110px; padding-bottom: 110px;">
+                   <div class="container">
+                      <div class="row justify-content-center">
+                         <div class="col-12 col-lg-8">
+                            <div class="section__header text-center">
+                               <span class="sub-title">
+                                  <span data-i18n="gallery_sub">MOMENTY Z PANORAMA</span>
+                                  <i class="fa-solid fa-arrow-right ms-1"></i>
+                               </span>
+                               <h2 class="title title-anim" data-i18n="gallery_title">
+                                  Fotogalerie rezidence a hor
+                               </h2>
+                               <p class="text-secondary small mt-2" data-i18n="gallery_desc">
+                                  Prozkoumejte autentickou atmosféru horské rezidence, designových apartmánů a okolní alpské přírody.
+                                </p>
+                            </div>
+                         </div>
+                      </div>
+
+                      <!-- 2026 Filter Pills Bar -->
+                      <div class="gallery-filter-bar d-flex flex-wrap justify-content-center align-items-center gap-2">
+                         <button class="gallery-filter-btn active" data-filter="all" onclick="filterPanoramaGallery('all')">
+                            <i class="fa-solid fa-border-all"></i>
+                            <span data-i18n="filter_all">Všechny momenty (12)</span>
+                         </button>
+                         <button class="gallery-filter-btn" data-filter="interiors" onclick="filterPanoramaGallery('interiors')">
+                            <i class="fa-solid fa-couch"></i>
+                            <span data-i18n="filter_interiors">Apartmány &amp; Interiéry</span>
+                         </button>
+                         <button class="gallery-filter-btn" data-filter="lobby" onclick="filterPanoramaGallery('lobby')">
+                            <i class="fa-solid fa-martini-glass-citrus"></i>
+                            <span data-i18n="filter_lobby">Lobby Bar &amp; Lounge</span>
+                         </button>
+                         <button class="gallery-filter-btn" data-filter="residence" onclick="filterPanoramaGallery('residence')">
+                            <i class="fa-solid fa-hotel"></i>
+                            <span data-i18n="filter_residence">Rezidence &amp; Exteriér</span>
+                         </button>
+                         <button class="gallery-filter-btn" data-filter="nature" onclick="filterPanoramaGallery('nature')">
+                            <i class="fa-solid fa-mountain-sun"></i>
+                            <span data-i18n="filter_nature">Hory &amp; Okolí</span>
+                         </button>
+                      </div>
+
+                      <!-- 2026 Editorial Asymmetric Grid (All photo texts = placeholder) -->
+                      <div class="gallery-grid-2026" id="panorama-gallery-grid">
+                         <!-- 01. Living Room with Balcony & Wood Slats -->
+                         <div class="gallery-card span-hero" data-category="interiors" onclick="openPanoramaLightbox(0)">
+                            <img src="assets/images/web/apt-living-balcony.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                                </div>
+                            </div>
+                         </div>
+
+                         <!-- 02. Lobby Bar Evening Atmosphere -->
+                         <div class="gallery-card span-tall" data-category="lobby" onclick="openPanoramaLightbox(1)">
+                            <img src="assets/images/web/lobby-bar-evening.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 03. Living Room & Dining Area Bublava -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(2)">
+                            <img src="assets/images/web/apt-living-dining.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 04. Lobby Bar Day Lounge -->
+                         <div class="gallery-card span-medium" data-category="lobby" onclick="openPanoramaLightbox(3)">
+                            <img src="assets/images/web/lobby-bar-lounge.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 05. Loft Bedroom with Skylight -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(4)">
+                            <img src="assets/images/web/apt-bedroom-loft.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 06. Residence Exterior -->
+                         <div class="gallery-card span-wide" data-category="residence" onclick="openPanoramaLightbox(5)">
+                            <img src="assets/images/web/residence-exterior.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 07. Winter Ski-in / Ski-out -->
+                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(6)">
+                            <img src="assets/images/web/winter-ski.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 08. Chalet Architecture & Wood Detail -->
+                         <div class="gallery-card span-medium" data-category="residence" onclick="openPanoramaLightbox(7)">
+                            <img src="assets/images/web/gallery-chalet.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 09. Summer Mountain Ridge -->
+                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(8)">
+                            <img src="assets/images/web/summer-hiking.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 10. Evening Mountain Lodge -->
+                         <div class="gallery-card span-medium" data-category="residence" onclick="openPanoramaLightbox(9)">
+                            <img src="assets/images/web/gallery-lodge.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 11. Mountain Lake -->
+                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(10)">
+                            <img src="assets/images/web/gallery-lake.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 12. Bublava Valley Village -->
+                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(11)">
+                            <img src="assets/images/web/location-village.jpg" alt="placeholder" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">placeholder</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">placeholder</h3>
+                                  <p class="gallery-card-desc">placeholder</p>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                   </div>
+                </section>
+                <!-- ==== / Gallery End ==== -->
+
+            </main>
+            <!-- ==== / Main End ==== -->
+
+            <!-- ==== 11. AUTHENTIC XPOVIO FOOTER START ==== -->
+            <footer class="footer-two section footer-cmn section pb-0" id="contact">
+               <div class="container">
+                  <div class="row gaper">
+                     <div class="col-12 col-lg-5 col-xl-4">
+                        <div class="footer-two__left">
+                           <div class="logo">
+                              <a href="index.html" class="text-decoration-none mb-3 d-inline-block">
+                                 <img src="assets/images/logo/panorama-logo.svg" alt="Apartmány Panorama" style="height: 44px; width: auto;">
+                              </a>
+                           </div>
+                           <div class="paragraph">
+                              <p data-i18n="footer_desc">
+                                 Exkluzivní horské ubytování s atmosférou alpského luxusu, prémiovým komfortem a dechberoucími výhledy.
+                              </p>
+                           </div>
+                           <div class="section__content-cta">
+                              <h2>
+                                 <a href="mailto:info@apartmany-panorama.cz" class="folks-text">info@apartmany-panorama.cz</a>
+                              </h2>
+                           </div>
+                        </div>
+                     </div>
+                     <div class="col-12 col-lg-7 col-xl-7 offset-xl-1 col-xxl-5 offset-xxl-3">
+                        <div class="footer-two__right">
+                           <div class="social justify-content-start justify-content-lg-start">
+                              <a href="https://www.facebook.com/" target="_blank">
+                                 <i class="fa-brands fa-facebook-f"></i>
+                                 <span>Facebook</span>
+                              </a>
+                              <a href="https://www.instagram.com/" target="_blank">
+                                 <i class="fa-brands fa-instagram"></i>
+                                 <span>Instagram</span>
+                              </a>
+                              <a href="https://www.airbnb.com/" target="_blank">
+                                 <i class="fa-brands fa-airbnb"></i>
+                                 <span>Airbnb</span>
+                              </a>
+                           </div>
+                           <div class="footer__single-meta section__content-cta">
+                              <a href="javascript:void(0)">
+                                 <i class="fa-sharp fa-solid fa-location-dot"></i>
+                                 <span data-i18n="footer_address">Bublava 791</span>
+                              </a>
+                              <a href="tel:+420777123456">
+                                 <i class="fa-sharp fa-solid fa-phone-volume"></i>
+                                 <span data-i18n="footer_phone">+420 777 123 456</span>
+                              </a>
+                              <a href="mailto:info@apartmany-panorama.cz">
+                                 <i class="fa-sharp fa-solid fa-envelope"></i>
+                                 <span data-i18n="footer_email">info@apartmany-panorama.cz</span>
+                              </a>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <div class="footer__copyright">
+                  <div class="container">
+                     <div class="row align-items-center gaper">
+                        <div class="col-12 col-xl-6">
+                           <div class="footer__copyright-text text-center text-xl-start">
+                              <p>
+                                 Copyright &copy; <span id="copyYear">2026</span> Apartmány Panorama. Všechna práva vyhrazena.
+                              </p>
+                           </div>
+                        </div>
+                        <div class="col-12 col-xl-6">
+                           <ul class="justify-content-center justify-content-xl-end">
+                              <li><a href="#home" data-i18n="nav_home">Domů</a></li>
+                              <li><a href="#apartments" data-i18n="nav_apartments">Apartmány</a></li>
+                              <li><a href="#about" data-i18n="nav_about">O rezidenci</a></li>
+                              <li><a href="#gallery" data-i18n="nav_gallery">Galerie</a></li>
+                              <li><a href="javascript:void(0)" onclick="openPrevioModal()">Previo Booking</a></li>
+                           </ul>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </footer>
+            <!-- ==== / Footer End ==== -->
+
+         </div>
+      </div>
+      <!-- ==== / Smooth Wrapper End ==== -->
+
+      <!-- ==== PINNED BOTTOM BOOKING BAR (Všudypřítomná lišta s datumy) ==== -->
+      <div id="pinned-booking-bar" class="pinned-booking-bar" role="region" aria-label="Rychlá rezervace a termíny">
+         <!-- Desktop Grid Layout (>= 992px) -->
+         <div class="pinned-desktop-grid">
+            <div class="row g-2 align-items-center">
+               <!-- 1. Check-in Field -->
+               <div class="col-3 position-relative">
+                  <div class="pinned-field-group">
+                     <span class="pinned-field-label" data-i18n="book_checkin">Příjezd</span>
+                     <div class="custom-date-trigger pinned-date-trigger" id="pinned-checkin-trigger" onclick="toggleAlpineCalendar('checkin', 'pinned')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
+                        <div class="custom-date-trigger__info">
+                           <i class="fa-regular fa-calendar-days custom-date-trigger__icon"></i>
+                           <span class="custom-date-trigger__val" id="pinned-checkin-val">15. 10. 2026</span>
+                        </div>
+                        <span class="custom-date-trigger__day" id="pinned-checkin-day">Čt</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 2. Check-out Field -->
+               <div class="col-3 position-relative">
+                  <div class="pinned-field-group">
+                     <span class="pinned-field-label" data-i18n="book_checkout">Odjezd</span>
+                     <div class="custom-date-trigger pinned-date-trigger" id="pinned-checkout-trigger" onclick="toggleAlpineCalendar('checkout', 'pinned')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
+                        <div class="custom-date-trigger__info">
+                           <i class="fa-regular fa-calendar-days custom-date-trigger__icon"></i>
+                           <span class="custom-date-trigger__val" id="pinned-checkout-val">19. 10. 2026</span>
+                        </div>
+                        <span class="custom-date-trigger__day" id="pinned-checkout-day">Po</span>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 3. Apartment Custom Luxury Dropdown -->
+               <div class="col-3 position-relative">
+                  <div class="pinned-field-group">
+                     <span class="pinned-field-label" data-i18n="book_apartment">Apartmán</span>
+                     <div class="custom-dropdown pinned-custom-dropdown" id="pinned-apt-dropdown-container">
+                        <button type="button" class="custom-dropdown__trigger pinned-dropdown-trigger" id="pinned-apt-dropdown-trigger" onclick="togglePinnedAptDropdown(event)" aria-haspopup="listbox" aria-expanded="false">
+                           <div class="custom-dropdown__trigger-content">
+                              <i class="fa-solid fa-mountain-city custom-dropdown__trigger-icon"></i>
+                              <span class="custom-dropdown__selected-text" id="pinned-apt-selected" data-i18n="book_all_apts">Všechny apartmány (nebo Celý dům)</span>
+                           </div>
+                           <i class="fa-solid fa-chevron-up custom-dropdown__chevron pinned-chevron"></i>
+                        </button>
+
+                         <div class="custom-dropdown__menu pinned-dropdown-menu" id="pinned-apt-dropdown-menu" role="listbox">
+                            <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny apartmány (nebo Celý dům)', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-layer-group"></i>
+                                  <span class="custom-dropdown__option-title" data-i18n="book_all_apts">Všechny apartmány (nebo Celý dům)</span>
+                               </div>
+                               <span class="custom-dropdown__badge">12 apartmánů • 50 lůžek</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="1" onclick="selectAptOption('1', 'Apartmán 1', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 1</span>
+                               </div>
+                               <span class="custom-dropdown__badge">6–8 osob • 115 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="2" onclick="selectAptOption('2', 'Apartmán 2', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 2</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4–6 osob • 72 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="3" onclick="selectAptOption('3', 'Apartmán 3', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 3</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4–6 osob • 68 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="4" onclick="selectAptOption('4', 'Apartmán 4', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 4</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4 osoby • 58 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Apartmán 5', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 5</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4 osoby • 56 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Apartmán 6', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 6</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4 osoby • 54 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="7" onclick="selectAptOption('7', 'Apartmán 7', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 7</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4 osoby • 52 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="8" onclick="selectAptOption('8', 'Apartmán 8', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 8</span>
+                               </div>
+                               <span class="custom-dropdown__badge">4 osoby • 48 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="9" onclick="selectAptOption('9', 'Apartmán 9', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 9</span>
+                               </div>
+                               <span class="custom-dropdown__badge">3 osoby • 44 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Apartmán 10', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 10</span>
+                               </div>
+                               <span class="custom-dropdown__badge">3 osoby • 42 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="11" onclick="selectAptOption('11', 'Apartmán 11', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 11</span>
+                               </div>
+                               <span class="custom-dropdown__badge">2 osoby • 38 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                            <div class="custom-dropdown__option" data-value="12" onclick="selectAptOption('12', 'Apartmán 12', this)">
+                               <div class="custom-dropdown__option-main">
+                                  <i class="fa-solid fa-door-open"></i>
+                                  <span class="custom-dropdown__option-title">Apartmán 12</span>
+                               </div>
+                               <span class="custom-dropdown__badge">2 osoby • 36 m²</span>
+                               <i class="fa-solid fa-check custom-dropdown__check"></i>
+                            </div>
+                         </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- 4. CTA Button & Live Pricing -->
+               <div class="col-3">
+                  <div class="pinned-cta-col">
+                     <button type="button" onclick="openPrevioModal()" class="btn btn--primary pinned-cta-btn">
+                        <span data-i18n="book_cta">Ověřit dostupnost (Previo)</span>
+                        <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
+                     </button>
+                     <div class="booking-live-price pinned-live-price" id="pinned-booking-live-price">
+                        <i class="fa-solid fa-tag" style="font-size: 10px; color: #ff9d5c;"></i>
+                        <span>Kalkulace: <strong>70 000 Kč</strong> <span style="font-size: 10px; opacity: 0.7;">(4 noci)</span></span>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+
+         <!-- Mobile Bar Layout (< 992px) -->
+         <div class="pinned-mobile-bar">
+            <div class="pinned-mobile-trigger" id="pinned-mobile-trigger" onclick="toggleAlpineCalendar('checkin', 'pinned')" role="button" tabindex="0">
+               <div class="pinned-mobile-dates">
+                  <i class="fa-regular fa-calendar-days"></i>
+                  <span id="pinned-mobile-dates-text">15. 10. – 19. 10.</span>
+                  <span class="pinned-mobile-dot">•</span>
+                  <span id="pinned-mobile-apt-text">Všechny apartmány</span>
+               </div>
+               <div class="pinned-mobile-sub" id="pinned-mobile-sub-text">
+                  Kalkulace: 70 000 Kč (4 noci)
+               </div>
+            </div>
+            <button type="button" onclick="openPrevioModal()" class="btn btn--primary pinned-mobile-btn">
+               <span data-i18n="nav_book">Rezervovat</span>
+               <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
+            </button>
+         </div>
+
+         <!-- Upward Alpine Calendar Popover Slot -->
+         <div id="pinned-calendar-slot" class="pinned-calendar-slot"></div>
+      </div>
+
+      <!-- ==== VIDEO TOUR MODAL ==== -->
+      <div id="video-modal" class="previo-modal">
+         <div class="previo-modal-content" style="max-width: 820px;">
+            <div class="previo-close-btn" onclick="closeVideoModal()">
+               <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-2">
+               <div class="modal-header-icon-badge">
+                  <span class="icon-pulse-ring"></span>
+                  <i class="fa-solid fa-play"></i>
+               </div>
+               <div>
+                  <h3 class="h5 text-white fw-7 m-0" data-i18n="video_modal_title">Videoprohlídka Apartmány Panorama</h3>
+                  <span class="text-white-50" style="font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;" data-i18n="video_modal_sub">4K Ultra HD • Rezidence &amp; Apartmány</span>
+               </div>
+            </div>
+            <p class="text-secondary small mb-3" data-i18n="video_modal_desc">
+               Prohlédněte si atmosféru luxusních apartmánů, horské architektury a okolní přírody.
+            </p>
+            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3" style="border: 1px solid rgba(255,255,255,0.15); background: #000;">
+               <iframe id="video-tour-iframe" src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&enablejsapi=1" title="Apartmány Panorama Video Tour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25 small text-secondary">
+               <span><i class="fa-solid fa-circle-info text-warning me-1"></i> <span data-i18n="video_modal_note">Videopřehrávač je připraven pro vložení vaší finální 4K videoprohlídky rezidence.</span></span>
+               <button onclick="closeVideoModal(); openPrevioModal();" class="btn btn--primary" style="padding: 8px 18px; font-size: 11px;">
+                  <span data-i18n="hero_cta_book">Ověřit termíny</span>
+                  <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
+               </button>
+            </div>
+         </div>
+      </div>
+
+      <!-- ==== PREVIO INTEGRATION MODAL ==== -->
+      <div id="previo-modal" class="previo-modal">
+         <div class="previo-modal-content">
+            <div class="previo-close-btn" onclick="closePrevioModal()">
+               <i class="fa-solid fa-xmark"></i>
+            </div>
+            <div class="d-flex align-items-center gap-3 mb-2">
+               <div class="modal-header-icon-badge">
+                  <span class="icon-pulse-ring"></span>
+                  <i class="fa-solid fa-calendar-check"></i>
+               </div>
+               <div>
+                  <h3 class="h5 text-white fw-7 m-0" data-i18n="previo_modal_title">Rezervační systém Previo</h3>
+                  <span class="text-white-50" style="font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;" data-i18n="previo_modal_sub">Oficiální přímá rezervace • Garance nejlepší ceny</span>
+               </div>
+            </div>
+            <p class="text-secondary small mb-4" data-i18n="previo_modal_note">
+               Online ověření dostupnosti a okamžitá kalkulace ceny v reálném čase.
+            </p>
+            <!-- Clean Structured Reservation Summary -->
+            <div class="previo-summary-card">
+               <div class="row g-3">
+                  <div class="col-12 col-md-6 previo-summary-item">
+                     <span class="previo-summary-label">
+                        <i class="fa-regular fa-calendar-days text-warning"></i>
+                        <span data-i18n="previo_dates">Termín pobytu:</span>
+                     </span>
+                     <span class="previo-summary-value" id="modal-summary-dates">2026-10-15 <i class="fa-solid fa-arrow-right-long text-warning mx-2"></i> 2026-10-19</span>
+                  </div>
+                  <div class="col-12 col-md-6 previo-summary-item">
+                     <span class="previo-summary-label">
+                        <i class="fa-regular fa-user-group text-warning"></i>
+                        <span data-i18n="previo_guests">Hosté:</span>
+                     </span>
+                     <span class="previo-summary-value" id="modal-summary-guests">2 dospělí / hosté</span>
+                  </div>
+                  <div class="col-12 previo-summary-item pt-3 border-top border-secondary border-opacity-25">
+                     <span class="previo-summary-label">
+                        <i class="fa-regular fa-bed-front text-warning"></i>
+                        <span data-i18n="previo_unit">Vybraný apartmán:</span>
+                     </span>
+                     <span class="previo-summary-value text-warning" id="modal-summary-apt">Apartmán 1</span>
+                  </div>
+                  <div class="col-12 previo-summary-item pt-2 border-top border-secondary border-opacity-25">
+                     <span class="previo-summary-label">
+                        <i class="fa-regular fa-tag text-warning"></i>
+                        <span>Předběžná kalkulace:</span>
+                     </span>
+                     <span class="previo-summary-value text-white fw-bold" id="modal-summary-price">70 000 Kč (4 noci)</span>
+                  </div>
+               </div>
+            </div>
+
+            <!-- Previo Engine Placeholder -->
+            <div class="previo-engine-box">
+               <div class="previo-engine-badge">
+                  <span style="width: 8px; height: 8px; border-radius: 50%; background: var(--primary-color); display: inline-block;"></span>
+                  <span>PREVIO RESERVATION ENGINE</span>
+               </div>
+               <p data-i18n="previo_placeholder_info">
+                  Zde se integruje oficiální rezervační engine Previo. Po propojení vašeho Previo Hotel ID budou moci hosté platit platební kartou a potvrdit rezervaci okamžitě v reálném čase.
+               </p>
+               <div class="previo-code-block">&lt;!-- Previo Booking Engine Widget --&gt;
+&lt;div id="previo-booking-widget" data-hotel-id="YOUR_HOTEL_ID"&gt;&lt;/div&gt;
+&lt;script src="https://booking.previo.app/widget.js" async&gt;&lt;/script&gt;</div>
+            </div>
+            <button onclick="alert('Skvěle! Jakmile budete mít přiděleno ID hotelu z Previo.cz, vložíme sem přímý iframe kód a online rezervace poběží.'); closePrevioModal();" class="btn btn--primary w-100">
+               <span data-i18n="previo_confirm_btn">Přejít k dokončení rezervace v Previo</span>
+               <i class="fa-sharp fa-solid fa-arrow-up-right ms-2"></i>
+            </button>
+         </div>
+      </div>
+
+      
+      <!-- ==== 2026 LUXURY CINEMA LIGHTBOX MODAL ==== -->
+      <div id="panorama-lightbox" class="panorama-lightbox" role="dialog" aria-modal="true" aria-label="Fotogalerie">
+         <div class="lightbox-backdrop" onclick="closePanoramaLightbox()"></div>
+
+         <!-- Lightbox Top Navigation Bar -->
+         <div class="lightbox-topbar">
+            <div class="lightbox-info">
+               <div class="lightbox-counter">
+                  <span id="lb-current-index">01</span>
+                  <span class="lightbox-counter-slash">/</span>
+                  <span id="lb-total-count">10</span>
+               </div>
+               <div class="lightbox-meta">
+                  <span class="lightbox-category" id="lb-category">placeholder</span>
+                  <h3 class="lightbox-title" id="lb-title">placeholder</h3>
+               </div>
+            </div>
+            <div class="lightbox-actions">
+               <button class="lightbox-btn" onclick="toggleLightboxZoom()" id="lb-zoom-btn" title="Přiblížit (Zoom)" aria-label="zoom">
+                  <i class="fa-solid fa-magnifying-glass-plus"></i>
+               </button>
+               <button class="lightbox-btn" onclick="toggleLightboxFullscreen()" id="lb-fs-btn" title="Celá obrazovka" aria-label="fullscreen">
+                  <i class="fa-solid fa-expand"></i>
+               </button>
+               <button class="lightbox-btn lb-close-btn" onclick="closePanoramaLightbox()" title="Zavřít galerii (Esc)" aria-label="close">
+                  <i class="fa-solid fa-xmark"></i>
+               </button>
+            </div>
+         </div>
+
+         <!-- Lightbox Main Stage -->
+         <div class="lightbox-stage">
+            <button class="lightbox-nav-btn lb-prev-btn" onclick="prevPanoramaImage()" aria-label="Předchozí fotografie" title="Předchozí (šipka vlevo)">
+               <i class="fa-solid fa-chevron-left"></i>
+            </button>
+
+            <div class="lightbox-image-container" id="lb-img-container" onclick="toggleLightboxZoom()">
+               <img id="lb-main-image" src="" alt="" class="lightbox-main-img">
+            </div>
+
+            <button class="lightbox-nav-btn lb-next-btn" onclick="nextPanoramaImage()" aria-label="Další fotografie" title="Další (šipka vpravo)">
+               <i class="fa-solid fa-chevron-right"></i>
+            </button>
+         </div>
+
+         <!-- Lightbox Bottom Filmstrip & Caption -->
+         <div class="lightbox-bottombar">
+            <div class="lightbox-caption-text" id="lb-desc">
+               placeholder
+            </div>
+            <div class="lightbox-filmstrip-track" id="lb-filmstrip">
+               <!-- Thumbnails dynamically rendered via JS -->
+            </div>
+         </div>
+      </div>
+
+      <!-- ==== 2026 LUXURY APARTMENT DETAIL SHOWCASE MODAL ==== -->
+      <div id="apt-detail-modal" class="apt-showcase-modal" role="dialog" aria-modal="true" aria-label="Detail apartmánu">
+         <div class="apt-showcase-backdrop" onclick="closeAptDetailModal()"></div>
+         
+         <div class="apt-showcase-dialog">
+            <!-- Floating Frosted Glass Close Button -->
+            <button class="apt-showcase-close" onclick="closeAptDetailModal()" aria-label="Zavřít detail">
+               <i class="fa-solid fa-xmark"></i>
+            </button>
+
+            <div class="apt-showcase-body">
+               <!-- Left Column: Visual Cinema Stage -->
+               <div class="apt-showcase-media">
+                  <div class="apt-showcase-img-wrap">
+                     <img id="apt-modal-img" src="assets/images/web/apt-living-balcony.jpg" alt="Detail apartmánu" class="apt-showcase-img">
+                     <div class="apt-showcase-img-overlay">
+                        <div class="apt-showcase-badge">
+                           <span class="badge-dot"></span>
+                           <span>Rezidence Panorama</span>
+                        </div>
+                        <div class="apt-showcase-tagline" id="apt-modal-tagline">
+                           115 m² • 6–8 hostů • Krušné hory • Bublava
+                        </div>
+                     </div>
+                  </div>
+               </div>
+
+               <!-- Right Column: Editorial Details & Sticky Dock -->
+               <div class="apt-showcase-content">
+                  <div class="apt-showcase-scroll">
+                     <!-- Section Eyebrow with Luminous Runway Line -->
+                     <div class="apt-eyebrow-wrap">
+                        <span class="sub-title mb-2">
+                           <span id="apt-modal-category">MEZONET &amp; STŘEŠNÍ TERASA</span>
+                        </span>
+                     </div>
+
+                     <!-- Main Title -->
+                     <h2 id="apt-modal-title" class="apt-showcase-title">Apartmán 1</h2>
+
+                     <!-- Architectural Spec Chips -->
+                     <div class="apt-spec-grid" id="apt-modal-specs">
+                        <div class="apt-spec-chip"><i class="fa-solid fa-vector-square"></i><span>115 m² obytná plocha</span></div>
+                        <div class="apt-spec-chip"><i class="fa-solid fa-users"></i><span>Až 8 dospělých hostů</span></div>
+                        <div class="apt-spec-chip"><i class="fa-solid fa-bed"></i><span>3 samostatné ložnice</span></div>
+                        <div class="apt-spec-chip"><i class="fa-solid fa-mountain-sun"></i><span>360° střešní terasa</span></div>
+                     </div>
+
+                     <!-- Description -->
+                     <p id="apt-modal-desc" class="apt-showcase-desc">
+                        Exkluzivní mezonetový penthouse zabírající celé nejvyšší patro rezidence. Nabízí velkorysé panoramatické výhledy na horské hřebeny, designový oboustranný krb a soukromou 360° střešní terasu s posezením.
+                     </p>
+
+                     <!-- Amenities Section -->
+                     <div class="apt-features-section">
+                        <div class="apt-features-header">
+                           <span class="apt-features-label" data-i18n="modal_amenities">Vybavení &amp; Komfort</span>
+                           <span class="apt-features-line"></span>
+                        </div>
+                        <div class="apt-features-grid" id="apt-modal-features">
+                           <div class="apt-feature-tile"><i class="fa-solid fa-fire-flame-curved"></i><span>Prosklený designový krb v salonu</span></div>
+                           <div class="apt-feature-tile"><i class="fa-solid fa-wine-glass"></i><span>Vinotéka s výběrovými víny</span></div>
+                           <div class="apt-feature-tile"><i class="fa-solid fa-bath"></i><span>2x designová kamenná koupelna</span></div>
+                           <div class="apt-feature-tile"><i class="fa-solid fa-mug-saucer"></i><span>Prémiový kávovar s čerstvou kávou</span></div>
+                           <div class="apt-feature-tile"><i class="fa-solid fa-wifi"></i><span>Optická Wi-Fi &amp; Smart TV s audiem</span></div>
+                           <div class="apt-feature-tile"><i class="fa-solid fa-shield-halved"></i><span>Bezkontaktní přístup na PIN kód</span></div>
+                        </div>
+                     </div>
+                  </div>
+
+                  <!-- Sticky Luxury Booking Dock -->
+                  <div class="apt-showcase-footer">
+                     <div class="apt-price-block">
+                        <span class="apt-price-label" data-i18n="modal_price_from">Cena od</span>
+                        <div class="apt-price-val">
+                           <span id="apt-modal-price" class="apt-price-number">6 800 Kč</span>
+                           <span class="apt-price-period" data-i18n="modal_per_night">/ noc</span>
+                        </div>
+                        <span class="apt-price-guarantee">
+                           <i class="fa-solid fa-shield-halved"></i>
+                           <span data-i18n="modal_best_price">Garance nejlepší ceny</span>
+                        </span>
+                     </div>
+                     <button id="apt-modal-book-btn" class="apt-book-btn">
+                        <span data-i18n="modal_book_previo">Rezervovat v Previo</span>
+                        <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
+                     </button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+
+   </div>
+
+   <!-- ==== JS Dependencies from Xpovio ==== -->
+   <script src="assets/vendor/jquery/jquery-3.7.0.min.js"></script>
+   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="assets/vendor/nice-select/js/jquery.nice-select.min.js"></script>
+   <script src="assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js"></script>
+   <script src="assets/vendor/slick/js/slick.min.js"></script>
+   <script src="assets/vendor/images-loaded/imagesloaded.pkgd.min.js"></script>
+   <script src="assets/vendor/isotope/isotope.pkgd.min.js"></script>
+   
+   <!-- GSAP Suite (ScrollSmoother, ScrollTrigger, SplitText) -->
+   <script src="assets/vendor/gsap/gsap.min.js"></script>
+   <script src="assets/vendor/gsap/ScrollTrigger.min.js"></script>
+   <script src="assets/vendor/gsap/ScrollToPlugin.min.js"></script>
+   <script src="assets/vendor/gsap/ScrollSmoother.min.js"></script>
+   <script src="assets/vendor/gsap/SplitText.min.js"></script>
+   <script src="assets/vendor/gsap/chroma.min.js"></script>
+   <script src="assets/vendor/vanilla-tilt/tilt.jquery.js"></script>
+
+   <!-- Core Scripts -->
+   <script src="assets/js/plugins.js"></script>
+   <script src="assets/js/main.js"></script>
+   <script src="assets/js/panorama.js"></script>
+</body>
+</html>

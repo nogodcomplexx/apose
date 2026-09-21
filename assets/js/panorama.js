@@ -9,32 +9,41 @@ const i18n = {
     nav_apartments: 'Apartmány',
     nav_about: 'O rezidenci',
     nav_gallery: 'Galerie',
-    nav_gallery: 'Galerie',
     nav_contact: 'Kontakt',
     nav_book_now: 'Rezervovat',
     
     hero_sub: 'HORSKÁ LUXUSNÍ REZIDENCE',
     hero_title_1: 'Apartmány',
     hero_title_stroke: 'Panorama',
-    hero_desc: 'Exkluzivní horské útočiště v srdci přírody. Čtyři designové apartmány s panoramatickým výhledem, prostornými terasami a ski-in / ski-out polohou přímo u sjezdovky.',
-    hero_stat_1_num: '4',
-    hero_stat_1_text: 'Designové apartmány',
-    hero_stat_2_num: '100%',
-    hero_stat_2_text: 'Panoramatický výhled',
+    hero_desc: 'Exkluzivní horské útočiště v Krušných horách přímo u sjezdovky Bublava. 3 architektonicky promyšlené typy apartmánů s panoramatickým výhledem na sjezdovky a hřebeny, moderním vybavením, privátní kójí na lyže a kola se sušáky bot a možností skupinového pronájmu až pro 14 hostů.',
+    hero_stat_1_num: '3',
+    hero_stat_1_text: 'Architektonické typy',
+    hero_stat_2_num: '14',
+    hero_stat_2_text: 'Lůžek celkem',
+    hero_stat_3_num: '100%',
+    hero_stat_3_text: 'Výhled na sjezdovky a hory',
     hero_cta_apts: 'Prohlédnout apartmány',
     hero_cta_book: 'Ověřit termíny v Previo',
     
     book_checkin: 'Příjezd',
     book_checkout: 'Odjezd',
     book_apartment: 'Apartmán',
-    book_all_apts: 'Všechny apartmány (nebo Celý dům)',
+    book_all_apts: 'Všechny apartmány (Kombinace pro skupiny • až 14 hostů)',
     book_guests: 'Hosté',
     book_cta: 'Ověřit dostupnost (Previo)',
     
     ticker_text_1: 'APARTMÁNY PANORAMA',
     ticker_text_2: 'PANORAMATICKÉ VÝHLEDY',
     ticker_text_3: 'SKI-IN / SKI-OUT POLOHA',
-    ticker_text_4: '4 DESIGN RESIDENCES',
+    ticker_text_4: '3 ARCHITEKTONICKÉ TYPY',
+    dossier_meta_tag: 'ARCHITEKTONICKÝ DOSSIER // REZIDENCE BUBLAVA 791',
+    dossier_title: '3 typy designových apartmánů s výhledem na sjezdovku a hory',
+    dossier_lead: 'V naší rezidenci nabízíme 3 architektonicky promyšlené typy apartmánů ve správcovství přímo u sjezdovky Bublava. Každý typ má vlastní balkon s výhledem, privátní uzamykatelnou kóji na lyže a kola se sušáky bot na 1. NP, garantované parkování a přímý přístup do rezidenčního Lobby Baru.',
+    dossier_calc_btn: 'Kalkulace pobytu v Previo',
+    dossier_buyout_tag: 'EXKLUZIVNÍ SKUPINOVÝ POBYT // VŠECHNY 3 TYPY APARTMÁNŮ',
+    dossier_buyout_title: 'Pronájem celé naší nabídky (až 14 hostů)',
+    dossier_buyout_desc: 'Získejte kompletní ubytovací portfolio ve správcovství jen pro svou skupinu, rodinu či přátele: všechny 3 designové apartmány (až 14 lůžek), 3 soukromé balkony s výhledem, vyhřívané kóje se sušáky bot a garantované parkování přímo u sjezdovky.',
+    dossier_buyout_btn: 'Rezervovat pro skupinu',
     
     about_sub: 'ARCHITEKTURA & HORSKÁ FILOZOFIE',
     about_title: 'Spojení masivního dřeva, žuly a nekonečného prostoru',
@@ -45,47 +54,51 @@ const i18n = {
     about_cta: 'Zjistit dostupnost v Previo',
     
     apts_sub: 'NAŠE REZIDENCE',
-    apts_title: 'Vyberte si své horské útočiště',
-    apts_desc: 'Čtyři jedinečné dispozice s terasami, designovými krby a prémiovým vybavením.',
+    apts_title: '12 designových apartmánů na Bublavě',
+    apts_desc: 'Celková kapacita 50 lůžek. Každý apartmán disponuje vlastní uzamykatelnou kójí na lyže a kola se sušáky bot a možností dobíjení elektrokol.',
     
-    apt1_title: 'Apartmán 1',
-    apt1_specs: '115 m² • 6–8 hostů • 360° střešní terasa',
-    apt1_price: 'od 6 800 Kč / noc',
+    apt1_title: 'Apartmány 1–3',
+    apt1_specs: '68–115 m² • 6–8 hostů • Terasa, lamely & výhled',
+    apt1_price: 'od 4 800 Kč / noc',
     
-    apt2_title: 'Apartmán 2',
-    apt2_specs: '72 m² • 2–4 hosté • Slunečná terasa s výhledem',
-    apt2_price: 'od 4 400 Kč / noc',
+    apt2_title: 'Apartmány 4–8',
+    apt2_specs: '48–58 m² • 4 hosté • Jídelní stůl, kuchyně & balkon',
+    apt2_price: 'od 3 600 Kč / noc',
     
-    apt3_title: 'Apartmán 3',
-    apt3_specs: '64 m² • 4–6 hostů • Jižní vyhlídková terasa',
-    apt3_price: 'od 3 600 Kč / noc',
+    apt3_title: 'Apartmány 9–12',
+    apt3_specs: '36–44 m² • 2–3 hosté • Podkroví, dřevěný dekor & klid',
+    apt3_price: 'od 2 600 Kč / noc',
     
-    apt4_title: 'Apartmán 4',
-    apt4_specs: '42 m² • 2 hosté • Přímý vstup do lesa',
-    apt4_price: 'od 2 800 Kč / noc',
+    apt4_title: 'Celá rezidence & Lobby Bar',
+    apt4_specs: '12 apartmánů • 50 lůžek • Privátní bar, krb & společenská zóna',
+    apt4_price: 'od 48 000 Kč / noc',
     
     comfort_sub: 'KOMFORT & VYBAVENÍ',
     comfort_title: 'Vše pro váš bezstarostný horský pobyt',
-    comfort_card_1_title: 'Slunečné Terasy & Krby',
-    comfort_card_1_desc: 'Prostorné venkovní terasy s posezením, výhledem na horské masivy a biokrby v apartmánech.',
-    comfort_card_2_title: 'Vyhřívaná Lyžárna & Depot',
-    comfort_card_2_desc: 'Sušáky na lyžařské boty, bezpečné stojany na kola a nabíjecí stanice pro elektrokola.',
-    comfort_card_3_title: 'Krytá Garáž & Wallbox',
-    comfort_card_3_desc: 'Pohodlné parkování v suchu pod domem s dobíjecími stanicemi pro elektromobily.',
-    comfort_card_4_title: 'Vysokorychlostní Wi-Fi & Smart TV',
-    comfort_card_4_desc: 'Rychlé stabilní optické připojení v celém objektu a multimediální systémy s prémiovým audiem.',
+    comfort_card_1_title: 'Vlastní Kóje na Lyže & Kola',
+    comfort_card_1_desc: 'Každý z našich apartmánů má vlastní uzamykatelnou privátní kóji se sušáky na lyžařské boty a bezpečným prostorem pro kola včetně dobíjení elektrokol.',
+    comfort_card_2_title: 'Stylový Lobby Bar & TV Lounge',
+    comfort_card_2_desc: 'Příjemná společenská zóna v přízemí pro ranní espresso, odpolední drinky a večerní sledování sportovních přenosů na velké obrazovce.',
+    comfort_card_3_title: 'Slunečné Terasy & Krby',
+    comfort_card_3_desc: 'Prostorné venkovní terasy s posezením, výhledem na horské masivy a biokrby v interiérech pro dokonalou horskou pohodu.',
+    comfort_card_4_title: 'Krytá Garáž & Wallbox',
+    comfort_card_4_desc: 'Pohodlné parkování v suchu pod domem s moderními dobíjecími stanicemi pro vaše elektromobily.',
+    comfort_card_5_title: 'Optická Wi-Fi & Smart TV',
+    comfort_card_5_desc: 'Rychlé stabilní optické připojení v celé rezidenci i v Lobby Baru a multimediální systémy v každém pokoji.',
+    comfort_card_6_title: 'Bezkontaktní Check-in 24/7',
+    comfort_card_6_desc: 'Flexibilní příjezd v libovolný čas díky moderním elektronickým zámkům se zabezpečeným PIN kódem bez čekání.',
     
     whole_house_sub: 'EXKLUZIVNÍ PRONÁJEM',
-    whole_house_title: 'Plánujete pobyt s přáteli nebo firemní retreat?',
-    whole_house_desc: 'Pronajměte si celou rezidenci Apartmány Panorama pro až 20 osob s exkluzivním využitím všech apartmánů, společenské zóny a venkovních teras.',
-    whole_house_btn: 'Poptat celou rezidenci',
+    whole_house_title: 'Plánujete pobyt s přáteli nebo rodinné setkání?',
+    whole_house_desc: 'Pronajměte si kompletní nabídku našich 3 designových apartmánů až pro 14 hostů. Užijte si 3 privátní balkony, vyhřívané kóje na lyže se sušáky bot, garantované parkování i přímý vstup do rezidenčního Lobby Baru.',
+    whole_house_btn: 'Poptat skupinový pobyt',
     
     testimonial_sub: 'REFERENCE HOSTŮ',
     testimonial_title: 'Co o nás říkají naši hosté',
     reviews_aggregate: '48 ověřených recenzí (Booking.com, Google, Previo)',
     
     footer_desc: 'Exkluzivní horské ubytování s atmosférou alpského luxusu, prémiovým komfortem a dechberoucími výhledy.',
-    footer_address: 'Horská 142, Krkonoše / Beskydy',
+    footer_address: 'Bublava 791',
     footer_phone: '+420 777 123 456',
     footer_email: 'info@apartmany-panorama.cz',
     
@@ -106,24 +119,25 @@ const i18n = {
     gallery_sub: 'MOMENTY Z PANORAMA',
     gallery_title: 'Fotogalerie rezidence a hor',
     gallery_desc: 'Prozkoumejte autentickou atmosféru horské rezidence, designových apartmánů a okolní přírody.',
-    filter_all: 'Všechny momenty (10)',
+    filter_all: 'Všechny momenty (12)',
+    filter_lobby: 'Lobby Bar & Lounge',
     filter_residence: 'Rezidence & Exteriér',
     filter_interiors: 'Apartmány & Interiéry',
     filter_nature: 'Hory & Okolí',
-        modal_amenities: 'Vybavení & Komfort',
+    modal_amenities: 'Vybavení & Komfort',
     modal_price_from: 'Cena od',
     modal_per_night: '/ noc',
     modal_best_price: 'Garance nejlepší ceny',
     modal_book_previo: 'Rezervovat v Previo',
     modal_close_aria: 'Zavřít detail apartmánu',
-    filter_nature: 'Hory & Okolí'
+    cal_today: 'Dnes',
+    cal_confirm: 'Potvrdit'
   },
   
   en: {
     nav_home: 'Home',
     nav_apartments: 'Apartments',
     nav_about: 'About',
-    nav_gallery: 'Galerie',
     nav_gallery: 'Gallery',
     nav_contact: 'Contact',
     nav_book_now: 'Book Now',
@@ -131,25 +145,35 @@ const i18n = {
     hero_sub: 'LUXURY MOUNTAIN RESIDENCE',
     hero_title_1: 'Apartments',
     hero_title_stroke: 'Panorama',
-    hero_desc: 'An exclusive alpine sanctuary nestled in nature. Four designer residences featuring panoramic vistas, private scenic terraces, and ski-in / ski-out convenience.',
-    hero_stat_1_num: '4',
-    hero_stat_1_text: 'Designer Residences',
-    hero_stat_2_num: '100%',
-    hero_stat_2_text: 'Panoramic Views',
+    hero_desc: 'An exclusive alpine sanctuary directly by the Bublava ski slopes in the Ore Mountains. 3 architecturally refined apartment types with panoramic ski slope and mountain views, dedicated ski/bike lockers with boot dryers, and group buyout for up to 14 guests.',
+    hero_stat_1_num: '3',
+    hero_stat_1_text: 'Architectural Types',
+    hero_stat_2_num: '14',
+    hero_stat_2_text: 'Total Beds',
+    hero_stat_3_num: '100%',
+    hero_stat_3_text: 'Slope & Mountain Views',
     hero_cta_apts: 'Explore Suites',
     hero_cta_book: 'Check Dates on Previo',
     
     book_checkin: 'Check-in',
     book_checkout: 'Check-out',
     book_apartment: 'Apartment',
-    book_all_apts: 'All Apartments (or Whole Residence)',
+    book_all_apts: 'All Apartments (Group combination • up to 14 guests)',
     book_guests: 'Guests',
     book_cta: 'Check Availability (Previo)',
     
     ticker_text_1: 'APARTMENTS PANORAMA',
     ticker_text_2: 'PANORAMIC VISTAS',
     ticker_text_3: 'SKI-IN / SKI-OUT LOCATION',
-    ticker_text_4: '4 DESIGN RESIDENCES',
+    ticker_text_4: '3 ARCHITECTURAL TYPES',
+    dossier_meta_tag: 'ARCHITECTURAL DOSSIER // RESIDENCE BUBLAVA 791',
+    dossier_title: '3 Designer Apartment Types Overlooking the Ski Slopes & Mountains',
+    dossier_lead: 'Our residence offers 3 thoughtfully designed apartment types under direct management right by the Bublava ski slope. Each type features a private balcony with panoramic mountain views, lockable heated gear locker on the ground floor, and guaranteed parking.',
+    dossier_calc_btn: 'Stay Calculation in Previo',
+    dossier_buyout_tag: 'EXCLUSIVE GROUP RETREAT // ALL 3 APARTMENT TYPES',
+    dossier_buyout_title: 'Rent Our Entire Portfolio (up to 14 guests)',
+    dossier_buyout_desc: 'Reserve all 3 managed designer apartments for your group, family, or retreat: up to 14 beds, 3 private mountain-view balconies, heated ski lockers with boot warmers, and guaranteed parking right at the ski resort.',
+    dossier_buyout_btn: 'Book for Group',
     
     about_sub: 'ARCHITECTURE & ALPINE ETHOS',
     about_title: 'The synergy of solid timber, granite, and boundless light',
@@ -160,47 +184,51 @@ const i18n = {
     about_cta: 'Check Dates on Previo',
     
     apts_sub: 'OUR SUITES',
-    apts_title: 'Choose your mountain retreat',
-    apts_desc: 'Four bespoke layouts featuring private terraces, signature fireplaces, and curated finishes.',
+    apts_title: '12 Designer Residences in Bublava',
+    apts_desc: 'Total capacity of 50 beds. Each apartment features its own lockable ski and bike storage locker with boot dryers and e-bike charging sockets.',
     
-    apt1_title: 'Apartmán 1',
-    apt1_specs: '115 m² • 6–8 Guests • 360° Rooftop Deck',
-    apt1_price: 'from 6,800 CZK / night',
+    apt1_title: 'Apartments 1–3',
+    apt1_specs: '68–115 m² • 6–8 Guests • Terrace, Timber Slats & View',
+    apt1_price: 'from 4,800 CZK / night',
     
-    apt2_title: 'Apartmán 2',
-    apt2_specs: '72 m² • 2–4 Guests • Sunny Panoramic Terrace',
-    apt2_price: 'from 4,400 CZK / night',
+    apt2_title: 'Apartments 4–8',
+    apt2_specs: '48–58 m² • 4 Guests • Dining Table, Kitchen & Balcony',
+    apt2_price: 'from 3,600 CZK / night',
     
-    apt3_title: 'Apartmán 3',
-    apt3_specs: '64 m² • 4–6 Guests • South-Facing Balcony',
-    apt3_price: 'from 3,600 CZK / night',
+    apt3_title: 'Apartments 9–12',
+    apt3_specs: '36–44 m² • 2–3 Guests • Loft, Warm Timber & Serenity',
+    apt3_price: 'from 2,600 CZK / night',
     
-    apt4_title: 'Apartmán 4',
-    apt4_specs: '42 m² • 2 Guests • Direct Forest Access',
-    apt4_price: 'from 2,800 CZK / night',
+    apt4_title: 'Whole Residence & Lobby Bar',
+    apt4_specs: '12 Suites • 50 Beds • Private Bar, Fireplace & Social Lounge',
+    apt4_price: 'from 48,000 CZK / night',
     
     comfort_sub: 'COMFORT & AMENITIES',
     comfort_title: 'Everything for an effortless alpine escape',
-    comfort_card_1_title: 'Sunny Terraces & Fireplaces',
-    comfort_card_1_desc: 'Spacious outdoor terraces with lounge seating, panoramic mountain views, and fireplaces in suites.',
-    comfort_card_2_title: 'Heated Ski & Bike Depot',
-    comfort_card_2_desc: 'Commercial boot warmers, secure bike storage, and high-output e-bike charging stations.',
-    comfort_card_3_title: 'Underground Garage & EV Wallbox',
-    comfort_card_3_desc: 'Sheltered underground parking equipped with high-speed EV chargers.',
-    comfort_card_4_title: 'High-Speed Wi-Fi & Smart TV',
-    comfort_card_4_desc: 'High-speed fiber optic connectivity throughout the residence and premium multimedia audio systems.',
+    comfort_card_1_title: 'Private Ski & Bike Lockers',
+    comfort_card_1_desc: 'Each of our suites has its own lockable private locker with ski boot dryers, bicycle storage, and high-output e-bike charging.',
+    comfort_card_2_title: 'Stylish Lobby Bar & TV Lounge',
+    comfort_card_2_desc: 'Inviting ground-floor social lounge for morning espresso, afternoon apres-ski drinks, and evening sports broadcasts on a big screen.',
+    comfort_card_3_title: 'Sunny Terraces & Fireplaces',
+    comfort_card_3_desc: 'Spacious outdoor terraces with lounge seating, panoramic mountain views, and fireplaces in suites for cozy alpine evenings.',
+    comfort_card_4_title: 'Underground Garage & Wallbox',
+    comfort_card_4_desc: 'Sheltered dry parking beneath the residence equipped with modern high-speed electric vehicle charging wallboxes.',
+    comfort_card_5_title: 'High-Speed Wi-Fi & Smart TV',
+    comfort_card_5_desc: 'Fast stable fiber optic connectivity across the entire residence including Lobby Bar, plus premium smart TV in every room.',
+    comfort_card_6_title: 'Contactless Check-in 24/7',
+    comfort_card_6_desc: 'Effortless arrival at any hour with smart PIN keypad access locks without waiting or front-desk delays.',
     
     whole_house_sub: 'EXCLUSIVE BUYOUT',
     whole_house_title: 'Planning a group retreat or family gathering?',
-    whole_house_desc: 'Reserve the entirety of Apartmány Panorama for up to 20 guests with exclusive access to all 4 suites, private lounge, and scenic terraces.',
-    whole_house_btn: 'Inquire Whole Residence',
+    whole_house_desc: 'Reserve our complete offering of 3 designer suites for up to 14 guests. Enjoy 3 private scenic balconies, heated gear lockers with boot dryers, parking, and direct access to the residential Lobby Bar.',
+    whole_house_btn: 'Inquire Group Stay',
     
     testimonial_sub: 'GUEST STORIES',
     testimonial_title: 'What our guests say',
     reviews_aggregate: '48 verified guest reviews (Booking.com, Google, Previo)',
     
     footer_desc: 'Exclusive mountain accommodation combining alpine luxury, premium comfort, and dramatic panoramic vistas.',
-    footer_address: 'Horska 142, Krkonose / Beskydy',
+    footer_address: 'Bublava 791',
     footer_phone: '+420 777 123 456',
     footer_email: 'info@apartmany-panorama.cz',
     
@@ -219,17 +247,19 @@ const i18n = {
     gallery_sub: 'MOMENTS FROM PANORAMA',
     gallery_title: 'Residence & Alpine Photo Gallery',
     gallery_desc: 'Discover the atmosphere of our mountain residence, designer suites, and surrounding alpine peaks.',
-    filter_all: 'All Moments (10)',
+    filter_all: 'All Moments (12)',
+    filter_lobby: 'Lobby Bar & Lounge',
     filter_residence: 'Residence & Exterior',
     filter_interiors: 'Suites & Interiors',
-    filter_nature: 'Hory & Okolí',
-        modal_amenities: 'Amenities & Comfort',
+    filter_nature: 'Mountains & Nature',
+    modal_amenities: 'Amenities & Comfort',
     modal_price_from: 'Price from',
     modal_per_night: '/ night',
     modal_best_price: 'Best price guarantee',
     modal_book_previo: 'Book on Previo',
     modal_close_aria: 'Close suite details',
-    filter_nature: 'Mountains & Nature'
+    cal_today: 'Today',
+    cal_confirm: 'Confirm'
   }
 };
 
@@ -267,6 +297,9 @@ function setLanguage(lang) {
   // Live refresh calendar and booking bar pricing when language changes
   if (typeof renderAlpineCalendar === 'function') {
     renderAlpineCalendar();
+  }
+  if (typeof updateCalendarFooterHint === 'function') {
+    updateCalendarFooterHint();
   }
 }
 
@@ -348,214 +381,546 @@ let currentAptModalId = null;
 
 const apartmentDetails = {
   1: {
-    img: 'assets/images/web/apt-penthouse.jpg',
+    unitCode: '791/1-201',
+    floor: '2. NP',
+    totalArea: '57,64 m²',
+    innerArea: '42,66 m²',
+    outdoorArea: '13,47 m² (terasa s grilem)',
+    lockerId: '1.04|1 (1,51 m²)',
+    img: 'assets/images/web/apt-living-balcony.jpg',
+    floorplan: 'assets/images/apartments/apt-01-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-01-cad-blueprint.jpg',
     cs: {
-      name: 'Apartmán 1',
-      category: 'MEZONET & STŘEŠNÍ TERASA',
-      size: '115 m²',
+      name: 'Apartmán 1 (Terasa & Krb)',
+      category: '2. NP // 3KK // VELKÁ SLUNEČNÁ TERASA & GRIL',
+      size: '57,64 m²',
       capacity: '6–8 hostů',
-      price: '6 800 Kč',
-      tagline: '115 m² • 6–8 hostů • Krkonoše',
+      price: '4 200 Kč',
+      tagline: '57,64 m² • Terasa 13,5 m² s grilem • Kóje 1.04|1 • 6–8 osob',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '115 m² obytná plocha' },
-        { icon: 'fa-solid fa-users', label: 'Až 8 dospělých hostů' },
-        { icon: 'fa-solid fa-bed', label: '3 samostatné ložnice' },
-        { icon: 'fa-solid fa-mountain-sun', label: '360° střešní terasa' }
+        { icon: 'fa-solid fa-vector-square', label: '57,64 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '6–8 dospělých hostů (3kk)' },
+        { icon: 'fa-solid fa-umbrella-beach', label: 'Terasa 13,47 m² s grilem' },
+        { icon: 'fa-solid fa-snowflake', label: 'Kóje 1.04|1 (1,51 m²) se sušáky' }
       ],
       features: [
-        { icon: 'fa-solid fa-fire-flame-curved', label: 'Prosklený designový krb v salonu' },
-        { icon: 'fa-solid fa-wine-glass', label: 'Vinotéka s výběrovými víny' },
-        { icon: 'fa-solid fa-bath', label: '2x designová kamenná koupelna' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Prémiový kávovar s čerstvou kávou' },
-        { icon: 'fa-solid fa-wifi', label: 'Optická Wi-Fi & Smart TV s audiem' },
-        { icon: 'fa-solid fa-shield-halved', label: 'Bezkontaktní přístup na PIN kód' }
+        { icon: 'fa-solid fa-mountain-sun', label: 'Slunečná jihozápadní terasa s venkovním grilem' },
+        { icon: 'fa-solid fa-fire-flame-curved', label: 'Útulný designový krb v obývacím pokoji' },
+        { icon: 'fa-solid fa-bed', label: '2 samostatné ložnice + rozkládací lůžko' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Plnohodnotná kuchyně s myčkou a kávovarem' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Vyhřívaná lyžařská kóje 1.04|1 na 1. NP' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací místa u domu' },
+        { icon: 'fa-solid fa-martini-glass-citrus', label: 'Přímý vstup do rezidenčního Lobby Baru (140 m²)' },
+        { icon: 'fa-solid fa-shield-halved', label: 'Bezkontaktní přístup na PIN kód 24/7' }
       ],
-      desc: 'Exkluzivní mezonetový penthouse zabírající celé nejvyšší patro rezidence. Nabízí velkorysé panoramatické výhledy na horské hřebeny, designový oboustranný krb a soukromou 360° střešní terasu s posezením.'
+      desc: 'Vlajková rezidence domu na 2. NP. Velkorysá jihozápadní terasa 13,5 m² s venkovním posezením a grilem nabízí přímý výhled na sjezdovku a okolní horské hřebeny. Uvnitř najdete dvě samostatné ložnice, obývací pokoj s krbem a moderní kuchyní. K apartmánu náleží vyhřívaná kóje 1.04|1 se sušáky na lyžáky a 2 parkovací stání.'
     },
     en: {
-      name: 'Apartment 1',
-      category: 'DUPLEX & ROOFTOP TERRACE',
-      size: '115 m²',
+      name: 'Apartment 1 (Terrace & Fireplace)',
+      category: '2nd Floor // 3-Room // Large Sun Terrace & BBQ',
+      size: '57.64 m²',
       capacity: '6–8 guests',
-      price: '€270',
-      tagline: '115 m² • 6–8 guests • Giant Mountains',
+      price: '€165',
+      tagline: '57.64 m² • Terrace 13.5 m² with BBQ • Ski Locker 1.04|1 • 6–8 guests',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '115 m² living area' },
-        { icon: 'fa-solid fa-users', label: 'Up to 8 adult guests' },
-        { icon: 'fa-solid fa-bed', label: '3 separate bedrooms' },
-        { icon: 'fa-solid fa-mountain-sun', label: '360° rooftop terrace' }
+        { icon: 'fa-solid fa-vector-square', label: '57.64 m² total area' },
+        { icon: 'fa-solid fa-users', label: '6–8 guests (3 rooms)' },
+        { icon: 'fa-solid fa-umbrella-beach', label: '13.47 m² terrace with BBQ' },
+        { icon: 'fa-solid fa-snowflake', label: 'Ski locker 1.04|1 with boot dryers' }
       ],
       features: [
-        { icon: 'fa-solid fa-fire-flame-curved', label: 'Glass designer fireplace in living salon' },
-        { icon: 'fa-solid fa-wine-glass', label: 'Curated wine collection cellar' },
-        { icon: 'fa-solid fa-bath', label: '2x bespoke stone bathrooms' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Premium bean-to-cup coffee maker' },
-        { icon: 'fa-solid fa-wifi', label: 'High-speed fiber Wi-Fi & Smart TV audio' },
-        { icon: 'fa-solid fa-shield-halved', label: 'Contactless self check-in via PIN' }
+        { icon: 'fa-solid fa-mountain-sun', label: 'Southwest terrace with grill & slope views' },
+        { icon: 'fa-solid fa-fire-flame-curved', label: 'Cozy modern fireplace in living room' },
+        { icon: 'fa-solid fa-bed', label: '2 separate bedrooms + sofa bed' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Fully equipped kitchen with dishwasher' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Heated ski locker 1.04|1 on ground floor' },
+        { icon: 'fa-solid fa-square-parking', label: '2 guaranteed parking spots' },
+        { icon: 'fa-solid fa-martini-glass-citrus', label: 'Access to Lobby Bar (140 m²)' },
+        { icon: 'fa-solid fa-shield-halved', label: 'Contactless PIN keyless entry 24/7' }
       ],
-      desc: 'An exclusive duplex penthouse spanning the entire highest floor of the residence. Features sweeping panoramic alpine vistas, a designer dual-sided fireplace, and a private 360° rooftop terrace with lounge seating.'
+      desc: 'Flagship residence on the 2nd floor featuring an expansive 13.5 m² private sun terrace with outdoor seating and grill overlooking the ski slopes. Includes 2 separate bedrooms, fireplace living lounge, fully appointed kitchen, and heated ski/bike locker 1.04|1.'
     }
   },
   2: {
-    img: 'assets/images/web/apt-suite.jpg',
+    unitCode: '791/2-202',
+    floor: '2. NP',
+    totalArea: '40,17 m²',
+    innerArea: '35,35 m²',
+    outdoorArea: '3,24 m² (balkon)',
+    lockerId: '1.04|2 (1,58 m²)',
+    img: 'assets/images/web/apt-living-dining.jpg',
+    floorplan: 'assets/images/apartments/apt-02-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-02-cad-blueprint.jpg',
     cs: {
-      name: 'Apartmán 2',
-      category: 'DESIGN SUITE & TERASA',
-      size: '72 m²',
-      capacity: '2–4 hosté',
-      price: '4 400 Kč',
-      tagline: '72 m² • 2–4 hosté • Krkonoše',
+      name: 'Apartmán 2 (Balkon • 2. NP)',
+      category: '2. NP // 2KK // BALKON & SKI VÝHLED',
+      size: '40,17 m²',
+      capacity: '4–6 hostů',
+      price: '2 900 Kč',
+      tagline: '40,17 m² • Balkon 3,2 m² • Kóje 1.04|2 • 4–6 osob',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '72 m² obytná plocha' },
-        { icon: 'fa-solid fa-users', label: '2–4 hosté' },
-        { icon: 'fa-solid fa-bed', label: 'King Size ložnice' },
-        { icon: 'fa-solid fa-sun', label: 'Slunečná jižní terasa' }
+        { icon: 'fa-solid fa-vector-square', label: '40,17 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '4–6 dospělých hostů' },
+        { icon: 'fa-solid fa-mountain', label: 'Balkon 3,24 m² s výhledem' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Kóje 1.04|2 (1,58 m²)' }
       ],
       features: [
-        { icon: 'fa-solid fa-chair', label: 'Slunečná terasa s vyhlídkovým sezením' },
-        { icon: 'fa-solid fa-bath', label: 'Horská volně stojící vana s výhledem' },
-        { icon: 'fa-solid fa-couch', label: 'Obytný prostor z masivního modřínu' },
-        { icon: 'fa-solid fa-door-open', label: 'Prostorná šatna a depot na lyže' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Nespresso kávovar & minibar' },
-        { icon: 'fa-solid fa-wifi', label: 'Rychlé optické připojení & Smart TV' }
+        { icon: 'fa-solid fa-mountain', label: 'Balkon orientovaný k horské scenérii' },
+        { icon: 'fa-solid fa-bed', label: 'Samostatná ložnice + lůžko v obýváku' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Kuchyňská linka s varnou deskou a lednicí' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje 1.04|2 se sušáky bot' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací místa' },
+        { icon: 'fa-solid fa-martini-glass-citrus', label: 'Vstup do rezidenčního Lobby Baru' },
+        { icon: 'fa-solid fa-wifi', label: 'Vysokorychlostní Wi-Fi & Smart TV' },
+        { icon: 'fa-solid fa-shield-halved', label: 'Bezkontaktní přístup na PIN kód 24/7' }
       ],
-      desc: 'Dokonalé útočiště pro páry či rodiny s velkou prosluněnou terasou, interiérem z ušlechtilého horského dřeva a luxusní volně stojící vanou s pohledem na zasněžené údolí.'
+      desc: 'Pohodlný apartmán 2kk na 2. NP s privátním balkonem a výhledem na hřebeny. Vybaven samostatnou ložnicí, obývacím pokojem s jídelnou a kuchyňským koutem. K dispozici je privátní lyžařská kóje 1.04|2 a 2 parkovací stání.'
     },
     en: {
-      name: 'Apartment 2',
-      category: 'DESIGN SUITE & SUN TERRACE',
-      size: '72 m²',
-      capacity: '2–4 guests',
-      price: '€175',
-      tagline: '72 m² • 2–4 guests • Giant Mountains',
+      name: 'Apartment 2 (Balcony • 2nd Floor)',
+      category: '2nd Floor // 2-Room // Balcony & Ski View',
+      size: '40.17 m²',
+      capacity: '4–6 guests',
+      price: '€114',
+      tagline: '40.17 m² • Balcony 3.2 m² • Ski Locker 1.04|2 • 4–6 guests',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '72 m² living area' },
-        { icon: 'fa-solid fa-users', label: '2–4 guests' },
-        { icon: 'fa-solid fa-bed', label: 'King size bedroom' },
-        { icon: 'fa-solid fa-sun', label: 'Sunny south-facing terrace' }
+        { icon: 'fa-solid fa-vector-square', label: '40.17 m² total area' },
+        { icon: 'fa-solid fa-users', label: '4–6 guests' },
+        { icon: 'fa-solid fa-mountain', label: '3.24 m² balcony' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Ski locker 1.04|2' }
       ],
       features: [
-        { icon: 'fa-solid fa-chair', label: 'Scenic sun terrace with outdoor lounge' },
-        { icon: 'fa-solid fa-bath', label: 'Freestanding soaking tub with mountain views' },
-        { icon: 'fa-solid fa-couch', label: 'Living area crafted from natural larch wood' },
-        { icon: 'fa-solid fa-door-open', label: 'Spacious dressing room & private ski depot' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Nespresso coffee machine & minibar' },
-        { icon: 'fa-solid fa-wifi', label: 'High-speed optical Wi-Fi & Smart TV' }
+        { icon: 'fa-solid fa-mountain', label: 'Private balcony facing alpine ridges' },
+        { icon: 'fa-solid fa-bed', label: 'Separate master bedroom + lounge bed' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Fully equipped kitchen & dining' },
+        { icon: 'fa-solid fa-snowflake', label: 'Locker 1.04|2 with electric boot warmers' },
+        { icon: 'fa-solid fa-square-parking', label: '2 dedicated parking slots' },
+        { icon: 'fa-solid fa-shield-halved', label: 'PIN code digital self check-in' }
       ],
-      desc: 'The ultimate sanctuary for couples or families featuring an expansive sun-drenched terrace, bespoke larch wood craftsmanship, and a freestanding soaking tub overlooking the snowy valley.'
+      desc: 'Comfortable 2-room apartment on the 2nd floor with private balcony. Master bedroom, sun-drenched living dining lounge, lockable gear locker 1.04|2 and parking.'
     }
   },
   3: {
-    img: 'assets/images/web/apt-valley.jpg',
+    unitCode: '791/3-203',
+    floor: '2. NP',
+    totalArea: '41,50 m²',
+    innerArea: '36,68 m²',
+    outdoorArea: '3,24 m² (balkon)',
+    lockerId: '1.04|3 (1,58 m²)',
+    img: 'assets/images/web/apt-living-balcony.jpg',
+    floorplan: 'assets/images/apartments/apt-03-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-03-cad-blueprint.jpg',
     cs: {
-      name: 'Apartmán 3',
-      category: 'RODINNÝ APARTMÁN & VÝHLED',
-      size: '64 m²',
+      name: 'Apartmán 3 (Balkon • 2. NP)',
+      category: '2. NP // 2KK // BALKON & LYŽAŘSKÝ KOMFORT',
+      size: '41,50 m²',
       capacity: '4–6 hostů',
-      price: '3 600 Kč',
-      tagline: '64 m² • 4–6 hostů • Krkonoše',
+      price: '2 950 Kč',
+      tagline: '41,50 m² • Balkon 3,2 m² • Kóje 1.04|3 • 4–6 osob',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '64 m² obytná plocha' },
-        { icon: 'fa-solid fa-users', label: '4–6 hostů' },
-        { icon: 'fa-solid fa-bed', label: '2 ložnice' },
-        { icon: 'fa-solid fa-compass', label: 'Jižní orientace' }
+        { icon: 'fa-solid fa-vector-square', label: '41,50 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '4–6 dospělých hostů' },
+        { icon: 'fa-solid fa-mountain', label: 'Balkon 3,24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Kóje 1.04|3 (1,58 m²)' }
       ],
       features: [
-        { icon: 'fa-solid fa-utensils', label: 'Plně vybavená kuchyně s ostrůvkem' },
-        { icon: 'fa-solid fa-people-roof', label: 'Jídelní stůl z masivu pro 6 osob' },
-        { icon: 'fa-solid fa-cloud-sun', label: 'Prosluněná terasa s posezením' },
-        { icon: 'fa-solid fa-lightbulb', label: 'Atmosférické zónové ambientní světlo' },
-        { icon: 'fa-solid fa-bed', label: 'Prémiové ortopedické matrace' },
-        { icon: 'fa-solid fa-shield-halved', label: 'Akustické odhlučnění pro klid' }
+        { icon: 'fa-solid fa-mountain', label: 'Výhled z balkonu na západní svahy' },
+        { icon: 'fa-solid fa-bed', label: 'Ložnice 14,1 m² s manželským lůžkem' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Kompletní kuchyně s kávovarem' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje 1.04|3 se sušáky bot' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací místa' },
+        { icon: 'fa-solid fa-shield-halved', label: 'Bezkontaktní přístup na PIN kód 24/7' }
       ],
-      desc: 'Velkorysý rodinný apartmán s dechberoucím výhledem do celého údolí. Centrem prostoru je moderní kuchyňský ostrůvek s masivním jídelním stolem a přímým vstupem na prosluněnou jižní terasu.'
+      desc: 'Světlý apartmán 2kk s lodžiovým balkonem na 2. NP. Velká ložnice (14,1 m²), koupelna s walk-in sprchou a prostorný obývací pokoj s kuchyní. Kóje 1.04|3 a 2 parkovací stání v ceně.'
     },
     en: {
-      name: 'Apartment 3',
-      category: 'FAMILY APARTMENT & PANORAMA',
-      size: '64 m²',
+      name: 'Apartment 3 (Balcony • 2nd Floor)',
+      category: '2nd Floor // 2-Room // Balcony & Alpine Charm',
+      size: '41.50 m²',
       capacity: '4–6 guests',
-      price: '€145',
-      tagline: '64 m² • 4–6 guests • Giant Mountains',
+      price: '€116',
+      tagline: '41.50 m² • Balcony 3.2 m² • Ski Locker 1.04|3 • 4–6 guests',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '64 m² living area' },
+        { icon: 'fa-solid fa-vector-square', label: '41.50 m² total area' },
         { icon: 'fa-solid fa-users', label: '4–6 guests' },
-        { icon: 'fa-solid fa-bed', label: '2 bedrooms' },
-        { icon: 'fa-solid fa-compass', label: 'South-facing orientation' }
+        { icon: 'fa-solid fa-mountain', label: '3.24 m² balcony' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Ski locker 1.04|3' }
       ],
       features: [
-        { icon: 'fa-solid fa-utensils', label: 'Fully appointed island kitchen' },
-        { icon: 'fa-solid fa-people-roof', label: 'Solid timber dining table for 6' },
-        { icon: 'fa-solid fa-cloud-sun', label: 'Sunlit terrace with scenic seating' },
-        { icon: 'fa-solid fa-lightbulb', label: 'Atmospheric zone ambient lighting' },
-        { icon: 'fa-solid fa-bed', label: 'Premium ergonomic orthopedic mattresses' },
-        { icon: 'fa-solid fa-shield-halved', label: 'Advanced acoustic soundproofing' }
+        { icon: 'fa-solid fa-mountain', label: 'Western mountain slope views' },
+        { icon: 'fa-solid fa-bed', label: 'Spacious 14.1 m² bedroom' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Equipped kitchen with coffee maker' },
+        { icon: 'fa-solid fa-snowflake', label: 'Locker 1.04|3 with boot dryers' }
       ],
-      desc: 'A spacious family apartment boasting panoramic views across the whole alpine valley. The heart of the suite is a modern island kitchen with solid wood dining and direct terrace access.'
+      desc: 'Bright 2-room apartment on 2nd floor with private balcony, generous master bedroom and lockable ski gear unit.'
     }
   },
   4: {
-    img: 'assets/images/web/apt-forest.jpg',
+    unitCode: '791/4-204',
+    floor: '2. NP',
+    totalArea: '41,96 m²',
+    innerArea: '37,14 m²',
+    outdoorArea: '3,24 m² (balkon)',
+    lockerId: '1.04|4 (1,58 m²)',
+    img: 'assets/images/web/apt-living-dining.jpg',
+    floorplan: 'assets/images/apartments/apt-04-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-04-cad-blueprint.jpg',
     cs: {
-      name: 'Apartmán 4',
-      category: 'LESNÍ STUDIO & ZAHRADA',
-      size: '42 m²',
-      capacity: '2 hosté',
-      price: '2 800 Kč',
-      tagline: '42 m² • 2 hosté • Krkonoše',
+      name: 'Apartmán 4 (Balkon • 2. NP)',
+      category: '2. NP // 2KK // BALKON & PANORAMA',
+      size: '41,96 m²',
+      capacity: '4–6 hostů',
+      price: '2 950 Kč',
+      tagline: '41,96 m² • Balkon 3,2 m² • Kóje 1.04|4 • 4–6 osob',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '42 m² obytná plocha' },
-        { icon: 'fa-solid fa-users', label: '2 dospělí hosté' },
-        { icon: 'fa-solid fa-bed', label: 'King Size bed' },
-        { icon: 'fa-solid fa-tree', label: 'Přímý vstup do lesa' }
+        { icon: 'fa-solid fa-vector-square', label: '41,96 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '4–6 dospělých hostů' },
+        { icon: 'fa-solid fa-mountain', label: 'Balkon 3,24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Kóje 1.04|4 (1,58 m²)' }
       ],
       features: [
-        { icon: 'fa-solid fa-tree', label: 'Přímý vstup do tiché lesní zahrady' },
-        { icon: 'fa-solid fa-fire', label: 'Útulný večerní biokrb v pokoji' },
-        { icon: 'fa-solid fa-volume-xmark', label: 'Akustická izolace pro hluboký spánek' },
-        { icon: 'fa-solid fa-shower', label: 'Velkoformátový walk-in sprchový kout' },
-        { icon: 'fa-solid fa-sun', label: 'Venkovní terasa s polohovacími lehátky' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Kávový koutek & rychlovarná konvice' }
+        { icon: 'fa-solid fa-mountain', label: 'Balkon s výhledem na sjezdovky' },
+        { icon: 'fa-solid fa-bed', label: 'Ložnice 14,5 m² s prémiovou matrací' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Kuchyň s myčkou, troubou a lednicí' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje 1.04|4 se sušáky bot' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací stání' }
       ],
-      desc: 'Klidné a romantické studio v bezprostředním kontaktu s horskou přírodou. Přímý vstup do tichého jehličnatého lesa a večerní plamen biokrbu vytváří ideální atmosféru pro ničím nerušený odpočinek.'
+      desc: 'Elegantní horské 2kk s balkonem na 2. patře. Nadstandardní tepelná a akustická izolace, dřevěné designové prvky a uzamykatelná kóje 1.04|4 se sušáky.'
     },
     en: {
-      name: 'Apartment 4',
-      category: 'STUDIO & PRIVATE GARDEN',
-      size: '42 m²',
-      capacity: '2 guests',
-      price: '€112',
-      tagline: '42 m² • 2 guests • Giant Mountains',
+      name: 'Apartment 4 (Balcony • 2nd Floor)',
+      category: '2nd Floor // 2-Room // Balcony & Panorama',
+      size: '41.96 m²',
+      capacity: '4–6 guests',
+      price: '€116',
+      tagline: '41.96 m² • Balcony 3.2 m² • Ski Locker 1.04|4 • 4–6 guests',
       specs: [
-        { icon: 'fa-solid fa-vector-square', label: '42 m² living area' },
-        { icon: 'fa-solid fa-users', label: '2 adult guests' },
-        { icon: 'fa-solid fa-bed', label: 'King size bed' },
-        { icon: 'fa-solid fa-tree', label: 'Direct forest access' }
+        { icon: 'fa-solid fa-vector-square', label: '41.96 m² total area' },
+        { icon: 'fa-solid fa-users', label: '4–6 guests' },
+        { icon: 'fa-solid fa-mountain', label: '3.24 m² balcony' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Ski locker 1.04|4' }
       ],
       features: [
-        { icon: 'fa-solid fa-tree', label: 'Direct private access to pine forest garden' },
-        { icon: 'fa-solid fa-fire', label: 'Cozy evening bio-fireplace in bedroom' },
-        { icon: 'fa-solid fa-volume-xmark', label: 'Acoustic isolation for restful sleep' },
-        { icon: 'fa-solid fa-shower', label: 'Large format walk-in rain shower' },
-        { icon: 'fa-solid fa-sun', label: 'Outdoor sun terrace with reclining loungers' },
-        { icon: 'fa-solid fa-mug-saucer', label: 'Artisan coffee corner & electric kettle' }
+        { icon: 'fa-solid fa-mountain', label: 'Balcony overlooking alpine slopes' },
+        { icon: 'fa-solid fa-bed', label: 'Comfortable master bedroom' },
+        { icon: 'fa-solid fa-snowflake', label: 'Ski locker 1.04|4 with boot dryers' }
       ],
-      desc: 'A peaceful romantic studio in direct intimacy with mountain nature. Private garden access to the evergreen forest and an evening fireplace flame create an idyllic ambience for deep rejuvenation.'
+      desc: 'Elegant mountain 2-room apartment on 2nd floor with scenic balcony and private locker 1.04|4.'
+    }
+  },
+  5: {
+    unitCode: 'Apartmán 5',
+    floor: '2. patro',
+    totalArea: '40 m²',
+    innerArea: '36 m²',
+    outdoorArea: 'Balkon s výhledem na hory',
+    lockerId: 'Kóje #5 se sušáky',
+    img: '/assets/images/web/apt-living-balcony.jpg',
+    floorplan: '/assets/images/apartments/apt-05-3d-floorplan.jpg',
+    blueprint: '/assets/images/blueprints/apt-05-cad-blueprint.jpg',
+    cs: {
+      name: 'Horský apartmán s balkonem a výhledem',
+      category: '2. PATRO // VÝHLED NA SJEZDOVKU & HORY // 4 OSOBY',
+      size: '40 m²',
+      capacity: '4 hosté (2+kk)',
+      price: '2 850 Kč',
+      tagline: '40 m² • 4 hosté • Vlastní balkon • Výhled na sjezdovku a hory',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '40 m² obytná plocha' },
+        { icon: 'fa-solid fa-users', label: '4 hosté (2+kk s ložnicí)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Balkon s výhledem na hory' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje na lyže/kola' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Slunný balkon s posezením a výhledem na hřebeny' },
+        { icon: 'fa-solid fa-bed', label: 'Samostatná tichá ložnice s manželskou postelí' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Kompletní moderní kuchyně s jídelním stolem' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vlastní uzamykatelná kóje se sušáky bot na 1. NP' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací místa přímo u domu' },
+        { icon: 'fa-solid fa-martini-glass-citrus', label: 'Přímý vstup do rezidenčního Lobby Baru' }
+      ],
+      desc: 'Světlý a útulný dvoupokojový apartmán pro 4 osoby s vlastním balkonem a posezením s malebným výhledem na sjezdovku a horské hřebeny Krušných hor. Samostatná tichá ložnice, obývací pokoj s jídelnou a kompletně vybavená kuchyně se vším potřebným. K apartmánu patří vyhřívaná kóje se sušáky bot a parkování přímo u domu.'
+    },
+    en: {
+      name: 'Mountain Balcony Suite with Alpine Views',
+      category: '2nd Floor // Ski Slope & Mountain Views // 4 Guests',
+      size: '40 m²',
+      capacity: '4 guests',
+      price: '€112',
+      tagline: '40 m² • 4 guests • Private balcony • Mountain & slope views',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '40 m² living area' },
+        { icon: 'fa-solid fa-users', label: '4 guests (1 bedroom + living)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Balcony with alpine vista' },
+        { icon: 'fa-solid fa-snowflake', label: 'Heated gear locker with dryers' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Sunny balcony facing ski slopes and ridges' },
+        { icon: 'fa-solid fa-bed', label: 'Quiet master bedroom with comfortable double bed' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Fully equipped kitchen & dining area' },
+        { icon: 'fa-solid fa-snowflake', label: 'Private heated ski/bike locker on ground floor' }
+      ],
+      desc: 'Bright and inviting 2-room apartment for up to 4 guests featuring a private balcony with panoramic mountain and ski slope vistas. Separate master bedroom, living room with equipped kitchen, private gear locker and guaranteed parking.'
+    }
+  },
+  6: {
+    unitCode: 'Apartmán 6',
+    floor: '2. patro',
+    totalArea: '47 m²',
+    innerArea: '42 m²',
+    outdoorArea: 'Rohový balkon s 180° výhledem',
+    lockerId: 'Kóje #6 se sušáky',
+    img: '/assets/images/web/apt-living-dining.jpg',
+    floorplan: '/assets/images/apartments/apt-06-3d-floorplan.jpg',
+    blueprint: '/assets/images/blueprints/apt-06-cad-blueprint.jpg',
+    cs: {
+      name: 'Panoramatický rohový apartmán s výhledem na sjezdovku',
+      category: '2. PATRO // 180° VÝHLED NA SJEZDOVKU & HORY // AŽ 6 OSOB',
+      size: '47 m²',
+      capacity: 'Až 6 hostů (velké 2+kk)',
+      price: '3 150 Kč',
+      tagline: '47 m² • Až 6 hostů • Rohový balkon • 180° výhled na sjezdovku a hory',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '47 m² velkorysá plocha' },
+        { icon: 'fa-solid fa-users', label: '4–6 hostů (velké 2+kk)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Rohový balkon s 180° výhledem' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje na lyže/kola' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Nádherný 180° rohový výhled přímo na sjezdovku a hory' },
+        { icon: 'fa-solid fa-couch', label: 'Velký prosvětlený obývací pokoj s jídelním stolem' },
+        { icon: 'fa-solid fa-bed', label: 'Samostatná prostorná ložnice s manželskou postelí' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Plnohodnotná kuchyně s varnou deskou i myčkou' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vlastní uzamykatelná kóje se sušáky bot na 1. NP' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací stání u rezidence' }
+      ],
+      desc: 'Náš nejprostornější apartmán s velkým rohovým balkonem a úchvatným 180° výhledem přímo na sjezdovku Bublava a krušnohorské hřebeny. Velkorysý obývací pokoj s jídelnou nabízí dostatek prostoru pro rodinu i partu přátel (až 6 hostů). Samostatná ložnice, moderní kuchyně, privátní vyhřívaná kóje na lyže a kola a 2 parkovací stání.'
+    },
+    en: {
+      name: 'Panoramic Corner Suite with Ski Slope & Mountain Views',
+      category: '2nd Floor // 180° Ski Slope & Mountain Panorama // Up to 6 Guests',
+      size: '47 m²',
+      capacity: 'Up to 6 guests',
+      price: '€124',
+      tagline: '47 m² • Up to 6 guests • Corner balcony • 180° slope & mountain views',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '47 m² generous layout' },
+        { icon: 'fa-solid fa-users', label: '4–6 guests (spacious 2-room)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Corner balcony with 180° vista' },
+        { icon: 'fa-solid fa-snowflake', label: 'Heated gear locker with dryers' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: '180° panoramic wrap-around views of ski pistes and alpine peaks' },
+        { icon: 'fa-solid fa-couch', label: 'Generous corner living lounge with dining area' },
+        { icon: 'fa-solid fa-bed', label: 'Spacious master bedroom with double bed' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Full modern kitchen with dishwasher' }
+      ],
+      desc: 'Our most spacious residence featuring a wrap-around corner balcony with dramatic 180° panoramic views over the Bublava ski slopes and surrounding Ore Mountain ridges. Comfortably accommodates up to 6 guests with master bedroom, large lounge, kitchen, and ski locker.'
+    }
+  },
+  10: {
+    unitCode: 'Apartmán 10',
+    floor: '3. patro (Podkroví)',
+    totalArea: '42 m²',
+    innerArea: '37 m²',
+    outdoorArea: 'Podkrovní balkon s výhledem na sjezdovku a hory',
+    lockerId: 'Kóje #10 se sušáky',
+    img: '/assets/images/web/apt-bedroom-loft.jpg',
+    floorplan: '/assets/images/apartments/apt-10-3d-floorplan.jpg',
+    blueprint: '/assets/images/blueprints/apt-10-cad-blueprint.jpg',
+    cs: {
+      name: 'Podkrovní apartmán s trámovým stropem a výhledem na hory',
+      category: '3. PATRO // PODKROVNÍ TRÁMY // VÝHLED NA SJEZDOVKU & HORY // 4 OSOBY',
+      size: '42 m²',
+      capacity: '4 hosté (2+kk)',
+      price: '2 900 Kč',
+      tagline: '42 m² • 4 hosté • Dřevěné trámy • Balkon s výhledem na sjezdovku a hory',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '42 m² obytná plocha' },
+        { icon: 'fa-solid fa-users', label: '4 hosté (podkrovní 2+kk)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Balkon s výhledem na sjezdovku & hory' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje na lyže/kola' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Privátní podkrovní balkon s nejvyšším výhledem na sjezdovku i hory' },
+        { icon: 'fa-solid fa-tree', label: 'Krásné přiznané dřevěné podkrovní trámy a hřejivá atmosféra' },
+        { icon: 'fa-solid fa-bed', label: 'Útulná podkrovní ložnice pro ničím nerušený horský spánek' },
+        { icon: 'fa-solid fa-kitchen-set', label: 'Vybavená kuchyně s varnou deskou a kávovarem' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje se sušáky bot na 1. NP' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací stání u domu' }
+      ],
+      desc: 'Atmosférický podkrovní apartmán ve 3. patře s přiznanými dřevěnými trámy a privátním balkonem s nejkrásnějším výhledem na sjezdovku Bublava i okolní horské vrcholy. Přírodní dřevo a klid podkroví vytváří kouzelné zázemí pro zimní i letní dovolenou. Samostatná ložnice, obývací pokoj s kuchyní, Wi-Fi a vyhřívaná kóje se sušáky bot.'
+    },
+    en: {
+      name: 'Attic Timber Suite with Slope & Mountain Views',
+      category: '3rd Floor // Cathedral Timber Beams // Slope & Mountain Views // 4 Guests',
+      size: '42 m²',
+      capacity: '4 guests',
+      price: '€114',
+      tagline: '42 m² • 4 guests • Exposed beams • Balcony overlooking slopes & peaks',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '42 m² living area' },
+        { icon: 'fa-solid fa-users', label: '4 guests (attic 2-room)' },
+        { icon: 'fa-solid fa-mountain-sun', label: 'Top floor balcony with slope & peak views' },
+        { icon: 'fa-solid fa-snowflake', label: 'Heated gear locker with dryers' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Highest balcony vantage point with views of slopes and alpine summits' },
+        { icon: 'fa-solid fa-tree', label: 'Atmospheric exposed timber rafters and cozy alpine ambiance' },
+        { icon: 'fa-solid fa-bed', label: 'Quiet attic bedroom for restorative mountain sleep' },
+        { icon: 'fa-solid fa-snowflake', label: 'Private heated ski & bike locker on ground floor' }
+      ],
+      desc: 'Enchanting top-floor attic residence with cathedral-style exposed timber beams and a private balcony boasting supreme vistas over the ski slopes and surrounding mountain heights. Features separate bedroom, lounge with kitchen, Wi-Fi, and private heated gear locker.'
+    }
+  },
+  11: {
+    unitCode: '791/11-305',
+    floor: '3. NP (Podkroví)',
+    totalArea: '40,19 m²',
+    innerArea: '35,71 m²',
+    outdoorArea: '3,24 m² (balkon)',
+    lockerId: '1.04|11 (1,24 m²)',
+    img: 'assets/images/web/apt-bedroom-loft.jpg',
+    floorplan: 'assets/images/apartments/apt-11-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-11-cad-blueprint.jpg',
+    cs: {
+      name: 'Apartmán 11 (Podkroví • 3. NP)',
+      category: '3. NP // PODKROVNÍ 2KK // BALKON & POHODA',
+      size: '40,19 m²',
+      capacity: '4 hosté',
+      price: '2 800 Kč',
+      tagline: '40,19 m² • Balkon 3,2 m² • Kóje 1.04|11 • 4 osoby',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '40,19 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '4 dospělí hosté' },
+        { icon: 'fa-solid fa-mountain', label: 'Balkon 3,24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Kóje 1.04|11 (1,24 m²)' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain', label: 'Balkon s výhledem do horské zeleně' },
+        { icon: 'fa-solid fa-bed', label: 'Samostatná ložnice 13,1 m²' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje 1.04|11 se sušáky bot' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací stání' }
+      ],
+      desc: 'Útulné podkroví s balkonem a dřevěnými architektonickými detaily. Kompletní kuchyně, koupelna se sprchou a kóje 1.04|11.'
+    },
+    en: {
+      name: 'Apartment 11 (Attic • 3rd Floor)',
+      category: '3rd Floor // Attic 2-Room // Balcony & Comfort',
+      size: '40.19 m²',
+      capacity: '4 guests',
+      price: '€110',
+      tagline: '40.19 m² • Balcony 3.2 m² • Ski Locker 1.04|11 • 4 guests',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '40.19 m² total area' },
+        { icon: 'fa-solid fa-users', label: '4 guests' },
+        { icon: 'fa-solid fa-mountain', label: 'Balcony 3.24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Ski locker 1.04|11' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain', label: 'Balcony overlooking alpine landscape' },
+        { icon: 'fa-solid fa-snowflake', label: 'Ski locker 1.04|11 with boot dryers' }
+      ],
+      desc: 'Comfortable attic 2-room apartment with balcony and ski gear storage.'
+    }
+  },
+  12: {
+    unitCode: '791/12-306',
+    floor: '3. NP (Podkroví)',
+    totalArea: '46,03 m²',
+    innerArea: '41,65 m²',
+    outdoorArea: '3,24 m² (rohový balkon)',
+    lockerId: '1.04|12 (1,14 m²)',
+    img: 'assets/images/web/apt-bedroom-loft.jpg',
+    floorplan: 'assets/images/apartments/apt-12-3d-floorplan.jpg',
+    blueprint: 'assets/images/blueprints/apt-12-cad-blueprint.jpg',
+    cs: {
+      name: 'Apartmán 12 (Podkroví • Rohový balkon)',
+      category: '3. NP // PODKROVÍ 2KK // ROHOVÝ BALKON & PANORAMA',
+      size: '46,03 m²',
+      capacity: '4–6 hostů',
+      price: '3 150 Kč',
+      tagline: '46,03 m² • Rohový balkon • Kóje 1.04|12 • 4–6 osob',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '46,03 m² celková výměra' },
+        { icon: 'fa-solid fa-users', label: '4–6 dospělých hostů' },
+        { icon: 'fa-solid fa-mountain', label: 'Rohový balkon 3,24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Kóje 1.04|12 (1,14 m²)' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Nejvyšší rohový výhled na Bublavu a sjezdovku' },
+        { icon: 'fa-solid fa-tree', label: 'Krásné podkrovní trámové detaily' },
+        { icon: 'fa-solid fa-bed', label: 'Velká ložnice 16,3 m² + obývací pokoj 17,2 m²' },
+        { icon: 'fa-solid fa-snowflake', label: 'Vyhřívaná kóje 1.04|12 se sušáky bot' },
+        { icon: 'fa-solid fa-square-parking', label: '2 garantovaná parkovací stání' }
+      ],
+      desc: 'Prémiový rohový podkrovní apartmán na 3. NP s rohovým balkonem a impozantním panoramatickým výhledem. Přiznané dřevěné trámy, velkorysé prostory a vlastní kóje 1.04|12.'
+    },
+    en: {
+      name: 'Apartment 12 (Attic • Corner Balcony)',
+      category: '3rd Floor // Attic 2-Room // Corner Balcony & Vista',
+      size: '46.03 m²',
+      capacity: '4–6 guests',
+      price: '€124',
+      tagline: '46.03 m² • Corner balcony • Ski Locker 1.04|12 • 4–6 guests',
+      specs: [
+        { icon: 'fa-solid fa-vector-square', label: '46.03 m² total area' },
+        { icon: 'fa-solid fa-users', label: '4–6 guests' },
+        { icon: 'fa-solid fa-mountain', label: 'Corner balcony 3.24 m²' },
+        { icon: 'fa-solid fa-person-skiing', label: 'Ski locker 1.04|12' }
+      ],
+      features: [
+        { icon: 'fa-solid fa-mountain-sun', label: 'Highest corner panorama of Bublava & slopes' },
+        { icon: 'fa-solid fa-tree', label: 'Warm exposed timber rafters' },
+        { icon: 'fa-solid fa-snowflake', label: 'Ski locker 1.04|12 with boot dryers' }
+      ],
+      desc: 'Top-tier corner attic residence with wraparound panoramic balcony, exposed wooden rafters and private locker 1.04|12.'
     }
   }
 };
 
-function openAptDetailModal(id) {
+let currentModalView = 'floorplan';
+
+function switchModalView(mode) {
+  const apt = apartmentDetails[currentAptModalId];
+  if (!apt) return;
+  currentModalView = mode;
+  const imgEl = document.getElementById('apt-modal-img');
+  const btnFloorplan = document.getElementById('modal-view-floorplan-btn');
+  const btnPhoto = document.getElementById('modal-view-photo-btn');
+
+  if (mode === 'floorplan' && apt.floorplan) {
+    if (imgEl) {
+      imgEl.src = apt.floorplan;
+      imgEl.style.objectFit = 'contain';
+      imgEl.style.padding = '24px';
+      imgEl.style.background = '#06080b';
+    }
+    if (btnFloorplan) btnFloorplan.classList.add('active');
+    if (btnPhoto) btnPhoto.classList.remove('active');
+  } else {
+    if (imgEl) {
+      imgEl.src = apt.img;
+      imgEl.style.objectFit = 'cover';
+      imgEl.style.padding = '0';
+      imgEl.style.background = 'transparent';
+    }
+    if (btnPhoto) btnPhoto.classList.add('active');
+    if (btnFloorplan) btnFloorplan.classList.remove('active');
+  }
+}
+
+function openAptDetailModal(id, viewMode) {
   const apt = apartmentDetails[id];
   if (!apt) return;
   currentAptModalId = id;
+  if (!viewMode) viewMode = 'floorplan';
 
   const lang = (typeof currentLang !== 'undefined' && apt[currentLang]) ? currentLang : 'cs';
   const data = apt[lang] || apt.cs;
 
   const titleEl = document.getElementById('apt-modal-title');
   const catEl = document.getElementById('apt-modal-category');
-  const imgEl = document.getElementById('apt-modal-img');
   const descEl = document.getElementById('apt-modal-desc');
   const priceEl = document.getElementById('apt-modal-price');
   const specsContainer = document.getElementById('apt-modal-specs');
@@ -564,13 +929,11 @@ function openAptDetailModal(id) {
 
   if (titleEl) titleEl.textContent = data.name;
   if (catEl) catEl.textContent = data.category;
-  if (imgEl) {
-    imgEl.src = apt.img;
-    imgEl.alt = data.name;
-  }
   if (descEl) descEl.textContent = data.desc;
   if (priceEl) priceEl.textContent = data.price;
   if (taglineEl) taglineEl.textContent = data.tagline;
+
+  switchModalView(viewMode);
 
   if (specsContainer) {
     specsContainer.innerHTML = '';
@@ -603,7 +966,7 @@ function openAptDetailModal(id) {
   const modal = document.getElementById('apt-detail-modal');
   if (modal) {
     modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
+    document.body.classList.add('apt-modal-open');
   }
 }
 
@@ -703,28 +1066,42 @@ setTimeout(dismissPreloader, 2200);
 // =============================================================================
 const panoramaGalleryData = [
   {
-    src: 'assets/images/web/residence-exterior.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
-    categorySlug: 'residence',
-    desc: 'placeholder'
-  },
-  {
-    src: 'assets/images/web/apt-penthouse.jpg',
+    src: 'assets/images/web/apt-living-balcony.jpg',
     title: 'placeholder',
     category: 'placeholder',
     categorySlug: 'interiors',
     desc: 'placeholder'
   },
   {
-    src: 'assets/images/web/summer-hiking.jpg',
+    src: 'assets/images/web/lobby-bar-evening.jpg',
     title: 'placeholder',
     category: 'placeholder',
-    categorySlug: 'nature',
+    categorySlug: 'lobby',
     desc: 'placeholder'
   },
   {
-    src: 'assets/images/web/gallery-chalet.jpg',
+    src: 'assets/images/web/apt-living-dining.jpg',
+    title: 'placeholder',
+    category: 'placeholder',
+    categorySlug: 'interiors',
+    desc: 'placeholder'
+  },
+  {
+    src: 'assets/images/web/lobby-bar-lounge.jpg',
+    title: 'placeholder',
+    category: 'placeholder',
+    categorySlug: 'lobby',
+    desc: 'placeholder'
+  },
+  {
+    src: 'assets/images/web/apt-bedroom-loft.jpg',
+    title: 'placeholder',
+    category: 'placeholder',
+    categorySlug: 'interiors',
+    desc: 'placeholder'
+  },
+  {
+    src: 'assets/images/web/residence-exterior.jpg',
     title: 'placeholder',
     category: 'placeholder',
     categorySlug: 'residence',
@@ -738,24 +1115,17 @@ const panoramaGalleryData = [
     desc: 'placeholder'
   },
   {
-    src: 'assets/images/web/apt-valley.jpg',
+    src: 'assets/images/web/gallery-chalet.jpg',
     title: 'placeholder',
     category: 'placeholder',
-    categorySlug: 'interiors',
+    categorySlug: 'residence',
     desc: 'placeholder'
   },
   {
-    src: 'assets/images/web/gallery-lake.jpg',
+    src: 'assets/images/web/summer-hiking.jpg',
     title: 'placeholder',
     category: 'placeholder',
     categorySlug: 'nature',
-    desc: 'placeholder'
-  },
-  {
-    src: 'assets/images/web/apt-forest.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
-    categorySlug: 'interiors',
     desc: 'placeholder'
   },
   {
@@ -763,6 +1133,13 @@ const panoramaGalleryData = [
     title: 'placeholder',
     category: 'placeholder',
     categorySlug: 'residence',
+    desc: 'placeholder'
+  },
+  {
+    src: 'assets/images/web/gallery-lake.jpg',
+    title: 'placeholder',
+    category: 'placeholder',
+    categorySlug: 'nature',
     desc: 'placeholder'
   },
   {
@@ -981,29 +1358,24 @@ document.addEventListener('touchend', (e) => {
 // Pricing Configuration (Placeholders subject to owner refinement)
 const APARTMENT_PRICES = {
   'all': {
-    pricePerNight: 17500,
-    cs: 'Celá rezidence',
-    en: 'Whole Residence'
+    pricePerNight: 8900,
+    cs: 'Všechny 3 apartmány (až 14 hostů)',
+    en: 'All 3 Apartments (Up to 14 guests)'
   },
-  '1': {
-    pricePerNight: 6800,
-    cs: 'Apartmán 1',
-    en: 'Apartment 1'
+  '6': {
+    pricePerNight: 3150,
+    cs: 'Panoramatický rohový apartmán (Apartmán 6 • až 6 hostů)',
+    en: 'Panoramic Corner Suite (Apartment 6 • up to 6 guests)'
   },
-  '2': {
-    pricePerNight: 4400,
-    cs: 'Apartmán 2',
-    en: 'Apartment 2'
+  '5': {
+    pricePerNight: 2850,
+    cs: 'Horský apartmán s balkonem (Apartmán 5 • 4 hosté)',
+    en: 'Mountain Balcony Suite (Apartment 5 • 4 guests)'
   },
-  '3': {
-    pricePerNight: 3600,
-    cs: 'Apartmán 3',
-    en: 'Apartment 3'
-  },
-  '4': {
-    pricePerNight: 2800,
-    cs: 'Apartmán 4',
-    en: 'Apartment 4'
+  '10': {
+    pricePerNight: 2900,
+    cs: 'Podkrovní apartmán s trámy (Apartmán 10 • 4 hosté)',
+    en: 'Attic Timber Suite (Apartment 10 • 4 guests)'
   }
 };
 
@@ -1052,7 +1424,8 @@ function getStayPricing(nightsCount) {
 
 function updateBookingBarPricing(pricingData) {
   const livePriceEl = document.getElementById('booking-live-price');
-  if (!livePriceEl) return;
+  const pinnedLivePriceEl = document.getElementById('pinned-booking-live-price');
+  if (!livePriceEl && !pinnedLivePriceEl) return;
 
   const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
   let pricing = pricingData;
@@ -1062,12 +1435,17 @@ function updateBookingBarPricing(pricingData) {
     pricing = getStayPricing(diff);
   }
 
-  if (pricing.isMinStayMet) {
-    livePriceEl.className = 'booking-live-price';
-    livePriceEl.innerHTML = `<i class="fa-solid fa-tag" style="font-size: 10px; color: #ff9d5c;"></i><span>${isEn ? 'Est. price:' : 'Kalkulace:'} <strong>${pricing.formattedPrice}</strong> <span style="font-size: 10px; opacity: 0.7;">(${pricing.nights} ${pricing.nightWord})</span></span>`;
-  } else {
-    livePriceEl.className = 'booking-live-price is-warning';
-    livePriceEl.innerHTML = `<i class="fa-solid fa-circle-exclamation" style="font-size: 10px; color: #ff8a43;"></i><span>${isEn ? 'Min. stay: <strong>2 nights</strong>' : 'Min. délka pobytu: <strong>2 noci</strong>'}</span>`;
+  const htmlSuccess = `<i class="fa-solid fa-tag" style="font-size: 10px; color: #ff9d5c;"></i><span>${isEn ? 'Est. price:' : 'Kalkulace:'} <strong>${pricing.formattedPrice}</strong> <span style="font-size: 10px; opacity: 0.7;">(${pricing.nights} ${pricing.nightWord})</span></span>`;
+  const htmlWarning = `<i class="fa-solid fa-circle-exclamation" style="font-size: 10px; color: #ff8a43;"></i><span>${isEn ? 'Min. stay: <strong>2 nights</strong>' : 'Min. délka pobytu: <strong>2 noci</strong>'}</span>`;
+
+  if (livePriceEl) {
+    livePriceEl.className = pricing.isMinStayMet ? 'booking-live-price' : 'booking-live-price is-warning';
+    livePriceEl.innerHTML = pricing.isMinStayMet ? htmlSuccess : htmlWarning;
+  }
+
+  if (pinnedLivePriceEl) {
+    pinnedLivePriceEl.className = pricing.isMinStayMet ? 'booking-live-price pinned-live-price' : 'booking-live-price pinned-live-price is-warning';
+    pinnedLivePriceEl.innerHTML = pricing.isMinStayMet ? htmlSuccess : htmlWarning;
   }
 }
 
@@ -1078,12 +1456,29 @@ function toggleAptDropdown(e) {
   if (!dropdown) return;
   const isOpen = dropdown.classList.contains('open');
   closeAlpineCalendar();
+  document.getElementById('pinned-apt-dropdown-container')?.classList.remove('open');
   if (isOpen) {
     dropdown.classList.remove('open');
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
   } else {
     dropdown.classList.add('open');
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'true');
+  }
+}
+
+function togglePinnedAptDropdown(e) {
+  if (e) e.stopPropagation();
+  const dropdown = document.getElementById('pinned-apt-dropdown-container');
+  if (!dropdown) return;
+  const isOpen = dropdown.classList.contains('open');
+  closeAlpineCalendar();
+  document.getElementById('apt-dropdown-container')?.classList.remove('open');
+  if (isOpen) {
+    dropdown.classList.remove('open');
+    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+  } else {
+    dropdown.classList.add('open');
+    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'true');
   }
 }
 
@@ -1100,24 +1495,45 @@ function selectAptOption(val, title, el) {
     hiddenSelect.dispatchEvent(new Event('change'));
   }
 
+  // Update hero dropdown text
   const selectedText = document.getElementById('apt-dropdown-selected');
   if (selectedText) {
     selectedText.textContent = title;
   }
 
-  document.querySelectorAll('.custom-dropdown__option').forEach(opt => {
-    opt.classList.remove('selected');
-    opt.setAttribute('aria-selected', 'false');
-  });
-  if (el) {
-    el.classList.add('selected');
-    el.setAttribute('aria-selected', 'true');
+  // Update pinned dropdown text
+  const pinnedSelectedText = document.getElementById('pinned-apt-selected');
+  if (pinnedSelectedText) {
+    pinnedSelectedText.textContent = title;
   }
 
+  // Update mobile summary text
+  const mobileAptText = document.getElementById('pinned-mobile-apt-text');
+  if (mobileAptText) {
+    mobileAptText.textContent = title;
+  }
+
+  // Synchronize active classes on all matching options across both bars
+  document.querySelectorAll(`.custom-dropdown__option`).forEach(opt => {
+    if (opt.getAttribute('data-value') === val) {
+      opt.classList.add('selected');
+      opt.setAttribute('aria-selected', 'true');
+    } else {
+      opt.classList.remove('selected');
+      opt.setAttribute('aria-selected', 'false');
+    }
+  });
+
+  // Close both dropdowns
   const dropdown = document.getElementById('apt-dropdown-container');
   if (dropdown) {
     dropdown.classList.remove('open');
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+  }
+  const pinnedDropdown = document.getElementById('pinned-apt-dropdown-container');
+  if (pinnedDropdown) {
+    pinnedDropdown.classList.remove('open');
+    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
   }
 
   // Live recalculate pricing for chosen apartment
@@ -1129,6 +1545,7 @@ let calCheckinDate = new Date(2026, 9, 15); // Default Oct 15, 2026
 let calCheckoutDate = new Date(2026, 9, 19); // Default Oct 19, 2026
 let calViewDate = new Date(2026, 9, 1); // Viewed month
 let calActiveStage = 'checkin'; // 'checkin' | 'checkout'
+let calActiveSource = 'hero'; // 'hero' | 'pinned'
 
 const calMonthNamesCS = ['Leden', 'Únor', 'Březen', 'Duben', 'Květen', 'Červen', 'Červenec', 'Srpen', 'Září', 'Říjen', 'Listopad', 'Prosinec'];
 const calMonthNamesEN = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
@@ -1162,12 +1579,24 @@ function updateCalBarDisplays() {
   if (inDay) inDay.textContent = getCalDayShort(calCheckinDate);
   if (inHidden) inHidden.value = formatCalISO(calCheckinDate);
 
+  // Sync pinned checkin
+  const pInVal = document.getElementById('pinned-checkin-val');
+  const pInDay = document.getElementById('pinned-checkin-day');
+  if (pInVal) pInVal.textContent = formatCalDisplay(calCheckinDate);
+  if (pInDay) pInDay.textContent = getCalDayShort(calCheckinDate);
+
   const outVal = document.getElementById('checkout-val-display');
   const outDay = document.getElementById('checkout-day-display');
   const outHidden = document.getElementById('book-checkout');
   if (outVal) outVal.textContent = formatCalDisplay(calCheckoutDate);
   if (outDay) outDay.textContent = getCalDayShort(calCheckoutDate);
   if (outHidden) outHidden.value = formatCalISO(calCheckoutDate);
+
+  // Sync pinned checkout
+  const pOutVal = document.getElementById('pinned-checkout-val');
+  const pOutDay = document.getElementById('pinned-checkout-day');
+  if (pOutVal) pOutVal.textContent = formatCalDisplay(calCheckoutDate);
+  if (pOutDay) pOutDay.textContent = getCalDayShort(calCheckoutDate);
 
   const stageInVal = document.getElementById('cal-stage-in-val');
   const stageOutVal = document.getElementById('cal-stage-out-val');
@@ -1187,6 +1616,25 @@ function updateCalBarDisplays() {
       nightsBadge.className = 'cal-stage-nights warning';
       const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
       nightsBadge.textContent = isEn ? `${pricing.nights} night (min. 2)` : `${pricing.nights} noc (min. 2)`;
+    }
+  }
+
+  // Update mobile summary text
+  const pMobDates = document.getElementById('pinned-mobile-dates-text');
+  if (pMobDates) {
+    const dIn = `${calCheckinDate.getDate()}. ${calCheckinDate.getMonth() + 1}.`;
+    const dOut = `${calCheckoutDate.getDate()}. ${calCheckoutDate.getMonth() + 1}.`;
+    pMobDates.textContent = `${dIn} – ${dOut}`;
+  }
+  const pMobSub = document.getElementById('pinned-mobile-sub-text');
+  if (pMobSub) {
+    const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+    if (pricing.isMinStayMet) {
+      pMobSub.textContent = isEn ?
+        `Est. price: ${pricing.formattedPrice} (${pricing.nights} ${pricing.nightWord})` :
+        `Kalkulace: ${pricing.formattedPrice} (${pricing.nights} ${pricing.nightWord})`;
+    } else {
+      pMobSub.textContent = isEn ? 'Min. stay: 2 nights' : 'Min. délka pobytu: 2 noci';
     }
   }
 
@@ -1391,7 +1839,7 @@ function updateCalendarFooterHint(customStatus, hoverNights) {
   // Normal / Hover / Idle state
   if (pricing.isMinStayMet) {
     // Stay is >= 2 nights -> hide minimum stay notice, show live pricing calculation!
-    const prefix = isEn ? 'Estimated price:' : 'Kalkulace:';
+    const prefix = isEn ? 'Est. price:' : 'Kalkulace:';
     setAlpineCalHint('price', `${prefix} <strong class="cal-price-highlight">${pricing.formattedPrice}</strong> <span class="cal-price-sub">(${pricing.nights} ${pricing.nightWord})</span>`);
   } else {
     // Stay is < 2 nights -> show warning with minimum stay notice!
@@ -1459,20 +1907,40 @@ function resetAlpineCalendarDates() {
   renderAlpineCalendar();
 }
 
-function toggleAlpineCalendar(field) {
+function toggleAlpineCalendar(field, source = 'hero') {
   const popover = document.getElementById('alpine-calendar-popover');
   const inTrigger = document.getElementById('checkin-trigger');
   const outTrigger = document.getElementById('checkout-trigger');
+  const pInTrigger = document.getElementById('pinned-checkin-trigger');
+  const pOutTrigger = document.getElementById('pinned-checkout-trigger');
   if (!popover) return;
 
+  // Close any open dropdowns
   document.getElementById('apt-dropdown-container')?.classList.remove('open');
+  document.getElementById('pinned-apt-dropdown-container')?.classList.remove('open');
+
+  // Reparent calendar popover to active container so it opens downwards in hero and UPWARDS in pinned bar
+  if (source === 'pinned') {
+    const pinnedSlot = document.getElementById('pinned-calendar-slot');
+    if (pinnedSlot && popover.parentElement !== pinnedSlot) {
+      pinnedSlot.appendChild(popover);
+    }
+    popover.classList.add('is-pinned-calendar');
+  } else {
+    const heroSlot = document.getElementById('hero-calendar-slot');
+    if (heroSlot && popover.parentElement !== heroSlot) {
+      heroSlot.appendChild(popover);
+    }
+    popover.classList.remove('is-pinned-calendar');
+  }
 
   const isOpen = popover.classList.contains('active');
-  if (isOpen && calActiveStage === field) {
+  if (isOpen && calActiveStage === field && calActiveSource === source) {
     closeAlpineCalendar();
     return;
   }
 
+  calActiveSource = source;
   calActiveStage = field || 'checkin';
   if (calActiveStage === 'checkin' && calCheckinDate) {
     calViewDate = new Date(calCheckinDate.getFullYear(), calCheckinDate.getMonth(), 1);
@@ -1481,8 +1949,18 @@ function toggleAlpineCalendar(field) {
   }
 
   popover.classList.add('active');
-  if (inTrigger) inTrigger.classList.toggle('active', calActiveStage === 'checkin');
-  if (outTrigger) outTrigger.classList.toggle('active', calActiveStage === 'checkout');
+
+  if (source === 'pinned') {
+    if (pInTrigger) pInTrigger.classList.toggle('active', calActiveStage === 'checkin');
+    if (pOutTrigger) pOutTrigger.classList.toggle('active', calActiveStage === 'checkout');
+    if (inTrigger) inTrigger.classList.remove('active');
+    if (outTrigger) outTrigger.classList.remove('active');
+  } else {
+    if (inTrigger) inTrigger.classList.toggle('active', calActiveStage === 'checkin');
+    if (outTrigger) outTrigger.classList.toggle('active', calActiveStage === 'checkout');
+    if (pInTrigger) pInTrigger.classList.remove('active');
+    if (pOutTrigger) pOutTrigger.classList.remove('active');
+  }
   
   if (calActiveStage === 'checkout') {
     updateCalendarFooterHint('action');
@@ -1497,30 +1975,496 @@ function closeAlpineCalendar() {
   if (popover) popover.classList.remove('active');
   document.getElementById('checkin-trigger')?.classList.remove('active');
   document.getElementById('checkout-trigger')?.classList.remove('active');
+  document.getElementById('pinned-checkin-trigger')?.classList.remove('active');
+  document.getElementById('pinned-checkout-trigger')?.classList.remove('active');
   updateCalBarDisplays();
 }
 
 // Global click outside listener
 document.addEventListener('click', (e) => {
-  const dropdown = document.getElementById('apt-dropdown-container');
-  if (dropdown && !dropdown.contains(e.target)) {
-    dropdown.classList.remove('open');
+  const heroDropdown = document.getElementById('apt-dropdown-container');
+  if (heroDropdown && !heroDropdown.contains(e.target)) {
+    heroDropdown.classList.remove('open');
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+  }
+
+  const pinnedDropdown = document.getElementById('pinned-apt-dropdown-container');
+  if (pinnedDropdown && !pinnedDropdown.contains(e.target)) {
+    pinnedDropdown.classList.remove('open');
+    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
   }
 
   const cal = document.getElementById('alpine-calendar-popover');
   const inTrigger = document.getElementById('checkin-trigger');
   const outTrigger = document.getElementById('checkout-trigger');
+  const pInTrigger = document.getElementById('pinned-checkin-trigger');
+  const pOutTrigger = document.getElementById('pinned-checkout-trigger');
+  const pMobTrigger = document.getElementById('pinned-mobile-trigger');
+
   if (cal && cal.classList.contains('active')) {
-    if (!cal.contains(e.target) && !inTrigger?.contains(e.target) && !outTrigger?.contains(e.target)) {
+    if (!cal.contains(e.target) &&
+        !inTrigger?.contains(e.target) && !outTrigger?.contains(e.target) &&
+        !pInTrigger?.contains(e.target) && !pOutTrigger?.contains(e.target) &&
+        !pMobTrigger?.contains(e.target)) {
       closeAlpineCalendar();
     }
   }
 });
 
+// Pinned Booking Bar omnipresence scroll watcher
+function initPinnedBookingBar() {
+  const pinnedBar = document.getElementById('pinned-booking-bar');
+  if (!pinnedBar) return;
+
+  function checkScroll() {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+    // Show pinned bar once scrolled past 260px
+    if (scrollY > 260) {
+      pinnedBar.classList.add('is-visible');
+    } else {
+      if (pinnedBar.classList.contains('is-visible')) {
+        const cal = document.getElementById('alpine-calendar-popover');
+        if (cal && cal.classList.contains('is-pinned-calendar') && cal.classList.contains('active')) {
+          closeAlpineCalendar();
+        }
+        document.getElementById('pinned-apt-dropdown-container')?.classList.remove('open');
+        pinnedBar.classList.remove('is-visible');
+      }
+    }
+  }
+
+  window.addEventListener('scroll', checkScroll, { passive: true });
+  checkScroll();
+
+  // Also support GSAP ScrollTrigger if active
+  if (typeof ScrollTrigger !== 'undefined') {
+    ScrollTrigger.create({
+      trigger: '.banner',
+      start: 'bottom 80%',
+      onLeave: () => pinnedBar.classList.add('is-visible'),
+      onEnterBack: () => {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
+        if (scrollY <= 260) {
+          pinnedBar.classList.remove('is-visible');
+        }
+      }
+    });
+  }
+}
+
+/* ==========================================================================
+   Hero Split Canvas Interactive Showcase Slider
+   ========================================================================== */
+const heroScenes = [
+  { id: 1, cs: "Panoramatický výhled", en: "Panoramic Mountain View" },
+  { id: 2, cs: "Stylový Lobby Bar", en: "Stylish Lobby Bar" },
+  { id: 3, cs: "Designové Mezonety", en: "Design Penthouse Suites" }
+];
+let currentHeroScene = 0;
+let heroAutoCycleTimer = null;
+
+function updateHeroSceneDisplay() {
+  const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+  for (let i = 1; i <= 3; i++) {
+    const slide = document.getElementById('hero-slide-' + i);
+    const diamonds = document.querySelectorAll('.hero-diamond');
+    const dia = diamonds[i - 1];
+    if (slide) {
+      if (i === currentHeroScene + 1) {
+        slide.classList.add('active');
+      } else {
+        slide.classList.remove('active');
+      }
+    }
+    if (dia) {
+      if (i === currentHeroScene + 1) {
+        dia.classList.add('active');
+      } else {
+        dia.classList.remove('active');
+      }
+    }
+  }
+  const captionEl = document.getElementById('hero-scene-caption');
+  if (captionEl) {
+    captionEl.textContent = isEn ? heroScenes[currentHeroScene].en : heroScenes[currentHeroScene].cs;
+  }
+}
+
+function nextHeroScene() {
+  currentHeroScene = (currentHeroScene + 1) % heroScenes.length;
+  updateHeroSceneDisplay();
+}
+
+function prevHeroScene() {
+  currentHeroScene = (currentHeroScene - 1 + heroScenes.length) % heroScenes.length;
+  updateHeroSceneDisplay();
+}
+
+function setHeroScene(num) {
+  currentHeroScene = num - 1;
+  updateHeroSceneDisplay();
+}
+
+function initHeroSplitSlider() {
+  updateHeroSceneDisplay();
+  const rightPanel = document.querySelector('.hero-split__right');
+  if (rightPanel) {
+    heroAutoCycleTimer = setInterval(nextHeroScene, 6500);
+    rightPanel.addEventListener('mouseenter', () => {
+      if (heroAutoCycleTimer) clearInterval(heroAutoCycleTimer);
+    });
+    rightPanel.addEventListener('mouseleave', () => {
+      if (heroAutoCycleTimer) clearInterval(heroAutoCycleTimer);
+      heroAutoCycleTimer = setInterval(nextHeroScene, 6500);
+    });
+  }
+}
+
+// ==========================================================================
+// Architectural Dossier: Spotlight X-Ray Reveal & Filtering
+// ==========================================================================
+function initSpotlightXRay() {
+  const canvas = document.getElementById('spotlight-canvas');
+  if (!canvas) return;
+
+  const rect = canvas.getBoundingClientRect();
+  const initW = rect.width || canvas.offsetWidth || 700;
+  const initH = rect.height || canvas.offsetHeight || 520;
+  let defaultX = initW * 0.52;
+  let defaultY = initH * 0.48;
+
+  let mouseX = defaultX;
+  let mouseY = defaultY;
+  let currentX = defaultX;
+  let currentY = defaultY;
+  let isHovered = false;
+  let animId = null;
+
+  const coordsEl = document.getElementById('spotlight-hud-coords');
+
+  function updateHudCoords(x, y, w, h) {
+    if (coordsEl) {
+      const cadX = ((x / (w || 700)) * 18.5).toFixed(1);
+      const cadY = ((((h || 520) - y) / (h || 520)) * 11.2).toFixed(1);
+      coordsEl.textContent = `X: ${cadX}m | Y: ${cadY}m | ELEV: +6.40m`;
+    }
+  }
+  updateHudCoords(defaultX, defaultY, initW, initH);
+
+  canvas.style.setProperty('--mouse-x', `${defaultX.toFixed(1)}px`);
+  canvas.style.setProperty('--mouse-y', `${defaultY.toFixed(1)}px`);
+
+  canvas.addEventListener('pointerenter', () => {
+    isHovered = true;
+    if (!animId) updateSpotlight();
+  });
+
+  canvas.addEventListener('pointerleave', () => {
+    isHovered = false;
+    const r = canvas.getBoundingClientRect();
+    mouseX = (r.width || initW) * 0.52;
+    mouseY = (r.height || initH) * 0.48;
+    updateHudCoords(mouseX, mouseY, r.width, r.height);
+    if (!animId) updateSpotlight();
+  });
+
+  canvas.addEventListener('pointermove', (e) => {
+    const r = canvas.getBoundingClientRect();
+    mouseX = e.clientX - r.left;
+    mouseY = e.clientY - r.top;
+    updateHudCoords(mouseX, mouseY, r.width, r.height);
+    if (!animId) updateSpotlight();
+  });
+
+  function updateSpotlight() {
+    currentX += (mouseX - currentX) * 0.15;
+    currentY += (mouseY - currentY) * 0.15;
+
+    canvas.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
+    canvas.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
+
+    if (isHovered || Math.abs(mouseX - currentX) > 0.5 || Math.abs(mouseY - currentY) > 0.5) {
+      animId = requestAnimationFrame(updateSpotlight);
+    } else {
+      animId = null;
+    }
+  }
+}
+
+function toggleSpotlightBlueprint() {
+  const canvas = document.getElementById('spotlight-canvas');
+  const fullBp = document.getElementById('spotlight-full-blueprint');
+  const btn = document.querySelector('.spotlight-toggle-btn');
+  const btnText = document.getElementById('spotlight-toggle-text');
+  const btnIcon = btn ? btn.querySelector('i') : null;
+  if (!fullBp) return;
+
+  const isVisible = fullBp.classList.toggle('is-visible');
+  if (canvas) {
+    if (isVisible) {
+      canvas.classList.add('is-floorplan-active');
+    } else {
+      canvas.classList.remove('is-floorplan-active');
+    }
+  }
+  if (btnText) {
+    btnText.textContent = isVisible ? 'Zpět na fotografii' : 'Zobrazit 3D půdorys';
+  }
+  if (btnIcon) {
+    btnIcon.className = isVisible ? 'fa-solid fa-camera me-1' : 'fa-solid fa-cube me-1';
+  }
+}
+
+function filterDossier(cat) {
+  const btns = document.querySelectorAll('.dossier-tab-btn');
+  btns.forEach(b => b.classList.remove('active'));
+
+  const activeBtn = document.querySelector(`.dossier-tab-btn[data-filter="${cat}"]`);
+  if (activeBtn) activeBtn.classList.add('active');
+
+  const cards = document.querySelectorAll('.dossier-card');
+  cards.forEach(card => {
+    const cardCat = card.getAttribute('data-category');
+    if (cat === 'all' || cardCat === cat) {
+      card.classList.remove('is-hidden');
+    } else {
+      card.classList.add('is-hidden');
+    }
+  });
+
+  const buyoutBanner = document.getElementById('dossier-buyout-banner');
+  if (buyoutBanner) {
+    if (cat === 'all' || cat === 'buyout') {
+      buyoutBanner.style.display = 'flex';
+    } else {
+      buyoutBanner.style.display = 'none';
+    }
+  }
+}
+
 // Initialize on load
 if (document.readyState === 'complete' || document.readyState === 'interactive') {
   renderAlpineCalendar();
+  initPinnedBookingBar();
+  initHeroSplitSlider();
+  initSpotlightXRay();
 } else {
-  window.addEventListener('DOMContentLoaded', renderAlpineCalendar);
+  window.addEventListener('DOMContentLoaded', () => {
+    renderAlpineCalendar();
+    initPinnedBookingBar();
+    initHeroSplitSlider();
+    initSpotlightXRay();
+  });
 }
+
+
+
+// ==========================================================================
+// Spotlight X-Ray Master Studio & Collapsible Grid Logic (Proposal A)
+// ==========================================================================
+
+// ==========================================================================
+// Managed Units Logic (Rooms 5, 6, 10)
+// ==========================================================================
+const managedUnitIds = [6, 5, 10];
+let currentSpotlightUnitId = 6; // Default to flagship corner apartment 6
+
+function switchSpotlightUnit(id) {
+  id = parseInt(id);
+  if (!managedUnitIds.includes(id)) {
+    id = 6;
+  }
+  const apt = apartmentDetails[id];
+  if (!apt) return;
+  currentSpotlightUnitId = id;
+
+  const lang = (typeof currentLang !== 'undefined' && apt[currentLang]) ? currentLang : 'cs';
+  const data = apt[lang] || apt.cs;
+
+  // 1. Update Spotlight Layers
+  const photoLayer = document.querySelector('.spotlight-layer--photo');
+  const bpLayer = document.querySelector('.spotlight-layer--blueprint');
+  const fullBpLayer = document.getElementById('spotlight-full-blueprint');
+
+  if (photoLayer && apt.img) {
+    photoLayer.style.backgroundImage = `url('${apt.img}')`;
+  }
+  if (bpLayer && apt.blueprint) {
+    bpLayer.style.backgroundImage = `url('${apt.blueprint}')`;
+  }
+  if (fullBpLayer && apt.floorplan) {
+    fullBpLayer.style.backgroundImage = `url('${apt.floorplan}')`;
+  }
+
+  // 2. Update Badge, Counter, and Select dropdown
+  const badgeEl = document.getElementById('spotlight-unit-badge');
+  const counterEl = document.getElementById('spotlight-nav-counter');
+  const selectEl = document.getElementById('spotlight-apt-select');
+
+  const unitIndex = managedUnitIds.indexOf(id) + 1;
+  if (badgeEl) badgeEl.textContent = `${apt.floor} // VÝHLED NA SJEZDOVKU & HORY`;
+  if (counterEl) counterEl.textContent = `0${unitIndex} / 03`;
+
+  // Sync quick filter tabs
+  ['tab-btn-6', 'tab-btn-5', 'tab-btn-10'].forEach(btnId => {
+    const btn = document.getElementById(btnId);
+    if (btn) {
+      if (btnId === `tab-btn-${id}`) {
+        btn.classList.add('active');
+      } else {
+        btn.classList.remove('active');
+      }
+    }
+  });
+  if (selectEl && parseInt(selectEl.value) !== id) selectEl.value = id;
+
+  // 3. Update Title & Description
+  const titleEl = document.getElementById('spotlight-title');
+  const descEl = document.getElementById('spotlight-desc');
+  if (titleEl) titleEl.textContent = data.name;
+  if (descEl) descEl.textContent = data.desc;
+
+  // 4. Update 4 Spec Boxes
+  const areaEl = document.getElementById('spotlight-spec-area');
+  const outdoorLabel = document.getElementById('spotlight-spec-outdoor-label');
+  const outdoorEl = document.getElementById('spotlight-spec-outdoor');
+  const capEl = document.getElementById('spotlight-spec-capacity');
+  const lockerEl = document.getElementById('spotlight-spec-locker');
+
+  if (areaEl) areaEl.textContent = apt.totalArea;
+  if (outdoorLabel) outdoorLabel.textContent = 'Balkon s výhledem';
+  if (outdoorEl) outdoorEl.textContent = apt.outdoorArea;
+  if (capEl) capEl.textContent = data.capacity;
+  if (lockerEl) lockerEl.textContent = `${apt.lockerId} + 2x park`;
+
+  // 5. Update Price & Action Buttons
+  const priceEl = document.getElementById('spotlight-price');
+  if (priceEl) priceEl.textContent = data.price;
+
+  const bookBtn = document.getElementById('spotlight-book-btn');
+  if (bookBtn) {
+    bookBtn.onclick = () => openPrevioModal(data.name);
+  }
+
+  const detailBtn = document.getElementById('spotlight-detail-btn');
+  if (detailBtn) {
+    detailBtn.onclick = () => openAptDetailModal(id, 'floorplan');
+  }
+
+  // 6. Highlight active card in 3-card showcase
+  document.querySelectorAll('.dossier-card').forEach(c => {
+    if (parseInt(c.getAttribute('data-id')) === id) {
+      c.classList.add('is-focused-unit');
+    } else {
+      c.classList.remove('is-focused-unit');
+    }
+  });
+}
+
+function nextSpotlightUnit() {
+  let currIdx = managedUnitIds.indexOf(currentSpotlightUnitId);
+  let nextIdx = (currIdx + 1) % managedUnitIds.length;
+  switchSpotlightUnit(managedUnitIds[nextIdx]);
+}
+
+function prevSpotlightUnit() {
+  let currIdx = managedUnitIds.indexOf(currentSpotlightUnitId);
+  let prevIdx = (currIdx - 1 + managedUnitIds.length) % managedUnitIds.length;
+  switchSpotlightUnit(managedUnitIds[prevIdx]);
+}
+
+function selectDossierCard(id) {
+  id = parseInt(id);
+  switchSpotlightUnit(id);
+  const studio = document.querySelector('.dossier-spotlight-card');
+  if (studio) {
+    studio.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+}
+
+function toggleCardImage(event, id) {
+  if (event) event.stopPropagation();
+  id = parseInt(id);
+  const card = document.querySelector(`.dossier-card[data-id="${id}"]`);
+  if (!card) return;
+  const img = card.querySelector('.dossier-card-thumb img');
+  const btnText = card.querySelector('.dossier-thumb-plan-btn span');
+  const btnIcon = card.querySelector('.dossier-thumb-plan-btn i');
+  const apt = apartmentDetails[id];
+  if (!img || !apt) return;
+
+  const currentView = img.getAttribute('data-view') || 'photo';
+  if (currentView === 'photo') {
+    img.style.opacity = '0.25';
+    setTimeout(() => {
+      img.src = apt.floorplan;
+      img.setAttribute('data-view', 'floorplan');
+      img.style.opacity = '1';
+    }, 150);
+    if (btnText) btnText.textContent = 'Fotografie';
+    if (btnIcon) btnIcon.className = 'fa-solid fa-camera me-1';
+  } else {
+    img.style.opacity = '0.25';
+    setTimeout(() => {
+      img.src = apt.img;
+      img.setAttribute('data-view', 'photo');
+      img.style.opacity = '1';
+    }, 150);
+    if (btnText) btnText.textContent = 'Půdorys';
+    if (btnIcon) btnIcon.className = 'fa-solid fa-compass-drafting me-1';
+  }
+}
+
+
+function toggleDossierGrid() {
+  isDossierGridExpanded = !isDossierGridExpanded;
+  const grid = document.getElementById('dossier-grid');
+  const toggleBtn = document.getElementById('dossier-catalog-toggle');
+  const label = document.getElementById('dossier-toggle-label');
+  const chevron = document.getElementById('dossier-toggle-chevron');
+
+  if (isDossierGridExpanded) {
+    if (grid) {
+      grid.classList.remove('dossier-grid--collapsed');
+      grid.classList.add('dossier-grid--expanded');
+    }
+    if (label) label.textContent = 'Skrýt přehledovou mřížku apartmánů';
+    if (chevron) {
+      chevron.classList.remove('fa-chevron-down');
+      chevron.classList.add('fa-chevron-up');
+    }
+    if (toggleBtn) toggleBtn.classList.add('is-active');
+  } else {
+    if (grid) {
+      grid.classList.remove('dossier-grid--expanded');
+      grid.classList.add('dossier-grid--collapsed');
+    }
+    if (label) label.textContent = 'Zobrazit všech 12 apartmánů v mřížce';
+    if (chevron) {
+      chevron.classList.remove('fa-chevron-up');
+      chevron.classList.add('fa-chevron-down');
+    }
+    if (toggleBtn) toggleBtn.classList.remove('is-active');
+
+    const spotlight = document.querySelector('.dossier-spotlight-card');
+    if (spotlight) {
+      spotlight.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  }
+}
+
+// Modify filterDossier to also auto-switch Spotlight Unit when a floor tab is clicked
+const originalFilterDossier = filterDossier;
+filterDossier = function(cat) {
+  if (typeof originalFilterDossier === 'function') {
+    originalFilterDossier(cat);
+  }
+  if (cat === '2np' && currentSpotlightUnitId > 6) {
+    switchSpotlightUnit(1);
+  } else if (cat === '3np' && currentSpotlightUnitId <= 6) {
+    switchSpotlightUnit(7);
+  } else if (cat === 'buyout') {
+    const banner = document.getElementById('dossier-buyout-banner');
+    if (banner) banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  }
+};
