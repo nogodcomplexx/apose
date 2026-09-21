@@ -9,29 +9,35 @@ if (!fs.existsSync(publicDir)) {
   fs.mkdirSync(publicDir, { recursive: true });
 }
 
-if (!fs.existsSync(targetLink)) {
-  try {
-    if (process.platform === 'win32') {
-      fs.symlinkSync(sourceDir, targetLink, 'junction');
-      console.log('Created NTFS junction: public/assets -> assets');
-    } else {
-      // Linux (Vercel) / macOS: create relative symlink
-      fs.symlinkSync('../assets', targetLink, 'dir');
-      console.log('Created symlink: public/assets -> ../assets');
-    }
-  } catch (err) {
-    console.warn('Symlink creation failed, copying essential assets...', err.message);
-    const essentialFolders = ['css', 'fonts', 'icons', 'images', 'js', 'vendor', 'video'];
-    fs.mkdirSync(targetLink, { recursive: true });
-    for (const folder of essentialFolders) {
-      const src = path.join(sourceDir, folder);
-      const dest = path.join(targetLink, folder);
-      if (fs.existsSync(src)) {
-        fs.cpSync(src, dest, { recursive: true });
-      }
-    }
-    console.log('Copied essential web asset folders to public/assets');
-  }
+// On local Windows dev, keep the existing junction if present
+if (process.platform === 'win32' && fs.existsSync(targetLink)) {
+  console.log('Windows local junction public/assets is present and ready.');
 } else {
-  console.log('public/assets is already present and ready');
+  // On Linux (Vercel production build): copy actual files into public/assets
+  // (avoiding symlinks pointing to ../ which Vercel Edge security blocks)
+  console.log('Vercel production build: syncing assets into public/assets...');
+  fs.mkdirSync(targetLink, { recursive: true });
+
+  const folders = ['css', 'fonts', 'icons', 'js', 'vendor', 'video'];
+  for (const f of folders) {
+    const src = path.join(sourceDir, f);
+    const dest = path.join(targetLink, f);
+    if (fs.existsSync(src)) {
+      fs.cpSync(src, dest, { recursive: true, force: true });
+    }
+  }
+
+  // Copy images (web, apartments, blueprints, logo, template)
+  const imagesDest = path.join(targetLink, 'images');
+  fs.mkdirSync(imagesDest, { recursive: true });
+  const imageSubfolders = ['web', 'apartments', 'blueprints', 'logo', 'template'];
+  for (const sub of imageSubfolders) {
+    const src = path.join(sourceDir, 'images', sub);
+    const dest = path.join(imagesDest, sub);
+    if (fs.existsSync(src)) {
+      fs.cpSync(src, dest, { recursive: true, force: true });
+    }
+  }
+
+  console.log('Vercel assets synced successfully to public/assets.');
 }
