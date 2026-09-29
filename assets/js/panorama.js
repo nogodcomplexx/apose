@@ -2169,6 +2169,10 @@ function initSpotlightXRay() {
   const canvas = document.getElementById('spotlight-canvas');
   if (!canvas) return;
 
+  // Skip mouse-tracking HUD on touch devices (no hover pointer available)
+  const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+  if (isTouchDevice) return;
+
   const rect = canvas.getBoundingClientRect();
   const initW = rect.width || canvas.offsetWidth || 700;
   const initH = rect.height || canvas.offsetHeight || 520;
