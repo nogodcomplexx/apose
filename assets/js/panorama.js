@@ -2531,3 +2531,11 @@ filterDossier = function(cat) {
     if (banner) banner.scrollIntoView({ behavior: 'smooth', block: 'center' });
   }
 };
+
+// Ensure GSAP ScrollTrigger recalculates after images and fonts load on mobile
+window.addEventListener('load', () => {
+  if (typeof ScrollTrigger !== 'undefined') {
+    setTimeout(() => { ScrollTrigger.refresh(); }, 250);
+    setTimeout(() => { ScrollTrigger.refresh(); }, 800);
+  }
+});

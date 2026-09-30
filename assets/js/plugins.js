@@ -693,46 +693,42 @@
 			});
 		  }
 
-		// 25. skill bar progress
-		$("[data-percent]").each(function() {
-			$(this)
-				.find(".skill-bar-percent")
-				.css("width", $(this).attr("data-percent"));
-			$(this).find(".percent-value").text($(this).attr("data-percent"));
-		});
-
+		// 25. skill bar progress (Mobile & Desktop GSAP Counter Animation)
 		const ax_progress_bar = document.querySelectorAll(".skill-bar-single");
 		ax_progress_bar.forEach((element) => {
-			const w = element.querySelector(".skill-bar-percent");
-			const p = element.querySelector(".percent-value");
+			const wrapper = element.querySelector(".skill-bar-wrapper");
+			const bar = element.querySelector(".skill-bar-percent");
+			const valEl = element.querySelector(".percent-value");
+			const targetPercent = parseInt(wrapper?.getAttribute("data-percent") || "100", 10);
 
-			const target = p.textContent;
+			if (bar) bar.style.width = "0%";
+			if (valEl) valEl.textContent = "0%";
 
-			const ax_bartl = gsap.timeline({
-				defaults: {
-					duration: 2,
-				},
-				scrollTrigger: {
-					trigger: element,
-				},
-			});
-
-			ax_bartl.fromTo(
-				w, {
-					width: 0
-				}, {
-					width: target,
+			ScrollTrigger.create({
+				trigger: element,
+				start: "top 95%",
+				once: true,
+				onEnter: () => {
+					if (bar) {
+						gsap.to(bar, {
+							width: targetPercent + "%",
+							duration: 1.5,
+							ease: "power2.out"
+						});
+					}
+					if (valEl) {
+						let countObj = { val: 0 };
+						gsap.to(countObj, {
+							val: targetPercent,
+							duration: 1.5,
+							ease: "power2.out",
+							onUpdate: () => {
+								valEl.textContent = Math.round(countObj.val) + "%";
+							}
+						});
+					}
 				}
-			);
-			ax_bartl.from(
-				p, {
-					textContent: 0 + "%",
-					snap: {
-						textContent: 5
-					},
-				},
-				"<"
-			);
+			});
 		});
 
 		// 26. project horizontal move
@@ -753,38 +749,35 @@
 			});
 		}
 
-		// 27. split title
-		if (device_width > 576) {
-			let char_come = gsap.utils.toArray(".title-anim");
+		// 27. split title (Active on mobile & desktop)
+		let char_come = gsap.utils.toArray(".title-anim");
 
-			char_come.forEach((char_come) => {
-				let split_char = new SplitText(char_come, {
-					type: "chars, words",
-					lineThreshold: 0.5,
-				});
-				const tl2 = gsap.timeline({
-					scrollTrigger: {
-						trigger: char_come,
-						start: "top 90%",
-						end: "bottom 60%",
-						scrub: false,
-						markers: false,
-						toggleActions: "play none none none",
-					},
-				});
-				tl2.from(split_char.chars, {
-					duration: 0.8,
-					x: 70,
-					autoAlpha: 0,
-					stagger: 0.03,
-				});
+		char_come.forEach((char_come) => {
+			let split_char = new SplitText(char_come, {
+				type: "chars, words",
+				lineThreshold: 0.5,
 			});
-		}
+			const tl2 = gsap.timeline({
+				scrollTrigger: {
+					trigger: char_come,
+					start: "top 92%",
+					end: "bottom 60%",
+					scrub: false,
+					markers: false,
+					toggleActions: "play none none none",
+				},
+			});
+			tl2.from(split_char.chars, {
+				duration: 0.8,
+				x: 40,
+				autoAlpha: 0,
+				stagger: 0.02,
+			});
+		});
 
 		// 28. fade animations
 		if ($(".fade-left").length > 0) {
-			if (device_width > 576) {
-				$(".fade-left").each(function() {
+			$(".fade-left").each(function() {
 					var element = this;
 
 					gsap.set(element, {
@@ -813,8 +806,7 @@
 		}
 
 		if ($(".fade-right").length > 0) {
-			if (device_width > 576) {
-				$(".fade-right").each(function() {
+			$(".fade-right").each(function() {
 					var element = this;
 
 					gsap.set(element, {
@@ -843,8 +835,7 @@
 		}
 
 		if ($(".fade-wrapper").length > 0) {
-			if (device_width > 576) {
-				$(".fade-wrapper").each(function() {
+			$(".fade-wrapper").each(function() {
 					var section = $(this);
 					var fadeItems = section.find(".fade-top");
 
@@ -878,8 +869,7 @@
 		}
 
 		if ($(".fade-wrapper").length > 0) {
-			if (device_width > 576) {
-				$(".fade-wrapper").each(function() {
+			$(".fade-wrapper").each(function() {
 					var section = $(this);
 					var fadeItems = section.find(".fade-down");
 
