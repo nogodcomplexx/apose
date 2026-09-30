@@ -2549,8 +2549,8 @@ filterDossier = function(cat) {
 function initMobileScrollAnimations() {
   if (typeof gsap === 'undefined') return;
 
-  // 1. Mobile Title SplitText Reveal (only for phones <= 576px, native IntersectionObserver for Safari iOS & mobile)
-  if (window.innerWidth <= 576 && typeof SplitText !== 'undefined') {
+  // 1. Mobile Title SplitText Reveal (phones and tablets <= 991px, native IntersectionObserver for Safari iOS & mobile)
+  if (window.innerWidth <= 991 && typeof SplitText !== 'undefined') {
     const titles = gsap.utils.toArray('.title-anim');
 
     function animateTitle(elem) {
@@ -2585,7 +2585,7 @@ function initMobileScrollAnimations() {
           lineThreshold: 0.5,
         });
         elem._splitInstance = split;
-        // Set initial state: shifted and invisible
+        // Set initial state: shifted and invisible until scrolled to
         gsap.set(split.chars, { autoAlpha: 0, x: 45 });
       } catch (err) {
         console.warn('SplitText mobile fallback:', err);
@@ -2601,35 +2601,27 @@ function initMobileScrollAnimations() {
           }
         });
       }, {
-        threshold: 0.1,
-        rootMargin: '0px 0px -30px 0px'
+        threshold: 0.05,
+        rootMargin: '0px 0px -15px 0px'
       });
 
       titles.forEach(elem => titleObserver.observe(elem));
     }
 
-    // Scroll and touch fallback for mobile touch
+    // Scroll and touch fallback: activates whenever any heading scrolls into the viewport
     const checkTitlesOnScroll = () => {
       titles.forEach((elem) => {
         if (elem.dataset.mobileAnimDone) return;
         const rect = elem.getBoundingClientRect();
-        if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+        if (rect.top < window.innerHeight * 0.94 && rect.bottom > 0) {
           animateTitle(elem);
         }
       });
     };
     window.addEventListener('scroll', checkTitlesOnScroll, { passive: true });
     window.addEventListener('touchmove', checkTitlesOnScroll, { passive: true });
-    setTimeout(checkTitlesOnScroll, 400);
-
-    // Safety fallback: ensure text is never permanently hidden under any network or engine condition
-    setTimeout(() => {
-      titles.forEach(elem => {
-        if (!elem.dataset.mobileAnimDone) {
-          animateTitle(elem);
-        }
-      });
-    }, 2800);
+    setTimeout(checkTitlesOnScroll, 350);
+    setTimeout(checkTitlesOnScroll, 800);
   }
 
   // 2. Skill Bars Counter & Fill Animation (Native IntersectionObserver + Scroll Fallback)
