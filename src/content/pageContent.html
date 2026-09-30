@@ -2166,7 +2166,7 @@
          <div class="pinned-mobile-bar">
             <div class="pinned-mobile-trigger-group">
                <!-- 1. Dates Touch Pill -->
-               <div class="pinned-mobile-pill" id="pinned-mobile-date-pill" onclick="toggleAlpineCalendar('checkin', 'pinned')" role="button" tabindex="0">
+               <div class="pinned-mobile-pill" id="pinned-mobile-date-pill" onclick="event.stopPropagation(); toggleAlpineCalendar('checkin', 'pinned');" role="button" tabindex="0">
                   <i class="fa-regular fa-calendar-days"></i>
                   <span id="pinned-mobile-dates-text">15. 10. – 19. 10.</span>
                </div>

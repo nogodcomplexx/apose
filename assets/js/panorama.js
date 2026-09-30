@@ -2059,12 +2059,16 @@ document.addEventListener('click', (e) => {
   const pInTrigger = document.getElementById('pinned-checkin-trigger');
   const pOutTrigger = document.getElementById('pinned-checkout-trigger');
   const pMobTrigger = document.getElementById('pinned-mobile-trigger');
+  const pMobDatePill = document.getElementById('pinned-mobile-date-pill');
 
   if (cal && cal.classList.contains('active')) {
     if (!cal.contains(e.target) &&
         !inTrigger?.contains(e.target) && !outTrigger?.contains(e.target) &&
         !pInTrigger?.contains(e.target) && !pOutTrigger?.contains(e.target) &&
-        !pMobTrigger?.contains(e.target)) {
+        !pMobTrigger?.contains(e.target) &&
+        !pMobDatePill?.contains(e.target) &&
+        !e.target.closest('#pinned-mobile-date-pill') &&
+        !e.target.closest('.custom-date-trigger')) {
       closeAlpineCalendar();
     }
   }
@@ -2569,12 +2573,12 @@ function initMobileScrollAnimations() {
     });
   }
 
-  // 2. Skill Bars Counter & Bar Fill Animation (Desktop & Mobile)
+  // 2. Skill Bars Counter & Fill Animation (Native IntersectionObserver + Scroll Fallback)
   const skillBars = document.querySelectorAll('.agency .skill-bar-single');
   if (skillBars.length > 0) {
-    skillBars.forEach((elem) => {
-      if (elem.dataset.barAnimInit) return;
-      elem.dataset.barAnimInit = 'true';
+    function animateBar(elem) {
+      if (elem.dataset.barAnimDone) return;
+      elem.dataset.barAnimDone = 'true';
 
       const w = elem.querySelector('.skill-bar-percent');
       const p = elem.querySelector('.percent-value');
@@ -2582,19 +2586,21 @@ function initMobileScrollAnimations() {
       const targetPercent = wrapper ? (wrapper.getAttribute('data-percent') || '100%') : '100%';
       const targetNum = parseInt(targetPercent, 10) || 100;
 
-      if (w && p) {
+      if (!w || !p) return;
+
+      // Kill any paused/frozen GSAP tweens from plugins.js
+      if (typeof gsap !== 'undefined') {
+        gsap.killTweensOf([w, p]);
+        
         const counter = { val: 0 };
-        gsap.timeline({
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 92%',
-            toggleActions: 'play none none none',
-          },
-        })
-        .fromTo(w, { width: '0%' }, { width: targetPercent, duration: 1.8, ease: 'power2.out' })
-        .to(counter, {
+        gsap.to(w, {
+          width: targetPercent,
+          duration: 1.6,
+          ease: 'power2.out'
+        });
+        gsap.to(counter, {
           val: targetNum,
-          duration: 1.8,
+          duration: 1.6,
           ease: 'power2.out',
           onUpdate: function() {
             p.textContent = Math.round(counter.val) + '%';
@@ -2602,9 +2608,43 @@ function initMobileScrollAnimations() {
           onComplete: function() {
             p.textContent = targetPercent;
           }
-        }, '<');
+        });
+      } else {
+        w.style.width = targetPercent;
+        p.textContent = targetPercent;
       }
-    });
+    }
+
+    if ('IntersectionObserver' in window) {
+      const barObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateBar(entry.target);
+            barObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -20px 0px'
+      });
+
+      skillBars.forEach(b => barObserver.observe(b));
+    }
+
+    // Scroll listener fallback for mobile touch
+    const onScrollCheck = () => {
+      skillBars.forEach(b => {
+        if (b.dataset.barAnimDone) return;
+        const rect = b.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+          animateBar(b);
+        }
+      });
+    };
+    window.addEventListener('scroll', onScrollCheck, { passive: true });
+    window.addEventListener('touchmove', onScrollCheck, { passive: true });
+    // Also run once in case already visible
+    setTimeout(onScrollCheck, 500);
   }
 
   // 3. Robust Ticker Fallback (ensures horizontal marquee never stacks)
