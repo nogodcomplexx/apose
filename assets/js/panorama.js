@@ -2533,7 +2533,111 @@ filterDossier = function(cat) {
 };
 
 // Ensure GSAP ScrollTrigger recalculates after images and fonts load on mobile
+/**
+ * Mobile Scroll Animations & Skill Bar Initializer
+ * Guarantees luxury scroll reveals on phone screens without altering desktop logic
+ */
+function initMobileScrollAnimations() {
+  if (typeof gsap === 'undefined') return;
+
+  // 1. Mobile Title SplitText Reveal (only for phones <= 576px, since desktop is handled by plugins.js)
+  if (window.innerWidth <= 576 && typeof SplitText !== 'undefined') {
+    const titles = gsap.utils.toArray('.title-anim');
+    titles.forEach((elem) => {
+      if (elem.dataset.mobileAnimInit) return;
+      elem.dataset.mobileAnimInit = 'true';
+      try {
+        const split = new SplitText(elem, {
+          type: 'chars, words',
+          lineThreshold: 0.5,
+        });
+        gsap.from(split.chars, {
+          duration: 0.8,
+          x: 35,
+          autoAlpha: 0,
+          stagger: 0.02,
+          ease: 'back.out',
+          scrollTrigger: {
+            trigger: elem,
+            start: 'top 92%',
+            toggleActions: 'play none none none',
+          },
+        });
+      } catch (err) {
+        console.warn('SplitText mobile fallback:', err);
+      }
+    });
+  }
+
+  // 2. Skill Bars Counter & Bar Fill Animation (Desktop & Mobile)
+  const skillBars = document.querySelectorAll('.agency .skill-bar-single');
+  if (skillBars.length > 0) {
+    skillBars.forEach((elem) => {
+      if (elem.dataset.barAnimInit) return;
+      elem.dataset.barAnimInit = 'true';
+
+      const w = elem.querySelector('.skill-bar-percent');
+      const p = elem.querySelector('.percent-value');
+      const wrapper = elem.querySelector('.skill-bar-wrapper');
+      const targetPercent = wrapper ? (wrapper.getAttribute('data-percent') || '100%') : '100%';
+      const targetNum = parseInt(targetPercent, 10) || 100;
+
+      if (w && p) {
+        const counter = { val: 0 };
+        gsap.timeline({
+          scrollTrigger: {
+            trigger: elem,
+            start: 'top 92%',
+            toggleActions: 'play none none none',
+          },
+        })
+        .fromTo(w, { width: '0%' }, { width: targetPercent, duration: 1.8, ease: 'power2.out' })
+        .to(counter, {
+          val: targetNum,
+          duration: 1.8,
+          ease: 'power2.out',
+          onUpdate: function() {
+            p.textContent = Math.round(counter.val) + '%';
+          },
+          onComplete: function() {
+            p.textContent = targetPercent;
+          }
+        }, '<');
+      }
+    });
+  }
+
+  // 3. Robust Ticker Fallback (ensures horizontal marquee never stacks)
+  if (typeof jQuery !== 'undefined' && jQuery.fn && jQuery.fn.slick) {
+    const $ticker = jQuery('.portfolio__text-slider');
+    if ($ticker.length > 0 && !$ticker.hasClass('slick-initialized')) {
+      $ticker.slick({
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: true,
+        autoplaySpeed: 0,
+        speed: 10000,
+        arrows: false,
+        dots: false,
+        pauseOnHover: false,
+        cssEase: 'linear',
+        variableWidth: true,
+      });
+    }
+  }
+}
+
+// Initialize on DOMContentLoaded and load
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    setTimeout(initMobileScrollAnimations, 200);
+  });
+} else {
+  setTimeout(initMobileScrollAnimations, 200);
+}
+
 window.addEventListener('load', () => {
+  setTimeout(initMobileScrollAnimations, 400);
   if (typeof ScrollTrigger !== 'undefined') {
     setTimeout(() => { ScrollTrigger.refresh(); }, 250);
     setTimeout(() => { ScrollTrigger.refresh(); }, 800);
