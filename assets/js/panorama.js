@@ -1548,10 +1548,10 @@ function selectAptOption(val, title, el) {
 
   // Concise titles for mobile pill
   let mobileTitle = title;
-  if (val === 'all') mobileTitle = 'Všechny apartmány';
-  else if (val === '6') mobileTitle = 'Apartmán 6 (rohový)';
-  else if (val === '5') mobileTitle = 'Apartmán 5 (balkon)';
-  else if (val === '10') mobileTitle = 'Apartmán 10 (podkroví)';
+  if (val === 'all') mobileTitle = 'Všechny (3)';
+  else if (val === '6') mobileTitle = 'Apartmán 6';
+  else if (val === '5') mobileTitle = 'Apartmán 5';
+  else if (val === '10') mobileTitle = 'Apartmán 10';
 
   // Update hero dropdown text
   const selectedText = document.getElementById('apt-dropdown-selected');
@@ -1676,9 +1676,12 @@ function updateCalBarDisplays() {
   // Update mobile summary text
   const pMobDates = document.getElementById('pinned-mobile-dates-text');
   if (pMobDates) {
-    const dIn = `${calCheckinDate.getDate()}. ${calCheckinDate.getMonth() + 1}.`;
-    const dOut = `${calCheckoutDate.getDate()}. ${calCheckoutDate.getMonth() + 1}.`;
-    pMobDates.textContent = `${dIn} – ${dOut}`;
+    const sameMonth = calCheckinDate.getMonth() === calCheckoutDate.getMonth() && calCheckinDate.getFullYear() === calCheckoutDate.getFullYear();
+    if (sameMonth) {
+      pMobDates.textContent = `${calCheckinDate.getDate()}. – ${calCheckoutDate.getDate()}. ${calCheckoutDate.getMonth() + 1}.`;
+    } else {
+      pMobDates.textContent = `${calCheckinDate.getDate()}.${calCheckinDate.getMonth() + 1}. – ${calCheckoutDate.getDate()}.${calCheckoutDate.getMonth() + 1}.`;
+    }
   }
   const pMobSub = document.getElementById('pinned-mobile-sub-text');
   if (pMobSub) {
@@ -2085,9 +2088,11 @@ function initPinnedBookingBar() {
   if (!pinnedBar) return;
 
   function checkScroll() {
-    const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-    // Show pinned bar once scrolled past 260px
-    if (scrollY > 260) {
+    const scrollY = window.pageYOffset || document.documentElement.scrollTop || (document.querySelector('.my-app')?.scrollTop) || 0;
+    const isMobile = window.innerWidth < 992;
+    const threshold = isMobile ? 120 : 260;
+    // Show pinned bar once scrolled past threshold
+    if (scrollY > threshold) {
       pinnedBar.classList.add('is-visible');
     } else {
       if (pinnedBar.classList.contains('is-visible')) {
@@ -2102,6 +2107,12 @@ function initPinnedBookingBar() {
   }
 
   window.addEventListener('scroll', checkScroll, { passive: true });
+  window.addEventListener('touchmove', checkScroll, { passive: true });
+  document.addEventListener('scroll', checkScroll, { passive: true });
+  const myApp = document.querySelector('.my-app');
+  if (myApp) {
+    myApp.addEventListener('scroll', checkScroll, { passive: true });
+  }
   checkScroll();
 
   // Also support GSAP ScrollTrigger if active
@@ -2111,8 +2122,10 @@ function initPinnedBookingBar() {
       start: 'bottom 80%',
       onLeave: () => pinnedBar.classList.add('is-visible'),
       onEnterBack: () => {
-        const scrollY = window.pageYOffset || document.documentElement.scrollTop || 0;
-        if (scrollY <= 260) {
+        const scrollY = window.pageYOffset || document.documentElement.scrollTop || (document.querySelector('.my-app')?.scrollTop) || 0;
+        const isMobile = window.innerWidth < 992;
+        const threshold = isMobile ? 120 : 260;
+        if (scrollY <= threshold) {
           pinnedBar.classList.remove('is-visible');
         }
       }

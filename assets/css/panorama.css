@@ -25,6 +25,9 @@ html, body {
   overflow-x: hidden !important;
   max-width: 100% !important;
   width: 100% !important;
+  min-height: 100vh !important;
+  max-height: none !important;
+  height: auto !important;
 }
 
 body * {
@@ -4088,9 +4091,12 @@ a.btn span {
     padding: 7px 9px !important;
     border-radius: 14px !important;
     box-sizing: border-box !important;
+    z-index: 99999 !important;
   }
   .pinned-booking-bar.is-visible {
     transform: translateY(0) !important;
+    opacity: 1 !important;
+    pointer-events: all !important;
   }
   .pinned-desktop-grid {
     display: none !important;
@@ -4114,13 +4120,13 @@ a.btn span {
   .pinned-mobile-pill {
     display: flex !important;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 9px;
-    padding: 6px 8px;
+    border-radius: 8px;
+    padding: 5px 5px;
     color: #ffffff;
-    font-size: 11px;
+    font-size: 9.5px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
@@ -4133,7 +4139,7 @@ a.btn span {
   .pinned-mobile-pill i.fa-regular,
   .pinned-mobile-pill i.fa-mountain-city {
     color: #ff7425;
-    font-size: 11px;
+    font-size: 10px;
     flex-shrink: 0;
   }
   .pinned-mobile-pill span {
@@ -4143,7 +4149,7 @@ a.btn span {
   }
   .pinned-mobile-pill-chevron {
     color: rgba(255, 255, 255, 0.5);
-    font-size: 8.5px;
+    font-size: 7.5px;
     margin-left: auto;
     flex-shrink: 0;
     transition: transform 0.25s ease;
@@ -4163,7 +4169,7 @@ a.btn span {
   }
   .pinned-mobile-sub {
     grid-column: span 2;
-    font-size: 9.5px;
+    font-size: 9px;
     color: #ff9d5c;
     font-weight: 600;
     white-space: nowrap;
@@ -4172,11 +4178,11 @@ a.btn span {
     padding-left: 2px;
   }
   .pinned-mobile-btn {
-    padding: 10px 14px !important;
-    font-size: 11.5px !important;
+    padding: 8px 10px !important;
+    font-size: 10.5px !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
-    border-radius: 10px !important;
+    border-radius: 9px !important;
     flex-shrink: 0 !important;
   }
   .pinned-booking-bar .pinned-dropdown-menu {
