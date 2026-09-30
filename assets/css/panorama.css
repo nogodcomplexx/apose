@@ -225,19 +225,151 @@ a.btn span {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 991px) {
+  .primary-navbar {
+    height: 64px !important;
+    background: rgba(8, 10, 14, 0.92) !important;
+    backdrop-filter: blur(24px) saturate(180%) !important;
+    -webkit-backdrop-filter: blur(24px) saturate(180%) !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5) !important;
+    padding: 0 !important;
+  }
+
+  .primary-navbar .container-fluid {
+    padding: 0 16px !important;
+    height: 100% !important;
+  }
+
   .primary-navbar .navbar {
     display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
     justify-content: space-between !important;
+    align-items: center !important;
+    width: 100% !important;
+    height: 100% !important;
   }
+
   .navbar__grid-left {
     display: none !important;
+    width: 0 !important;
   }
-  .navbar__logo-center {
+
+  .navbar__center-cluster {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 0 1 auto !important;
     margin: 0 !important;
   }
+
+  .navbar__center-cluster .navbar__list {
+    display: none !important;
+  }
+
+  .navbar__logo-center {
+    display: inline-flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  .navbar__logo-center img {
+    height: 28px !important;
+    max-height: 28px !important;
+    width: auto !important;
+  }
+
+  .navbar__grid-right {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    flex-wrap: nowrap !important;
+    gap: 10px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Hide the top-bar redundant booking button on mobile — sticky bottom bar already has it */
   .navbar-book-btn {
     display: none !important;
+  }
+
+  /* Mobile Language Switcher: Refined frosted capsule */
+  .primary-navbar .lang-switcher {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    border-radius: 30px !important;
+    padding: 2px !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 2px !important;
+  }
+
+  .primary-navbar .lang-btn {
+    padding: 4px 8px !important;
+    font-size: 10px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.5px !important;
+    border-radius: 20px !important;
+    color: rgba(255, 255, 255, 0.6) !important;
+    background: transparent !important;
+    border: none !important;
+    transition: all 0.2s ease !important;
+    line-height: 1 !important;
+  }
+
+  .primary-navbar .lang-btn.active {
+    background: #ff7425 !important;
+    color: #ffffff !important;
+    box-shadow: 0 0 10px rgba(255, 116, 37, 0.4) !important;
+  }
+
+  /* Iconic Mobile Menu Trigger Button (Luxury Frosted Squircle with 2 Micro-Lines) */
+  .primary-navbar .open-offcanvas-nav {
+    width: 38px !important;
+    min-width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.14) !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 4px !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    transition: all 0.25s ease !important;
+  }
+
+  .primary-navbar .open-offcanvas-nav::before {
+    content: "" !important;
+    position: static !important;
+    transform: none !important;
+    width: 16px !important;
+    height: 1.5px !important;
+    background-color: #ffffff !important;
+    border-radius: 2px !important;
+    transition: all 0.25s ease !important;
+    box-shadow: none !important;
+  }
+
+  .primary-navbar .open-offcanvas-nav::after {
+    content: "" !important;
+    width: 11px !important;
+    height: 1.5px !important;
+    background-color: #ff7425 !important;
+    border-radius: 2px !important;
+    transition: all 0.25s ease !important;
+    align-self: flex-start !important;
+    margin-left: 11px !important;
+  }
+
+  .primary-navbar .open-offcanvas-nav:active {
+    transform: scale(0.94) !important;
+    background: rgba(255, 116, 37, 0.15) !important;
+    border-color: rgba(255, 116, 37, 0.5) !important;
   }
 }
 
@@ -5902,5 +6034,111 @@ a.btn span {
   }
   .custom-dropdown__check {
     margin-left: auto !important;
+  }
+}
+
+/* ==========================================================================
+   EXCLUSIVE MOBILE OFFCANVAS DRAWER LUXURY STYLING (< 768px)
+   ========================================================================== */
+@media (max-width: 767px) {
+  .offcanvas-menu {
+    background: radial-gradient(circle at 85% 10%, rgba(255, 116, 37, 0.1) 0%, transparent 55%), #090b0e !important;
+  }
+
+  .offcanvas-menu .offcanvas-menu__wrapper {
+    padding: 24px 20px 36px 20px !important;
+    gap: 22px !important;
+    min-height: 100dvh !important;
+    justify-content: space-between !important;
+  }
+
+  .offcanvas-menu__header {
+    padding-bottom: 16px !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08) !important;
+  }
+
+  .offcanvas-menu__header .logo img {
+    height: 28px !important;
+  }
+
+  .close-offcanvas-menu {
+    width: 38px !important;
+    height: 38px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    font-size: 18px !important;
+    color: #ffffff !important;
+  }
+
+  .close-offcanvas-menu:active {
+    transform: scale(0.92) !important;
+    color: #ff7425 !important;
+  }
+
+  .offcanvas-menu .navbar__menu > ul {
+    gap: 6px !important;
+  }
+
+  .offcanvas-menu .navbar__item a {
+    font-size: 21px !important;
+    font-weight: 800 !important;
+    letter-spacing: -0.01em !important;
+    padding: 8px 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04) !important;
+    color: rgba(255, 255, 255, 0.9) !important;
+  }
+
+  .offcanvas-menu .navbar__item a::after {
+    content: "→" !important;
+    font-size: 16px !important;
+    color: rgba(255, 255, 255, 0.2) !important;
+    transition: transform 0.25s ease, color 0.25s ease !important;
+  }
+
+  .offcanvas-menu .navbar__item a:active {
+    color: #ff7425 !important;
+  }
+
+  .offcanvas-menu .navbar__item a:active::after {
+    color: #ff7425 !important;
+    transform: translateX(4px) !important;
+  }
+
+  /* Booking button in drawer */
+  .offcanvas-menu__options .btn--secondary {
+    width: 100% !important;
+    padding: 13px 20px !important;
+    border-radius: 12px !important;
+    font-size: 12px !important;
+    font-weight: 700 !important;
+    text-align: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, #ff7425 0%, #e05507 100%) !important;
+    border: none !important;
+    color: #ffffff !important;
+    box-shadow: 0 8px 24px rgba(255, 116, 37, 0.3) !important;
+  }
+
+  .offcanvas-menu__social {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 10px !important;
+    padding-top: 14px !important;
+    border-top: 1px solid rgba(255, 255, 255, 0.06) !important;
+  }
+
+  .offcanvas-menu__social a {
+    width: 40px !important;
+    min-width: 40px !important;
+    height: 40px !important;
+    border-radius: 10px !important;
+    background: rgba(255, 255, 255, 0.05) !important;
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+    font-size: 15px !important;
   }
 }
