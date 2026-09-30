@@ -1779,7 +1779,8 @@ function renderAlpineCalendar() {
         });
       }
 
-      dayCell.addEventListener('click', () => {
+      dayCell.addEventListener('click', (e) => {
+        e.stopPropagation();
         handleCalDateSelection(currentDayDate);
       });
     }
@@ -1912,6 +1913,7 @@ function handleCalDateSelection(date) {
     calActiveStage = 'checkout';
     renderAlpineCalendar();
     updateCalendarFooterHint('action');
+    updateCalBarDisplays();
   } else {
     if (date <= calCheckinDate) {
       calCheckinDate = date;
@@ -1921,12 +1923,13 @@ function handleCalDateSelection(date) {
       calActiveStage = 'checkout';
       renderAlpineCalendar();
       updateCalendarFooterHint('action');
+      updateCalBarDisplays();
     } else {
       calCheckoutDate = date;
-      calActiveStage = 'checkin';
+      calActiveStage = 'checkout';
       renderAlpineCalendar();
       updateCalendarFooterHint('success');
-      setTimeout(closeAlpineCalendar, 650);
+      updateCalBarDisplays();
     }
   }
 }
@@ -2062,7 +2065,9 @@ document.addEventListener('click', (e) => {
   const pMobDatePill = document.getElementById('pinned-mobile-date-pill');
 
   if (cal && cal.classList.contains('active')) {
-    if (!cal.contains(e.target) &&
+    const isInsideCal = (typeof e.composedPath === 'function' && e.composedPath().some(el => el === cal || el.id === 'alpine-calendar-popover')) ||
+                        cal.contains(e.target);
+    if (!isInsideCal &&
         !inTrigger?.contains(e.target) && !outTrigger?.contains(e.target) &&
         !pInTrigger?.contains(e.target) && !pOutTrigger?.contains(e.target) &&
         !pMobTrigger?.contains(e.target) &&
@@ -2544,9 +2549,33 @@ filterDossier = function(cat) {
 function initMobileScrollAnimations() {
   if (typeof gsap === 'undefined') return;
 
-  // 1. Mobile Title SplitText Reveal (only for phones <= 576px, since desktop is handled by plugins.js)
+  // 1. Mobile Title SplitText Reveal (only for phones <= 576px, native IntersectionObserver for Safari iOS & mobile)
   if (window.innerWidth <= 576 && typeof SplitText !== 'undefined') {
     const titles = gsap.utils.toArray('.title-anim');
+
+    function animateTitle(elem) {
+      if (elem.dataset.mobileAnimDone) return;
+      elem.dataset.mobileAnimDone = 'true';
+      try {
+        if (elem._splitInstance && elem._splitInstance.chars && elem._splitInstance.chars.length > 0) {
+          gsap.to(elem._splitInstance.chars, {
+            duration: 0.8,
+            x: 0,
+            autoAlpha: 1,
+            stagger: 0.025,
+            ease: 'power2.out',
+            clearProps: 'transform,opacity,visibility'
+          });
+        } else {
+          elem.style.visibility = 'visible';
+          elem.style.opacity = '1';
+        }
+      } catch (e) {
+        elem.style.visibility = 'visible';
+        elem.style.opacity = '1';
+      }
+    }
+
     titles.forEach((elem) => {
       if (elem.dataset.mobileAnimInit) return;
       elem.dataset.mobileAnimInit = 'true';
@@ -2555,22 +2584,52 @@ function initMobileScrollAnimations() {
           type: 'chars, words',
           lineThreshold: 0.5,
         });
-        gsap.from(split.chars, {
-          duration: 0.8,
-          x: 35,
-          autoAlpha: 0,
-          stagger: 0.02,
-          ease: 'back.out',
-          scrollTrigger: {
-            trigger: elem,
-            start: 'top 92%',
-            toggleActions: 'play none none none',
-          },
-        });
+        elem._splitInstance = split;
+        // Set initial state: shifted and invisible
+        gsap.set(split.chars, { autoAlpha: 0, x: 45 });
       } catch (err) {
         console.warn('SplitText mobile fallback:', err);
       }
     });
+
+    if ('IntersectionObserver' in window) {
+      const titleObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            animateTitle(entry.target);
+            titleObserver.unobserve(entry.target);
+          }
+        });
+      }, {
+        threshold: 0.1,
+        rootMargin: '0px 0px -30px 0px'
+      });
+
+      titles.forEach(elem => titleObserver.observe(elem));
+    }
+
+    // Scroll and touch fallback for mobile touch
+    const checkTitlesOnScroll = () => {
+      titles.forEach((elem) => {
+        if (elem.dataset.mobileAnimDone) return;
+        const rect = elem.getBoundingClientRect();
+        if (rect.top < window.innerHeight * 0.95 && rect.bottom > 0) {
+          animateTitle(elem);
+        }
+      });
+    };
+    window.addEventListener('scroll', checkTitlesOnScroll, { passive: true });
+    window.addEventListener('touchmove', checkTitlesOnScroll, { passive: true });
+    setTimeout(checkTitlesOnScroll, 400);
+
+    // Safety fallback: ensure text is never permanently hidden under any network or engine condition
+    setTimeout(() => {
+      titles.forEach(elem => {
+        if (!elem.dataset.mobileAnimDone) {
+          animateTitle(elem);
+        }
+      });
+    }, 2800);
   }
 
   // 2. Skill Bars Counter & Fill Animation (Native IntersectionObserver + Scroll Fallback)

@@ -394,13 +394,18 @@
                                  <div id="alpine-calendar-popover" class="alpine-calendar-popover" role="dialog" aria-label="Výběr termínu pobytu">
                                  <!-- Month Nav Header -->
                                  <div class="cal-header">
-                                    <button type="button" class="cal-nav-btn" onclick="prevAlpineMonth()" aria-label="Předchozí měsíc">
+                                    <button type="button" class="cal-nav-btn" onclick="prevAlpineMonth()" aria-label="Předchozí měsíc" title="Předchozí měsíc">
                                        <i class="fa-solid fa-chevron-left"></i>
                                     </button>
                                     <div class="cal-month-title" id="cal-month-title">Říjen 2026</div>
-                                    <button type="button" class="cal-nav-btn" onclick="nextAlpineMonth()" aria-label="Následující měsíc">
-                                       <i class="fa-solid fa-chevron-right"></i>
-                                    </button>
+                                    <div class="cal-header-actions">
+                                       <button type="button" class="cal-nav-btn" onclick="nextAlpineMonth()" aria-label="Následující měsíc" title="Následující měsíc">
+                                          <i class="fa-solid fa-chevron-right"></i>
+                                       </button>
+                                       <button type="button" class="cal-close-btn" onclick="closeAlpineCalendar()" aria-label="Zavřít kalendář" title="Zavřít kalendář">
+                                          <i class="fa-solid fa-xmark"></i>
+                                       </button>
+                                    </div>
                                  </div>
 
                                  <!-- Active Selection Stage Bar -->

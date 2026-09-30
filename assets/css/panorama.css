@@ -3439,6 +3439,36 @@ a.btn span {
   box-shadow: 0 0 12px rgba(255, 116, 37, 0.5);
 }
 
+.cal-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cal-close-btn {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  outline: none;
+}
+
+.cal-close-btn:hover {
+  background: var(--primary-color, #ff7425);
+  border-color: var(--primary-color, #ff7425);
+  color: #ffffff;
+  transform: scale(1.08);
+  box-shadow: 0 0 12px rgba(255, 116, 37, 0.5);
+}
+
 /* Stage Indicator Bar */
 .cal-stage-bar {
   display: flex;
