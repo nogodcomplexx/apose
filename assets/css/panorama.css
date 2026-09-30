@@ -3075,10 +3075,12 @@ a.btn span {
   position: absolute;
   top: calc(100% + 8px);
   left: 0;
-  width: 100%;
-  min-width: 290px;
-  max-height: 380px;
+  width: max-content;
+  min-width: 100%;
+  max-width: min(580px, calc(100vw - 32px));
+  max-height: 480px;
   overflow-y: auto;
+  overflow-x: hidden;
   z-index: 99999;
   background: #0c1017 !important;
   backdrop-filter: blur(28px);
@@ -3140,15 +3142,16 @@ a.btn span {
 }
 
 .custom-dropdown__option {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 12px;
-  padding: 10px 14px;
-  border-radius: 10px;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: 14px !important;
+  padding: 11px 14px !important;
+  border-radius: 10px !important;
   cursor: pointer;
   transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   color: rgba(255, 255, 255, 0.85);
+  min-height: 52px;
 }
 
 .custom-dropdown__option:hover {
@@ -3164,43 +3167,55 @@ a.btn span {
 }
 
 .custom-dropdown__option-main {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+  display: flex !important;
+  align-items: center !important;
+  gap: 12px !important;
+  flex: 1 1 auto !important;
+  min-width: 0 !important;
 }
 
 .custom-dropdown__option-main i {
-  color: #ff7425;
-  font-size: 13px;
-  width: 16px;
-  text-align: center;
+  color: #ff7425 !important;
+  font-size: 14px !important;
+  width: 18px !important;
+  text-align: center !important;
+  flex-shrink: 0 !important;
 }
 
 .custom-dropdown__option-title {
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.01em;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  letter-spacing: 0.01em !important;
+  line-height: 1.35 !important;
+  color: #ffffff !important;
+  white-space: normal !important;
 }
 
 .custom-dropdown__badge {
-  font-size: 10.5px;
-  color: rgba(255, 255, 255, 0.45);
-  background: rgba(255, 255, 255, 0.06);
-  padding: 3px 8px;
-  border-radius: 6px;
-  font-weight: 500;
-  white-space: nowrap;
+  font-size: 11px !important;
+  color: #ff9d5c !important;
+  background: rgba(255, 116, 37, 0.12) !important;
+  border: 1px solid rgba(255, 116, 37, 0.28) !important;
+  padding: 4px 10px !important;
+  border-radius: 8px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  flex-shrink: 0 !important;
+  margin-left: auto !important;
 }
 
 .custom-dropdown__option:hover .custom-dropdown__badge {
-  color: #ff9d5c;
-  background: rgba(255, 116, 37, 0.2);
+  color: #ffb07c !important;
+  background: rgba(255, 116, 37, 0.22) !important;
+  border-color: rgba(255, 116, 37, 0.45) !important;
 }
 
 .custom-dropdown__check {
-  color: #ff7425;
-  font-size: 12px;
+  color: #ff7425 !important;
+  font-size: 13px !important;
   display: none;
+  flex-shrink: 0 !important;
+  margin-left: 8px !important;
 }
 
 .custom-dropdown__option.selected .custom-dropdown__check {
@@ -3818,17 +3833,35 @@ a.btn span {
 /* Upward Dropdown Menu in Pinned Bar */
 .pinned-booking-bar .pinned-dropdown-menu {
   position: absolute !important;
-  bottom: calc(100% + 10px) !important;
+  bottom: calc(100% + 12px) !important;
   top: auto !important;
-  max-height: 380px !important;
+  left: 33% !important;
+  width: max-content !important;
+  min-width: 460px !important;
+  max-width: min(580px, calc(100vw - 32px)) !important;
+  max-height: 480px !important;
   overflow-y: auto !important;
+  overflow-x: hidden !important;
   transform: translateY(10px) scale(0.97) !important;
   transform-origin: bottom center !important;
   box-shadow: 0 -22px 60px rgba(0, 0, 0, 0.92), 0 0 35px rgba(255, 116, 37, 0.16) !important;
+  background: #0c1017 !important;
+  border: 1px solid rgba(255, 255, 255, 0.16) !important;
+  border-radius: 14px !important;
+  padding: 8px !important;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1), transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.25s;
+  z-index: 100000 !important;
 }
 
+.pinned-booking-bar .pinned-dropdown-menu.open,
 .pinned-booking-bar .pinned-custom-dropdown.open .pinned-dropdown-menu {
   transform: translateY(0) scale(1) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  pointer-events: all !important;
 }
 
 .pinned-chevron {
@@ -3895,61 +3928,92 @@ a.btn span {
     width: 100% !important;
     box-sizing: border-box !important;
   }
-  .pinned-mobile-trigger {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+  .pinned-mobile-trigger-group {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 4px 6px;
     flex: 1 1 auto;
     min-width: 0;
+  }
+  .pinned-mobile-pill {
+    display: flex !important;
+    align-items: center;
+    gap: 5px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 10px;
-    padding: 6px 9px;
-    cursor: pointer;
-    overflow: hidden;
-    transition: all 0.2s ease;
-  }
-  .pinned-mobile-trigger:active {
-    background: rgba(255, 116, 37, 0.12);
-    border-color: rgba(255, 116, 37, 0.4);
-  }
-  .pinned-mobile-dates {
+    border-radius: 9px;
+    padding: 6px 8px;
+    color: #ffffff;
     font-size: 11px;
     font-weight: 700;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    gap: 4px;
+    cursor: pointer;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    transition: all 0.2s ease;
+    user-select: none;
+    min-width: 0;
   }
-  .pinned-mobile-dates i {
+  .pinned-mobile-pill i.fa-regular,
+  .pinned-mobile-pill i.fa-mountain-city {
     color: #ff7425;
-    font-size: 10.5px;
+    font-size: 11px;
     flex-shrink: 0;
   }
-  .pinned-mobile-dot {
-    opacity: 0.4;
-    font-size: 10px;
+  .pinned-mobile-pill span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .pinned-mobile-pill-chevron {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 8.5px;
+    margin-left: auto;
     flex-shrink: 0;
+    transition: transform 0.25s ease;
+  }
+  .pinned-mobile-pill.active {
+    background: rgba(255, 116, 37, 0.16) !important;
+    border-color: #ff7425 !important;
+    box-shadow: 0 0 12px rgba(255, 116, 37, 0.3) !important;
+  }
+  .pinned-mobile-pill.active .pinned-mobile-pill-chevron {
+    transform: rotate(180deg);
+    color: #ff7425;
+  }
+  .pinned-mobile-pill:active {
+    transform: scale(0.97);
+    background: rgba(255, 116, 37, 0.2);
   }
   .pinned-mobile-sub {
+    grid-column: span 2;
     font-size: 9.5px;
     color: #ff9d5c;
     font-weight: 600;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    margin-top: 1px;
+    padding-left: 2px;
   }
   .pinned-mobile-btn {
-    padding: 8px 11px !important;
-    font-size: 11px !important;
+    padding: 10px 14px !important;
+    font-size: 11.5px !important;
     font-weight: 700 !important;
     white-space: nowrap !important;
     border-radius: 10px !important;
     flex-shrink: 0 !important;
+  }
+  .pinned-booking-bar .pinned-dropdown-menu {
+    left: 0 !important;
+    right: 0 !important;
+    width: 100% !important;
+    min-width: 100% !important;
+    max-width: 100% !important;
+    bottom: calc(100% + 10px) !important;
+    max-height: calc(85vh - 65px) !important;
+    padding: 10px 8px !important;
+    border-radius: 16px !important;
   }
   .alpine-calendar-popover.is-pinned-calendar {
     position: absolute !important;
@@ -5818,5 +5882,25 @@ a.btn span {
 
   .hero-bg-video-wrapper::before {
     filter: blur(6px) brightness(0.8) !important;
+  }
+}
+
+/* Mobile Dropdown Option Stacking for Small Phones */
+@media (max-width: 480px) {
+  .custom-dropdown__option {
+    flex-wrap: wrap !important;
+    gap: 6px 10px !important;
+    padding: 10px 12px !important;
+  }
+  .custom-dropdown__option-main {
+    flex: 1 1 100% !important;
+  }
+  .custom-dropdown__badge {
+    margin-left: 30px !important;
+    font-size: 10px !important;
+    padding: 3px 8px !important;
+  }
+  .custom-dropdown__check {
+    margin-left: auto !important;
   }
 }

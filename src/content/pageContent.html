@@ -284,7 +284,7 @@
                            <div class="previo-booking-bar">
                               <div class="row g-3 align-items-end">
                                  <!-- 1. Check-in Field -->
-                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                 <div class="col-12 col-sm-6 col-lg-2 position-relative">
                                     <div class="booking-field-group">
                                        <span class="booking-field-label" data-i18n="book_checkin">Příjezd</span>
                                        <div class="custom-date-trigger" id="checkin-trigger" onclick="toggleAlpineCalendar('checkin')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
@@ -299,7 +299,7 @@
                                  </div>
 
                                  <!-- 2. Check-out Field -->
-                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                 <div class="col-12 col-sm-6 col-lg-2 position-relative">
                                     <div class="booking-field-group">
                                        <span class="booking-field-label" data-i18n="book_checkout">Odjezd</span>
                                        <div class="custom-date-trigger" id="checkout-trigger" onclick="toggleAlpineCalendar('checkout')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
@@ -314,29 +314,29 @@
                                  </div>
 
                                  <!-- 3. Apartment Custom Luxury Dropdown -->
-                                 <div class="col-12 col-sm-6 col-lg-3 position-relative">
+                                 <div class="col-12 col-sm-6 col-lg-5 position-relative">
                                     <div class="booking-field-group">
                                        <span class="booking-field-label" data-i18n="book_apartment">Apartmán</span>
                                        <div class="custom-dropdown" id="apt-dropdown-container">
                                           <button type="button" class="custom-dropdown__trigger" id="apt-dropdown-trigger" onclick="toggleAptDropdown()" aria-haspopup="listbox" aria-expanded="false">
                                              <div class="custom-dropdown__trigger-content">
                                                 <i class="fa-solid fa-mountain-city custom-dropdown__trigger-icon"></i>
-                                                <span class="custom-dropdown__selected-text" id="apt-dropdown-selected" data-i18n="book_all_apts">Všechny 3 typy (Kombinace pro skupiny • až 14 hostů)</span>
+                                                <span class="custom-dropdown__selected-text" id="apt-dropdown-selected" data-i18n="book_all_apts">Všechny 3 apartmány (až 14 hostů)</span>
                                              </div>
                                              <i class="fa-solid fa-chevron-down custom-dropdown__chevron"></i>
                                           </button>
 
                                           <div class="custom-dropdown__menu" id="apt-dropdown-menu" role="listbox">
-                                             <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny apartmány (Kombinace pro skupiny • až 14 hostů)', this)">
+                                             <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny 3 apartmány (až 14 hostů)', this)">
                                                 <div class="custom-dropdown__option-main">
                                                    <i class="fa-solid fa-layer-group"></i>
-                                                   <span class="custom-dropdown__option-title">Všechny apartmány (Kombinace pro skupiny • až 14 hostů)</span>
+                                                   <span class="custom-dropdown__option-title">Všechny 3 apartmány (Kombinace pro skupiny)</span>
                                                 </div>
                                                 <span class="custom-dropdown__badge">3 apartmány • 14 lůžek</span>
                                                 <i class="fa-solid fa-check custom-dropdown__check"></i>
                                              </div>
 
-                                             <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Panoramatický rohový apartmán (Apartmán 6 • až 6 osob)', this)">
+                                             <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Panoramatický rohový (Apartmán 6)', this)">
                                                 <div class="custom-dropdown__option-main">
                                                    <i class="fa-solid fa-crown"></i>
                                                    <span class="custom-dropdown__option-title">Panoramatický rohový apartmán (Apartmán 6)</span>
@@ -345,7 +345,7 @@
                                                 <i class="fa-solid fa-check custom-dropdown__check"></i>
                                              </div>
 
-                                             <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Horský apartmán s balkonem a výhledem (Apartmán 5 • 4 osoby)', this)">
+                                             <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Horský apartmán (Apartmán 5)', this)">
                                                 <div class="custom-dropdown__option-main">
                                                    <i class="fa-solid fa-door-open"></i>
                                                    <span class="custom-dropdown__option-title">Horský apartmán s balkonem (Apartmán 5)</span>
@@ -354,7 +354,7 @@
                                                 <i class="fa-solid fa-check custom-dropdown__check"></i>
                                              </div>
 
-                                             <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Podkrovní apartmán s trámovým stropem (Apartmán 10 • 4 osoby)', this)">
+                                             <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Podkrovní apartmán (Apartmán 10)', this)">
                                                 <div class="custom-dropdown__option-main">
                                                    <i class="fa-solid fa-snowflake"></i>
                                                    <span class="custom-dropdown__option-title">Podkrovní apartmán s trámy (Apartmán 10)</span>
@@ -2106,7 +2106,7 @@
          <div class="pinned-desktop-grid">
             <div class="row g-2 align-items-center">
                <!-- 1. Check-in Field -->
-               <div class="col-3 position-relative">
+               <div class="col-2 position-relative">
                   <div class="pinned-field-group">
                      <span class="pinned-field-label" data-i18n="book_checkin">Příjezd</span>
                      <div class="custom-date-trigger pinned-date-trigger" id="pinned-checkin-trigger" onclick="toggleAlpineCalendar('checkin', 'pinned')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
@@ -2120,7 +2120,7 @@
                </div>
 
                <!-- 2. Check-out Field -->
-               <div class="col-3 position-relative">
+               <div class="col-2 position-relative">
                   <div class="pinned-field-group">
                      <span class="pinned-field-label" data-i18n="book_checkout">Odjezd</span>
                      <div class="custom-date-trigger pinned-date-trigger" id="pinned-checkout-trigger" onclick="toggleAlpineCalendar('checkout', 'pinned')" tabindex="0" role="button" aria-haspopup="dialog" aria-expanded="false">
@@ -2134,55 +2134,17 @@
                </div>
 
                <!-- 3. Apartment Custom Luxury Dropdown -->
-               <div class="col-3 position-relative">
+               <div class="col-5 position-relative">
                   <div class="pinned-field-group">
                      <span class="pinned-field-label" data-i18n="book_apartment">Apartmán</span>
                      <div class="custom-dropdown pinned-custom-dropdown" id="pinned-apt-dropdown-container">
                         <button type="button" class="custom-dropdown__trigger pinned-dropdown-trigger" id="pinned-apt-dropdown-trigger" onclick="togglePinnedAptDropdown(event)" aria-haspopup="listbox" aria-expanded="false">
                            <div class="custom-dropdown__trigger-content">
                               <i class="fa-solid fa-mountain-city custom-dropdown__trigger-icon"></i>
-                              <span class="custom-dropdown__selected-text" id="pinned-apt-selected" data-i18n="book_all_apts">Všechny 3 typy (až 14 hostů)</span>
+                              <span class="custom-dropdown__selected-text" id="pinned-apt-selected" data-i18n="book_all_apts">Všechny 3 apartmány (až 14 hostů)</span>
                            </div>
                            <i class="fa-solid fa-chevron-up custom-dropdown__chevron pinned-chevron"></i>
                         </button>
-
-                         <div class="custom-dropdown__menu pinned-dropdown-menu" id="pinned-apt-dropdown-menu" role="listbox">
-                                             <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny apartmány (Kombinace pro skupiny • až 14 hostů)', this)">
-                                                <div class="custom-dropdown__option-main">
-                                                   <i class="fa-solid fa-layer-group"></i>
-                                                   <span class="custom-dropdown__option-title">Všechny apartmány (Kombinace pro skupiny • až 14 hostů)</span>
-                                                </div>
-                                                <span class="custom-dropdown__badge">3 apartmány • 14 lůžek</span>
-                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
-                                             </div>
-
-                                             <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Panoramatický rohový apartmán (Apartmán 6 • až 6 osob)', this)">
-                                                <div class="custom-dropdown__option-main">
-                                                   <i class="fa-solid fa-crown"></i>
-                                                   <span class="custom-dropdown__option-title">Panoramatický rohový apartmán (Apartmán 6)</span>
-                                                </div>
-                                                <span class="custom-dropdown__badge">Až 6 osob • 47 m² • Rohový balkon</span>
-                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
-                                             </div>
-
-                                             <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Horský apartmán s balkonem a výhledem (Apartmán 5 • 4 osoby)', this)">
-                                                <div class="custom-dropdown__option-main">
-                                                   <i class="fa-solid fa-door-open"></i>
-                                                   <span class="custom-dropdown__option-title">Horský apartmán s balkonem (Apartmán 5)</span>
-                                                </div>
-                                                <span class="custom-dropdown__badge">4 osoby • 40 m² • Balkon</span>
-                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
-                                             </div>
-
-                                             <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Podkrovní apartmán s trámovým stropem (Apartmán 10 • 4 osoby)', this)">
-                                                <div class="custom-dropdown__option-main">
-                                                   <i class="fa-solid fa-snowflake"></i>
-                                                   <span class="custom-dropdown__option-title">Podkrovní apartmán s trámy (Apartmán 10)</span>
-                                                </div>
-                                                <span class="custom-dropdown__badge">4 osoby • 42 m² • Výhled na sjezdovku</span>
-                                                <i class="fa-solid fa-check custom-dropdown__check"></i>
-                                             </div>
-                         </div>
                      </div>
                   </div>
                </div>
@@ -2205,21 +2167,69 @@
 
          <!-- Mobile Bar Layout (< 992px) -->
          <div class="pinned-mobile-bar">
-            <div class="pinned-mobile-trigger" id="pinned-mobile-trigger" onclick="toggleAlpineCalendar('checkin', 'pinned')" role="button" tabindex="0">
-               <div class="pinned-mobile-dates">
+            <div class="pinned-mobile-trigger-group">
+               <!-- 1. Dates Touch Pill -->
+               <div class="pinned-mobile-pill" id="pinned-mobile-date-pill" onclick="toggleAlpineCalendar('checkin', 'pinned')" role="button" tabindex="0">
                   <i class="fa-regular fa-calendar-days"></i>
                   <span id="pinned-mobile-dates-text">15. 10. – 19. 10.</span>
-                  <span class="pinned-mobile-dot">•</span>
-                  <span id="pinned-mobile-apt-text">Všechny apartmány</span>
                </div>
+
+               <!-- 2. Apartment Touch Pill -->
+               <div class="pinned-mobile-pill" id="pinned-mobile-apt-pill" onclick="togglePinnedAptDropdown(event)" role="button" tabindex="0">
+                  <i class="fa-solid fa-mountain-city"></i>
+                  <span id="pinned-mobile-apt-text">Všechny apartmány</span>
+                  <i class="fa-solid fa-chevron-up pinned-mobile-pill-chevron"></i>
+               </div>
+
+               <!-- 3. Subline with live pricing -->
                <div class="pinned-mobile-sub" id="pinned-mobile-sub-text">
                   Kalkulace: 70 000 Kč (4 noci)
                </div>
             </div>
+
             <button type="button" onclick="openPrevioModal()" class="btn btn--primary pinned-mobile-btn">
                <span data-i18n="nav_book">Rezervovat</span>
                <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
             </button>
+         </div>
+
+         <!-- Upward Apartment Dropdown Menu (Shared by desktop and mobile) -->
+         <div class="custom-dropdown__menu pinned-dropdown-menu" id="pinned-apt-dropdown-menu" role="listbox">
+            <div class="custom-dropdown__option selected" data-value="all" onclick="selectAptOption('all', 'Všechny 3 apartmány (až 14 hostů)', this)">
+               <div class="custom-dropdown__option-main">
+                  <i class="fa-solid fa-layer-group"></i>
+                  <span class="custom-dropdown__option-title">Všechny 3 apartmány (Kombinace pro skupiny)</span>
+               </div>
+               <span class="custom-dropdown__badge">3 apartmány • 14 lůžek</span>
+               <i class="fa-solid fa-check custom-dropdown__check"></i>
+            </div>
+
+            <div class="custom-dropdown__option" data-value="6" onclick="selectAptOption('6', 'Panoramatický rohový (Apartmán 6)', this)">
+               <div class="custom-dropdown__option-main">
+                  <i class="fa-solid fa-crown"></i>
+                  <span class="custom-dropdown__option-title">Panoramatický rohový apartmán (Apartmán 6)</span>
+               </div>
+               <span class="custom-dropdown__badge">Až 6 osob • 47 m² • Rohový balkon</span>
+               <i class="fa-solid fa-check custom-dropdown__check"></i>
+            </div>
+
+            <div class="custom-dropdown__option" data-value="5" onclick="selectAptOption('5', 'Horský apartmán (Apartmán 5)', this)">
+               <div class="custom-dropdown__option-main">
+                  <i class="fa-solid fa-door-open"></i>
+                  <span class="custom-dropdown__option-title">Horský apartmán s balkonem (Apartmán 5)</span>
+               </div>
+               <span class="custom-dropdown__badge">4 osoby • 40 m² • Balkon</span>
+               <i class="fa-solid fa-check custom-dropdown__check"></i>
+            </div>
+
+            <div class="custom-dropdown__option" data-value="10" onclick="selectAptOption('10', 'Podkrovní apartmán (Apartmán 10)', this)">
+               <div class="custom-dropdown__option-main">
+                  <i class="fa-solid fa-snowflake"></i>
+                  <span class="custom-dropdown__option-title">Podkrovní apartmán s trámy (Apartmán 10)</span>
+               </div>
+               <span class="custom-dropdown__badge">4 osoby • 42 m² • Výhled na sjezdovku</span>
+               <i class="fa-solid fa-check custom-dropdown__check"></i>
+            </div>
          </div>
 
          <!-- Upward Alpine Calendar Popover Slot -->

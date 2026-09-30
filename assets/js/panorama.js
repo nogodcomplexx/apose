@@ -28,7 +28,7 @@ const i18n = {
     book_checkin: 'Příjezd',
     book_checkout: 'Odjezd',
     book_apartment: 'Apartmán',
-    book_all_apts: 'Všechny apartmány (Kombinace pro skupiny • až 14 hostů)',
+    book_all_apts: 'Všechny 3 apartmány (až 14 hostů)',
     book_guests: 'Hosté',
     book_cta: 'Ověřit dostupnost (Previo)',
     
@@ -158,7 +158,7 @@ const i18n = {
     book_checkin: 'Check-in',
     book_checkout: 'Check-out',
     book_apartment: 'Apartment',
-    book_all_apts: 'All Apartments (Group combination • up to 14 guests)',
+    book_all_apts: 'All 3 Apartments (up to 14 guests)',
     book_guests: 'Guests',
     book_cta: 'Check Availability (Previo)',
     
@@ -1508,19 +1508,28 @@ function toggleAptDropdown(e) {
   }
 }
 
+function closePinnedAptDropdown() {
+  const menu = document.getElementById('pinned-apt-dropdown-menu');
+  if (menu) menu.classList.remove('open');
+  document.getElementById('pinned-apt-dropdown-container')?.classList.remove('open');
+  document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+  document.getElementById('pinned-mobile-apt-pill')?.classList.remove('active');
+}
+
 function togglePinnedAptDropdown(e) {
   if (e) e.stopPropagation();
-  const dropdown = document.getElementById('pinned-apt-dropdown-container');
-  if (!dropdown) return;
-  const isOpen = dropdown.classList.contains('open');
+  const menu = document.getElementById('pinned-apt-dropdown-menu');
+  if (!menu) return;
+  const isOpen = menu.classList.contains('open');
   closeAlpineCalendar();
   document.getElementById('apt-dropdown-container')?.classList.remove('open');
   if (isOpen) {
-    dropdown.classList.remove('open');
-    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+    closePinnedAptDropdown();
   } else {
-    dropdown.classList.add('open');
+    menu.classList.add('open');
+    document.getElementById('pinned-apt-dropdown-container')?.classList.add('open');
     document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'true');
+    document.getElementById('pinned-mobile-apt-pill')?.classList.add('active');
   }
 }
 
@@ -1537,6 +1546,13 @@ function selectAptOption(val, title, el) {
     hiddenSelect.dispatchEvent(new Event('change'));
   }
 
+  // Concise titles for mobile pill
+  let mobileTitle = title;
+  if (val === 'all') mobileTitle = 'Všechny apartmány';
+  else if (val === '6') mobileTitle = 'Apartmán 6 (rohový)';
+  else if (val === '5') mobileTitle = 'Apartmán 5 (balkon)';
+  else if (val === '10') mobileTitle = 'Apartmán 10 (podkroví)';
+
   // Update hero dropdown text
   const selectedText = document.getElementById('apt-dropdown-selected');
   if (selectedText) {
@@ -1552,7 +1568,7 @@ function selectAptOption(val, title, el) {
   // Update mobile summary text
   const mobileAptText = document.getElementById('pinned-mobile-apt-text');
   if (mobileAptText) {
-    mobileAptText.textContent = title;
+    mobileAptText.textContent = mobileTitle;
   }
 
   // Synchronize active classes on all matching options across both bars
@@ -1572,11 +1588,7 @@ function selectAptOption(val, title, el) {
     dropdown.classList.remove('open');
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
   }
-  const pinnedDropdown = document.getElementById('pinned-apt-dropdown-container');
-  if (pinnedDropdown) {
-    pinnedDropdown.classList.remove('open');
-    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
-  }
+  closePinnedAptDropdown();
 
   // Live recalculate pricing for chosen apartment
   updateCalBarDisplays();
@@ -1959,7 +1971,7 @@ function toggleAlpineCalendar(field, source = 'hero') {
 
   // Close any open dropdowns
   document.getElementById('apt-dropdown-container')?.classList.remove('open');
-  document.getElementById('pinned-apt-dropdown-container')?.classList.remove('open');
+  closePinnedAptDropdown();
 
   // Reparent calendar popover to active container so it opens downwards in hero and UPWARDS in pinned bar
   if (source === 'pinned') {
@@ -2030,10 +2042,15 @@ document.addEventListener('click', (e) => {
     document.getElementById('apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
   }
 
-  const pinnedDropdown = document.getElementById('pinned-apt-dropdown-container');
-  if (pinnedDropdown && !pinnedDropdown.contains(e.target)) {
-    pinnedDropdown.classList.remove('open');
-    document.getElementById('pinned-apt-dropdown-trigger')?.setAttribute('aria-expanded', 'false');
+    const pinnedMenu = document.getElementById('pinned-apt-dropdown-menu');
+  const pAptTrigger = document.getElementById('pinned-apt-dropdown-trigger');
+  const pMobAptPill = document.getElementById('pinned-mobile-apt-pill');
+  if (pinnedMenu && pinnedMenu.classList.contains('open')) {
+    if (!pinnedMenu.contains(e.target) &&
+        !pAptTrigger?.contains(e.target) &&
+        !pMobAptPill?.contains(e.target)) {
+      closePinnedAptDropdown();
+    }
   }
 
   const cal = document.getElementById('alpine-calendar-popover');
