@@ -301,6 +301,14 @@ function setLanguage(lang) {
   if (typeof updateCalendarFooterHint === 'function') {
     updateCalendarFooterHint();
   }
+
+  // Live update photo gallery cards & lightbox if open
+  if (typeof updateGalleryCardsLanguage === 'function') {
+    updateGalleryCardsLanguage(lang);
+  }
+  if (document.getElementById('panorama-lightbox')?.classList.contains('active')) {
+    setPanoramaImage(currentGalleryIndex);
+  }
 }
 
 function openPrevioModal(aptName = '') {
@@ -1109,87 +1117,123 @@ setTimeout(dismissPreloader, 2200);
 const panoramaGalleryData = [
   {
     src: 'assets/images/web/apt-living-balcony.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Designový obývací salon',
+    titleEn: 'Designer Living Salon',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    desc: 'placeholder'
+    descCs: 'Prosvětlený mezonetový prostor s dřevěným lamelovým obložením, Smart TV a balkonem.',
+    descEn: 'Sunlit duplex living space with designer oak slatted paneling, Smart TV, and private scenic balcony.'
   },
   {
     src: 'assets/images/web/lobby-bar-evening.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Lobby Bar & Večerní atmosféra',
+    titleEn: 'Lobby Bar & Evening Ambiance',
+    categoryCs: 'Lobby Bar & Lounge',
+    categoryEn: 'Lobby Bar & Lounge',
     categorySlug: 'lobby',
-    desc: 'placeholder'
+    descCs: 'Prémiová vína z moravských i světových sklepů, výběrová káva a hřejivé posezení u krbu.',
+    descEn: 'Curated Moravian & international wines, specialty roast coffees, and warm fireplace ambiance.'
   },
   {
     src: 'assets/images/web/apt-living-dining.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Jídelní kout & Plně vybavená kuchyně',
+    titleEn: 'Dining Lounge & Fully Equipped Kitchen',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    desc: 'placeholder'
+    descCs: 'Indukční varná deska, myčka, kávovar Nespresso a masivní jídelní stůl pro společné chvíle.',
+    descEn: 'Induction cooktop, dishwasher, Nespresso machine, and solid dining table for shared moments.'
   },
   {
     src: 'assets/images/web/lobby-bar-lounge.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Společenský Lounge Bar',
+    titleEn: 'Social Lounge Bar',
+    categoryCs: 'Lobby Bar & Lounge',
+    categoryEn: 'Lobby Bar & Lounge',
     categorySlug: 'lobby',
-    desc: 'placeholder'
+    descCs: 'Stylový prostor pro setkání s přáteli, rodinné oslavy i nerušený relax po celém dni na svahu.',
+    descEn: 'Sophisticated gathering space for friends, celebrations, and unwinding after a day on the slopes.'
   },
   {
     src: 'assets/images/web/apt-bedroom-loft.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Ložnice v klidovém patře',
+    titleEn: 'Peaceful Upper Loft Bedroom',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    desc: 'placeholder'
+    descCs: 'Mimořádně pohodlné boxspringové postele s prémiovým ložním prádlem pro hluboký spánek.',
+    descEn: 'Exceptional boxspring beds with premium linen ensuring deep mountain sleep.'
   },
   {
     src: 'assets/images/web/residence-exterior.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Moderní horská architektura',
+    titleEn: 'Modern Alpine Architecture',
+    categoryCs: 'Rezidence & Exteriér',
+    categoryEn: 'Residence & Exterior',
     categorySlug: 'residence',
-    desc: 'placeholder'
+    descCs: 'Harmonické propojení přírodního modřínového dřeva, tmavého kamene a velkoformátového prosklení.',
+    descEn: 'Harmonious blend of natural larch timber, dark stone cladding, and floor-to-ceiling panoramic glass.'
   },
   {
     src: 'assets/images/web/winter-ski.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Ski-in / Ski-out poloha',
+    titleEn: 'Ski-in / Ski-out Location',
+    categoryCs: 'Hory & Okolí',
+    categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    desc: 'placeholder'
+    descCs: 'Pouhých 150 metrů k nástupní stanici 4sedačkové lanovky a 6 zasněženým sjezdovkám.',
+    descEn: 'Just 150 meters to the 4-seater chairlift base and 6 pristine groomed ski slopes.'
   },
   {
     src: 'assets/images/web/gallery-chalet.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Slunečné vyhlídkové balkony',
+    titleEn: 'Scenic Sun Balconies',
+    categoryCs: 'Rezidence & Exteriér',
+    categoryEn: 'Residence & Exterior',
     categorySlug: 'residence',
-    desc: 'placeholder'
+    descCs: 'Ničím nerušený výhled na horské hřebeny Krušných hor a klidné horské západy slunce.',
+    descEn: 'Unobstructed panorama across Ore Mountain ridges and peaceful alpine sunsets.'
   },
   {
     src: 'assets/images/web/summer-hiking.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Krušnohorská magistrála',
+    titleEn: 'Ore Mountain Trail Ridge',
+    categoryCs: 'Hory & Okolí',
+    categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    desc: 'placeholder'
+    descCs: 'Stovky kilometrů upravených stop v zimě a horských cyklotras v letní sezóně.',
+    descEn: 'Hundreds of kilometers of cross-country trails in winter and MTB trails in summer.'
   },
   {
     src: 'assets/images/web/gallery-lodge.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Privátní zázemí a kóje',
+    titleEn: 'Private Storage & Facilities',
+    categoryCs: 'Rezidence & Exteriér',
+    categoryEn: 'Residence & Exterior',
     categorySlug: 'residence',
-    desc: 'placeholder'
+    descCs: 'Garantované parkování u domu a vyhřívané kóje na lyže a kola s průmyslovými sušáky bot.',
+    descEn: 'Dedicated on-site parking and heated ski/bike lockers equipped with industrial boot dryers.'
   },
   {
     src: 'assets/images/web/gallery-lake.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Panenská horská příroda',
+    titleEn: 'Pristine Alpine Nature',
+    categoryCs: 'Hory & Okolí',
+    categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    desc: 'placeholder'
+    descCs: 'Klidné přírodní scenérie, horská rašeliniště na Přebuzi a křišťálově čistý vzduch.',
+    descEn: 'Tranquil natural scenery, high peat bogs at Přebuz, and crystalline mountain air.'
   },
   {
     src: 'assets/images/web/location-village.jpg',
-    title: 'placeholder',
-    category: 'placeholder',
+    titleCs: 'Horská obec Bublava 791',
+    titleEn: 'Alpine Village Bublava 791',
+    categoryCs: 'Hory & Okolí',
+    categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    desc: 'placeholder'
+    descCs: 'Klidné horské útočiště v nadmořské výšce 791 m n. m. přímo na česko-saské hranici.',
+    descEn: 'Serene mountain haven at 791 meters elevation right on the Czech-Saxon border.'
   }
 ];
 
@@ -1200,6 +1244,7 @@ function initPanoramaGalleryFilmstrip() {
   const strip = document.getElementById('lb-filmstrip');
   if (!strip) return;
   strip.innerHTML = '';
+  const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
   panoramaGalleryData.forEach((item, index) => {
     const thumb = document.createElement('div');
     thumb.className = `lightbox-thumb ${index === currentGalleryIndex ? 'active' : ''}`;
@@ -1208,7 +1253,8 @@ function initPanoramaGalleryFilmstrip() {
       e.stopPropagation();
       setPanoramaImage(index);
     };
-    thumb.innerHTML = `<img src="${item.src}" alt="${item.title}" loading="lazy">`;
+    const title = isEn ? item.titleEn : item.titleCs;
+    thumb.innerHTML = `<img src="${item.src}" alt="${title}" loading="lazy">`;
     strip.appendChild(thumb);
   });
 }
@@ -1248,16 +1294,21 @@ function setPanoramaImage(index) {
   const titleEl = document.getElementById('lb-title');
   const descEl = document.getElementById('lb-desc');
   
+  const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+  const categoryText = isEn ? (item.categoryEn || item.categoryCs) : item.categoryCs;
+  const titleText = isEn ? (item.titleEn || item.titleCs) : item.titleCs;
+  const descText = isEn ? (item.descEn || item.descCs) : item.descCs;
+
   if (countEl) countEl.textContent = String(index + 1).padStart(2, '0');
   if (totalEl) totalEl.textContent = String(panoramaGalleryData.length).padStart(2, '0');
-  if (catEl) catEl.textContent = item.category;
-  if (titleEl) titleEl.textContent = item.title;
-  if (descEl) descEl.textContent = item.desc;
+  if (catEl) catEl.textContent = categoryText;
+  if (titleEl) titleEl.textContent = titleText;
+  if (descEl) descEl.textContent = descText;
   
   if (img) {
     img.style.opacity = '0';
     img.src = item.src;
-    img.alt = item.title;
+    img.alt = titleText;
     img.onload = () => {
       img.style.opacity = '1';
     };
@@ -1303,6 +1354,22 @@ function resetLightboxZoom() {
   if (btn) btn.innerHTML = '<i class="fa-solid fa-magnifying-glass-plus"></i>';
 }
 
+let lastImageTapTime = 0;
+function handleLightboxImageClick(e) {
+  if (e && e.pointerType === 'touch') {
+    const now = Date.now();
+    if (now - lastImageTapTime < 320) {
+      toggleLightboxZoom();
+      lastImageTapTime = 0;
+    } else {
+      lastImageTapTime = now;
+    }
+  } else {
+    // Desktop mouse click zooms directly
+    toggleLightboxZoom();
+  }
+}
+
 function toggleLightboxFullscreen() {
   const modal = document.getElementById('panorama-lightbox');
   if (!modal) return;
@@ -1339,6 +1406,23 @@ function filterPanoramaGallery(category) {
   });
 }
 
+// Live update on-page gallery cards when language changes
+function updateGalleryCardsLanguage(lang) {
+  const isEn = lang === 'en';
+  document.querySelectorAll('.gallery-card').forEach((card, idx) => {
+    const data = panoramaGalleryData[idx];
+    if (!data) return;
+    const badge = card.querySelector('.gallery-badge');
+    const title = card.querySelector('.gallery-card-title');
+    const desc = card.querySelector('.gallery-card-desc');
+    const img = card.querySelector('img');
+    if (badge) badge.textContent = isEn ? data.categoryEn : data.categoryCs;
+    if (title) title.textContent = isEn ? data.titleEn : data.titleCs;
+    if (desc) desc.textContent = isEn ? data.descEn : data.descCs;
+    if (img) img.alt = isEn ? data.titleEn : data.titleCs;
+  });
+}
+
 // Keyboard navigation & touch gestures
 document.addEventListener('keydown', (e) => {
   const modal = document.getElementById('panorama-lightbox');
@@ -1369,25 +1453,45 @@ document.addEventListener('keydown', (e) => {
   }
 });
 
-// Touch Swipe on mobile
+// Mobile Touch gestures: Swipe next/prev & pull-down to dismiss
 let touchStartX = 0;
-let touchEndX = 0;
+let touchStartY = 0;
+let touchStartTime = 0;
+
 document.addEventListener('touchstart', (e) => {
   const modal = document.getElementById('panorama-lightbox');
   if (modal && modal.classList.contains('active')) {
+    if (e.target.closest('#lb-filmstrip') || e.target.closest('.lightbox-actions') || e.target.closest('.lightbox-topbar')) return;
     touchStartX = e.changedTouches[0].screenX;
+    touchStartY = e.changedTouches[0].screenY;
+    touchStartTime = Date.now();
   }
 }, { passive: true });
 
 document.addEventListener('touchend', (e) => {
   const modal = document.getElementById('panorama-lightbox');
   if (modal && modal.classList.contains('active')) {
-    touchEndX = e.changedTouches[0].screenX;
-    if (touchEndX < touchStartX - 50) {
-      nextPanoramaImage();
+    if (e.target.closest('#lb-filmstrip') || e.target.closest('.lightbox-actions') || e.target.closest('.lightbox-topbar')) return;
+    const touchEndX = e.changedTouches[0].screenX;
+    const touchEndY = e.changedTouches[0].screenY;
+    const diffX = touchEndX - touchStartX;
+    const diffY = touchEndY - touchStartY;
+    const timeElapsed = Date.now() - touchStartTime;
+
+    // Do not swipe images if zoomed in
+    if (isLightboxZoomed) return;
+
+    // Horizontal swipe (next / prev)
+    if (Math.abs(diffX) > 40 && Math.abs(diffX) > Math.abs(diffY) * 1.2 && timeElapsed < 600) {
+      if (diffX < 0) {
+        nextPanoramaImage();
+      } else {
+        prevPanoramaImage();
+      }
     }
-    if (touchEndX > touchStartX + 50) {
-      prevPanoramaImage();
+    // Pull down to dismiss (> 80px downward swipe)
+    else if (diffY > 80 && Math.abs(diffY) > Math.abs(diffX) * 1.5 && timeElapsed < 600) {
+      closePanoramaLightbox();
     }
   }
 }, { passive: true });
