@@ -15,13 +15,13 @@ const i18n = {
     hero_sub: 'HORSKÁ LUXUSNÍ REZIDENCE',
     hero_title_1: 'Apartmány',
     hero_title_stroke: 'Panorama',
-    hero_desc: 'Exkluzivní horské útočiště v Krušných horách přímo u sjezdovky Bublava. 3 architektonicky promyšlené typy apartmánů s panoramatickým výhledem na sjezdovky a hřebeny, moderním vybavením, privátní kójí na lyže a kola se sušáky bot a možností skupinového pronájmu až pro 14 hostů.',
+    hero_desc: 'Exkluzivní horské útočiště v Krušných horách přímo u sjezdovky Bublava. 3 architektonicky promyšlené typy apartmánů – všechny s vlastním privátním balkonem a panoramatickým výhledem na sjezdovky i horské hřebeny, moderním vybavením, privátní kójí na lyže a kola se sušáky bot a možností skupinového pronájmu až pro 14 hostů.',
     hero_stat_1_num: '3',
     hero_stat_1_text: 'Architektonické typy',
     hero_stat_2_num: '14',
     hero_stat_2_text: 'Lůžek celkem',
     hero_stat_3_num: '100%',
-    hero_stat_3_text: 'Výhled na sjezdovky a hory',
+    hero_stat_3_text: 'Všechny pokoje s balkonem',
     hero_cta_apts: 'Prohlédnout apartmány',
     hero_cta_book: 'Ověřit termíny v Previo',
     
@@ -33,7 +33,7 @@ const i18n = {
     book_cta: 'Ověřit dostupnost (Previo)',
     
     ticker_text_1: 'APARTMÁNY PANORAMA',
-    ticker_text_2: 'PANORAMATICKÉ VÝHLEDY',
+    ticker_text_2: 'VŠECHNY POKOJE S BALKONEM',
     ticker_text_3: 'SKI-IN / SKI-OUT POLOHA',
     ticker_text_4: '3 ARCHITEKTONICKÉ TYPY',
     dossier_meta_tag: 'ARCHITEKTONICKÝ DOSSIER // REZIDENCE BUBLAVA 791',
@@ -79,8 +79,8 @@ const i18n = {
     comfort_card_1_desc: 'Každý z našich apartmánů má vlastní uzamykatelnou privátní kóji se sušáky na lyžařské boty a bezpečným prostorem pro kola včetně dobíjení elektrokol.',
     comfort_card_2_title: 'Stylový Lobby Bar & TV Lounge',
     comfort_card_2_desc: 'Příjemná společenská zóna v přízemí pro ranní espresso, odpolední drinky a večerní sledování sportovních přenosů na velké obrazovce.',
-    comfort_card_3_title: 'Slunečné Terasy & Krby',
-    comfort_card_3_desc: 'Prostorné venkovní terasy s posezením, výhledem na horské masivy a biokrby v interiérech pro dokonalou horskou pohodu.',
+    comfort_card_3_title: 'Privátní Balkony pro Každý Pokoj',
+    comfort_card_3_desc: 'Každý jednotlivý apartmán disponuje vlastním slunným balkonem s venkovním posezením a ničím nerušeným výhledem na sjezdovky a krušnohorské lesy.',
     comfort_card_4_title: 'Krytá Garáž & Wallbox',
     comfort_card_4_desc: 'Pohodlné parkování v suchu pod domem s moderními dobíjecími stanicemi pro vaše elektromobily.',
     comfort_card_5_title: 'Optická Wi-Fi & Smart TV',
@@ -145,13 +145,13 @@ const i18n = {
     hero_sub: 'LUXURY MOUNTAIN RESIDENCE',
     hero_title_1: 'Apartments',
     hero_title_stroke: 'Panorama',
-    hero_desc: 'An exclusive alpine sanctuary directly by the Bublava ski slopes in the Ore Mountains. 3 architecturally refined apartment types with panoramic ski slope and mountain views, dedicated ski/bike lockers with boot dryers, and group buyout for up to 14 guests.',
+    hero_desc: 'An exclusive alpine sanctuary directly by the Bublava ski slopes in the Ore Mountains. 3 architecturally refined apartment types – all featuring private balconies with panoramic ski slope and mountain views, dedicated ski/bike lockers with boot dryers, and group buyout for up to 14 guests.',
     hero_stat_1_num: '3',
     hero_stat_1_text: 'Architectural Types',
     hero_stat_2_num: '14',
     hero_stat_2_text: 'Total Beds',
     hero_stat_3_num: '100%',
-    hero_stat_3_text: 'Slope & Mountain Views',
+    hero_stat_3_text: 'All Rooms with Balcony',
     hero_cta_apts: 'Explore Suites',
     hero_cta_book: 'Check Dates on Previo',
     
@@ -163,7 +163,7 @@ const i18n = {
     book_cta: 'Check Availability (Previo)',
     
     ticker_text_1: 'APARTMENTS PANORAMA',
-    ticker_text_2: 'PANORAMIC VISTAS',
+    ticker_text_2: 'ALL ROOMS WITH PRIVATE BALCONY',
     ticker_text_3: 'SKI-IN / SKI-OUT LOCATION',
     ticker_text_4: '3 ARCHITECTURAL TYPES',
     dossier_meta_tag: 'ARCHITECTURAL DOSSIER // RESIDENCE BUBLAVA 791',
@@ -209,8 +209,8 @@ const i18n = {
     comfort_card_1_desc: 'Each of our suites has its own lockable private locker with ski boot dryers, bicycle storage, and high-output e-bike charging.',
     comfort_card_2_title: 'Stylish Lobby Bar & TV Lounge',
     comfort_card_2_desc: 'Inviting ground-floor social lounge for morning espresso, afternoon apres-ski drinks, and evening sports broadcasts on a big screen.',
-    comfort_card_3_title: 'Sunny Terraces & Fireplaces',
-    comfort_card_3_desc: 'Spacious outdoor terraces with lounge seating, panoramic mountain views, and fireplaces in suites for cozy alpine evenings.',
+    comfort_card_3_title: 'Private Balconies for Every Room',
+    comfort_card_3_desc: 'Every single apartment features its own sunny private balcony with outdoor seating and unobstructed views of the ski slopes and mountain forests.',
     comfort_card_4_title: 'Underground Garage & Wallbox',
     comfort_card_4_desc: 'Sheltered dry parking beneath the residence equipped with modern high-speed electric vehicle charging wallboxes.',
     comfort_card_5_title: 'High-Speed Wi-Fi & Smart TV',
@@ -395,7 +395,7 @@ const apartmentDetails = {
     innerArea: '42,66 m²',
     outdoorArea: '13,47 m² (terasa s grilem)',
     lockerId: '1.04|1 (1,51 m²)',
-    img: 'assets/images/web/apt-living-balcony.jpg',
+    img: '/assets/images/web/apt-living-room-panoramic.jpg',
     floorplan: 'assets/images/apartments/apt-01-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-01-cad-blueprint.jpg',
     cs: {
@@ -456,7 +456,7 @@ const apartmentDetails = {
     innerArea: '35,35 m²',
     outdoorArea: '3,24 m² (balkon)',
     lockerId: '1.04|2 (1,58 m²)',
-    img: 'assets/images/web/apt-living-dining.jpg',
+    img: '/assets/images/web/apt-balcony-rattan.jpg',
     floorplan: 'assets/images/apartments/apt-02-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-02-cad-blueprint.jpg',
     cs: {
@@ -515,7 +515,7 @@ const apartmentDetails = {
     innerArea: '36,68 m²',
     outdoorArea: '3,24 m² (balkon)',
     lockerId: '1.04|3 (1,58 m²)',
-    img: 'assets/images/web/apt-living-balcony.jpg',
+    img: '/assets/images/web/apt-living-lounge-warm.jpg',
     floorplan: 'assets/images/apartments/apt-03-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-03-cad-blueprint.jpg',
     cs: {
@@ -570,7 +570,7 @@ const apartmentDetails = {
     innerArea: '37,14 m²',
     outdoorArea: '3,24 m² (balkon)',
     lockerId: '1.04|4 (1,58 m²)',
-    img: 'assets/images/web/apt-living-dining.jpg',
+    img: '/assets/images/web/apt-living-sofa-detail.jpg',
     floorplan: 'assets/images/apartments/apt-04-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-04-cad-blueprint.jpg',
     cs: {
@@ -623,7 +623,7 @@ const apartmentDetails = {
     innerArea: '36 m²',
     outdoorArea: 'Balkon s výhledem na hory',
     lockerId: 'Kóje #5 se sušáky',
-    img: '/assets/images/web/apt-living-balcony.jpg',
+    img: '/assets/images/web/apt-balcony-rattan.jpg',
     floorplan: '/assets/images/apartments/apt-05-3d-floorplan.jpg',
     blueprint: '/assets/images/blueprints/apt-05-cad-blueprint.jpg',
     cs: {
@@ -678,7 +678,7 @@ const apartmentDetails = {
     innerArea: '42 m²',
     outdoorArea: 'Rohový balkon s 180° výhledem',
     lockerId: 'Kóje #6 se sušáky',
-    img: '/assets/images/web/apt-living-dining.jpg',
+    img: '/assets/images/web/apt-living-room-panoramic.jpg',
     floorplan: '/assets/images/apartments/apt-06-3d-floorplan.jpg',
     blueprint: '/assets/images/blueprints/apt-06-cad-blueprint.jpg',
     cs: {
@@ -733,7 +733,7 @@ const apartmentDetails = {
     innerArea: '37 m²',
     outdoorArea: 'Podkrovní balkon s výhledem na sjezdovku a hory',
     lockerId: 'Kóje #10 se sušáky',
-    img: '/assets/images/web/apt-bedroom-loft.jpg',
+    img: '/assets/images/web/apt-kitchen-dining-full.jpg',
     floorplan: '/assets/images/apartments/apt-10-3d-floorplan.jpg',
     blueprint: '/assets/images/blueprints/apt-10-cad-blueprint.jpg',
     cs: {
@@ -788,7 +788,7 @@ const apartmentDetails = {
     innerArea: '35,71 m²',
     outdoorArea: '3,24 m² (balkon)',
     lockerId: '1.04|11 (1,24 m²)',
-    img: 'assets/images/web/apt-bedroom-loft.jpg',
+    img: '/assets/images/web/apt-bedroom-master.jpg',
     floorplan: 'assets/images/apartments/apt-11-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-11-cad-blueprint.jpg',
     cs: {
@@ -839,7 +839,7 @@ const apartmentDetails = {
     innerArea: '41,65 m²',
     outdoorArea: '3,24 m² (rohový balkon)',
     lockerId: '1.04|12 (1,14 m²)',
-    img: 'assets/images/web/apt-bedroom-loft.jpg',
+    img: '/assets/images/web/apt-balcony-rattan.jpg',
     floorplan: 'assets/images/apartments/apt-12-3d-floorplan.jpg',
     blueprint: 'assets/images/blueprints/apt-12-cad-blueprint.jpg',
     cs: {
@@ -1116,124 +1116,148 @@ setTimeout(dismissPreloader, 2200);
 // =============================================================================
 const panoramaGalleryData = [
   {
-    src: 'assets/images/web/apt-living-balcony.jpg',
+    src: 'assets/images/web/apt-living-room-panoramic.jpg',
     titleCs: 'Designový obývací salon',
     titleEn: 'Designer Living Salon',
     categoryCs: 'Apartmány & Interiéry',
     categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    descCs: 'Prosvětlený mezonetový prostor s dřevěným lamelovým obložením, Smart TV a balkonem.',
-    descEn: 'Sunlit duplex living space with designer oak slatted paneling, Smart TV, and private scenic balcony.'
+    altCs: 'Apartmány Panorama Bublava – prostorný skandinávský obývací pokoj s dřevěným lamelovým obložením, Smart TV a výhledem do lesa',
+    altEn: 'Apartments Panorama Bublava – spacious Scandinavian living room with acoustic slatted oak paneling, Smart TV and forest view',
+    descCs: 'Prosvětlený obývací prostor s dřevěným lamelovým obložením, Smart TV, jídelním stolem a francouzským oknem na balkon.',
+    descEn: 'Sunlit open-plan living room with designer acoustic oak slatted paneling, Smart TV, dining table and French doors to balcony.'
   },
   {
-    src: 'assets/images/web/lobby-bar-evening.jpg',
-    titleCs: 'Lobby Bar & Večerní atmosféra',
-    titleEn: 'Lobby Bar & Evening Ambiance',
-    categoryCs: 'Lobby Bar & Lounge',
-    categoryEn: 'Lobby Bar & Lounge',
-    categorySlug: 'lobby',
-    descCs: 'Prémiová vína z moravských i světových sklepů, výběrová káva a hřejivé posezení u krbu.',
-    descEn: 'Curated Moravian & international wines, specialty roast coffees, and warm fireplace ambiance.'
+    src: 'assets/images/web/residence-exterior-front.jpg',
+    titleCs: 'Rezidence Apartmány Panorama',
+    titleEn: 'Apartments Panorama Residence',
+    categoryCs: 'Rezidence & Exteriér',
+    categoryEn: 'Residence & Exterior',
+    categorySlug: 'residence',
+    altCs: 'Rezidence Apartmány Panorama Bublava – moderní horský apartmánový dům přímo u sjezdovky s vyhrazeným parkováním',
+    altEn: 'Apartments Panorama Bublava residence – modern alpine apartment building directly by ski slopes with private parking',
+    descCs: 'Moderní horský apartmánový dům přímo u sjezdovky v Bublavě s vyhrazeným parkováním, gabionovou zdí a terasou.',
+    descEn: 'Modern alpine apartment residence directly by Bublava ski resort with dedicated parking, gabion wall, and sun terrace.'
   },
   {
-    src: 'assets/images/web/apt-living-dining.jpg',
+    src: 'assets/images/web/apt-kitchen-dining-full.jpg',
     titleCs: 'Jídelní kout & Plně vybavená kuchyně',
     titleEn: 'Dining Lounge & Fully Equipped Kitchen',
     categoryCs: 'Apartmány & Interiéry',
     categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    descCs: 'Indukční varná deska, myčka, kávovar Nespresso a masivní jídelní stůl pro společné chvíle.',
-    descEn: 'Induction cooktop, dishwasher, Nespresso machine, and solid dining table for shared moments.'
+    altCs: 'Apartmány Panorama Bublava – plně vybavená moderní kuchyň s jídelním stolem, kávovarem a výhledem na hory',
+    altEn: 'Apartments Panorama Bublava – fully equipped modern kitchen with dining table, coffee maker and scenic mountain views',
+    descCs: 'Plnohodnotná kuchyňská linka s dřevěnou pracovní deskou, mikrovlnnou troubou, kávovarem a jídelním stolem pro 4 osoby.',
+    descEn: 'Full kitchen with natural wood worktops, built-in microwave, coffee maker, and dining table for 4 guests.'
   },
   {
-    src: 'assets/images/web/lobby-bar-lounge.jpg',
-    titleCs: 'Společenský Lounge Bar',
-    titleEn: 'Social Lounge Bar',
-    categoryCs: 'Lobby Bar & Lounge',
-    categoryEn: 'Lobby Bar & Lounge',
-    categorySlug: 'lobby',
-    descCs: 'Stylový prostor pro setkání s přáteli, rodinné oslavy i nerušený relax po celém dni na svahu.',
-    descEn: 'Sophisticated gathering space for friends, celebrations, and unwinding after a day on the slopes.'
+    src: 'assets/images/web/apt-balcony-rattan.jpg',
+    titleCs: 'Privátní vyhlídkový balkon',
+    titleEn: 'Private Scenic Balcony',
+    categoryCs: 'Rezidence & Exteriér',
+    categoryEn: 'Residence & Exterior',
+    categorySlug: 'residence',
+    altCs: 'Privátní vyhlídkový balkon apartmánu s ratanovým posezením – Apartmány Panorama Bublava',
+    altEn: 'Private scenic apartment balcony with rattan lounge seating – Apartments Panorama Bublava',
+    descCs: 'Slunný balkon s perforovaným kovovým zábradlím, pohodlným ratanovým posezením a výhledem do zeleně a údolí Bublavy.',
+    descEn: 'Sunny balcony with modern perforated steel railing, comfortable rattan armchairs, and views over Bublava valley.'
   },
   {
-    src: 'assets/images/web/apt-bedroom-loft.jpg',
-    titleCs: 'Ložnice v klidovém patře',
-    titleEn: 'Peaceful Upper Loft Bedroom',
+    src: 'assets/images/web/apt-bedroom-master.jpg',
+    titleCs: 'Klidová manželská ložnice',
+    titleEn: 'Peaceful Master Bedroom',
     categoryCs: 'Apartmány & Interiéry',
     categoryEn: 'Apartments & Interiors',
     categorySlug: 'interiors',
-    descCs: 'Mimořádně pohodlné boxspringové postele s prémiovým ložním prádlem pro hluboký spánek.',
-    descEn: 'Exceptional boxspring beds with premium linen ensuring deep mountain sleep.'
+    altCs: 'Komfortní ložnice s manželskou postelí a prémiovým ložním prádlem – Apartmány Panorama Bublava',
+    altEn: 'Comfortable master bedroom with double bed and premium linens – Apartments Panorama Bublava',
+    descCs: 'Prostorná manželská postel s úložnými zásuvkami, prémiové pruhované povlečení a tiché prostředí pro nerušený spánek.',
+    descEn: 'Spacious double bed with under-bed storage drawers, premium striped linens, and a peaceful mountain setting.'
   },
   {
-    src: 'assets/images/web/residence-exterior.jpg',
+    src: 'assets/images/web/residence-exterior-balconies.jpg',
     titleCs: 'Moderní horská architektura',
     titleEn: 'Modern Alpine Architecture',
     categoryCs: 'Rezidence & Exteriér',
     categoryEn: 'Residence & Exterior',
     categorySlug: 'residence',
-    descCs: 'Harmonické propojení přírodního modřínového dřeva, tmavého kamene a velkoformátového prosklení.',
-    descEn: 'Harmonious blend of natural larch timber, dark stone cladding, and floor-to-ceiling panoramic glass.'
+    altCs: 'Apartmány Panorama v Bublavě – pohled na slunné balkony apartmánů a okolní horskou přírodu Krušných hor',
+    altEn: 'Apartments Panorama in Bublava – view of sunny apartment balconies and surrounding Ore Mountains nature',
+    descCs: 'Pohled na jižní fasádu rezidence se všemi vyhlídkovými balkony, upraveným svahem a smrkovými lesy Krušných hor.',
+    descEn: 'View of the south facade showcasing all scenic balconies, landscaped grounds, and lush Ore Mountain spruce forests.'
   },
   {
-    src: 'assets/images/web/winter-ski.jpg',
-    titleCs: 'Ski-in / Ski-out poloha',
-    titleEn: 'Ski-in / Ski-out Location',
+    src: 'assets/images/apartments/real-balcony-view-slope.jpg',
+    titleCs: 'Výhled z balkonu na sjezdovku',
+    titleEn: 'Direct Ski Slope View from Balcony',
     categoryCs: 'Hory & Okolí',
     categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    descCs: 'Pouhých 150 metrů k nástupní stanici 4sedačkové lanovky a 6 zasněženým sjezdovkám.',
-    descEn: 'Just 150 meters to the 4-seater chairlift base and 6 pristine groomed ski slopes.'
+    altCs: 'Reálný výhled z balkonu apartmánu Panorama na lyžařský areál Bublava a Krušné hory',
+    altEn: 'Real view from apartment balcony overlooking the ski slope and chairlift in Bublava – Ore Mountains',
+    descCs: 'Autentická fotografie přímo z balkonu rezidence s pohledem přes zasněžené údolí na sjezdovku a lanovku Bublava.',
+    descEn: 'Authentic photo from the apartment balcony overlooking the snow-covered valley, ski pistes, and chairlift in Bublava.'
   },
   {
-    src: 'assets/images/web/gallery-chalet.jpg',
-    titleCs: 'Slunečné vyhlídkové balkony',
-    titleEn: 'Scenic Sun Balconies',
-    categoryCs: 'Rezidence & Exteriér',
-    categoryEn: 'Residence & Exterior',
-    categorySlug: 'residence',
-    descCs: 'Ničím nerušený výhled na horské hřebeny Krušných hor a klidné horské západy slunce.',
-    descEn: 'Unobstructed panorama across Ore Mountain ridges and peaceful alpine sunsets.'
+    src: 'assets/images/web/apt-bathroom-shower.jpg',
+    titleCs: 'Moderní koupelna se sprchou',
+    titleEn: 'Modern Bathroom & Shower',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
+    categorySlug: 'interiors',
+    altCs: 'Moderní koupelna s proskleným sprchovým koutem a zrcadlovou skříňkou – Apartmány Panorama Bublava',
+    altEn: 'Modern bathroom with glass corner shower enclosure and mirror cabinet – Apartments Panorama Bublava',
+    descCs: 'Rohový sprchový kout s hlavovou i ruční sprchou, zrcadlová skříňka s osvětlením a teplé pískové keramické obklady.',
+    descEn: 'Corner glass shower enclosure with rain shower head, illuminated mirror cabinet, and warm sandstone tiling.'
   },
   {
-    src: 'assets/images/web/summer-hiking.jpg',
-    titleCs: 'Krušnohorská magistrála',
-    titleEn: 'Ore Mountain Trail Ridge',
+    src: 'assets/images/web/apt-living-lounge-warm.jpg',
+    titleCs: 'Útulný obývací prostor v teplém světle',
+    titleEn: 'Cozy Sunlit Living Lounge',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
+    categorySlug: 'interiors',
+    altCs: 'Útulný obývací prostor v teplém odpoledním světle s pohodlnou pohovkou – Apartmány Panorama',
+    altEn: 'Cozy living lounge bathed in warm afternoon sunlight with comfortable sofa – Apartments Panorama',
+    descCs: 'Pohodlná rozkládací pohovka s polštáři, konferenční stolky a příjemné odpolední světlo prostupující celým apartmánem.',
+    descEn: 'Comfortable sofa bed with plush pillows, nested coffee tables, and warm afternoon light filling the apartment.'
+  },
+  {
+    src: 'assets/images/web/lobby-bar-evening.jpg',
+    titleCs: 'Lobby Bar & Večerní posezení',
+    titleEn: 'Lobby Bar & Evening Lounge',
+    categoryCs: 'Lobby Bar & Lounge',
+    categoryEn: 'Lobby Bar & Lounge',
+    categorySlug: 'lobby',
+    altCs: 'Rezidenční Lobby Bar v 1. NP rezidence – večerní atmosféra u krbu se sportovními přenosy',
+    altEn: 'Residential Lobby Bar on ground floor – evening fireplace ambiance with sports broadcasts',
+    descCs: 'Příjemné společenské zázemí v přízemí rezidence pro ranní espresso, odpolední drink a večerní sportovní přenosy.',
+    descEn: 'Sociable ground-floor lounge for morning espresso, afternoon drinks, and evening sports broadcasts.'
+  },
+  {
+    src: 'assets/images/web/apt-kitchen-counter-detail.jpg',
+    titleCs: 'Detail kuchyňské linky a dřezu',
+    titleEn: 'Kitchen Workspace & Sink Detail',
+    categoryCs: 'Apartmány & Interiéry',
+    categoryEn: 'Apartments & Interiors',
+    categorySlug: 'interiors',
+    altCs: 'Detail kuchyňské linky s černým granitovým dřezem, kávovarem a indukční varnou deskou – Apartmány Panorama',
+    altEn: 'Detail of kitchen workspace with black granite sink, coffee maker and induction hob – Apartments Panorama',
+    descCs: 'Černý granitový dřez, designová vysoká baterie, kapslový kávovar, rychlovarná konvice a indukční varná deska.',
+    descEn: 'Black granite composite sink, designer high-arc faucet, capsule coffee machine, kettle, and induction cooktop.'
+  },
+  {
+    src: 'assets/images/apartments/real-exterior-sunny.jpg',
+    titleCs: 'Zimní kulisa rezidence',
+    titleEn: 'Winter Atmosphere at Residence',
     categoryCs: 'Hory & Okolí',
     categoryEn: 'Mountains & Surroundings',
     categorySlug: 'nature',
-    descCs: 'Stovky kilometrů upravených stop v zimě a horských cyklotras v letní sezóně.',
-    descEn: 'Hundreds of kilometers of cross-country trails in winter and MTB trails in summer.'
-  },
-  {
-    src: 'assets/images/web/gallery-lodge.jpg',
-    titleCs: 'Privátní zázemí a kóje',
-    titleEn: 'Private Storage & Facilities',
-    categoryCs: 'Rezidence & Exteriér',
-    categoryEn: 'Residence & Exterior',
-    categorySlug: 'residence',
-    descCs: 'Garantované parkování u domu a vyhřívané kóje na lyže a kola s průmyslovými sušáky bot.',
-    descEn: 'Dedicated on-site parking and heated ski/bike lockers equipped with industrial boot dryers.'
-  },
-  {
-    src: 'assets/images/web/gallery-lake.jpg',
-    titleCs: 'Panenská horská příroda',
-    titleEn: 'Pristine Alpine Nature',
-    categoryCs: 'Hory & Okolí',
-    categoryEn: 'Mountains & Surroundings',
-    categorySlug: 'nature',
-    descCs: 'Klidné přírodní scenérie, horská rašeliniště na Přebuzi a křišťálově čistý vzduch.',
-    descEn: 'Tranquil natural scenery, high peat bogs at Přebuz, and crystalline mountain air.'
-  },
-  {
-    src: 'assets/images/web/location-village.jpg',
-    titleCs: 'Horská obec Bublava 791',
-    titleEn: 'Alpine Village Bublava 791',
-    categoryCs: 'Hory & Okolí',
-    categoryEn: 'Mountains & Surroundings',
-    categorySlug: 'nature',
-    descCs: 'Klidné horské útočiště v nadmořské výšce 791 m n. m. přímo na česko-saské hranici.',
-    descEn: 'Serene mountain haven at 791 meters elevation right on the Czech-Saxon border.'
+    altCs: 'Slunečný zimní den v rezidenci Apartmány Panorama Bublava u lyžařského areálu',
+    altEn: 'Sunny winter day at Apartments Panorama Bublava residence by the ski resort',
+    descCs: 'Rezidence v zimním kabátu pod jasně modrou oblohou – zasněžené svahy Krušných hor přímo u domu.',
+    descEn: 'Residence in winter dress under crisp blue skies – snowy Ore Mountain slopes right outside your door.'
   }
 ];
 
@@ -1298,6 +1322,7 @@ function setPanoramaImage(index) {
   const categoryText = isEn ? (item.categoryEn || item.categoryCs) : item.categoryCs;
   const titleText = isEn ? (item.titleEn || item.titleCs) : item.titleCs;
   const descText = isEn ? (item.descEn || item.descCs) : item.descCs;
+  const altText = isEn ? (item.altEn || item.titleEn) : (item.altCs || item.titleCs);
 
   if (countEl) countEl.textContent = String(index + 1).padStart(2, '0');
   if (totalEl) totalEl.textContent = String(panoramaGalleryData.length).padStart(2, '0');
@@ -1308,7 +1333,7 @@ function setPanoramaImage(index) {
   if (img) {
     img.style.opacity = '0';
     img.src = item.src;
-    img.alt = titleText;
+    img.alt = altText;
     img.onload = () => {
       img.style.opacity = '1';
     };
@@ -1419,7 +1444,7 @@ function updateGalleryCardsLanguage(lang) {
     if (badge) badge.textContent = isEn ? data.categoryEn : data.categoryCs;
     if (title) title.textContent = isEn ? data.titleEn : data.titleCs;
     if (desc) desc.textContent = isEn ? data.descEn : data.descCs;
-    if (img) img.alt = isEn ? data.titleEn : data.titleCs;
+    if (img) img.alt = isEn ? (data.altEn || data.titleEn) : (data.altCs || data.titleCs);
   });
 }
 
@@ -2241,9 +2266,9 @@ function initPinnedBookingBar() {
    Hero Split Canvas Interactive Showcase Slider
    ========================================================================== */
 const heroScenes = [
-  { id: 1, cs: "Panoramatický výhled", en: "Panoramic Mountain View" },
-  { id: 2, cs: "Stylový Lobby Bar", en: "Stylish Lobby Bar" },
-  { id: 3, cs: "Designové Mezonety", en: "Design Penthouse Suites" }
+  { id: 1, cs: "Rezidence Panorama & Sjezdovka", en: "Panorama Residence & Ski Slopes" },
+  { id: 2, cs: "Horská architektura & Balkony", en: "Alpine Architecture & Balconies" },
+  { id: 3, cs: "Panoramatický obývací salon", en: "Panoramic Designer Living Salon" }
 ];
 let currentHeroScene = 0;
 let heroAutoCycleTimer = null;
@@ -2312,7 +2337,10 @@ function initSpotlightXRay() {
   const canvas = document.getElementById('spotlight-canvas');
   if (!canvas) return;
 
-  // Skip mouse-tracking HUD on touch devices (no hover pointer available)
+  // Initialize default view to clean real photo
+  setSpotlightMode('photo');
+
+  // Skip mouse-tracking HUD pointer handlers if touch device with no hover
   const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
   if (isTouchDevice) return;
 
@@ -2345,7 +2373,7 @@ function initSpotlightXRay() {
 
   canvas.addEventListener('pointerenter', () => {
     isHovered = true;
-    if (!animId) updateSpotlight();
+    if (currentSpotlightMode === 'xray' && !animId) updateSpotlight();
   });
 
   canvas.addEventListener('pointerleave', () => {
@@ -2354,7 +2382,7 @@ function initSpotlightXRay() {
     mouseX = (r.width || initW) * 0.52;
     mouseY = (r.height || initH) * 0.48;
     updateHudCoords(mouseX, mouseY, r.width, r.height);
-    if (!animId) updateSpotlight();
+    if (currentSpotlightMode === 'xray' && !animId) updateSpotlight();
   });
 
   canvas.addEventListener('pointermove', (e) => {
@@ -2362,7 +2390,7 @@ function initSpotlightXRay() {
     mouseX = e.clientX - r.left;
     mouseY = e.clientY - r.top;
     updateHudCoords(mouseX, mouseY, r.width, r.height);
-    if (!animId) updateSpotlight();
+    if (currentSpotlightMode === 'xray' && !animId) updateSpotlight();
   });
 
   function updateSpotlight() {
@@ -2372,7 +2400,7 @@ function initSpotlightXRay() {
     canvas.style.setProperty('--mouse-x', `${currentX.toFixed(1)}px`);
     canvas.style.setProperty('--mouse-y', `${currentY.toFixed(1)}px`);
 
-    if (isHovered || Math.abs(mouseX - currentX) > 0.5 || Math.abs(mouseY - currentY) > 0.5) {
+    if (currentSpotlightMode === 'xray' && (isHovered || Math.abs(mouseX - currentX) > 0.5 || Math.abs(mouseY - currentY) > 0.5)) {
       animId = requestAnimationFrame(updateSpotlight);
     } else {
       animId = null;
@@ -2380,28 +2408,69 @@ function initSpotlightXRay() {
   }
 }
 
-function toggleSpotlightBlueprint() {
+let currentSpotlightMode = 'photo';
+
+function setSpotlightMode(mode) {
   const canvas = document.getElementById('spotlight-canvas');
   const fullBp = document.getElementById('spotlight-full-blueprint');
-  const btn = document.querySelector('.spotlight-toggle-btn');
-  const btnText = document.getElementById('spotlight-toggle-text');
-  const btnIcon = btn ? btn.querySelector('i') : null;
-  if (!fullBp) return;
+  const captionEl = document.getElementById('spotlight-caption-text');
+  if (!canvas) return;
 
-  const isVisible = fullBp.classList.toggle('is-visible');
-  if (canvas) {
-    if (isVisible) {
-      canvas.classList.add('is-floorplan-active');
-    } else {
-      canvas.classList.remove('is-floorplan-active');
+  // Toggle back to photo if clicking the same active mode (xray or floorplan)
+  if (currentSpotlightMode === mode && mode !== 'photo') {
+    mode = 'photo';
+  }
+
+  currentSpotlightMode = mode;
+
+  // Update mode buttons active state
+  ['photo', 'xray', 'floorplan'].forEach(m => {
+    const btn = document.getElementById(`mode-btn-${m}`);
+    if (btn) {
+      if (m === mode) {
+        btn.classList.add('active');
+        btn.setAttribute('aria-selected', 'true');
+      } else {
+        btn.classList.remove('active');
+        btn.setAttribute('aria-selected', 'false');
+      }
+    }
+  });
+
+  const isEn = typeof currentLang !== 'undefined' && currentLang === 'en';
+
+  if (mode === 'photo') {
+    canvas.classList.remove('is-xray-active');
+    canvas.classList.remove('is-floorplan-active');
+    if (fullBp) fullBp.classList.remove('is-visible');
+    if (captionEl) {
+      captionEl.textContent = isEn
+        ? 'Real apartment photograph. Explore the interior or activate the Spotlight X-Ray.'
+        : 'Reálná fotografie apartmánu. Prozkoumejte interiér nebo zapněte Spotlight X-Ray rentgen.';
+    }
+  } else if (mode === 'xray') {
+    canvas.classList.add('is-xray-active');
+    canvas.classList.remove('is-floorplan-active');
+    if (fullBp) fullBp.classList.remove('is-visible');
+    if (captionEl) {
+      captionEl.textContent = isEn
+        ? 'Spotlight X-Ray active: Move your cursor across the photo to inspect the CAD blueprint.'
+        : 'Spotlight X-Ray aktivní: Pohybujte kurzorem po fotografii pro interaktivní rentgen CAD půdorysu.';
+    }
+  } else if (mode === 'floorplan') {
+    canvas.classList.remove('is-xray-active');
+    canvas.classList.add('is-floorplan-active');
+    if (fullBp) fullBp.classList.add('is-visible');
+    if (captionEl) {
+      captionEl.textContent = isEn
+        ? '3D spatial floorplan model including private balcony, equipment, and ski locker.'
+        : '3D prostorový model dispozice apartmánu včetně balkonu, vybavení a kóje.';
     }
   }
-  if (btnText) {
-    btnText.textContent = isVisible ? 'Zpět na fotografii' : 'Zobrazit 3D půdorys';
-  }
-  if (btnIcon) {
-    btnIcon.className = isVisible ? 'fa-solid fa-camera me-1' : 'fa-solid fa-cube me-1';
-  }
+}
+
+function toggleSpotlightBlueprint() {
+  setSpotlightMode(currentSpotlightMode === 'floorplan' ? 'photo' : 'floorplan');
 }
 
 function filterDossier(cat) {

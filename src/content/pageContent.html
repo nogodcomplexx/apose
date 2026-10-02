@@ -208,7 +208,7 @@
                               </h1>
 
                               <p class="hero-left-desc" data-i18n="hero_desc">
-                                 Exkluzivní horské útočiště v srdci přírody. 3 architektonické typy apartmánů s panoramatickým výhledem na sjezdovku a hory, vlastním Lobby Barem a ski-in / ski-out polohou.
+                                 Exkluzivní horské útočiště v srdci přírody. 3 architektonické typy apartmánů – všechny s vlastním privátním balkonem a panoramatickým výhledem na sjezdovky i hory, vlastním Lobby Barem a ski-in / ski-out polohou.
                               </p>
 
                               <div class="hero-actions-row">
@@ -235,7 +235,7 @@
                               </div>
                               <div class="hero-stat-item">
                                  <h4 class="hero-stat-counter" data-target="100" data-suffix="%" data-i18n="hero_stat_3_num">100%</h4>
-                                 <p data-i18n="hero_stat_3_text">Panoramatický výhled</p>
+                                 <p data-i18n="hero_stat_3_text">Všechny pokoje s balkonem</p>
                               </div>
                               <div class="hero-stat-item">
                                  <h4>Privátní</h4>
@@ -248,24 +248,24 @@
                         <!-- Right Panel: Crisp Photographic Showcase & Interactive Slider -->
                         <div class="hero-split__right">
                            <!-- Scene 1: Exterior & Panorama -->
-                           <div class="hero-slide-bg active" id="hero-slide-1" style="background-image: url('/assets/images/web/hero-panorama.jpg'); background-position: 22% 45%;"></div>
-                           <!-- Scene 2: Lobby Bar Evening -->
-                           <div class="hero-slide-bg" id="hero-slide-2" style="background-image: url('/assets/images/web/lobby-bar-evening.jpg'); background-position: center 45%;"></div>
-                           <!-- Scene 3: Penthouse Suite -->
-                           <div class="hero-slide-bg" id="hero-slide-3" style="background-image: url('/assets/images/web/apt-living-balcony.jpg'); background-position: center center;"></div>
+                           <div class="hero-slide-bg active" id="hero-slide-1" style="background-image: url('/assets/images/web/residence-exterior-front.jpg'); background-position: center 40%;"></div>
+                           <!-- Scene 2: Building Architecture & Balconies -->
+                           <div class="hero-slide-bg" id="hero-slide-2" style="background-image: url('/assets/images/web/residence-exterior-balconies.jpg'); background-position: center 35%;"></div>
+                           <!-- Scene 3: Panoramic Living Salon with Oak Slats -->
+                           <div class="hero-slide-bg" id="hero-slide-3" style="background-image: url('/assets/images/web/apt-living-room-panoramic.jpg'); background-position: center center;"></div>
 
                            <!-- Vertical Diamond Slider Indicators (from reference) -->
                            <div class="hero-vertical-indicators">
                               <div class="hero-indicator-line"></div>
-                              <div class="hero-diamond active" onclick="setHeroScene(1)" title="Pohled 1: Panoramatický výhled"></div>
-                              <div class="hero-diamond" onclick="setHeroScene(2)" title="Pohled 2: Stylový Lobby Bar"></div>
-                              <div class="hero-diamond" onclick="setHeroScene(3)" title="Pohled 3: Designové apartmány"></div>
+                              <div class="hero-diamond active" onclick="setHeroScene(1)" title="Pohled 1: Rezidence Panorama &amp; Sjezdovka"></div>
+                              <div class="hero-diamond" onclick="setHeroScene(2)" title="Pohled 2: Horská architektura &amp; Balkony"></div>
+                              <div class="hero-diamond" onclick="setHeroScene(3)" title="Pohled 3: Panoramatický obývací salon"></div>
                               <div class="hero-indicator-line"></div>
                            </div>
 
                            <!-- Bottom Scene Caption & Bronze Arrow Controls (from reference) -->
                            <div class="hero-right__controls">
-                              <div class="hero-scene-caption" id="hero-scene-caption">Panoramatický výhled</div>
+                              <div class="hero-scene-caption" id="hero-scene-caption">Rezidence Panorama &amp; Sjezdovka</div>
                               <button type="button" class="hero-ctrl-btn" onclick="prevHeroScene()" aria-label="Předchozí pohled">
                                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
                               </button>
@@ -702,11 +702,11 @@
                            ========================================================================== -->
                       <div class="dossier-spotlight-card">
                          <div class="row g-0 align-items-stretch">
-                            <!-- Left: Interactive Spotlight Canvas -->
-                            <div class="col-12 col-lg-7">
+                            <!-- Left: Interactive Spotlight Canvas & Mode Controls -->
+                            <div class="col-12 col-lg-7 d-flex flex-column">
                                <div class="spotlight-canvas" id="spotlight-canvas">
                                   <!-- Base Photo Layer -->
-                                  <div class="spotlight-layer spotlight-layer--photo" style="background-image: url('/assets/images/web/apt-living-dining.jpg');"></div>
+                                  <div class="spotlight-layer spotlight-layer--photo" style="background-image: url('/assets/images/web/apt-living-room-panoramic.jpg');"></div>
                                   
                                   <!-- X-Ray CAD Blueprint Layer (Revealed through cursor spotlight mask) -->
                                   <div class="spotlight-layer spotlight-layer--blueprint" style="background-image: url('/assets/images/blueprints/apt-06-cad-blueprint.jpg');"></div>
@@ -720,23 +720,42 @@
                                      <div class="spotlight-hud-coords" id="spotlight-hud-coords">X: 16.4m | Y: 9.2m | ELEV: +6.40m</div>
                                   </div>
 
-                                  <!-- Instruction Tag -->
+                                  <!-- Instruction Tag (Active only when X-Ray is turned on) -->
                                   <div class="spotlight-instruction-pill d-none d-sm-inline-flex">
                                      <span class="pulsing-dot"></span>
-                                     <span>SPOTLIGHT X-RAY: POHYBUJTE KURZOREM PRO RENTGEN PŮDORYSU</span>
+                                     <span id="spotlight-instruction-text">SPOTLIGHT X-RAY: POHYBUJTE KURZOREM PRO RENTGEN PŮDORYSU</span>
                                   </div>
 
-                                  <!-- Touch / Direct Toggle Button -->
-                                  <button type="button" class="spotlight-toggle-btn" onclick="toggleSpotlightBlueprint()">
-                                     <i class="fa-solid fa-cube me-1"></i>
-                                     <span id="spotlight-toggle-text">Zobrazit 3D půdorys</span>
-                                  </button>
-
                                   <!-- Quick Return Button in top corner when in floorplan mode -->
-                                  <button type="button" class="spotlight-floorplan-close-btn" onclick="toggleSpotlightBlueprint()" title="Zavřít půdorys a vrátit se k fotografii" aria-label="Zavřít půdorys">
+                                  <button type="button" class="spotlight-floorplan-close-btn" onclick="setSpotlightMode('photo')" title="Zavřít půdorys a vrátit se k fotografii" aria-label="Zavřít půdorys">
                                      <i class="fa-solid fa-xmark me-1"></i>
                                      <span>Zavřít půdorys</span>
                                   </button>
+                               </div>
+
+                               <!-- Control Bar Under Photo: View Mode Switcher -->
+                               <div class="spotlight-bottom-bar">
+                                  <div class="spotlight-modes-wrap">
+                                     <div class="spotlight-modes-nav" role="tablist" aria-label="Režim zobrazení apartmánu">
+                                        <button type="button" class="spotlight-mode-btn active" id="mode-btn-photo" onclick="setSpotlightMode('photo')" aria-label="Reálná fotografie">
+                                           <i class="fa-solid fa-camera"></i>
+                                           <span id="mode-text-photo">Reálné foto</span>
+                                        </button>
+                                        <button type="button" class="spotlight-mode-btn" id="mode-btn-xray" onclick="setSpotlightMode('xray')" aria-label="Zapnout Spotlight X-Ray rentgen">
+                                           <i class="fa-solid fa-crosshairs"></i>
+                                           <span id="mode-text-xray">Spotlight X-Ray</span>
+                                           <span class="spotlight-mode-badge" id="mode-badge-xray">Rentgen</span>
+                                        </button>
+                                        <button type="button" class="spotlight-mode-btn" id="mode-btn-floorplan" onclick="setSpotlightMode('floorplan')" aria-label="3D Půdorys dispozice">
+                                           <i class="fa-solid fa-cube"></i>
+                                           <span id="mode-text-floorplan">3D Půdorys</span>
+                                        </button>
+                                     </div>
+                                  </div>
+                                  <div class="spotlight-mode-caption" id="spotlight-mode-caption">
+                                     <i class="fa-regular fa-compass me-2 text-primary"></i>
+                                     <span id="spotlight-caption-text">Reálná fotografie apartmánu. Prozkoumejte interiér nebo zapněte Spotlight X-Ray rentgen.</span>
+                                  </div>
                                </div>
                             </div>
 
@@ -760,9 +779,9 @@
                                      </div>
                                      <div class="spotlight-select-wrap">
                                          <select id="spotlight-apt-select" class="spotlight-cad-select" onchange="switchSpotlightUnit(this.value)">
-                                            <option value="6" selected>Typ 1: Panoramatický rohový apartmán (Apartmán 6 • až 6 hostů)</option>
-                                            <option value="5">Typ 2: Horský apartmán s balkonem (Apartmán 5 • 4 hosté)</option>
-                                            <option value="10">Typ 3: Podkrovní apartmán s trámovým stropem (Apartmán 10 • 4 hosté)</option>
+                                            <option value="6" selected>Typ 1: Panoramatický rohový apartmán s balkonem (Apartmán 6 • až 6 hostů)</option>
+                                            <option value="5">Typ 2: Horský apartmán s privátním balkonem (Apartmán 5 • 4 hosté)</option>
+                                            <option value="10">Typ 3: Podkrovní apartmán s vyhlídkovým balkonem (Apartmán 10 • 4 hosté)</option>
                                          </select>
                                         <i class="fa-solid fa-chevron-down spotlight-select-arrow"></i>
                                      </div>
@@ -829,12 +848,12 @@
                            3 Curated Managed Suites Showcase (Apartments 6, 5, 10)
                            ========================================================================== -->
                       <div class="dossier-managed-header text-center mt-5 mb-4">
-                         <span class="dossier-cad-tag"><i class="fa-solid fa-mountain-sun me-1"></i> NAŠE NABÍDKA // 3 ARCHITEKTONICKÉ TYPY APARTMÁNŮ</span>
+                         <span class="dossier-cad-tag"><i class="fa-solid fa-mountain-sun me-1"></i> NAŠE NABÍDKA // 3 ARCHITEKTONICKÉ TYPY APARTMÁNŮ // VŠECHNY S BALKONEM</span>
                          <h3 class="title title-anim mt-2 text-white font-secondary fs-3">
                             Vyberte si ideální typ apartmánu s výhledem na sjezdovku a hory
                          </h3>
                          <p class="text-white-50 mx-auto" style="max-width: 720px; font-size: 14px;">
-                            V naší rezidenci nabízíme 3 rozmanité typy apartmánů navržené pro maximální komfort párů, rodin i skupin přátel. Všechny typy nabízejí vlastní balkon s přímým výhledem na lyžařský areál a horské hřebeny, vyhřívanou uzamykatelnou kóji se sušáky bot na 1. NP a garantované parkování.
+                            V naší rezidenci nabízíme 3 rozmanité typy apartmánů navržené pro maximální komfort párů, rodin i skupin přátel. Všechny pokoje mají vlastní privátní balkon s přímým výhledem na lyžařský areál a horské hřebeny, vyhřívanou uzamykatelnou kóji se sušáky bot na 1. NP a garantované parkování.
                          </p>
                       </div>
 
@@ -843,7 +862,7 @@
                          <div class="col-12 col-md-6 col-lg-4">
                             <div class="dossier-card is-focused-unit" data-id="6" onclick="selectDossierCard(6)">
                                <div class="dossier-card-thumb">
-                                  <img src="/assets/images/web/apt-living-dining.jpg" alt="Typ 1 – Panoramatický rohový apartmán s výhledem na sjezdovku" loading="lazy" data-view="photo">
+                                  <img src="/assets/images/web/apt-living-room-panoramic.jpg" alt="Apartmány Panorama Bublava – Typ 1: Panoramatický rohový apartmán s výhledem na sjezdovku a Krušné hory" loading="lazy" data-view="photo">
                                   <span class="dossier-card-floor-badge" style="background: rgba(255, 116, 37, 0.9);"><i class="fa-solid fa-crown me-1"></i> TYP 1 • VLAJKOVÁ LOĎ (2. NP)</span>
                                   <button type="button" class="dossier-thumb-plan-btn" onclick="toggleCardImage(event, 6)" title="Přepnout půdorys / fotografii">
                                      <i class="fa-solid fa-compass-drafting me-1"></i>
@@ -883,7 +902,7 @@
                          <div class="col-12 col-md-6 col-lg-4">
                             <div class="dossier-card" data-id="5" onclick="selectDossierCard(5)">
                                <div class="dossier-card-thumb">
-                                  <img src="/assets/images/web/apt-living-balcony.jpg" alt="Typ 2 – Horský apartmán s privátním balkonem a výhledem" loading="lazy" data-view="photo">
+                                  <img src="/assets/images/web/apt-balcony-rattan.jpg" alt="Apartmány Panorama Bublava – Typ 2: Horský apartmán s privátním vyhlídkovým balkonem a ratanovým posezením" loading="lazy" data-view="photo">
                                   <span class="dossier-card-floor-badge"><i class="fa-solid fa-mountain-sun me-1"></i> TYP 2 • HORSKÝ BALKON (2. NP)</span>
                                   <button type="button" class="dossier-thumb-plan-btn" onclick="toggleCardImage(event, 5)" title="Přepnout půdorys / fotografii">
                                      <i class="fa-solid fa-compass-drafting me-1"></i>
@@ -923,7 +942,7 @@
                          <div class="col-12 col-md-6 col-lg-4">
                             <div class="dossier-card" data-id="10" onclick="selectDossierCard(10)">
                                <div class="dossier-card-thumb">
-                                  <img src="/assets/images/web/apt-bedroom-loft.jpg" alt="Typ 3 – Podkrovní apartmán s trámovým stropem a výhledem na hory" loading="lazy" data-view="photo">
+                                  <img src="/assets/images/web/apt-kitchen-dining-full.jpg" alt="Apartmány Panorama Bublava – Typ 3: Podkrovní apartmán s plně vybavenou kuchyní a výhledem na hory" loading="lazy" data-view="photo">
                                   <span class="dossier-card-floor-badge"><i class="fa-solid fa-snowflake me-1"></i> TYP 3 • PODKROVNÍ TRÁMY (3. NP)</span>
                                   <button type="button" class="dossier-thumb-plan-btn" onclick="toggleCardImage(event, 10)" title="Přepnout půdorys / fotografii">
                                      <i class="fa-solid fa-compass-drafting me-1"></i>
@@ -992,8 +1011,8 @@
                      <div class="row gaper align-items-center">
                         <div class="col-12 col-lg-6">
                            <div class="agency__thumb">
-                              <img src="/assets/images/web/residence-exterior.jpg" alt="Exteriér Rezidence" class="thumb-one fade-left">
-                              <img src="/assets/images/web/gallery-chalet.jpg" alt="Detail dřeva" class="thumb-two fade-right">
+                              <img src="/assets/images/web/residence-exterior-front.jpg" alt="Rezidence Apartmány Panorama Bublava – moderní horský apartmánový dům přímo u sjezdovky s vyhrazeným parkováním" class="thumb-one fade-left">
+                              <img src="/assets/images/web/residence-exterior-balconies.jpg" alt="Apartmány Panorama v Bublavě – pohled na slunné balkony apartmánů a okolní horskou přírodu Krušných hor" class="thumb-two fade-right">
                            </div>
                         </div>
                         <div class="col-12 col-lg-6">
@@ -1112,10 +1131,10 @@
                                  <i class="fa-solid fa-mountain-sun" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_3_title">Slunečné Terasy &amp; Krby</a>
+                                 <a href="javascript:void(0)" data-i18n="comfort_card_3_title">Privátní Balkony pro Každý Pokoj</a>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_3_desc">
-                                 Prostorné venkovní terasy s posezením, výhledem na horské masivy a biokrby v interiérech pro dokonalou horskou pohodu.
+                                 Každý jednotlivý apartmán disponuje vlastním slunným balkonem s venkovním posezením a ničím nerušeným výhledem na sjezdovky a krušnohorské lesy.
                               </p>
                            </div>
                         </div>
@@ -1829,9 +1848,9 @@
 
                       <!-- 2026 Editorial Asymmetric Grid -->
                       <div class="gallery-grid-2026" id="panorama-gallery-grid">
-                            <!-- 01. Living Room with Balcony & Wood Slats -->
+                         <!-- 01. Living Room with Balcony & Wood Slats -->
                          <div class="gallery-card span-hero" data-category="interiors" onclick="openPanoramaLightbox(0)">
-                            <img src="/assets/images/web/apt-living-balcony.jpg" alt="Designový obývací salon" loading="lazy">
+                            <img src="/assets/images/web/apt-living-room-panoramic.jpg" alt="Apartmány Panorama Bublava – prostorný skandinávský obývací pokoj s dřevěným lamelovým obložením, Smart TV a výhledem do lesa" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
                                   <span class="gallery-badge">Apartmány &amp; Interiéry</span>
@@ -1839,172 +1858,172 @@
                                </div>
                                <div class="gallery-card-bottom">
                                   <h3 class="gallery-card-title">Designový obývací salon</h3>
-                                  <p class="gallery-card-desc">Prosvětlený mezonetový prostor s dřevěným lamelovým obložením, Smart TV a balkonem.</p>
-                                </div>
+                                  <p class="gallery-card-desc">Prosvětlený obývací prostor s dřevěným lamelovým obložením, Smart TV, jídelním stolem a francouzským oknem na balkon.</p>
+                               </div>
                             </div>
                          </div>
 
-                         <!-- 02. Lobby Bar Evening Atmosphere -->
-                         <div class="gallery-card span-tall" data-category="lobby" onclick="openPanoramaLightbox(1)">
-                            <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Večerní atmosféra v Lobby Baru" loading="lazy">
+                         <!-- 02. Residence Exterior Front -->
+                         <div class="gallery-card span-tall" data-category="residence" onclick="openPanoramaLightbox(1)">
+                            <img src="/assets/images/web/residence-exterior-front.jpg" alt="Rezidence Apartmány Panorama Bublava – moderní horský apartmánový dům přímo u sjezdovky s vyhrazeným parkováním" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
-                                  <span class="gallery-badge">Lobby Bar &amp; Lounge</span>
+                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
                                   <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
                                </div>
                                <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Večerní atmosféra v Lobby Baru</h3>
-                                  <p class="gallery-card-desc">Privátní společenský prostor pro hosty s krbem a výběrovou vinotékou v 1. NP rezidence.</p>
+                                  <h3 class="gallery-card-title">Rezidence Apartmány Panorama</h3>
+                                  <p class="gallery-card-desc">Moderní horský apartmánový dům přímo u sjezdovky v Bublavě s vyhrazeným parkováním, gabionovou zdí a terasou.</p>
                                </div>
                             </div>
                          </div>
 
-                         <!-- 03. Living Room & Dining Area Bublava -->
+                         <!-- 03. Kitchen & Dining Full -->
                          <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(2)">
-                            <img src="/assets/images/web/apt-living-dining.jpg" alt="Jídelní kout a masivní kuchyně" loading="lazy">
+                            <img src="/assets/images/web/apt-kitchen-dining-full.jpg" alt="Apartmány Panorama Bublava – plně vybavená moderní kuchyň s jídelním stolem, kávovarem a výhledem na hory" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
                                   <span class="gallery-badge">Apartmány &amp; Interiéry</span>
                                   <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
                                </div>
                                <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Jídelní kout a masivní kuchyně</h3>
-                                  <p class="gallery-card-desc">Spojení přírodního masivního dřeva, žulových desek a otevřeného společenského prostoru.</p>
+                                  <h3 class="gallery-card-title">Jídelní kout &amp; Plně vybavená kuchyně</h3>
+                                  <p class="gallery-card-desc">Plnohodnotná kuchyňská linka s dřevěnou pracovní deskou, mikrovlnnou troubou, kávovarem a jídelním stolem pro 4 osoby.</p>
                                </div>
                             </div>
                          </div>
 
-                         <!-- 04. Lobby Bar Day Lounge -->
-                         <div class="gallery-card span-medium" data-category="lobby" onclick="openPanoramaLightbox(3)">
-                            <img src="/assets/images/web/lobby-bar-lounge.jpg" alt="Rezidenční denní lounge" loading="lazy">
+                         <!-- 04. Balcony with Rattan Seating -->
+                         <div class="gallery-card span-medium" data-category="residence" onclick="openPanoramaLightbox(3)">
+                            <img src="/assets/images/web/apt-balcony-rattan.jpg" alt="Privátní vyhlídkový balkon apartmánu s ratanovým posezením – Apartmány Panorama Bublava" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Privátní vyhlídkový balkon</h3>
+                                  <p class="gallery-card-desc">Slunný balkon s perforovaným kovovým zábradlím, pohodlným ratanovým posezením a výhledem do zeleně a údolí Bublavy.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 05. Master Bedroom -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(4)">
+                            <img src="/assets/images/web/apt-bedroom-master.jpg" alt="Komfortní ložnice s manželskou postelí a prémiovým ložním prádlem – Apartmány Panorama Bublava" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Apartmány &amp; Interiéry</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Klidová manželská ložnice</h3>
+                                  <p class="gallery-card-desc">Prostorná manželská postel s úložnými zásuvkami, prémiové pruhované povlečení a tiché prostředí pro nerušený spánek.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 06. Residence Exterior Balconies -->
+                         <div class="gallery-card span-wide" data-category="residence" onclick="openPanoramaLightbox(5)">
+                            <img src="/assets/images/web/residence-exterior-balconies.jpg" alt="Apartmány Panorama v Bublavě – pohled na slunné balkony apartmánů a okolní horskou přírodu Krušných hor" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Moderní horská architektura</h3>
+                                  <p class="gallery-card-desc">Pohled na jižní fasádu rezidence se všemi vyhlídkovými balkony, upraveným svahem a smrkovými lesy Krušných hor.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 07. Real Balcony View of Slope -->
+                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(6)">
+                            <img src="/assets/images/apartments/real-balcony-view-slope.jpg" alt="Reálný výhled z balkonu apartmánu Panorama na lyžařský areál Bublava a Krušné hory" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Hory &amp; Okolí</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Výhled z balkonu na sjezdovku</h3>
+                                  <p class="gallery-card-desc">Autentická fotografie přímo z balkonu rezidence s pohledem přes zasněžené údolí na sjezdovku a lanovku Bublava.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 08. Modern Bathroom with Shower -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(7)">
+                            <img src="/assets/images/web/apt-bathroom-shower.jpg" alt="Moderní koupelna s proskleným sprchovým koutem a zrcadlovou skříňkou – Apartmány Panorama Bublava" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Apartmány &amp; Interiéry</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Moderní koupelna se sprchou</h3>
+                                  <p class="gallery-card-desc">Rohový sprchový kout s hlavovou i ruční sprchou, zrcadlová skříňka s osvětlením a teplé pískové keramické obklady.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 09. Cozy Living Lounge in Warm Light -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(8)">
+                            <img src="/assets/images/web/apt-living-lounge-warm.jpg" alt="Útulný obývací prostor v teplém odpoledním světle s pohodlnou pohovkou – Apartmány Panorama" loading="lazy">
+                            <div class="gallery-card-overlay">
+                               <div class="gallery-card-top">
+                                  <span class="gallery-badge">Apartmány &amp; Interiéry</span>
+                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
+                               </div>
+                               <div class="gallery-card-bottom">
+                                  <h3 class="gallery-card-title">Útulný obývací prostor v teplém světle</h3>
+                                  <p class="gallery-card-desc">Pohodlná rozkládací pohovka s polštáři, konferenční stolky a příjemné odpolední světlo prostupující celým apartmánem.</p>
+                               </div>
+                            </div>
+                         </div>
+
+                         <!-- 10. Lobby Bar Evening Lounge -->
+                         <div class="gallery-card span-medium" data-category="lobby" onclick="openPanoramaLightbox(9)">
+                            <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Rezidenční Lobby Bar v 1. NP rezidence – večerní atmosféra u krbu se sportovními přenosy" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
                                   <span class="gallery-badge">Lobby Bar &amp; Lounge</span>
                                   <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
                                </div>
                                <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Rezidenční denní lounge</h3>
-                                  <p class="gallery-card-desc">Ranní čerstvé espresso před nástupem na sjezdovku a posezení s přáteli u krbu.</p>
+                                  <h3 class="gallery-card-title">Lobby Bar &amp; Večerní posezení</h3>
+                                  <p class="gallery-card-desc">Příjemné společenské zázemí v přízemí rezidence pro ranní espresso, odpolední drink a večerní sportovní přenosy.</p>
                                </div>
                             </div>
                          </div>
 
-                         <!-- 05. Loft Bedroom with Skylight -->
-                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(4)">
-                            <img src="/assets/images/web/apt-bedroom-loft.jpg" alt="Klidová ložnice v podkroví" loading="lazy">
+                         <!-- 11. Kitchen Counter Detail -->
+                         <div class="gallery-card span-medium" data-category="interiors" onclick="openPanoramaLightbox(10)">
+                            <img src="/assets/images/web/apt-kitchen-counter-detail.jpg" alt="Detail kuchyňské linky s černým granitovým dřezem, kávovarem a indukční varnou deskou – Apartmány Panorama" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
                                   <span class="gallery-badge">Apartmány &amp; Interiéry</span>
                                   <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
                                </div>
                                <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Klidová ložnice v podkroví</h3>
-                                  <p class="gallery-card-desc">Akustické soukromí, střešní okna s výhledem na noční oblohu a prémiové matrace.</p>
+                                  <h3 class="gallery-card-title">Detail kuchyňské linky a dřezu</h3>
+                                  <p class="gallery-card-desc">Černý granitový dřez, designová vysoká baterie, kapslový kávovar, rychlovarná konvice a indukční varná deska.</p>
                                </div>
                             </div>
                          </div>
 
-                         <!-- 06. Residence Exterior -->
-                         <div class="gallery-card span-wide" data-category="residence" onclick="openPanoramaLightbox(5)">
-                            <img src="/assets/images/web/residence-exterior.jpg" alt="Architektura rezidence Panorama" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Architektura rezidence Panorama</h3>
-                                  <p class="gallery-card-desc">Moderní horská stavba s privátními balkony přímo na dohled sedačkové lanovky Bublava.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 07. Winter Ski-in / Ski-out -->
-                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(6)">
-                            <img src="/assets/images/web/winter-ski.jpg" alt="Ski-in / Ski-out poloha" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Hory &amp; Okolí</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Ski-in / Ski-out poloha</h3>
-                                  <p class="gallery-card-desc">Pouhých 150 metrů k nástupní stanici 4sedačkové lanovky a 6 zasněženým sjezdovkám.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 08. Chalet Architecture & Wood Detail -->
-                         <div class="gallery-card span-medium" data-category="residence" onclick="openPanoramaLightbox(7)">
-                            <img src="/assets/images/web/gallery-chalet.jpg" alt="Slunečné vyhlídkové balkony" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Slunečné vyhlídkové balkony</h3>
-                                  <p class="gallery-card-desc">Ničím nerušený výhled na horské hřebeny Krušných hor a klidné horské západy slunce.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 09. Summer Mountain Ridge -->
-                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(8)">
-                            <img src="/assets/images/web/summer-hiking.jpg" alt="Krušnohorská magistrála" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Hory &amp; Okolí</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Krušnohorská magistrála</h3>
-                                  <p class="gallery-card-desc">Stovky kilometrů upravených stop v zimě a horských cyklotras v letní sezóně.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 10. Evening Mountain Lodge -->
-                         <div class="gallery-card span-medium" data-category="residence" onclick="openPanoramaLightbox(9)">
-                            <img src="/assets/images/web/gallery-lodge.jpg" alt="Privátní zázemí a kóje" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Rezidence &amp; Exteriér</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Privátní zázemí a kóje</h3>
-                                  <p class="gallery-card-desc">Garantované parkování u domu a vyhřívané kóje na lyže a kola s průmyslovými sušáky bot.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 11. Mountain Lake -->
-                         <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(10)">
-                            <img src="/assets/images/web/gallery-lake.jpg" alt="Panenská horská příroda" loading="lazy">
-                            <div class="gallery-card-overlay">
-                               <div class="gallery-card-top">
-                                  <span class="gallery-badge">Hory &amp; Okolí</span>
-                                  <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
-                               </div>
-                               <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Panenská horská příroda</h3>
-                                  <p class="gallery-card-desc">Klidné přírodní scenérie, horská rašeliniště na Přebuzi a křišťálově čistý vzduch.</p>
-                               </div>
-                            </div>
-                         </div>
-
-                         <!-- 12. Bublava Valley Village -->
+                         <!-- 12. Winter Scenery of Residence -->
                          <div class="gallery-card span-medium" data-category="nature" onclick="openPanoramaLightbox(11)">
-                            <img src="/assets/images/web/location-village.jpg" alt="Horská obec Bublava 791" loading="lazy">
+                            <img src="/assets/images/apartments/real-exterior-sunny.jpg" alt="Slunečný zimní den v rezidenci Apartmány Panorama Bublava u lyžařského areálu" loading="lazy">
                             <div class="gallery-card-overlay">
                                <div class="gallery-card-top">
                                   <span class="gallery-badge">Hory &amp; Okolí</span>
                                   <span class="gallery-zoom-icon"><i class="fa-solid fa-expand"></i></span>
                                </div>
                                <div class="gallery-card-bottom">
-                                  <h3 class="gallery-card-title">Horská obec Bublava 791</h3>
-                                  <p class="gallery-card-desc">Klidné horské útočiště v nadmořské výšce 791 m n. m. přímo na česko-saské hranici.</p>
+                                  <h3 class="gallery-card-title">Zimní kulisa rezidence</h3>
+                                  <p class="gallery-card-desc">Rezidence v zimním kabátu pod jasně modrou oblohou – zasněžené svahy Krušných hor přímo u domu.</p>
                                </div>
                             </div>
                          </div>
@@ -2423,7 +2442,7 @@
                      </button>
                   </div>
                   <div class="apt-showcase-img-wrap">
-                     <img id="apt-modal-img" src="/assets/images/web/apt-living-balcony.jpg" alt="Detail apartmánu" class="apt-showcase-img">
+                     <img id="apt-modal-img" src="/assets/images/web/apt-living-room-panoramic.jpg" alt="Apartmány Panorama Bublava – detail pokoje a vybavení" class="apt-showcase-img">
                      <div class="apt-showcase-img-overlay">
                         <div class="apt-showcase-badge">
                            <span class="badge-dot"></span>

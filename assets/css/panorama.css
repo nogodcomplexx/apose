@@ -1090,7 +1090,7 @@ a.btn span {
   font-size: clamp(48px, 5.8vw, 84px);
   font-weight: 900;
   letter-spacing: 3px;
-  background: url('../images/web/hero-panorama.jpg') 22% 45% / cover no-repeat;
+  background: url('../images/web/mountain-panorama-text.jpg') center 36% / cover no-repeat;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -4394,9 +4394,23 @@ a.btn span {
 .spotlight-canvas {
   position: relative;
   width: 100%;
-  height: 490px;
+  flex: 1 1 auto;
+  min-height: 440px;
   overflow: hidden;
   background: #080e18;
+  cursor: default;
+  border-top-left-radius: 28px;
+}
+
+@media (max-width: 991px) {
+  .spotlight-canvas {
+    border-top-right-radius: 28px;
+    min-height: 320px;
+    height: 340px;
+  }
+}
+
+.spotlight-canvas.is-xray-active {
   cursor: crosshair;
 }
 
@@ -4419,6 +4433,14 @@ a.btn span {
   mask-image: radial-gradient(circle 240px at var(--mouse-x, -500px) var(--mouse-y, -500px), black 0%, black 65%, transparent 100%);
   -webkit-mask-image: radial-gradient(circle 240px at var(--mouse-x, -500px) var(--mouse-y, -500px), black 0%, black 65%, transparent 100%);
   pointer-events: none;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.35s ease, visibility 0.35s ease;
+}
+
+.spotlight-canvas.is-xray-active .spotlight-layer--blueprint {
+  opacity: 1;
+  visibility: visible;
 }
 
 .spotlight-layer--full-blueprint {
@@ -4437,7 +4459,7 @@ a.btn span {
   pointer-events: auto !important;
 }
 
-/* HUD Optical Lens Target following cursor */
+/* HUD Optical Lens Target following cursor (Only active when X-Ray is turned on) */
 .spotlight-hud-reticle {
   position: absolute;
   top: 0;
@@ -4452,12 +4474,18 @@ a.btn span {
   pointer-events: none;
   z-index: 3;
   transform: translate(var(--mouse-x, 52%), var(--mouse-y, 48%));
-  opacity: 0.85;
-  transition: opacity 0.3s ease;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
 }
 
-.spotlight-canvas:hover .spotlight-hud-reticle {
-  opacity: 1;
+.spotlight-canvas.is-xray-active .spotlight-hud-reticle {
+  opacity: 0.85 !important;
+  visibility: visible !important;
+}
+
+.spotlight-canvas.is-xray-active:hover .spotlight-hud-reticle {
+  opacity: 1 !important;
 }
 
 .spotlight-hud-crosshair {
@@ -4523,6 +4551,14 @@ a.btn span {
   align-items: center;
   gap: 8px;
   pointer-events: none;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.spotlight-canvas.is-xray-active .spotlight-instruction-pill {
+  opacity: 1 !important;
+  visibility: visible !important;
 }
 
 .spotlight-instruction-pill .pulsing-dot {
@@ -4533,47 +4569,129 @@ a.btn span {
   animation: pulse-dot 1.8s infinite;
 }
 
-.spotlight-toggle-btn {
-  position: absolute;
-  bottom: 20px;
-  right: 20px;
-  z-index: 25 !important;
-  background: rgba(10, 12, 16, 0.9);
-  border: 1px solid rgba(255, 255, 255, 0.25);
-  color: #ffffff;
-  padding: 9px 18px;
-  border-radius: 8px;
-  font-size: 12px;
-  font-weight: 600;
-  cursor: pointer;
+/* ==========================================================================
+   Dedicated View Mode Control Bar Under Spotlight Photo
+   ========================================================================== */
+.spotlight-bottom-bar {
+  background: linear-gradient(180deg, rgba(14, 18, 26, 0.96) 0%, rgba(9, 12, 18, 0.98) 100%);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 16px 22px 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-bottom-left-radius: 28px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+@media (max-width: 991px) {
+  .spotlight-bottom-bar {
+    border-bottom-left-radius: 0;
+  }
+}
+
+.spotlight-modes-wrap {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.spotlight-modes-nav {
+  display: flex;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 4px;
+  gap: 6px;
+  width: 100%;
+}
+
+.spotlight-mode-btn {
+  flex: 1;
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: 8px;
-  transition: all 0.25s ease;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  padding: 10px 14px;
+  font-family: inherit;
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  color: rgba(255, 255, 255, 0.72);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 10px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
-.spotlight-toggle-btn:hover {
-  background: var(--primary-color, #ff7425);
-  border-color: var(--primary-color, #ff7425);
+.spotlight-mode-btn:hover {
   color: #ffffff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(255, 116, 37, 0.35);
+  background: rgba(255, 255, 255, 0.09);
+  border-color: rgba(255, 255, 255, 0.15);
 }
 
-.spotlight-canvas.is-floorplan-active .spotlight-toggle-btn {
-  background: #ff7425 !important;
-  border-color: #ff7425 !important;
-  color: #ffffff !important;
-  box-shadow: 0 4px 20px rgba(255, 116, 37, 0.5) !important;
+.spotlight-mode-btn.active {
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.14);
+  border-color: rgba(255, 255, 255, 0.32);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
 }
 
-.spotlight-canvas.is-floorplan-active .spotlight-toggle-btn:hover {
-  background: #e05508 !important;
-  border-color: #e05508 !important;
-  transform: translateY(-2px);
+.spotlight-mode-btn#mode-btn-xray.active {
+  color: #ffffff;
+  background: rgba(255, 116, 37, 0.2);
+  border-color: #ff7425;
+  box-shadow: 0 4px 20px rgba(255, 116, 37, 0.35), inset 0 0 12px rgba(255, 116, 37, 0.15);
+}
+
+.spotlight-mode-btn#mode-btn-xray.active i {
+  color: #ff9d42;
+}
+
+.spotlight-mode-badge {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  background: rgba(255, 116, 37, 0.22);
+  color: #ff9d42;
+  padding: 2px 7px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 116, 37, 0.4);
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.spotlight-mode-btn.active .spotlight-mode-badge {
+  background: #ff7425;
+  color: #ffffff;
+  border-color: #ff7425;
+}
+
+.spotlight-mode-caption {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px 0;
+}
+
+@media (max-width: 575px) {
+  .spotlight-modes-nav {
+    flex-direction: column;
+    padding: 6px;
+    gap: 4px;
+  }
+  .spotlight-mode-btn {
+    width: 100%;
+    padding: 8px 12px;
+    font-size: 12px;
+    justify-content: flex-start;
+  }
 }
 
 .spotlight-floorplan-close-btn {
