@@ -28,3 +28,6 @@ desktop.ini
 
 # Debug
 npm-debug.log*
+
+*.tsbuildinfo
+archive/

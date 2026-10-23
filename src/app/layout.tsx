@@ -1,4 +1,6 @@
 import type { Metadata } from "next";
+import { LanguageProvider } from "@/context/LanguageContext";
+import CookieBanner from "@/components/CookieBanner";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://apose-eight.vercel.app"),
@@ -116,17 +118,17 @@ export default function RootLayout({
     currenciesAccepted: "CZK, EUR",
     paymentAccepted: "Credit Card, Bank Transfer, Cash",
     checkinTime: "15:00",
-    checkoutTime: "10:00",
+    checkoutTime: "11:00",
     numberOfRooms: 12,
-    petsAllowed: false,
+    petsAllowed: true,
     amenityFeature: [
-      { "@type": "LocationFeatureSpecification", name: "Balkon u každého pokoje", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Přímo u sjezdovky (Ski-in / Ski-out)", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Vyhřívaná lyžařská kóje se sušáky bot", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Lobby Bar s krbem a sportovními přenosy", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Garantované parkování", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Vysokorychlostní optická Wi-Fi", value: true },
-      { "@type": "LocationFeatureSpecification", name: "Bezkontaktní přístup na PIN kód 24/7", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Privátní balkon u každého pokoje", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Přímo u sjezdovky (150 m od Ski Areálu Bublava)", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Vyhřívaná lyžařská kóje se sušáky bot v přízemí", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Rezidenční Lobby Bar", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Soukromé parkování zdarma přímo u objektu", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Bezplatné Wi-Fi připojení v celém objektu", value: true },
+      { "@type": "LocationFeatureSpecification", name: "Vlastní koupelna a plně vybavený kuchyňský kout", value: true },
     ],
   };
 
@@ -156,7 +158,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/vendor/magnific-popup/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/vendor/slick/css/slick.css" />
         <link rel="stylesheet" href="/assets/css/main.min.css" />
-        <link rel="stylesheet" href="/assets/css/panorama.css" />
+        <link rel="stylesheet" href="/assets/css/panorama.css?v=2.4" />
 
         {/* ==== Safe Preloader Auto-Dissolver (Guarantees preloader dissolves smoothly and NEVER hangs) ==== */}
         <script
@@ -183,32 +185,41 @@ export default function RootLayout({
         />
       </head>
       <body>
-        {children}
+        <LanguageProvider>
+          {children}
+          <CookieBanner />
+        </LanguageProvider>
 
         {/* ==== Deterministic Sequential Script Loader ==== */}
         <script
           dangerouslySetInnerHTML={{
             __html: `
               (function() {
+                var isHome = window.location.pathname === '/' || window.location.pathname === '';
                 var scripts = [
                   "/assets/vendor/jquery/jquery-3.7.0.min.js",
-                  "/assets/vendor/bootstrap/js/bootstrap.bundle.min.js",
-                  "/assets/vendor/nice-select/js/jquery.nice-select.min.js",
-                  "/assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js",
-                  "/assets/vendor/slick/js/slick.min.js",
-                  "/assets/vendor/images-loaded/imagesloaded.pkgd.min.js",
-                  "/assets/vendor/isotope/isotope.pkgd.min.js",
-                  "/assets/vendor/gsap/gsap.min.js",
-                  "/assets/vendor/gsap/ScrollTrigger.min.js",
-                  "/assets/vendor/gsap/ScrollToPlugin.min.js",
-                  "/assets/vendor/gsap/ScrollSmoother.min.js",
-                  "/assets/vendor/gsap/SplitText.min.js",
-                  "/assets/vendor/gsap/chroma.min.js",
-                  "/assets/vendor/vanilla-tilt/tilt.jquery.js",
-                  "/assets/js/plugins.js",
-                  "/assets/js/main.js",
-                  "/assets/js/panorama.js"
+                  "/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"
                 ];
+
+                if (isHome) {
+                  scripts.push(
+                    "/assets/vendor/nice-select/js/jquery.nice-select.min.js",
+                    "/assets/vendor/magnific-popup/js/jquery.magnific-popup.min.js",
+                    "/assets/vendor/slick/js/slick.min.js",
+                    "/assets/vendor/images-loaded/imagesloaded.pkgd.min.js",
+                    "/assets/vendor/isotope/isotope.pkgd.min.js",
+                    "/assets/vendor/gsap/gsap.min.js",
+                    "/assets/vendor/gsap/ScrollTrigger.min.js",
+                    "/assets/vendor/gsap/ScrollToPlugin.min.js",
+                    "/assets/vendor/gsap/ScrollSmoother.min.js",
+                    "/assets/vendor/gsap/SplitText.min.js",
+                    "/assets/vendor/gsap/chroma.min.js",
+                    "/assets/vendor/vanilla-tilt/tilt.jquery.js",
+                    "/assets/js/plugins.js",
+                    "/assets/js/main.js",
+                    "/assets/js/panorama.js?v=2.4"
+                  );
+                }
 
                 function loadScript(idx) {
                   if (idx >= scripts.length) {

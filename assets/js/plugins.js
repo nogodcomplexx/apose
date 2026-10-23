@@ -683,7 +683,7 @@
 			});
 		});
 // 24. smooth scroll
-		if (device_width > 576) {
+		if (device_width > 576 && document.getElementById("smooth-wrapper") && document.getElementById("smooth-content")) {
 			const smoother = ScrollSmoother.create({
 			  smooth: 2.2,
 			  effects: device_width < 992 ? false : true,

@@ -27,10 +27,10 @@ if (process.platform === 'win32' && fs.existsSync(targetLink)) {
     }
   }
 
-  // Copy images (web, apartments, blueprints, logo, template)
+  // Copy images (web, apartments, blueprints, logo, template, flags)
   const imagesDest = path.join(targetLink, 'images');
   fs.mkdirSync(imagesDest, { recursive: true });
-  const imageSubfolders = ['web', 'apartments', 'blueprints', 'logo', 'template'];
+  const imageSubfolders = ['web', 'apartments', 'blueprints', 'logo', 'template', 'flags'];
   for (const sub of imageSubfolders) {
     const src = path.join(sourceDir, 'images', sub);
     const dest = path.join(imagesDest, sub);
