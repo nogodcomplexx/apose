@@ -8,6 +8,8 @@ const assetsDir = path.join(rootDir, 'assets');
 const outAssetsDir = path.join(outDir, 'assets');
 const publicHtaccess = path.join(rootDir, 'public', '.htaccess');
 const outHtaccess = path.join(outDir, '.htaccess');
+const publicLlms = path.join(rootDir, 'public', 'llms.txt');
+const outLlms = path.join(outDir, 'llms.txt');
 const zipFile = path.join(rootDir, 'apartmany-panorama-ftp.zip');
 
 console.log('=== PREPARING STATIC FTP EXPORT PACKAGE ===');
@@ -30,10 +32,14 @@ for (const f of folders) {
   }
 }
 
-// 2. Ensure .htaccess is in out/
+// 2. Ensure .htaccess and llms.txt are in out/
 if (fs.existsSync(publicHtaccess)) {
   fs.copyFileSync(publicHtaccess, outHtaccess);
   console.log('2. Copied .htaccess into out/.htaccess');
+}
+if (fs.existsSync(publicLlms)) {
+  fs.copyFileSync(publicLlms, outLlms);
+  console.log('2b. Copied llms.txt into out/llms.txt');
 }
 
 // 3. Remove old zip if exists

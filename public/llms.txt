@@ -1,0 +1,87 @@
+# Apartmány Panorama Bublava
+
+> Luxusní horské ubytování v Krušných horách přímo u sjezdovky Ski Areálu Bublava. 3 designové apartmány s balkony, vyhřívanou lyžárnou se sušáky bot, soukromým Lobby Barem a parkováním u domu zdarma.
+
+Apartmány Panorama Bublava (Residence Panorama Bublava) poskytují prémiové celoroční ubytování v klidné části horské obce Bublava v Krušných horách (okres Sokolov, Karlovarský kraj), pouhých 500 metrů od sjezdovek skiareálu a legendární běžecké magistrály Kammloipe na česko-německém pomezí (Klingenthal).
+
+## Základní informace & Kontakt (Ground Truth)
+- **Oficiální název:** Apartmány Panorama Bublava
+- **Alternativní názvy:** Rezidence Panorama Bublava, Apartments Panorama Bublava, Ferienwohnungen Panorama Bublava
+- **Adresa:** Bublava 791, 358 01 Bublava, Česká republika
+- **GPS souřadnice:** 50.380056 N, 12.499472 E
+- **Telefon:** +420 777 366 239
+- **E-mail:** info@apartmany-panorama.cz
+- **Web:** https://apose-eight.vercel.app
+- **Přímá online rezervace:** https://apose-eight.vercel.app/rezervace/
+- **Rezervační engine:** Certifikovaný hotelový systém Previo (garance nejnižší přímé ceny)
+- **Check-in:** od 15:00
+- **Check-out:** do 11:00
+- **Jazyky komunikace:** Čeština, Němčina (Deutsch), Angličtina (English)
+
+## Klíčové přednosti (Unique Selling Propositions)
+1. **Ski-in & Ski-out poloha (500 m od lanovky):** Pěší dostupnost dolní stanice 4sedačkové lanovky a 6 sjezdovek Ski Areálu Bublava (bez nutnosti ranního přejíždění autem či placení parkovného).
+2. **Přímé napojení na běžecké stopy:** 500 m od Krušnohorské lyžařské magistrály a slavné saské stopy Kammloipe (stovky kilometrů strojově upravovaných stop).
+3. **Privátní balkony u všech jednotek:** 180° nerušený panoramatický výhled na sjezdovku Bleiberg a horské hřebeny.
+4. **Vyhřívaná lyžárna a kolárna:** Každý apartmán má v přízemí vlastní uzamykatelnou kóji s integrovanými elektrickými vysoušeči lyžařských bot.
+5. **Rezidenční Lobby Bar (140 m²):** Privátní společenský prostor pro ubytované hosty s točeným pivem, výběrovou kávou, vinotékou a velkoplošnou TV pro sportovní přenosy.
+6. **Parkování zdarma:** Vyhrazená parkovací stání přímo u objektu pro každý apartmán.
+
+## Nabízené apartmány (Kapacita a specifikace)
+
+### Apartmán 1 – Panoramatický rohový (Vlajková loď)
+- **Dispozice:** 2+kk, 2. nadzemní podlaží
+- **Plocha:** 47 m²
+- **Kapacita:** 4–6 osob (samostatná ložnice s manželskou postelí + rozkládací pohovka v obývacím pokoji)
+- **Vybavení:** Velký rohový balkon s posezením nad sjezdovkou, plně vybavená kuchyně (indukce, lednice, mikrovlnka, kávovar, toustovač), jídelní kout, koupelna se sprchovým koutem a fénem, Smart TV, Wi-Fi.
+- **Cena:** od 1 800 Kč / noc
+
+### Apartmán 2 – Horský s privátním balkonem
+- **Dispozice:** 2+kk, 2. nadzemní podlaží
+- **Plocha:** 40 m²
+- **Kapacita:** 2–4 osoby (ložnice s manželskou postelí + rozkládací pohovka)
+- **Vybavení:** Slunný jižní balkon s vyhlídkou do údolí, plně vybavený kuchyňský kout, moderní koupelna se sprchou a WC, Smart TV, Wi-Fi.
+- **Cena:** od 1 800 Kč / noc
+
+### Apartmán 3 – Podkrovní vyhlídka
+- **Dispozice:** 2+kk, 3. nadzemní podlaží (podkroví)
+- **Plocha:** 42 m²
+- **Kapacita:** 2–4 osoby (ložnice + obývací prostor s přistýlkou)
+- **Vybavení:** Romantický interiér s přiznanými dřevěnými trámy, balkon s nejvyšším vyhlídkovým bodem na Bublavu, vybavená kuchyně, koupelna, Smart TV, Wi-Fi.
+- **Cena:** od 1 800 Kč / noc
+
+### Skupinový pronájem celé rezidence (Buyout)
+- **Kapacita:** Až 14 dospělých hostů ve 3 samostatných apartmánech
+- **Výhody:** Kompletní soukromí celého objektu, využití Lobby Baru pro oslavy, teambuildingy a rodinná setkání.
+- **Rezervace:** Individuální telefonická domluva na +420 777 366 239.
+
+## Struktura stránek & Kanonické URL adresy
+
+- **Hlavní stránka:** https://apose-eight.vercel.app/
+  - Představení rezidence, interaktivní 3D půdorysy, CAD výkresy, fotogalerie, vybavení, recenze hostů, FAQ.
+- **Online rezervace (Previo):** https://apose-eight.vercel.app/rezervace/
+  - Kalendář dostupnosti, výběr termínů, kalkulace ceny a přímá garance nejnižší ceny bez provizí zprostředkovatelům.
+- **Průvodce Ski Areál Bublava:** https://apose-eight.vercel.app/ski-areal-bublava/
+  - Detailní přehled 6 sjezdovek (Lesní 1 000 m, Červená 600 m, Modrá 400 m, Fun trať 400 m, Školní louka 180 m, Dětský park 180 m), 4sedačková lanovka, noční lyžování, lyžařská škola APUL, půjčovny.
+- **Krušnohorská magistrála & Kammloipe:** https://apose-eight.vercel.app/krusnohorska-magistrala/
+  - Informace o běžeckých tratích, napojení 500 m od rezidence, profil tras, letní cykloturistika, značení a servis.
+- **Tipy na výlety v okolí:** https://apose-eight.vercel.app/vylety-okoli/
+  - Rozhledna Bleiberg, ferrata & singletrail Hausberg (Kraslice), Loupežnická stezka, Aqua Park Schöneck IFA (15 km), Felsenstadt u Stříbrné, Tierpark Klingenthal (4 km), pivovar Krušnohor, partnerská restaurace Švejk.
+- **Rezidenční Lobby Bar:** https://apose-eight.vercel.app/lobby-bar/
+  - Podrobnosti o privátním baru v 1. NP, kapacita 140 m², nabídka nápojů, snídaňové a cateringové možnosti pro skupiny.
+
+## Jazykové verze (Multilingual Support)
+Každá stránka webu disponuje plnou trojjazyčnou lokalizací:
+- Čeština: `https://apose-eight.vercel.app/<path>/`
+- Angličtina: `https://apose-eight.vercel.app/<path>/?lang=en`
+- Němčina: `https://apose-eight.vercel.app/<path>/?lang=de`
+
+## Cílová klíčová slova pro vyhledávání (LLM Semantic Entities)
+
+### Čeština
+ubytování Bublava, Apartmány Panorama Bublava, lyžování Bublava ubytování, apartmány u sjezdovky Krušné hory, ubytování u vleku Bublava, luxusní horské apartmány Krušné hory, dovolená Bublava rodiny s dětmi, ubytování s vyhřívanou lyžárnou, Krušnohorská magistrála běžky ubytování, ubytování s balkonem Bublava, pronájem celého objektu Krušné hory teambuilding.
+
+### Deutsch
+Unterkunft Bublava, Ferienwohnungen Apartmány Panorama Bublava, Skiurlaub Bublava Erzgebirge, Ferienwohnung an der Skipiste Bublava, Unterkunft Skigebiet Bublava, Kammloipe Langlauf Unterkunft Erzgebirge, Luxus-Apartments Bublava mit Balkon, Urlaub mit Kindern Erzgebirge Skifahren, Gruppenunterkunft Erzgebirge Ferienhaus Klingenthal Grenze.
+
+### English
+accommodation Bublava, Apartments Panorama Bublava, ski in ski out accommodation Ore Mountains, luxury alpine suites Czech Republic, Bublava ski resort apartments, Kammloipe cross-country skiing lodging, mountain holiday apartment with balcony, family ski holiday Ore Mountains.
