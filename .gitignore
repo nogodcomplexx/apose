@@ -31,6 +31,7 @@ npm-debug.log*
 
 *.tsbuildinfo
 archive/
+*.zip
 
 # Heavy design templates & raw graphics
 assets/40-vintage-frames*
@@ -40,7 +41,6 @@ assets/icons/
 assets/apartment building/
 assets/apartmetnt rooms/
 assets/images/*utc*
-assets/*.zip
 assets/*.psd
 assets/*.ai
 assets/*.eps

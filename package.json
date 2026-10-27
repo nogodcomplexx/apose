@@ -6,6 +6,7 @@
     "dev": "next dev",
     "prebuild": "node scripts/ensure-assets.js && node scripts/generate-page-content.js",
     "build": "next build",
+    "build:ftp": "node scripts/ensure-assets.js && node scripts/generate-page-content.js && next build && node scripts/prepare-ftp.js",
     "start": "next start",
     "lint": "next lint"
   },
