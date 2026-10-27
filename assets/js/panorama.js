@@ -1325,7 +1325,24 @@ function executePrevioBooking() {
   window.location.href = '/rezervace?lang=' + activeLang;
 }
 
-function openPrevioModal(aptName = '') {
+function openPrevioModal(arg1 = '', arg2 = '') {
+  let aptName = '';
+  let e = null;
+
+  if (arg1 && typeof arg1 === 'object' && typeof arg1.preventDefault === 'function') {
+    e = arg1;
+    aptName = typeof arg2 === 'string' ? arg2 : '';
+  } else if (typeof arg1 === 'string') {
+    aptName = arg1;
+    if (arg2 && typeof arg2 === 'object' && typeof arg2.preventDefault === 'function') {
+      e = arg2;
+    }
+  }
+
+  if (e && typeof e.preventDefault === 'function' && !e.ctrlKey && !e.metaKey && !e.shiftKey) {
+    e.preventDefault();
+  }
+
   let aptParam = '';
   const nameStr = String(aptName || '').toLowerCase();
 

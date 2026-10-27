@@ -79,13 +79,13 @@
                      </div>
 
                      <!-- Rezervovat CTA Button -->
-                     <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--secondary d-none d-xl-inline-flex navbar-book-btn">
+                     <a href="/rezervace" onclick="openPrevioModal(event)" class="btn btn--secondary d-none d-xl-inline-flex navbar-book-btn">
                         <span data-i18n="nav_book">Rezervovat</span>
                         <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
                      </a>
 
                      <!-- Iconic Kulička (Offcanvas menu trigger) -->
-                     <button class="open-offcanvas-nav d-flex" aria-label="toggle menu" title="Otevřít menu" onclick="openOffcanvasMenu()"></button>
+                     <button class="open-offcanvas-nav d-flex" aria-label="Otevřít navigační menu" title="Otevřít menu" onclick="openOffcanvasMenu()"><span class="visually-hidden">Otevřít menu</span></button>
                   </div>
 
                </nav>
@@ -103,7 +103,7 @@
                         <img src="/assets/images/logo/panorama-logo.svg" alt="Apartmány Panorama" style="height: 38px; width: auto;">
                      </a>
                   </div>
-                  <button class="close-offcanvas-menu" aria-label="close menu" onclick="closeOffcanvasMenu()">
+                  <button class="close-offcanvas-menu" aria-label="Zavřít navigační menu" title="Zavřít menu" onclick="closeOffcanvasMenu()">
                      <i class="fa-solid fa-xmark"></i>
                   </button>
                </div>
@@ -160,7 +160,7 @@
                </div>
                <div class="offcanvas-menu__options nav-fade">
                   <div class="offcanvas__mobile-options d-flex align-items-center flex-wrap gap-3">
-                     <a href="javascript:void(0)" onclick="closeOffcanvasMenu(); openPrevioModal();" class="btn btn--secondary">
+                     <a href="/rezervace" onclick="closeOffcanvasMenu(); openPrevioModal(event);" class="btn btn--secondary">
                         <span data-i18n="nav_book">Rezervovat</span>
                         <i class="fa-sharp fa-solid fa-arrow-up-right ms-2"></i>
                      </a>
@@ -262,7 +262,7 @@
                                     <span data-i18n="hero_cta_apts">Prozkoumat apartmány</span>
                                     <i class="fa-solid fa-arrow-right"></i>
                                  </a>
-                                 <a href="javascript:void(0)" onclick="openPrevioModal()" class="hero-btn-pill">
+                                 <a href="/rezervace" onclick="openPrevioModal(event)" class="hero-btn-pill">
                                     <span data-i18n="hero_cta_book">Rezervovat pobyt</span>
                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
                                  </a>
@@ -527,7 +527,7 @@
                             </p>
                          </div>
                          <div class="col-12 col-lg-4 text-lg-end mb-3">
-                            <a href="javascript:void(0)" onclick="openPrevioModal('Skupinový pobyt – Všechny 3 typy apartmánů (14 osob)')" class="btn btn--secondary">
+                            <a href="/rezervace" onclick="openPrevioModal(event, 'Skupinový pobyt – Všechny 3 typy apartmánů (14 osob)')" class="btn btn--secondary">
                                 <span data-i18n="dossier_calc_btn">Skupinový pobyt (až 14 osob)</span>
                                 <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
                             </a>
@@ -643,7 +643,7 @@
                                         </div>
                                      </div>
                                      <div class="spotlight-select-wrap">
-                                         <select id="spotlight-apt-select" class="spotlight-cad-select" onchange="switchSpotlightUnit(this.value)">
+                                         <select id="spotlight-apt-select" class="spotlight-cad-select" onchange="switchSpotlightUnit(this.value)" aria-label="Vyberte apartmán pro zobrazení podlaží">
                                             <option value="1" selected>Apartmán 1: Panoramatický rohový apartmán s balkonem (až 6 hostů)</option>
                                             <option value="2">Apartmán 2: Horský apartmán s privátním balkonem (4 hosté)</option>
                                             <option value="3">Apartmán 3: Podkrovní apartmán s vyhlídkovým balkonem (4 hosté)</option>
@@ -1033,7 +1033,7 @@
                                  <i class="fa-solid fa-person-skiing" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_1_title">Vlastní Kóje na Lyže &amp; Kola</a>
+                                 <span data-i18n="comfort_card_1_title">Vlastní Kóje na Lyže &amp; Kola</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_1_desc">
                                  Každý ze 12 apartmánů má vlastní uzamykatelnou privátní kóji se sušáky na lyžařské boty a bezpečným prostorem pro kola včetně dobíjení elektrokol.
@@ -1048,7 +1048,7 @@
                                  <i class="fa-solid fa-martini-glass-citrus" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="#lobby-bar" data-i18n="comfort_card_2_title">Stylový Lobby Bar &amp; TV Lounge</a>
+                                 <span data-i18n="comfort_card_2_title">Stylový Lobby Bar &amp; TV Lounge</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_2_desc">
                                  Příjemná společenská zóna v přízemí pro ranní espresso, odpolední drinky a večerní sledování sportovních přenosů na velké obrazovce.
@@ -1063,7 +1063,7 @@
                                  <i class="fa-solid fa-mountain-sun" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_3_title">Privátní Balkony pro Každý Pokoj</a>
+                                 <span data-i18n="comfort_card_3_title">Privátní Balkony pro Každý Pokoj</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_3_desc">
                                  Každý jednotlivý apartmán disponuje vlastním slunným balkonem s venkovním posezením a ničím nerušeným výhledem na sjezdovky a krušnohorské lesy.
@@ -1078,7 +1078,7 @@
                                  <i class="fa-solid fa-square-parking" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_4_title">Bezplatné Soukromé Parkování</a>
+                                 <span data-i18n="comfort_card_4_title">Bezplatné Soukromé Parkování</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_4_desc">
                                  Pohodlné soukromé parkování přímo u objektu bez nutnosti rezervace. Ke každému apartmánu náleží 1 vyhrazené parkovací stání přímo u rezidence.
@@ -1093,7 +1093,7 @@
                                  <i class="fa-solid fa-wifi" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_5_title">Bezplatná Wi-Fi &amp; Smart TV</a>
+                                 <span data-i18n="comfort_card_5_title">Bezplatná Wi-Fi &amp; Smart TV</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_5_desc">
                                  Spolehlivé bezdrátové Wi-Fi připojení zdarma ve všech apartmánech i ve společných prostorách a moderní Smart TV v každém pokoji.
@@ -1108,7 +1108,7 @@
                                  <i class="fa-solid fa-clock" style="font-size: 30px; color: var(--primary-color);"></i>
                               </div>
                               <h4 class="mb-2">
-                                 <a href="javascript:void(0)" data-i18n="comfort_card_6_title">Příjezd 15:00–18:00 &amp; Odjezd do 11:00</a>
+                                 <span data-i18n="comfort_card_6_title">Příjezd 15:00–18:00 &amp; Odjezd do 11:00</span>
                               </h4>
                               <p class="text-secondary small" data-i18n="comfort_card_6_desc">
                                  Příjezd s předáním klíčů v čase 15:00–18:00 (či dle předchozí individuální domluvy) a pohodlný odjezd do 11:00.
@@ -1197,7 +1197,7 @@
                                     <span data-i18n="lobby_cta_gallery">Prohlédnout fotogalerii</span>
                                     <i class="fa-sharp fa-solid fa-arrow-down"></i>
                                  </a>
-                                 <a href="javascript:void(0)" onclick="openPrevioModal()" class="btn btn--primary">
+                                 <a href="/rezervace" onclick="openPrevioModal(event)" class="btn btn--primary">
                                     <span data-i18n="lobby_cta_book">Rezervovat pobyt</span>
                                     <i class="fa-sharp fa-solid fa-arrow-up-right"></i>
                                  </a>
@@ -2552,13 +2552,13 @@
                </div>
             </div>
             <div class="lightbox-actions">
-               <button class="lightbox-btn" onclick="toggleLightboxZoom()" id="lb-zoom-btn" title="Přiblížit (Zoom)" aria-label="zoom">
+               <button class="lightbox-btn" onclick="toggleLightboxZoom()" id="lb-zoom-btn" title="Přiblížit (Zoom)" aria-label="Přiblížit fotografii">
                   <i class="fa-solid fa-magnifying-glass-plus"></i>
                </button>
-               <button class="lightbox-btn d-none d-md-inline-flex" onclick="toggleLightboxFullscreen()" id="lb-fs-btn" title="Celá obrazovka" aria-label="fullscreen">
+               <button class="lightbox-btn d-none d-md-inline-flex" onclick="toggleLightboxFullscreen()" id="lb-fs-btn" title="Celá obrazovka" aria-label="Zobrazit na celou obrazovku">
                   <i class="fa-solid fa-expand"></i>
                </button>
-               <button class="lightbox-btn lb-close-btn" onclick="closePanoramaLightbox()" title="Zavřít galerii (Esc)" aria-label="close">
+               <button class="lightbox-btn lb-close-btn" onclick="closePanoramaLightbox()" title="Zavřít galerii (Esc)" aria-label="Zavřít galerii">
                   <i class="fa-solid fa-xmark"></i>
                </button>
             </div>
