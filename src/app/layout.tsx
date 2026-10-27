@@ -217,7 +217,7 @@ export default function RootLayout({
                     "/assets/vendor/vanilla-tilt/tilt.jquery.js",
                     "/assets/js/plugins.js",
                     "/assets/js/main.js",
-                    "/assets/js/panorama.js?v=2.5"
+                    "/assets/js/panorama.js?v=2.6"
                   );
                 }
 

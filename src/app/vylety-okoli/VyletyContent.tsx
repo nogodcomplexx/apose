@@ -314,7 +314,8 @@ export default function VyletyContent() {
             {/* Ferrata & Singltrek Hausberg */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-mountain-sun text-warning"></i> Ferrata & Singltrek Hausberg (Kraslice, 6 km)
+                <i className="fa-solid fa-mountain-sun text-warning"></i>{" "}
+                {isDe ? "Klettersteig & Singletrail Hausberg (Kraslice, 6 km)" : isEn ? "Via Ferrata & Singletrail Hausberg (Kraslice, 6 km)" : "Ferrata & Singltrek Hausberg (Kraslice, 6 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -328,7 +329,8 @@ export default function VyletyContent() {
             {/* Loupežnická stezka */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-person-hiking text-warning"></i> Loupežnická stezka (Kraslice, 6 km)
+                <i className="fa-solid fa-person-hiking text-warning"></i>{" "}
+                {isDe ? "Räuberpfad „Loupežnická stezka“ (Kraslice, 6 km)" : isEn ? "Highwayman Trail „Loupežnická stezka“ (Kraslice, 6 km)" : "Loupežnická stezka (Kraslice, 6 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -342,7 +344,8 @@ export default function VyletyContent() {
             {/* Aqua Park Schöneck */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-water-ladder text-warning"></i> Aqua Park Schöneck – IFA Ferienpark (15 km)
+                <i className="fa-solid fa-water-ladder text-warning"></i>{" "}
+                {isDe ? "Erlebnisbad Aqua Park Schöneck – IFA Ferienpark (15 km)" : isEn ? "Aqua Park Schöneck – IFA Resort (15 km)" : "Aqua Park Schöneck – IFA Ferienpark (15 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -356,7 +359,8 @@ export default function VyletyContent() {
             {/* Skalní město u Stříbrné */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-gem text-warning"></i> Skalní město u Stříbrné & Kamenný hřib (5,9 km)
+                <i className="fa-solid fa-gem text-warning"></i>{" "}
+                {isDe ? "Felsenstadt bei Stříbrná & Steinerner Pilz (5,9 km)" : isEn ? "Rock City near Stříbrná & Stone Mushroom (5.9 km)" : "Skalní město u Stříbrné & Kamenný hřib (5,9 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -370,7 +374,8 @@ export default function VyletyContent() {
             {/* Tierpark Klingenthal */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-paw text-warning"></i> Tierpark Klingenthal (4 km)
+                <i className="fa-solid fa-paw text-warning"></i>{" "}
+                {isDe ? "Tierpark Klingenthal (4 km)" : isEn ? "Tierpark Klingenthal Zoo (4 km)" : "Tierpark Klingenthal (4 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -384,7 +389,8 @@ export default function VyletyContent() {
             {/* Pivovar Krušnohor */}
             <div className="practical-card">
               <div className="practical-card-title">
-                <i className="fa-solid fa-beer-mug-empty text-warning"></i> Řemeslný pivovar Krušnohor (Kraslice, 5 km)
+                <i className="fa-solid fa-beer-mug-empty text-warning"></i>{" "}
+                {isDe ? "Handwerksbrauerei Krušnohor (Kraslice, 5 km)" : isEn ? "Craft Brewery Krušnohor (Kraslice, 5 km)" : "Řemeslný pivovar Krušnohor (Kraslice, 5 km)"}
               </div>
               <p className="practical-card-desc">
                 {isDe
@@ -410,7 +416,8 @@ export default function VyletyContent() {
             {/* Hotel & Restaurant Švejk Bublava */}
             <div className="practical-card" style={{ border: "1px solid rgba(255, 180, 0, 0.35)", background: "rgba(255, 180, 0, 0.03)" }}>
               <div className="practical-card-title">
-                <i className="fa-solid fa-hotel text-warning"></i> Hotel & Restaurant Švejk Bublava (Partnerská restaurace)
+                <i className="fa-solid fa-hotel text-warning"></i>{" "}
+                {isDe ? "Hotel & Restaurant Švejk Bublava (Partnerrestaurant)" : isEn ? "Hotel & Restaurant Švejk Bublava (Partner Restaurant)" : "Hotel & Restaurant Švejk Bublava (Partnerská restaurace)"}
               </div>
               <p className="practical-card-desc">
                 {isDe

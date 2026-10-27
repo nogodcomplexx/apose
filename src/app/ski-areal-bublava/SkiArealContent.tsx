@@ -168,7 +168,8 @@ export default function SkiArealContent() {
             <div className="practical-info-grid">
               <div className="practical-card" style={{ borderLeft: "3px solid #ff5252" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-mountain" style={{ color: "#ff5252" }}></i> Lesní (1 000 m / převýšení 185 m)
+                  <i className="fa-solid fa-mountain" style={{ color: "#ff5252" }}></i>{" "}
+                  {isDe ? "Waldpiste „Lesní“ (1 000 m / Höhenunterschied 185 m)" : isEn ? "Lesní – Forest Slope (1,000 m / 185 m vertical drop)" : "Lesní (1 000 m / převýšení 185 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe
@@ -181,7 +182,8 @@ export default function SkiArealContent() {
 
               <div className="practical-card" style={{ borderLeft: "3px solid #ff5252" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-mountain" style={{ color: "#ff5252" }}></i> Červená (600 m / převýšení 105 m)
+                  <i className="fa-solid fa-mountain" style={{ color: "#ff5252" }}></i>{" "}
+                  {isDe ? "Rote Piste „Červená“ (600 m / Höhenunterschied 105 m)" : isEn ? "Červená – Red Slope (600 m / 105 m vertical drop)" : "Červená (600 m / převýšení 105 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe
@@ -203,7 +205,8 @@ export default function SkiArealContent() {
             <div className="practical-info-grid">
               <div className="practical-card" style={{ borderLeft: "3px solid #42a5f5" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-person-skiing" style={{ color: "#42a5f5" }}></i> Modrá (400 m / převýšení 70 m)
+                  <i className="fa-solid fa-person-skiing" style={{ color: "#42a5f5" }}></i>{" "}
+                  {isDe ? "Blaue Piste „Modrá“ (400 m / Höhenunterschied 70 m)" : isEn ? "Modrá – Blue Slope (400 m / 70 m vertical drop)" : "Modrá (400 m / převýšení 70 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe
@@ -216,7 +219,8 @@ export default function SkiArealContent() {
 
               <div className="practical-card" style={{ borderLeft: "3px solid #42a5f5" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-wave-square" style={{ color: "#42a5f5" }}></i> Fun trať (400 m / převýšení 70 m)
+                  <i className="fa-solid fa-wave-square" style={{ color: "#42a5f5" }}></i>{" "}
+                  {isDe ? "Fun-Piste & Hindernisse (400 m / Höhenunterschied 70 m)" : isEn ? "Fun Slope & Snowpark (400 m / 70 m vertical drop)" : "Fun trať (400 m / převýšení 70 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe
@@ -229,7 +233,8 @@ export default function SkiArealContent() {
 
               <div className="practical-card" style={{ borderLeft: "3px solid #42a5f5" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-graduation-cap" style={{ color: "#42a5f5" }}></i> Školní louka (180 m / převýšení 25 m)
+                  <i className="fa-solid fa-graduation-cap" style={{ color: "#42a5f5" }}></i>{" "}
+                  {isDe ? "Schulwiese (180 m / Höhenunterschied 25 m)" : isEn ? "Ski School Meadow (180 m / 25 m vertical drop)" : "Školní louka (180 m / převýšení 25 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe
@@ -242,7 +247,8 @@ export default function SkiArealContent() {
 
               <div className="practical-card" style={{ borderLeft: "3px solid #42a5f5" }}>
                 <div className="practical-card-title">
-                  <i className="fa-solid fa-children" style={{ color: "#42a5f5" }}></i> Dětský park s pojezdem (180 m / převýšení 27 m)
+                  <i className="fa-solid fa-children" style={{ color: "#42a5f5" }}></i>{" "}
+                  {isDe ? "Kinderpark mit Zauberteppich (180 m / Höhenunterschied 27 m)" : isEn ? "Children's Ski Park with Magic Carpet (180 m / 27 m vertical drop)" : "Dětský park s pojezdem (180 m / převýšení 27 m)"}
                 </div>
                 <p className="practical-card-desc">
                   {isDe

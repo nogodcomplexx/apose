@@ -1083,6 +1083,20 @@ function setLanguage(lang) {
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
     if (i18n[lang] && i18n[lang][key]) {
+      // Clean up any previous SplitText instance before replacing text
+      if (el._splitInstance) {
+        try {
+          el._splitInstance.revert();
+        } catch (e) {}
+        el._splitInstance = null;
+      }
+      if (el._titleTl) {
+        try {
+          el._titleTl.kill();
+        } catch (e) {}
+        el._titleTl = null;
+      }
+
       if (i18n[lang][key].includes('<') || i18n[lang][key].includes('&')) {
         el.innerHTML = i18n[lang][key];
       } else {
@@ -4448,6 +4462,18 @@ function initPanoramaTitleAnimations(isLanguageChange) {
         elem._titleTl.kill();
       } catch (e) {}
       elem._titleTl = null;
+    }
+
+    // CRITICAL: Ensure element displays its active localized string from i18n dictionary
+    const i18nKey = elem.getAttribute('data-i18n');
+    const activeL = (typeof currentLang !== 'undefined' && i18n[currentLang]) ? currentLang : (localStorage.getItem('panorama_lang') || 'cs');
+    if (i18nKey && i18n[activeL] && i18n[activeL][i18nKey]) {
+      const translated = i18n[activeL][i18nKey];
+      if (translated.includes('<') || translated.includes('&')) {
+        elem.innerHTML = translated;
+      } else {
+        elem.textContent = translated;
+      }
     }
 
     delete elem.dataset.titleAnimDone;
