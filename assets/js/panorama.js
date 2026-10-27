@@ -1367,37 +1367,10 @@ function closePrevioModal() {
 }
 
 function openVideoModal(e) {
-  if (e) {
-    if (e.preventDefault) e.preventDefault();
-    if (e.stopPropagation) e.stopPropagation();
-  }
-  // Ensure any rogue popup is closed
-  if (window.jQuery && window.jQuery.magnificPopup) {
-    window.jQuery.magnificPopup.close();
-  }
-  const modal = document.getElementById('video-modal');
-  if (modal) {
-    modal.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  }
+  if (e && e.preventDefault) e.preventDefault();
 }
 
-function closeVideoModal() {
-  const modal = document.getElementById('video-modal');
-  if (modal) {
-    modal.classList.remove('active');
-    document.body.style.overflow = '';
-    const iframe = document.getElementById('video-tour-iframe');
-    if (iframe) {
-      const s = iframe.src;
-      iframe.src = s;
-    }
-  }
-  // Dismiss any lingering Magnific Popup iframe instance completely
-  if (window.jQuery && window.jQuery.magnificPopup) {
-    window.jQuery.magnificPopup.close();
-  }
-}
+function closeVideoModal() {}
 
 const apartmentDetails = {
   1: {

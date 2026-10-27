@@ -207,7 +207,6 @@
                   <!-- Ambient Cinematic Loop Video in Background -->
                   <div class="hero-bg-video-wrapper">
                      <video class="hero-bg-video" autoplay muted loop playsinline poster="/assets/video/mountain-video-poster.jpg?v=2">
-                        <source src="/assets/video/mountain-panorama-loop-720p.mp4?v=2" type="video/mp4">
                         <source src="/assets/video/mountain-panorama-loop.mp4?v=2" type="video/mp4">
                      </video>
                      <div class="hero-bg-video-overlay"></div>
@@ -509,18 +508,10 @@
                      <a href="tel:+420 777 366 239">tel : +420 777 366 239</a>
                   </div>
                   <div class="banner-right-text banner-social-text d-none d-md-flex">
-                     <a href="javascript:void(0)" onclick="openVideoModal(event)"><i class="fa-solid fa-play me-1"></i> Video Tour</a>
-                     <a href="#apartments">Apartmány</a>
-                     <a href="#gallery">Galerie</a>
+                     <a href="#apartments" data-i18n="nav_apartments">Apartmány</a>
+                     <a href="#wellness" data-i18n="nav_wellness">Lobby Bar</a>
+                     <a href="#gallery" data-i18n="nav_gallery">Galerie</a>
                   </div>
-
-                  <!-- Rotating Video Tour Button (Přehrát video z apartmánů) -->
-                  <a class="video-frame video-tour-trigger" href="javascript:void(0)" onclick="openVideoModal(event)" title="Přehrát video prohlídku" aria-label="Přehrát video prohlídku">
-                     <img id="hero-video-badge" src="/assets/images/template/video-badge.svg" alt="Video prohlídka - Apartmány Panorama">
-                     <span class="badge-center-icon">
-                        <i class="fa-sharp fa-solid fa-play"></i>
-                     </span>
-                  </a>
 
                   <!-- Subtle Background Grid Lines from Xpovio -->
                   <div class="lines d-none d-lg-flex">
@@ -2674,37 +2665,6 @@
          <div id="pinned-calendar-slot" class="pinned-calendar-slot"></div>
       </div>
 
-      <!-- ==== VIDEO TOUR MODAL ==== -->
-      <div id="video-modal" class="previo-modal">
-         <div class="previo-modal-content" style="max-width: 820px;">
-            <div class="previo-close-btn" onclick="closeVideoModal()">
-               <i class="fa-solid fa-xmark"></i>
-            </div>
-            <div class="d-flex align-items-center gap-3 mb-2">
-               <div class="modal-header-icon-badge">
-                  <span class="icon-pulse-ring"></span>
-                  <i class="fa-solid fa-play"></i>
-               </div>
-               <div>
-                  <h3 class="h5 text-white fw-7 m-0" data-i18n="video_modal_title">Videoprohlídka Apartmány Panorama</h3>
-                  <span class="text-white-50" style="font-size: 11px; letter-spacing: 0.05em; text-transform: uppercase;" data-i18n="video_modal_sub">4K Ultra HD • Rezidence &amp; Apartmány</span>
-               </div>
-            </div>
-            <p class="text-secondary small mb-3" data-i18n="video_modal_desc">
-               Prohlédněte si atmosféru luxusních apartmánů, horské architektury a okolní přírody.
-            </p>
-            <div class="ratio ratio-16x9 rounded-3 overflow-hidden mb-3" style="border: 1px solid rgba(255,255,255,0.15); background: #000;">
-               <iframe id="video-tour-iframe" src="https://www.youtube.com/embed/ScMzIvxBSi4?rel=0&enablejsapi=1" title="Apartmány Panorama Video Tour" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-2 pt-2 border-top border-secondary border-opacity-25 small text-secondary">
-               <span><i class="fa-solid fa-circle-info text-warning me-1"></i> <span data-i18n="video_modal_note">Videopřehrávač je připraven pro vložení vaší finální 4K videoprohlídky rezidence.</span></span>
-               <button onclick="closeVideoModal(); openPrevioModal();" class="btn btn--primary" style="padding: 8px 18px; font-size: 11px;">
-                  <span data-i18n="hero_cta_book">Ověřit termíny</span>
-                  <i class="fa-sharp fa-solid fa-arrow-up-right ms-1"></i>
-               </button>
-            </div>
-         </div>
-      </div>
 
       <!-- ==== 2026 LUXURY CINEMA LIGHTBOX MODAL ==== -->
       <div id="panorama-lightbox" class="panorama-lightbox" role="dialog" aria-modal="true" aria-label="Fotogalerie">
