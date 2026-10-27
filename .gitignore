@@ -1,0 +1,47 @@
+# Dependencies
+node_modules/
+
+# Next.js
+.next/
+out/
+public/assets
+
+# Build
+dist/
+
+# Environment
+.env
+.env.local
+.env.production
+.env.development
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+*.tmp
+*.log
+
+# IDE
+.vscode/
+.idea/
+
+# Debug
+npm-debug.log*
+
+*.tsbuildinfo
+archive/
+
+# Heavy design templates & raw graphics
+assets/40-vintage-frames*
+assets/chinese-frames*
+assets/templates/
+assets/icons/
+assets/apartment building/
+assets/apartmetnt rooms/
+assets/images/*utc*
+assets/*.zip
+assets/*.psd
+assets/*.ai
+assets/*.eps
+assets/*.aep
