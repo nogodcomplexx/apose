@@ -206,7 +206,7 @@
                   
                   <!-- Ambient Cinematic Loop Video in Background -->
                   <div class="hero-bg-video-wrapper">
-                     <video class="hero-bg-video" autoplay muted loop playsinline poster="/assets/video/mountain-video-poster.jpg?v=2">
+                     <video class="hero-bg-video" autoplay muted loop playsinline preload="metadata" poster="/assets/video/mountain-video-poster.jpg?v=2">
                         <source src="/assets/video/mountain-panorama-loop.mp4?v=2" type="video/mp4">
                      </video>
                      <div class="hero-bg-video-overlay"></div>
@@ -899,7 +899,7 @@
                             <div class="portfolio__single topy-tilt fade-top" onclick="window.location.href='/lobby-bar'" style="cursor: pointer;" title="Přečíst průvodce o Lobby Baru">
                                <div class="portfolio-price-tag" data-i18n="exp1_badge"><i class="fa-solid fa-martini-glass me-1 text-warning"></i> Přímo v domě • 1. NP</div>
                                <a href="/lobby-bar">
-                                  <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Rezidenční Lobby Bar &amp; Lounge">
+                                  <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Rezidenční Lobby Bar &amp; Lounge" loading="lazy" decoding="async">
                                </a>
                                <div class="portfolio__single-content">
                                   <a href="/lobby-bar" aria-label="Přečíst článek o Lobby Baru">
@@ -924,7 +924,7 @@
                             <div class="portfolio__single topy-tilt fade-top" onclick="window.location.href='/ski-areal-bublava'" style="cursor: pointer;" title="Přečíst průvodce o Ski Areálu Bublava">
                                <div class="portfolio-price-tag" data-i18n="exp2_badge"><i class="fa-solid fa-person-skiing me-1 text-warning"></i> 500 m od rezidence</div>
                                <a href="/ski-areal-bublava">
-                                  <img src="/assets/images/web/apt-real-balcony-winter.jpg" alt="Ski Areál Bublava">
+                                  <img src="/assets/images/web/apt-real-balcony-winter.jpg" alt="Ski Areál Bublava" loading="lazy" decoding="async">
                                </a>
                                <div class="portfolio__single-content">
                                   <a href="/ski-areal-bublava" aria-label="Přečíst článek o Ski Areálu Bublava">
@@ -949,7 +949,7 @@
                             <div class="portfolio__single topy-tilt fade-top" onclick="window.location.href='/krusnohorska-magistrala'" style="cursor: pointer;" title="Přečíst průvodce o Krušnohorské magistrále">
                                <div class="portfolio-price-tag" data-i18n="exp3_badge"><i class="fa-solid fa-person-hiking me-1 text-warning"></i> Hned za domem</div>
                                <a href="/krusnohorska-magistrala">
-                                  <img src="/assets/images/web/krusnohorska-magistrala-card.jpg" alt="Krušnohorská magistrála">
+                                  <img src="/assets/images/web/krusnohorska-magistrala-card.jpg" alt="Krušnohorská magistrála" loading="lazy" decoding="async">
                                </a>
                                <div class="portfolio__single-content">
                                   <a href="/krusnohorska-magistrala" aria-label="Přečíst článek o Krušnohorské magistrále">
@@ -974,7 +974,7 @@
                             <div class="portfolio__single topy-tilt fade-top" onclick="window.location.href='/vylety-okoli'" style="cursor: pointer;" title="Přečíst průvodce o výletech v okolí">
                                <div class="portfolio-price-tag" data-i18n="exp4_badge"><i class="fa-solid fa-compass me-1 text-warning"></i> Tipy v okolí • 5–10 min</div>
                                <a href="/vylety-okoli">
-                                  <img src="/assets/images/web/location-village.jpg" alt="Rozhledna &amp; Výlety v okolí">
+                                  <img src="/assets/images/web/location-village.jpg" alt="Rozhledna &amp; Výlety v okolí" loading="lazy" decoding="async">
                                </a>
                                <div class="portfolio__single-content">
                                   <a href="/vylety-okoli" aria-label="Přečíst článek o výletech v okolí">
@@ -1127,13 +1127,13 @@
                         <div class="col-12 col-lg-6">
                            <div class="lobby-bar-media-wrap position-relative">
                               <div class="lobby-bar-card-main">
-                                 <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Lobby Bar večer - posezení a sportovní přenosy" class="img-fluid rounded-4 shadow-lg w-100" style="border: 1px solid rgba(255,255,255,0.12); object-fit: cover; aspect-ratio: 4/3;">
+                                 <img src="/assets/images/web/lobby-bar-evening.jpg" alt="Lobby Bar večer - posezení a sportovní přenosy" class="img-fluid rounded-4 shadow-lg w-100" style="border: 1px solid rgba(255,255,255,0.12); object-fit: cover; aspect-ratio: 4/3;" loading="lazy" decoding="async">
                                  <div class="lobby-bar-badge" style="position: absolute; bottom: 16px; left: 16px; background: rgba(10,14,20,0.88); backdrop-filter: blur(12px); border: 1px solid rgba(255,255,255,0.14); padding: 7px 14px; border-radius: 10px; font-size: 12px; font-weight: 700; color: #fff;">
                                     <i class="fa-solid fa-tv me-1" style="color: #ff7425;"></i> <span data-i18n="lobby_badge_tv">Velkoplošná TV &amp; Sportovní přenosy</span>
                                  </div>
                               </div>
                               <div class="lobby-bar-card-sub d-none d-md-block" style="position: absolute; top: -25px; right: -20px; z-index: 2;">
-                                 <img src="/assets/images/web/lobby-bar-lounge.jpg" alt="Lobby Bar denní posezení a design" class="img-fluid rounded-4 shadow-lg" style="width: 200px; border: 2px solid #ff7425; object-fit: cover; aspect-ratio: 4/3;">
+                                 <img src="/assets/images/web/lobby-bar-lounge.jpg" alt="Lobby Bar denní posezení a design" class="img-fluid rounded-4 shadow-lg" style="width: 200px; border: 2px solid #ff7425; object-fit: cover; aspect-ratio: 4/3;" loading="lazy" decoding="async">
                                  <div class="lobby-bar-sub-badge" style="position: absolute; bottom: 8px; left: 8px; background: rgba(10,14,20,0.92); border: 1px solid rgba(255,255,255,0.14); padding: 4px 10px; border-radius: 8px; font-size: 10.5px; font-weight: 700; color: #ff9d5c;">
                                     <i class="fa-solid fa-mug-hot me-1"></i> <span data-i18n="lobby_badge_coffee">Výběrová káva</span>
                                  </div>
