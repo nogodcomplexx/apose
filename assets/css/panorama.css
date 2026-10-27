@@ -4370,23 +4370,22 @@ a.btn span {
     box-sizing: border-box !important;
   }
   .pinned-mobile-trigger-group {
-    display: grid !important;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 4px 6px;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 2px;
     flex: 1 1 auto;
     min-width: 0;
   }
   .pinned-mobile-pill {
     display: flex !important;
     align-items: center;
-    gap: 3px;
+    gap: 6px;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.12);
     border-radius: 8px;
-    padding: 5px 5px;
+    padding: 6px 10px;
     color: #ffffff;
-    font-size: 9.5px;
+    font-size: 11px;
     font-weight: 700;
     cursor: pointer;
     white-space: nowrap;
