@@ -150,6 +150,51 @@ export default function RootLayout({
           type="image/svg+xml"
         />
 
+        {/* Google Consent Mode v2 & Google Tag Manager & GA4 */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+
+              var initialAnalytics = 'denied';
+              var initialAds = 'denied';
+              try {
+                var consent = localStorage.getItem('panorama_cookies_consent');
+                if (consent) {
+                  var parsed = JSON.parse(consent);
+                  if (parsed.analytics) initialAnalytics = 'granted';
+                  if (parsed.marketing) initialAds = 'granted';
+                }
+              } catch(e) {}
+
+              gtag('set', 'ads_data_redaction', true);
+              gtag('set', 'url_passthrough', true);
+
+              gtag('consent', 'default', {
+                'analytics_storage': initialAnalytics,
+                'ad_storage': initialAds,
+                'ad_user_data': initialAds,
+                'ad_personalization': initialAds,
+                'wait_for_update': 500
+              });
+
+              // Google Tag Manager
+              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+              })(window,document,'script','dataLayer','GTM-MHXV8MKW');
+
+              gtag('js', new Date());
+              gtag('config', 'G-Y31WJ8355P', {
+                send_page_view: true
+              });
+            `,
+          }}
+        />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=G-Y31WJ8355P" />
+
         {/* Schema.org Structured Data */}
         <script
           type="application/ld+json"
@@ -236,6 +281,15 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-MHXV8MKW"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         <LanguageProvider>
           {children}
           <CookieBanner />

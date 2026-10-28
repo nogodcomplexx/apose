@@ -77,6 +77,14 @@ export default function CookieBanner() {
         date: new Date().toISOString(),
       };
       localStorage.setItem("panorama_cookies_consent", JSON.stringify(consentData));
+      if (typeof (window as any).gtag === "function") {
+        (window as any).gtag("consent", "update", {
+          analytics_storage: all || analyticsEnabled ? "granted" : "denied",
+          ad_storage: all || analyticsEnabled ? "granted" : "denied",
+          ad_user_data: all || analyticsEnabled ? "granted" : "denied",
+          ad_personalization: all || analyticsEnabled ? "granted" : "denied",
+        });
+      }
     } catch (e) {}
     setIsOpen(false);
   };
