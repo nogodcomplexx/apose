@@ -127,7 +127,7 @@
 				}
 			}
 		}
-		itCursor();
+		// itCursor(); // Disabled - native system cursor
 
 		// 06. mobile menu
 		if ($(".mobile-menu").length) {

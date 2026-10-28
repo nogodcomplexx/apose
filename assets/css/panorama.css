@@ -8355,3 +8355,19 @@ a.btn span {
 .border-warning {
   border-color: rgba(255, 116, 37, 0.3) !important;
 }
+
+/* Custom cursor disabled - use clean native OS cursor */
+.mouseCursor,
+.cursor-outer,
+.cursor-inner {
+  display: none !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  pointer-events: none !important;
+}
+html, body {
+  cursor: auto !important;
+}
+a, button, [role="button"], select, input[type="submit"], input[type="button"], .pointer {
+  cursor: pointer !important;
+}

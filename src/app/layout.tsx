@@ -252,7 +252,7 @@ export default function RootLayout({
         <link rel="stylesheet" href="/assets/vendor/magnific-popup/css/magnific-popup.css" />
         <link rel="stylesheet" href="/assets/vendor/slick/css/slick.css" />
         <link rel="stylesheet" href="/assets/css/main.min.css" />
-        <link rel="stylesheet" href="/assets/css/panorama.css?v=2.5" />
+        <link rel="stylesheet" href="/assets/css/panorama.css?v=3.2" />
 
         {/* ==== Safe Preloader Auto-Dissolver (Guarantees preloader dissolves smoothly and NEVER hangs) ==== */}
         <script
@@ -321,8 +321,8 @@ export default function RootLayout({
                     "/assets/vendor/gsap/chroma.min.js",
                     "/assets/vendor/vanilla-tilt/tilt.jquery.js",
                     "/assets/js/plugins.js",
-                    "/assets/js/main.js",
-                    "/assets/js/panorama.js?v=2.6"
+                    "/assets/js/main.js?v=3.2",
+                    "/assets/js/panorama.js?v=3.2"
                   );
                 }
 
